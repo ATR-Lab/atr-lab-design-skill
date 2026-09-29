@@ -1,0 +1,147 @@
+{
+  "_style_anchor": "Flat vector style, sharp clean edges, solid flat colors, no gradients, no glow, no blur, no noise, no 3D rendering, no photograph. Absolutely no text, no letters, no numbers, no logos, no watermark, no signature.",
+  "_palette": "ATR brand palette: navy #003976, gold #EFAB00, midnight #00295F, sky #2C8ECD, mist #F3F6FA, line #D6DEE8, white #FFFFFF.",
+  "images": {
+    "bg-title-A": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A solid deep navy blue field, hex #003976, fills the entire image. The LEFT 55% of the image is completely empty plain navy: no shapes, no lines, no gradient, nothing. On the RIGHT third only: crisp thin gold (#EFAB00) line-work forming an open wireframe lattice of equilateral triangles and 45-degree chevrons, like a technical robotics blueprint, with two or three thin sky-blue (#2C8ECD) accent lines and a few small solid gold triangles. All lines have the same thin uniform weight. The line-work becomes sparser toward the left and stops before the middle of the image. {STYLE}"
+    },
+    "bg-title-B": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A solid deep navy blue field, hex #003976, fills the entire image. The LEFT 55% of the image is completely empty plain navy: no shapes, no lines, no gradient. On the RIGHT third: large overlapping flat triangular facets in slightly lighter and darker navy tints (#00295F and #0A4A8C), like low-poly folded geometry, arranged along the right edge, with a few sharp thin gold (#EFAB00) edge lines and one thin sky-blue (#2C8ECD) diagonal line at 45 degrees. Calm, minimal, modern technical feel. {STYLE}"
+    },
+    "bg-section-A": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A solid gold field, hex #EFAB00, fills the entire image. The LEFT 60% and the center are completely empty plain gold: no shapes, no lines, no gradient. On the RIGHT third only: subtle thin navy blue (#003976) line-work forming a sparse open lattice of equilateral triangles and 45-degree chevrons, thin uniform stroke weight, with two or three small solid navy triangles near the right edge. Minimal, modern, technical. {STYLE}"
+    },
+    "bg-section-B": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A solid gold field, hex #EFAB00, fills the entire image. The left and center of the image are completely empty plain gold. In the bottom-right corner only: a cluster of thin navy blue (#003976) straight lines and chevrons rising diagonally at 45 degrees, like a stylized wireframe of angular robot gripper arms, sparse, thin uniform stroke weight, with one small solid navy equilateral triangle. Minimal, modern, technical. {STYLE}"
+    },
+    "bg-closing-A": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A solid deep navy blue field, hex #003976, fills the entire image. Almost the whole image is empty plain navy. Only in the bottom-right corner: a small, sparse cluster of thin gold (#EFAB00) lines forming a few outline equilateral triangles and one chevron, plus one thin sky-blue (#2C8ECD) line. Very calm, minimal, quiet. {STYLE}"
+    },
+    "bg-closing-B": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A solid deep navy blue field, hex #003976, fills the entire image. Across the bottom half, a few very large, very faint outline triangles in a slightly lighter navy (#0B4380), low contrast, barely visible. In the bottom-right corner a small cluster of thin gold (#EFAB00) line-work triangles. The top half and the left side are completely empty plain navy. Very calm, minimal. {STYLE}"
+    },
+    "bg-light-A": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A very light cool white field, hex #F3F6FA, fills the entire image. The central 70% of the image is completely empty. Only along the right edge and in the bottom-left corner: faint pale blue-gray (#D6DEE8) thin line-work forming a sparse lattice of equilateral triangles and 45-degree chevrons, thin uniform stroke weight, plus one or two small solid gold (#EFAB00) triangles as accents. Minimal, clean, airy, technical. {STYLE}"
+    },
+    "bg-light-B": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric presentation background, wide landscape orientation (wider than tall, 16:9). A pure white field, hex #FFFFFF, fills the entire image. The center and left are completely empty white. Only in the top-right corner and along the bottom edge: very faint pale blue-gray (#D6DEE8) thin straight lines and outline triangles forming a sparse wireframe, thin uniform stroke weight, with one small solid navy (#003976) triangle and one small solid gold (#EFAB00) triangle as accents. Minimal, clean, airy. {STYLE}"
+    },
+    "illus-telepresence-A": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. LEFT: a simplified person seated at a desk, wearing a VR headset, holding two hand controllers, facing right, drawn with simple geometric shapes and no facial detail. RIGHT: a simplified industrial six-axis robot arm on a pedestal, drawn from straight segments with angular joints, reaching toward a small gold cube. BETWEEN THEM: a dashed network link with small signal arcs and a stylized data stream connecting the headset to the robot arm, showing remote control over a network. Clean, friendly, modern, minimal shading. {STYLE}"
+    },
+    "illus-telepresence-B": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. Composition in two rounded panels side by side: LEFT panel shows a simplified operator wearing a VR headset with raised hands holding controllers; RIGHT panel shows a simplified angular robot arm with a two-finger gripper picking up a gold object. A dashed sky-blue network link with a small cloud/antenna symbol connects the two panels, representing telepresence over a network. Simple geometric shapes, no facial detail, minimal shading. {STYLE}"
+    },
+    "illus-vr-drone-A": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. A simplified standing person wearing a VR headset holds a two-stick remote controller. In front of them, a simplified quadcopter drone with four rotors flies through a stylized virtual training course drawn as a wireframe grid ground plane and a few floating gold ring gates, suggesting a virtual pilot training simulator. Simple geometric shapes, no facial detail, minimal shading. {STYLE}"
+    },
+    "illus-vr-drone-B": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. A simplified seated person wearing a VR headset holds a drone remote controller; a dashed sky-blue line goes from the headset to a large rounded rectangle 'virtual view' panel showing a simplified quadcopter drone flying over a wireframe grid landscape with gold ring gates. Simple geometric shapes, no facial detail, minimal shading. {STYLE}"
+    },
+    "illus-k12-robot-A": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. Three simplified young students of different heights stand around a workbench assembling a small wheeled robot together: one holds a screwdriver, one holds a robot wheel, one points at an open laptop showing a simple gold circuit diagram. Small parts, gears and a battery lie on the table. Friendly, simple geometric shapes, no facial detail, minimal shading. {STYLE}"
+    },
+    "illus-k12-robot-B": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. Two simplified young students sit at a table building a small two-wheeled robot from parts; one attaches a sensor, the other connects a cable to a laptop. A gold toolbox and a few gears sit beside them. Friendly, playful, simple geometric shapes, no facial detail, minimal shading. {STYLE}"
+    },
+    "tex-navy-square": {
+      "orientation": "square",
+      "prompt": "Abstract geometric social media background, square. A solid deep navy blue field, hex #003976, fills the entire image. Thin gold (#EFAB00) line-work forming a sparse open lattice of equilateral triangles and 45-degree chevrons only in the top-left and bottom-right corners, with a couple of thin sky-blue (#2C8ECD) accent lines and a few small solid gold triangles. The central 60% of the image is completely empty plain navy. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "tex-gold-square": {
+      "orientation": "square",
+      "prompt": "Abstract geometric social media background, square. A solid gold field, hex #EFAB00, fills the entire image. Thin navy blue (#003976) line-work forming a sparse open lattice of equilateral triangles and 45-degree chevrons only in the top-right and bottom-left corners, with a few small solid navy triangles. The central 60% of the image is completely empty plain gold. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "tex-navy-portrait": {
+      "orientation": "portrait",
+      "prompt": "Abstract geometric social media background, portrait orientation (taller than wide). A solid deep navy blue field, hex #003976, fills the entire image. Thin gold (#EFAB00) line-work forming a sparse open lattice of equilateral triangles and 45-degree chevrons only along the top edge and the bottom edge, with a couple of thin sky-blue (#2C8ECD) accent lines and a few small solid gold triangles. The central 60% of the image is completely empty plain navy. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "tex-gold-portrait": {
+      "orientation": "portrait",
+      "prompt": "Abstract geometric social media background, portrait orientation (taller than wide). A solid gold field, hex #EFAB00, fills the entire image. Thin navy blue (#003976) line-work forming a sparse open lattice of equilateral triangles and 45-degree chevrons only along the top edge and the bottom edge, with a few small solid navy triangles. The central 60% of the image is completely empty plain gold. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "poster-band-A": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric banner, wide landscape orientation. The composition is a horizontal band: a solid deep navy blue field, hex #003976, with crisp thin gold (#EFAB00) line-work forming an open wireframe lattice of equilateral triangles and 45-degree chevrons that runs along the full width of the image concentrated in the vertical middle of the frame, denser at the right and sparser at the left, with a few small solid gold triangles and two thin sky-blue (#2C8ECD) accent lines. Top and bottom edges plain navy. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "poster-band-B": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric banner, wide landscape orientation. A solid deep navy blue field, hex #003976, with a horizontal row of large flat overlapping triangular facets in slightly lighter and darker navy tints (#00295F and #0A4A8C) spanning the full width across the vertical middle of the frame, with sharp thin gold (#EFAB00) edge lines on some facets and one thin sky-blue (#2C8ECD) diagonal line. The left 40% of the band is calmer with fewer facets. Top and bottom edges plain navy. Minimal, modern, technical. {STYLE}"
+    },
+    "poster-band-A2": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric banner, wide landscape orientation. A solid deep navy blue field, hex #003976. Across the vertical middle of the frame, spanning the full width, runs a horizontal band of crisp, perfectly straight, precise gold (#EFAB00) lines forming an open lattice of equilateral triangles, like CAD drafting: every line is straight, complete and connected, with no dangling or broken fragments and no wobble. The lattice is dense at the right edge and becomes gradually sparser toward the left, ending in a few isolated outline triangles. Add a few small solid gold triangles and two thin sky-blue (#2C8ECD) accent lines at 60 degrees. The top and bottom quarters of the image are plain navy. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "illus-telepresence-C": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. LEFT: a simplified person seated at a desk, wearing a VR headset, holding two hand controllers, facing right, drawn with simple geometric shapes and no facial detail. RIGHT: a simplified industrial six-axis robot arm on a pedestal, drawn from straight segments with angular joints, reaching toward a small gold cube. BETWEEN THEM: a dashed network link with small signal arcs and a stylized data stream connecting the headset to the robot arm, showing remote control over a network. Clean, friendly, modern, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces (headset, robot arm segments, table, signal symbols), so the illustration stays legible on a white page. Skin tones may be natural. {STYLE}"
+    },
+    "illus-telepresence-D": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. Composition in two rounded panels side by side: LEFT panel shows a simplified operator wearing a VR headset with raised hands holding controllers; RIGHT panel shows a simplified angular robot arm with a two-finger gripper picking up a gold object. A dashed sky-blue network link with a small cloud/antenna symbol connects the two panels, representing telepresence over a network. Simple geometric shapes, no facial detail, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces (headset, robot arm segments, table, signal symbols), so the illustration stays legible on a white page. Skin tones may be natural. {STYLE}"
+    },
+    "illus-vr-drone-C": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. A simplified seated person wearing a VR headset holds a drone remote controller; a dashed sky-blue line goes from the headset to a large rounded rectangle 'virtual view' panel showing a simplified quadcopter drone flying over a wireframe grid landscape with gold ring gates. Simple geometric shapes, no facial detail, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces (headset, robot arm segments, table, signal symbols), so the illustration stays legible on a white page. Skin tones may be natural. {STYLE}"
+    },
+    "illus-k12-robot-C": {
+      "orientation": "landscape",
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, white #FFFFFF, light gray #F3F6FA. Three simplified young students of different heights stand around a workbench assembling a small wheeled robot together: one holds a screwdriver, one holds a robot wheel, one points at an open laptop showing a simple gold circuit diagram. Small parts, gears and a battery lie on the table. Friendly, simple geometric shapes, no facial detail, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces (headset, robot arm segments, table, signal symbols), so the illustration stays legible on a white page. Skin tones may be natural. {STYLE}"
+    },
+    "poster-band-C": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric banner background, wide landscape orientation (much wider than tall). A solid deep navy blue field, hex #003976, fills the entire image. The LEFT 55% of the image is completely empty plain navy: no shapes, no lines, no triangles, nothing at all. The art occupies ONLY the RIGHT 45%: crisp, perfectly straight, precise thin gold (#EFAB00) lines forming an open lattice of equilateral triangles, like CAD drafting, every line straight, complete and connected, no dangling or broken fragments, no wobble; the lattice is dense at the right edge and fades to nothing well before the middle of the image, ending in a few isolated outline triangles. Add a few small solid gold triangles and two thin sky-blue (#2C8ECD) accent lines at 60 degrees, all inside the right 45%. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "poster-band-D": {
+      "orientation": "landscape",
+      "prompt": "Abstract geometric banner background, wide landscape orientation (much wider than tall). A solid deep navy blue field, hex #003976, fills the entire image. The LEFT 55% of the image is completely empty plain navy: no shapes, no lines, no triangles, nothing at all. The art occupies ONLY the RIGHT 45%: a row of crisp gold (#EFAB00) outline equilateral triangles and 45-degree chevrons drawn with perfectly straight thin lines, like a technical drafting pattern, dense and interlocking at the right edge and thinning out to a few single outline triangles before it stops, well before the middle of the image. Two or three small solid gold triangles and one thin sky-blue (#2C8ECD) diagonal line at 60 degrees, all inside the right 45%. Thin uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "illus-k12-robot-D": {
+      "orientation": "landscape",
+      "refs": ["raw/illus-k12-robot-C.png"],
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, light gray #D6DEE8. Three simplified young students of different heights stand around a small workbench assembling a small wheeled robot together: one holds a screwdriver, one holds a robot wheel, one points at an open laptop showing a simple gold circuit diagram. Small parts, gears and a battery lie on the table. FRAMING RULE: the entire scene is a compact cut-out group in the middle of the image: the whole workbench including all four table legs, and all three students from head to shoes, are completely inside the frame, with a wide plain green margin on every side (at least 15% of the image width on the left and right and 10% on the top and bottom); nothing touches or runs off any edge of the image. Faces are completely blank: no eyes, no nose, no mouth. Friendly, simple geometric shapes, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces, so the illustration stays legible on a white page. Skin tones may be natural. {STYLE}"
+    },
+    "illus-k12-robot-E": {
+      "orientation": "landscape",
+      "refs": ["raw/illus-k12-robot-C.png"],
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, light gray #D6DEE8. Three simplified young students of different heights sit and stand around a small round-cornered workbench, building a small two-wheeled robot together: one attaches a wheel, one holds a screwdriver, one points at an open laptop showing a simple gold circuit diagram. A few gears, screws and a battery lie on the table. FRAMING RULE: the entire scene is one compact cut-out group centred in the image: the complete workbench with all of its legs and all three students from head to shoes are fully inside the frame with a wide plain green margin all around (at least 15% of the width on the left and right, 10% on the top and bottom); nothing touches or runs off any edge. Faces are completely blank: no eyes, no nose, no mouth. Friendly, simple geometric shapes, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces. Skin tones may be natural. {STYLE}"
+    },
+    "illus-telepresence-E": {
+      "orientation": "landscape",
+      "refs": ["raw/illus-telepresence-C.png"],
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, light gray #D6DEE8. LEFT: a simplified person seated at a small desk, wearing a VR headset, holding two hand controllers, facing right, drawn with simple geometric shapes; the face is completely blank: no eyes, no nose, no mouth. RIGHT: a simplified generic robot arm on a rectangular pedestal, built ONLY from straight rectangular box segments with angular, boxy, square-cornered joints; NO round or cylindrical joint caps, NO rounded links; the joints are marked with small solid gold (#EFAB00) squares; the arm ends in a simple two-finger angular gripper reaching toward a small gold cube. It must look like an abstract diagram of a robot arm, not like any real commercial robot brand. BETWEEN THEM: a dashed sky-blue network link with small signal arcs and a stylized data stream connecting the headset to the robot arm, showing remote control over a network. FRAMING RULE: the whole scene is fully inside the frame with a wide plain green margin on every side; nothing touches any edge. Clean, friendly, modern, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces (headset, arm segments, desk, signal symbols). Skin tones may be natural. {STYLE}"
+    },
+    "illus-telepresence-F": {
+      "orientation": "landscape",
+      "refs": ["raw/illus-telepresence-C.png"],
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, light gray #D6DEE8. LEFT: a simplified standing operator wearing a VR headset, arms raised, holding two hand controllers, facing right; the face is completely blank: no eyes, no nose, no mouth. RIGHT: a simplified abstract robot arm made of three straight rectangular bar segments joined at sharp angular elbows (like a folded ruler), standing on a rectangular base, with small solid gold (#EFAB00) squares at the joints and a two-finger angular gripper holding a small gold cube; NO round joint caps, NO cylinders, NO resemblance to any real commercial robot. BETWEEN THEM: a dashed sky-blue network link with small signal arcs connecting the headset to the arm, representing remote control over a network. FRAMING RULE: the whole scene is fully inside the frame with a wide plain green margin on every side; nothing touches any edge. Clean, friendly, modern, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces. Skin tones may be natural. {STYLE}"
+    },
+    "illus-vr-drone-D": {
+      "orientation": "landscape",
+      "refs": ["raw/illus-vr-drone-C.png"],
+      "prompt": "Flat vector conceptual illustration, landscape orientation, on a completely flat, uniform bright chroma green background (#00FF00) with no shadows or gradients on the background. Palette strictly: navy #003976, gold #EFAB00, sky #2C8ECD, light gray #D6DEE8. A simplified seated person wearing a VR headset holds a drone remote controller; the face is completely blank: no eyes, no nose, no mouth. A dashed sky-blue line goes from the headset to a large rounded-rectangle 'virtual view' panel showing a simplified quadcopter drone flying over a wireframe grid landscape with gold ring gates. FRAMING RULE: the whole scene is fully inside the frame with a wide plain green margin on every side; nothing touches any edge. Simple geometric shapes, minimal shading. STYLE RULE: every shape has a thin navy (#003976) outline, and no surface is pure white: use light gray #D6DEE8 for light surfaces (headset, panel frame, controller). Skin tones may be natural. {STYLE}"
+    },
+    "tex-navy-portrait-B": {
+      "orientation": "portrait",
+      "prompt": "Abstract geometric social media background, portrait orientation (taller than wide). A solid deep navy blue field, hex #003976, fills the entire image. Bold gold (#EFAB00) line-work, with a stroke about three times thicker than a hairline, forming an open lattice of equilateral triangles and 45-degree chevrons that fills the TOP 15% and the BOTTOM 15% of the image edge to edge, with two thin sky-blue (#2C8ECD) accent lines and a few small solid gold triangles inside those bands. The central 60% of the image is completely empty plain navy: no shapes, no lines. Uniform stroke weight. Minimal, modern, technical. {STYLE}"
+    },
+    "tex-navy-portrait-C": {
+      "orientation": "portrait",
+      "prompt": "Abstract geometric social media background, portrait orientation (taller than wide). A solid deep navy blue field, hex #003976, fills the entire image. Across the TOP 15% and the BOTTOM 15% of the image: a bold band of large gold (#EFAB00) outline equilateral triangles and 45-degree chevrons drawn with a thick, clearly visible uniform stroke (about 1% of the image width), edge to edge, plus a few small solid gold triangles and one sky-blue (#2C8ECD) diagonal line in each band. The central 60% is completely empty plain navy: no shapes, no lines. Minimal, modern, technical. {STYLE}"
+    }
+  }
+}

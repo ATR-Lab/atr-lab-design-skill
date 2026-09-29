@@ -1,0 +1,41 @@
+{
+  "_example": "EXAMPLE SPEC, not an ATR Lab project record. It continues the fictional haptic-feedback example from nasa-haptics-example.json; the milestones, dates and statuses are invented to show every status symbol, and the Objective slot carries a brand-font callout (Roboto Slab value, Source Sans 3 label) in place of a photo. Bracketed values are unknowns. Build: python3 scripts/quad_chart.py scripts/examples/quads/status-haptics-example.json -o status-example.pptx --allow-placeholders --check --render",
+  "type": "status",
+  "example_tag": true,
+  "title": "Reliable remote grasping over slow networks",
+  "meta": [
+    "PI: [PI name]  ·  POC: [email]",
+    "NASA EPSCoR  ·  80NSSC26K1234",
+    "[Mon YYYY] to [Mon YYYY]"
+  ],
+  "objective": [
+    "Keep remote grasps reliable at up to 500 ms of delay.",
+    "A haptic testbed that adapts to the delay."
+  ],
+  "image": {
+    "callout": {"value": "31%", "label": "fewer failures", "context": "at 500 ms, n = 24"},
+    "alt": "Callout: 31% fewer grasp failures at 500 ms of delay, 24 participants (example value)."
+  },
+  "approach": [
+    "Adapt force-feedback timing and gain to the measured delay.",
+    "Challenge: stability at 500 ms, handled by [method].",
+    "Done: user study with 24 participants."
+  ],
+  "milestones": [
+    {"milestone": "User study, n = 24", "target": "Apr 26", "status": "complete"},
+    {"milestone": "Dataset release", "target": "Aug 26", "status": "late"},
+    {"milestone": "Outdoor field trial", "target": "Nov 26", "status": "at-risk"},
+    {"milestone": "Open-source code", "target": "Dec 26", "status": "on-track"},
+    {"milestone": "Journal extension", "target": "Mar 27", "status": "not-started"}
+  ],
+  "impact": [
+    "Impact: remote grasping that stays reliable on slow links.",
+    "Deliverables: ROS package, study dataset, RA-L paper.",
+    "Next: field trial on [platform]."
+  ],
+  "version_date": "2026-09-29",
+  "notes": [
+    "Status markers are shape + written label + color (references/color.md section 6); the typed glyphs use the text-safe colors from quad-layouts.json.",
+    "[Add the risk behind the late dataset release and the at-risk field trial, with the mitigation.]"
+  ]
+}

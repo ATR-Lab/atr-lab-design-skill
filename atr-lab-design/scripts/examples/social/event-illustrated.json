@@ -1,0 +1,14 @@
+{
+  "template": "event",
+  "size": "portrait",
+  "background": "navy",
+  "eyebrow": "K-12 SUMMER WORKSHOP",
+  "title": "Build a robot in one week",
+  "date": "[July 13-17]",
+  "place": "[Building, Room], Kent Campus",
+  "cta": "Register at atr.cs.kent.edu",
+  "icon": "k12-outreach",
+  "image": "assets/illustrations/illus-k12-robot-build.png",
+  "image_alt": "Concept illustration of three students assembling a small wheeled robot at a workbench",
+  "time": "[Mon.-Fri., 9 a.m.-noon]"
+}

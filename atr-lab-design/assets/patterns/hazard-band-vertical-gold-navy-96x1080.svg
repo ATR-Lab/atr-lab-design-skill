@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="1080" viewBox="0 0 96 1080">
+  <!-- ATR hazard-stripe band: 45deg stripes, stripe width 192px (=2x band height 96px), period 543.06px, fg #EFAB00 on bg #003976 -->
+  <rect width="96" height="1080" fill="#003976"/>
+  <path fill="#EFAB00" d="M0.000,-543.058 L0.000,-271.529 L96.000,-367.529 L96.000,-639.058 Z M0.000,0.000 L0.000,271.529 L96.000,175.529 L96.000,-96.000 Z M0.000,543.058 L0.000,814.587 L96.000,718.587 L96.000,447.058 Z M0.000,1086.116 L0.000,1357.645 L96.000,1261.645 L96.000,990.116 Z"/>
+</svg>

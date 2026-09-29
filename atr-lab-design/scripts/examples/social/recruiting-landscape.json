@@ -1,0 +1,13 @@
+{
+  "template": "recruiting",
+  "size": "landscape",
+  "background": "gold",
+  "eyebrow": ["WE ARE RECRUITING", "FALL 2026"],
+  "title": "Graduate positions in telerobotics",
+  "body": [
+    "Telepresence and tele-embodiment research",
+    "VR and drone pilot-training simulation"
+  ],
+  "cta": "Apply at atr.cs.kent.edu",
+  "icon": "student"
+}

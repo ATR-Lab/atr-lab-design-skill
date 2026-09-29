@@ -1,0 +1,14 @@
+{
+  "template": "recruiting",
+  "size": "square",
+  "background": "gold",
+  "eyebrow": ["WE ARE RECRUITING", "FALL 2026"],
+  "title": "Graduate research positions in telerobotics and Physical AI",
+  "body": [
+    "Telepresence and tele-embodiment research",
+    "VR and drone pilot-training simulation",
+    "Robot autonomy with people in the loop"
+  ],
+  "cta": "Apply at atr.cs.kent.edu",
+  "icon": "student"
+}

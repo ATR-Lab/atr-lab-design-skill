@@ -1,0 +1,11 @@
+{
+  "template": "publication",
+  "size": "landscape",
+  "background": "navy",
+  "eyebrow": ["NEW PAPER", "[CONFERENCE 2026]"],
+  "title": "Gesture-enabled control of a telepresence robot",
+  "authors": "[Author One], [Author Two] and Jong-Hoon Kim",
+  "link": "DOI // [10.xxxx/xxxxx]",
+  "cta": "Read the paper at atr.cs.kent.edu",
+  "icon": "publication"
+}

@@ -1,0 +1,12 @@
+{
+  "template": "event",
+  "size": "portrait",
+  "background": "navy",
+  "eyebrow": "K-12 SUMMER WORKSHOP",
+  "title": "Build and fly a drone with ATR Lab researchers",
+  "body": "A one-week summer workshop for middle school students: assemble a quadcopter, program it and fly it in the lab's VR simulator.",
+  "date": "[Mon., July 13 to Fri., July 17]  ·  9 a.m.-noon",
+  "place": "[Building, Room], Kent Campus",
+  "cta": "Register at atr.cs.kent.edu",
+  "icon": "drone-uav"
+}

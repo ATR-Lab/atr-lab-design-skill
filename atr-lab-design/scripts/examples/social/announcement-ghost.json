@@ -1,0 +1,11 @@
+{
+  "template": "announcement",
+  "size": "square",
+  "background": "navy",
+  "art": "ghost",
+  "eyebrow": ["LAB HISTORY", "WORLD ROBOT SUMMIT"],
+  "title": "The only U.S. team in the World Robot Summit finals",
+  "body": "ATR_Kent reached the 2021 finals and earned a Distinguished Paper Award, after first competing in Tokyo in 2018.",
+  "cta": "More at atr.cs.kent.edu",
+  "icon": "award"
+}

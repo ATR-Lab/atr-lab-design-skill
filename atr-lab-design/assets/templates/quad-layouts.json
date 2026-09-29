@@ -1,0 +1,999 @@
+{
+  "template": "ATR-Quad-Chart-Template.pptx",
+  "slide_size_in": [
+    10,
+    5.625
+  ],
+  "generated_by": "build/templates-src/quad/build.js (pptxgenjs 4.0.1) + postprocess.py; budgets from advances.py",
+  "how_to_use": [
+    "NASA quads: duplicate showcase slide 1 (right-click > Duplicate Slide) and replace the bracketed text. Never build a NASA quad with New Slide from the layout: placeholder prompts (including the acknowledgement sentence) do not print, and the printed quad would show \"5 Acknowledgements\" with no sentence. validate.py and fill_test.py check that every NASA slide carries the sentence as slide text.",
+    "Other layouts: PowerPoint Home > New Slide > pick a layout, or right-click a slide > Layout; or duplicate the showcase slide. Google Slides: File > Import slides, then Slide > Apply layout.",
+    "Placeholders are addressed by idx (python-pptx: slide.placeholders[idx]). Text typed into a placeholder inherits the font, size, color, exact spacing and bullets listed here for levels 1 to 5; the master body style carries the same values.",
+    "Budgets are measured: chars_per_line = floor((box width - bullet indent) / average advance of the fallback face (Arial for Source Sans 3 roles; Arial and Source Code Pro as themselves)); max_lines = floor(box height / exact line spacing); max_chars = chars_per_line x max_lines x packing (1.0 one-line box, 0.95 prose on long lines, 0.90 prose on short lines, 0.85 bulleted lists). Every shipped prompt is within its own budget (asserted at build time). Cut words before you shrink type: 14 pt is the floor (NASA: Arial 14).",
+    "Titles hold two lines at most (brand 24/28 pt, NASA Arial bold 20/23), anchored to the top of the box so a third line runs visibly into the header rule. A third line means shorten the title; never reduce the size.",
+    "The footer marking is one line: PowerPoint does not wrap it (overflow runs left past the box, visible at once); Google Slides and LibreOffice wrap it, so keep it within the budget.",
+    "Picture slots (ph_type pic) crop an inserted picture to fill the slot; the aspect of each slot is listed (aspect). After inserting, use Picture Format > Crop > Fit, or export the figure at that aspect, so axes, units and color bars stay visible. On the showcase slides the slots flagged frame \"mist\" carry a mist frame that moves, stretches and disappears with the slot in PowerPoint and Google Slides; the layout slots carry no frame (LibreOffice draws layout objects on every slide), so a slide made with New Slide shows empty slots.",
+    "The Project Status milestone table (native table with status markers in the status cell) lives on showcase slide 2: duplicate that slide and edit its rows. A new slide from the layout gets a list placeholder in quadrant 3 instead.",
+    "Sponsor logo: the Project Status layout has a 0.70 in picture slot at the header right for the NSF full-color logo (required on NSF-funded products; unaltered, at least 0.625 in). Showcase slide 2 has no slot and its meta block runs to x 9.50; do the same (delete the slot, stretch the meta block) for other sponsors; never the NASA insignia or DoD/DARPA marks.",
+    "Slide numbers are a native field on the brand layouts (master hf sldNum=1). If a new slide shows none, Insert > Header & Footer > Slide number > Apply to All.",
+    "Kent State logo: the quad layouts carry no Kent State University wordmark. Kent State asks for its logo at 1 in or more with UNIVERSITY at least 1 in long, which makes the Stacked file 1.05 in wide (1.0 in tall) plus a clear space of one K height on every side; neither the 0.78 in header nor the 0.26 in footer holds that, and the rule is to leave the logo off rather than shrink it, so Kent State University is named in text instead (the fixed lab signature on NASA quads, the footer on the other layouts). If a sponsor or program requires the university logo, use the official Kent State Horizontal logo from https://www.kent.edu/brand/logos at 1 in wide or more, with its registered mark, on a plain area as a separate signature from the ATR mark (never sharing a rule with it). The file in assets/logos/ksu/ (ksu-wordmark-color.png, 1022 x 976 px) is a working copy of the old template raster with its colors corrected to #003976 and #EFAB00, for drafts and on-screen internal decks only: for anything printed or public, replace it with the official file, and never recolor or shrink it."
+  ],
+  "milestone_glyphs": {
+    "complete": {
+      "label": "Complete",
+      "shape": "filled triangle",
+      "char": "\u25b2",
+      "unicode": "U+25B2",
+      "glyph_color": "003976",
+      "shape_fill": "003976",
+      "shape_stroke": "003976",
+      "font": "Source Sans 3",
+      "size_pt": 14,
+      "note": "A typed glyph is text (references/color.md \u00a76): char in glyph_color, which passes 4.5:1 on white, with no text outline (Google Slides drops text outlines). shape_fill and shape_stroke are the token colors for DRAWN markers (PowerPoint shapes, tokens/atr_plot.py milestone()), where the outline carries the 3:1 non-text contrast; never type a glyph in them."
+    },
+    "on-track": {
+      "label": "On track",
+      "shape": "filled circle",
+      "char": "\u25cf",
+      "unicode": "U+25CF",
+      "glyph_color": "1B2533",
+      "shape_fill": "269143",
+      "shape_stroke": "269143",
+      "font": "Source Sans 3",
+      "size_pt": 14,
+      "note": "A typed glyph is text (references/color.md \u00a76): char in glyph_color, which passes 4.5:1 on white, with no text outline (Google Slides drops text outlines). shape_fill and shape_stroke are the token colors for DRAWN markers (PowerPoint shapes, tokens/atr_plot.py milestone()), where the outline carries the 3:1 non-text contrast; never type a glyph in them."
+    },
+    "at-risk": {
+      "label": "At risk",
+      "shape": "filled diamond (drawn: amber fill with the dark outline and a \"!\")",
+      "char": "\u25c6",
+      "unicode": "U+25C6",
+      "glyph_color": "915109",
+      "shape_fill": "FD9E3C",
+      "shape_stroke": "915109",
+      "font": "Source Sans 3",
+      "size_pt": 14,
+      "note": "A typed glyph is text (references/color.md \u00a76): char in glyph_color, which passes 4.5:1 on white, with no text outline (Google Slides drops text outlines). shape_fill and shape_stroke are the token colors for DRAWN markers (PowerPoint shapes, tokens/atr_plot.py milestone()), where the outline carries the 3:1 non-text contrast; never type a glyph in them."
+    },
+    "late": {
+      "label": "Late",
+      "shape": "filled square (drawn: with an \"x\")",
+      "char": "\u25a0",
+      "unicode": "U+25A0",
+      "glyph_color": "A21921",
+      "shape_fill": "A21921",
+      "shape_stroke": "A21921",
+      "font": "Source Sans 3",
+      "size_pt": 14,
+      "note": "A typed glyph is text (references/color.md \u00a76): char in glyph_color, which passes 4.5:1 on white, with no text outline (Google Slides drops text outlines). shape_fill and shape_stroke are the token colors for DRAWN markers (PowerPoint shapes, tokens/atr_plot.py milestone()), where the outline carries the 3:1 non-text contrast; never type a glyph in them."
+    },
+    "not-started": {
+      "label": "Not started",
+      "shape": "hollow triangle",
+      "char": "\u25b3",
+      "unicode": "U+25B3",
+      "glyph_color": "616F7E",
+      "shape_fill": "FFFFFF",
+      "shape_stroke": "7C8795",
+      "font": "Source Sans 3",
+      "size_pt": 14,
+      "note": "A typed glyph is text (references/color.md \u00a76): char in glyph_color, which passes 4.5:1 on white, with no text outline (Google Slides drops text outlines). shape_fill and shape_stroke are the token colors for DRAWN markers (PowerPoint shapes, tokens/atr_plot.py milestone()), where the outline carries the 3:1 non-text contrast; never type a glyph in them."
+    }
+  },
+  "forbidden": [
+    "white text on gold",
+    "gold text or hairlines on white or mist",
+    "text below 14 pt",
+    "NASA insignia/logotype/seal or DoD/DARPA marks",
+    "AI imagery presented as lab evidence",
+    "@atr_kent (does not exist)",
+    "British spellings (colour, labelled): Kent State uses AP style"
+  ],
+  "deviations_from_spec": [
+    "Header hairline at y 1.00 and title boxes anchored to the top at y 0.14 (spec: hairline 0.95, valign middle) so two-line titles fit and a third line is visible.",
+    "Footer rule at y 5.10 and footer text at 5.14..5.40 (spec section 6: 5.02 / 5.10) to give the content zone 0.08 in more; the 0.225 in bottom margin is kept.",
+    "NASA quadrant labels are Arial bold 14 title case (not tracked caps); brand label tracking 2.0 pt (spec 2.5) so the Arial fallback of \"OBJECTIVE AND DESCRIPTION\" fits.",
+    "Quadrant 4 of the Project Status quad is labeled \"IMPACT AND DELIVERABLES\"; transition or next steps is its third line.",
+    "NASA Acknowledgements is a side heading (plate 5 + label) beside a three-line sentence block; the lab signature is fixed at the header top right; no ATR footer or slide number on the NASA layout (single-slide uploads).",
+    "Footer right reads \"[Internal] \u00b7 [YYYY-MM-DD]\" (marking + date) instead of \"Quad chart \u00b7 [date]\".",
+    "Plate + numeral and plate + mark are separate layout objects (pptxgenjs has no groups); they are on the layouts, not on slides, so they cannot drift apart."
+  ],
+  "showcase_overrides": {
+    "ppt/slides/slide2.xml": {
+      "meta": {
+        "x": 5.95,
+        "y": 0.14,
+        "w": 3.55,
+        "h": 0.75
+      }
+    },
+    "ppt/slides/slide4.xml": {
+      "meta": {
+        "x": 6.45,
+        "y": 0.54,
+        "w": 3.05,
+        "h": 0.23
+      }
+    }
+  },
+  "layouts": [
+    {
+      "name": "ATR - NASA Research Quad",
+      "purpose": "NASA GSFC publication quad chart (one result per slide). Headings, order, Arial >= 14 pt, navy main text, black figure text and the exact acknowledgement sentence follow the GSFC guidance. Build NASA quads by duplicating showcase slide 1: placeholder prompts (including the acknowledgement sentence) do not print on a slide made with New Slide.",
+      "font_rule": "Arial >= 14 pt for all text (NASA rule; overrides the brand fonts). Main text navy 003976; figure text black 000000. Body and captions at exact 16 pt spacing (Arial single).",
+      "fixed_elements": [
+        "Gold label plate 0.62 in at (0.50, 0.14) with the navy ATR mark (h 0.375 in, 1 X clear space inside the plate)",
+        "Header hairline D6DEE8 0.75 pt at y 1.00 from x 0.50 to 9.50",
+        "Lab signature \"ATR Lab  \u00b7  Kent State University\" (Arial 14 navy, right aligned) fixed at the header top right (x 6.45..9.50, y 0.09..0.32), above the meta placeholder",
+        "Quadrant separators: D6DEE8 hairlines at x 5.00 (vertical, y 1.12..4.64) and y 2.73 (horizontal)",
+        "Quadrant 1 label plate (navy 0.36 in, Arial bold 14 gold numeral) + \"Background or Science Question\"",
+        "Quadrant 2 label plate (navy 0.36 in, Arial bold 14 gold numeral) + \"Analysis\"",
+        "Quadrant 3 label plate (navy 0.36 in, Arial bold 14 gold numeral) + \"Results\"",
+        "Quadrant 4 label plate (navy 0.36 in, Arial bold 14 gold numeral) + \"Significance\"",
+        "Quadrant 5 label plate (navy 0.36 in, Arial bold 14 gold numeral) + \"Acknowledgements\""
+      ],
+      "slide_number_field": false,
+      "placeholders": [
+        {
+          "idx": 103,
+          "ph_type": "title",
+          "key": "title",
+          "role": "title",
+          "purpose": "Attention-grabbing title (a finding). It does not have to be the full paper title. Two lines maximum (Arial bold 20/23), top anchored so a third line is visible at once; if it wraps to a third line, shorten it, never go below 20 pt.",
+          "box": {
+            "x": 1.32,
+            "y": 0.12,
+            "w": 4.93,
+            "h": 0.64
+          },
+          "font": {
+            "face": "Arial",
+            "size": 20,
+            "bold": true,
+            "color": "003976",
+            "line": 23
+          },
+          "valign": "top",
+          "prompt": "[Attention-grabbing title: the finding, not the paper title]",
+          "chars_per_line": 37,
+          "max_lines": 2,
+          "max_chars": 66,
+          "budget_basis": "Arial 20 pt bold, 0.1323 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 105,
+          "ph_type": "body",
+          "key": "meta",
+          "role": "header metadata",
+          "purpose": "PI on line 1; NASA program and date on line 2; right aligned under the fixed lab signature.",
+          "box": {
+            "x": 6.45,
+            "y": 0.32,
+            "w": 3.05,
+            "h": 0.45
+          },
+          "font": {
+            "face": "Arial",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 16
+          },
+          "align": "right",
+          "valign": "top",
+          "prompt": "[PI Name]\n[NASA program]  \u00b7  [Month YYYY]",
+          "chars_per_line": 35,
+          "max_lines": 2,
+          "max_chars": 63,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 106,
+          "ph_type": "body",
+          "key": "citation",
+          "role": "short citation + DOI",
+          "purpose": "Short-form citation with the DOI on one line directly under the title (GSFC rule 10). The box spans the full header width (about 94 Arial-14 characters), enough for a journal name and a long DOI.",
+          "box": {
+            "x": 1.32,
+            "y": 0.77,
+            "w": 8.18,
+            "h": 0.23
+          },
+          "font": {
+            "face": "Arial",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 16
+          },
+          "valign": "top",
+          "prompt": "[Author] et al. (Year), [Journal], doi:10.xxxx/xxxxx",
+          "chars_per_line": 94,
+          "max_lines": 1,
+          "max_chars": 94,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 1"
+        },
+        {
+          "idx": 112,
+          "ph_type": "body",
+          "key": "q1",
+          "role": "Background or Science Question",
+          "purpose": "Why the work matters and the question it answers. Up to 3 bullets in 5 lines, plain language (GSFC rules 3, 11).",
+          "box": {
+            "x": 0.5,
+            "y": 1.54,
+            "w": 4.375,
+            "h": 1.12
+          },
+          "font": {
+            "face": "Arial",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 16
+          },
+          "bullets": true,
+          "prompt": "[The question answered and why it matters]\n[Plain language, no jargon, up to 3 bullets]",
+          "chars_per_line": 48,
+          "max_lines": 5,
+          "max_chars": 204,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 116,
+          "ph_type": "body",
+          "key": "q2",
+          "role": "Analysis",
+          "purpose": "What was done and learned, and the NASA resources employed (GSFC rules 2, 8). Up to 3 bullets in 5 lines.",
+          "box": {
+            "x": 5.125,
+            "y": 1.54,
+            "w": 4.375,
+            "h": 1.12
+          },
+          "font": {
+            "face": "Arial",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 16
+          },
+          "bullets": true,
+          "prompt": "[What was done and learned: data, methods]\nNASA resources used: [satellites, datasets]",
+          "chars_per_line": 48,
+          "max_lines": 5,
+          "max_chars": 204,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 120,
+          "ph_type": "pic",
+          "key": "q3fig1",
+          "role": "Results figure 1",
+          "frame": "mist",
+          "purpose": "Figure 1: picture placeholder. On the showcase slides the slot carries a mist frame that moves, stretches and disappears with the slot (PowerPoint and Google Slides); a slide made with New Slide shows an empty slot instead. Axes labeled, units of measurement and a color bar where color encodes data (GSFC rule 9). For one wide figure, stretch this slot over both (w 4.375 in, aspect 3.77:1) and delete figure 2. PowerPoint crops an inserted picture to fill this slot (aspect 1.81:1, 2.10 x 1.16 in). After inserting, use Picture Format > Crop > Fit, or export the figure at the slot aspect, so axes, units and color bars stay visible.",
+          "box": {
+            "x": 0.5,
+            "y": 3.2199999999999998,
+            "w": 2.1,
+            "h": 1.16
+          },
+          "prompt": "",
+          "aspect": 1.81,
+          "crop_note": "PowerPoint crops an inserted picture to fill this slot (aspect 1.81:1, 2.10 x 1.16 in). After inserting, use Picture Format > Crop > Fit, or export the figure at the slot aspect, so axes, units and color bars stay visible."
+        },
+        {
+          "idx": 121,
+          "ph_type": "pic",
+          "key": "q3fig2",
+          "role": "Results figure 2",
+          "frame": "mist",
+          "purpose": "Figure 2 (optional): delete it if you show one figure; in PowerPoint and Google Slides nothing is left behind (LibreOffice draws layout objects, so the layout slot carries no frame). PowerPoint crops an inserted picture to fill this slot (aspect 1.81:1, 2.10 x 1.16 in). After inserting, use Picture Format > Crop > Fit, or export the figure at the slot aspect, so axes, units and color bars stay visible.",
+          "box": {
+            "x": 2.775,
+            "y": 3.2199999999999998,
+            "w": 2.1,
+            "h": 1.16
+          },
+          "prompt": "",
+          "aspect": 1.81,
+          "crop_note": "PowerPoint crops an inserted picture to fill this slot (aspect 1.81:1, 2.10 x 1.16 in). After inserting, use Picture Format > Crop > Fit, or export the figure at the slot aspect, so axes, units and color bars stay visible."
+        },
+        {
+          "idx": 122,
+          "ph_type": "body",
+          "key": "q3cap",
+          "role": "Results caption",
+          "purpose": "One-line caption in black (figure text). Name the quantity, units and n.",
+          "box": {
+            "x": 0.5,
+            "y": 4.41,
+            "w": 4.375,
+            "h": 0.23
+          },
+          "font": {
+            "face": "Arial",
+            "size": 14,
+            "bold": false,
+            "color": "000000",
+            "line": 16
+          },
+          "valign": "top",
+          "prompt": "Fig. 1: [caption; axes labeled, units, color bar]",
+          "chars_per_line": 50,
+          "max_lines": 1,
+          "max_chars": 50,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 1"
+        },
+        {
+          "idx": 126,
+          "ph_type": "body",
+          "key": "q4",
+          "role": "Significance",
+          "purpose": "The 1 to 3 most significant elements and how the results contribute to society or Earth system science (GSFC rule 3). Up to 6 lines.",
+          "box": {
+            "x": 5.125,
+            "y": 3.2199999999999998,
+            "w": 4.375,
+            "h": 1.4200000000000008
+          },
+          "font": {
+            "face": "Arial",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 16
+          },
+          "bullets": true,
+          "prompt": "[1 to 3 most significant results and how they contribute to society or Earth system science]\n[Accomplishments, not activities]",
+          "chars_per_line": 48,
+          "max_lines": 6,
+          "max_chars": 244,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 130,
+          "ph_type": "body",
+          "key": "ack",
+          "role": "Acknowledgements",
+          "purpose": "NASA's exact sentence (GSFC rule 6) in a three-line block beside the fixed \"5 Acknowledgements\" heading. Replace only the two bracketed placeholders; a long program name fits (use the acronym if a fourth line appears). Duplicate showcase slide 1 rather than using New Slide: a placeholder prompt does not print.",
+          "box": {
+            "x": 3.1,
+            "y": 4.73,
+            "w": 6.4,
+            "h": 0.67
+          },
+          "font": {
+            "face": "Arial",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 16
+          },
+          "prompt": "This work was supported by the National Aeronautics and Space Administration under Grant/Contract/Agreement No. [xxxx] and was part of the [NASA program name] program.",
+          "chars_per_line": 73,
+          "max_lines": 3,
+          "max_chars": 208,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.95"
+        }
+      ],
+      "layout_part": "ppt/slideLayouts/slideLayout2.xml"
+    },
+    {
+      "name": "ATR - Project Status Quad",
+      "purpose": "Internal or sponsor program-review quad (DoD/NASA conventions): objective + image, technical approach, milestones and schedule (list placeholder; table with status markers on slide 2), impact/deliverables/transition. Optional sponsor-logo slot in the header (NSF); showcase slide 2 has no slot and its meta block runs to the margin.",
+      "font_rule": "Source Sans 3 (title bold 24, labels bold 14 tracked, body 16, table 14), Roboto Slab numerals, Source Code Pro dates and footer.",
+      "fixed_elements": [
+        "Gold label plate 0.62 in at (0.50, 0.14) with the navy ATR mark (h 0.375 in, 1 X clear space inside the plate)",
+        "Header hairline D6DEE8 0.75 pt at y 1.00 from x 0.50 to 9.50",
+        "Quadrant separators: D6DEE8 hairlines at x 5.00 (vertical) and y 3.04 (horizontal)",
+        "Quadrant 1 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"OBJECTIVE AND DESCRIPTION\"",
+        "Quadrant 2 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"TECHNICAL APPROACH\"",
+        "Quadrant 3 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"MILESTONES AND SCHEDULE\"",
+        "Quadrant 4 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"IMPACT AND DELIVERABLES\"",
+        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Lab  \u00b7  Kent State University\" Source Sans 3 14 slate at x 0.50..5.90",
+        "Native slide-number field (Source Code Pro 14 navy) at x 9.00..9.50"
+      ],
+      "slide_number_field": true,
+      "placeholders": [
+        {
+          "idx": 103,
+          "ph_type": "title",
+          "key": "title",
+          "role": "project title",
+          "purpose": "Project title as a goal or finding, not a paper title. Two lines maximum (24/28 pt), anchored to the top of the box so a third line is visible at once (it runs into the header rule). If it wraps to a third line, shorten the title; never reduce the size.",
+          "box": {
+            "x": 1.32,
+            "y": 0.14,
+            "w": 4.4,
+            "h": 0.78
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 24,
+            "bold": true,
+            "color": "003976",
+            "line": 28
+          },
+          "valign": "top",
+          "prompt": "[Project title: a goal, not a paper title]",
+          "chars_per_line": 27,
+          "max_lines": 2,
+          "max_chars": 48,
+          "budget_basis": "Arial 24 pt bold, 0.1586 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 104,
+          "ph_type": "body",
+          "key": "meta",
+          "role": "header metadata",
+          "purpose": "Three right-aligned lines of metadata, top aligned with the title; keep each line under the budget.",
+          "box": {
+            "x": 5.95,
+            "y": 0.14,
+            "w": 2.7,
+            "h": 0.75
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 14,
+            "bold": false,
+            "color": "4A5868",
+            "line": 18
+          },
+          "align": "right",
+          "valign": "top",
+          "prompt": "PI: [PI Name]  \u00b7  POC: [email]\n[Sponsor]  \u00b7  Award [No.]\n[Mon YYYY] to [Mon YYYY]",
+          "chars_per_line": 31,
+          "max_lines": 3,
+          "max_chars": 83,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 105,
+          "ph_type": "pic",
+          "key": "sponsor",
+          "role": "sponsor logo slot",
+          "purpose": "Optional 0.70 x 0.70 in sponsor-logo slot (about 1/8 of the slide height). NSF-funded: insert the NSF full-color logo from the NSF portal, unaltered, at least 0.625 in wide; the header grid keeps its clear space (1/8 of the logo width). Otherwise delete the slot and stretch the meta block to x 9.50 (as showcase slide 2 does). Never the NASA insignia or DoD/DARPA marks.",
+          "box": {
+            "x": 8.8,
+            "y": 0.14,
+            "w": 0.7,
+            "h": 0.7
+          },
+          "prompt": "",
+          "aspect": 1,
+          "crop_note": "PowerPoint crops an inserted picture to fill this slot (aspect 1.00:1, 0.70 x 0.70 in). After inserting, use Picture Format > Crop > Fit, or export the figure at the slot aspect, so axes, units and color bars stay visible."
+        },
+        {
+          "idx": 111,
+          "ph_type": "body",
+          "key": "q1",
+          "role": "Objective and Description",
+          "purpose": "Need, objective and a one-line description. Up to 5 short lines beside the image.",
+          "box": {
+            "x": 0.5,
+            "y": 1.54,
+            "w": 2.6,
+            "h": 1.4100000000000001
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[Objective: the need and the goal in one sentence]\n[Description: what the system or study is]",
+          "chars_per_line": 24,
+          "max_lines": 5,
+          "max_chars": 102,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 112,
+          "ph_type": "pic",
+          "key": "q1img",
+          "role": "Objective image",
+          "frame": "mist",
+          "purpose": "Picture placeholder (mist frame on the showcase slide): a real photo, render or diagram of the system (never AI imagery as evidence). Write alt text. PowerPoint crops an inserted picture to fill this slot (aspect 1.34:1, 1.55 x 1.16 in). After inserting, use Picture Format > Crop > Fit, or export the figure at the slot aspect, so axes, units and color bars stay visible.",
+          "box": {
+            "x": 3.325,
+            "y": 1.54,
+            "w": 1.55,
+            "h": 1.16
+          },
+          "prompt": "",
+          "aspect": 1.34,
+          "crop_note": "PowerPoint crops an inserted picture to fill this slot (aspect 1.34:1, 1.55 x 1.16 in). After inserting, use Picture Format > Crop > Fit, or export the figure at the slot aspect, so axes, units and color bars stay visible."
+        },
+        {
+          "idx": 116,
+          "ph_type": "body",
+          "key": "q2",
+          "role": "Technical Approach",
+          "purpose": "How the technology achieves the objective, challenges and work to date. Up to 5 lines.",
+          "box": {
+            "x": 5.125,
+            "y": 1.54,
+            "w": 4.375,
+            "h": 1.4100000000000001
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[How the technology achieves the objective]\n[Key challenge and how it is addressed]\n[Work to date, in findings not activities]",
+          "chars_per_line": 42,
+          "max_lines": 5,
+          "max_chars": 178,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 120,
+          "ph_type": "body",
+          "key": "q3",
+          "role": "Milestones and Schedule",
+          "purpose": "Milestone, target month and status as one line each (up to 5). The preferred form is the native table with status markers on showcase slide 2: duplicate that slide and edit its rows.",
+          "box": {
+            "x": 0.5,
+            "y": 3.55,
+            "w": 4.375,
+            "h": 1.4100000000000001
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[Milestone]  \u00b7  [Mon YY]  \u00b7  [Status]\n[Or duplicate slide 2 for the table with status markers]",
+          "chars_per_line": 42,
+          "max_lines": 5,
+          "max_chars": 178,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 124,
+          "ph_type": "body",
+          "key": "q4",
+          "role": "Impact and Deliverables",
+          "purpose": "Impact, deliverables and transition or next steps (or accomplishments / next steps). Up to 5 lines.",
+          "box": {
+            "x": 5.125,
+            "y": 3.55,
+            "w": 4.375,
+            "h": 1.4100000000000001
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "Impact: [who benefits and how]\nDeliverables: [software, data, paper, demo]\nTransition or next steps: [next period]",
+          "chars_per_line": 42,
+          "max_lines": 5,
+          "max_chars": 178,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 127,
+          "ph_type": "body",
+          "key": "footer_right",
+          "role": "footer marking and date",
+          "nowrap": true,
+          "purpose": "Distribution marking and the date of this version (mono, right aligned). In PowerPoint the box does not wrap (text longer than the budget runs left past the box edge, visible at once); Google Slides and LibreOffice wrap it under the footer instead, so keep it within the budget.",
+          "box": {
+            "x": 6,
+            "y": 5.14,
+            "w": 3,
+            "h": 0.26
+          },
+          "font": {
+            "face": "Source Code Pro",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 17
+          },
+          "align": "right",
+          "valign": "middle",
+          "prompt": "[Internal] \u00b7 [YYYY-MM-DD]",
+          "chars_per_line": 25,
+          "max_lines": 1,
+          "max_chars": 25,
+          "budget_basis": "Source Code Pro 14 pt, 0.1167 in/char measured; packing 1"
+        }
+      ],
+      "layout_part": "ppt/slideLayouts/slideLayout3.xml"
+    },
+    {
+      "name": "ATR - Weekly Summary",
+      "purpose": "Weekly progress summary: accomplishments, path forward, risks and needs, notes and the media of the week (link).",
+      "font_rule": "Source Sans 3 (title bold 24, labels bold 14 tracked, body 16), Roboto Slab numerals, Source Code Pro footer.",
+      "fixed_elements": [
+        "Gold label plate 0.62 in at (0.50, 0.14) with the navy ATR mark (h 0.375 in, 1 X clear space inside the plate)",
+        "Header hairline D6DEE8 0.75 pt at y 1.00 from x 0.50 to 9.50",
+        "Separators: D6DEE8 hairlines at x 5.85 (vertical), y 3.04 (left column) and y 2.47 (right column)",
+        "Quadrant 1 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"ACCOMPLISHMENTS\"",
+        "Quadrant 2 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"PATH FORWARD\"",
+        "Quadrant 3 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"RISKS AND NEEDS\"",
+        "Quadrant 4 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"NOTES\"",
+        "Mist media panel 3.50 x 1.18 in at (6.00, 3.78) with the plate 5 on its corner",
+        "Quadrant 5 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"MEDIA OF THE WEEK\"",
+        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Lab  \u00b7  Kent State University\" Source Sans 3 14 slate at x 0.50..5.90",
+        "Native slide-number field (Source Code Pro 14 navy) at x 9.00..9.50"
+      ],
+      "slide_number_field": true,
+      "placeholders": [
+        {
+          "idx": 103,
+          "ph_type": "title",
+          "key": "title",
+          "role": "project title",
+          "purpose": "Project title as a goal or finding, not a paper title. Two lines maximum (24/28 pt), anchored to the top of the box so a third line is visible at once (it runs into the header rule). If it wraps to a third line, shorten the title; never reduce the size.",
+          "box": {
+            "x": 1.32,
+            "y": 0.14,
+            "w": 4.68,
+            "h": 0.78
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 24,
+            "bold": true,
+            "color": "003976",
+            "line": 28
+          },
+          "valign": "top",
+          "prompt": "[Project or student]: weekly summary",
+          "chars_per_line": 29,
+          "max_lines": 2,
+          "max_chars": 52,
+          "budget_basis": "Arial 24 pt bold, 0.1586 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 104,
+          "ph_type": "body",
+          "key": "meta",
+          "role": "header metadata",
+          "purpose": "Three right-aligned lines of metadata, top aligned with the title; keep each line under the budget.",
+          "box": {
+            "x": 6.2,
+            "y": 0.14,
+            "w": 3.3,
+            "h": 0.75
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 14,
+            "bold": false,
+            "color": "4A5868",
+            "line": 18
+          },
+          "align": "right",
+          "valign": "top",
+          "prompt": "Week of [Mon. D, YYYY]\n[Student name]  \u00b7  [Advisor]\nATR Lab  \u00b7  Kent State University",
+          "chars_per_line": 37,
+          "max_lines": 3,
+          "max_chars": 99,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 110,
+          "ph_type": "body",
+          "key": "acc",
+          "role": "Accomplishments",
+          "purpose": "What was finished and learned this week, as outcomes. Up to 5 lines.",
+          "box": {
+            "x": 0.5,
+            "y": 1.54,
+            "w": 5.2,
+            "h": 1.4100000000000001
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[Finding or result completed this week]\n[Second accomplishment, stated as an outcome]\n[Third accomplishment]",
+          "chars_per_line": 50,
+          "max_lines": 5,
+          "max_chars": 212,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 114,
+          "ph_type": "body",
+          "key": "path",
+          "role": "Path forward",
+          "purpose": "Next steps with dates and the decisions you need. Up to 5 lines.",
+          "box": {
+            "x": 0.5,
+            "y": 3.55,
+            "w": 5.2,
+            "h": 1.4100000000000001
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[Next step and its target date]\n[Second next step]\n[Decision or input needed from the advisor]",
+          "chars_per_line": 50,
+          "max_lines": 5,
+          "max_chars": 212,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 118,
+          "ph_type": "body",
+          "key": "risks",
+          "role": "Risks and needs",
+          "purpose": "Blockers, risks and asks. Up to 3 lines.",
+          "box": {
+            "x": 6,
+            "y": 1.54,
+            "w": 3.5,
+            "h": 0.8600000000000001
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[Blocker or risk, with the ask]\n[Parts, access or time needed]",
+          "chars_per_line": 33,
+          "max_lines": 3,
+          "max_chars": 84,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 123,
+          "ph_type": "body",
+          "key": "notes",
+          "role": "Notes",
+          "purpose": "Reading, ideas and questions. Up to 2 lines.",
+          "box": {
+            "x": 6,
+            "y": 2.96,
+            "w": 3.5,
+            "h": 0.6800000000000002
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[Reading, ideas, questions for the group]",
+          "chars_per_line": 33,
+          "max_lines": 2,
+          "max_chars": 56,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 128,
+          "ph_type": "body",
+          "key": "media",
+          "role": "Media of the week",
+          "purpose": "Title of the video or photo (line 1) and a short link label (line 2). Select the label, Insert > Link, and paste the URL as the hyperlink target: a 43-character YouTube URL does not fit as visible text.",
+          "box": {
+            "x": 6.1,
+            "y": 4.22,
+            "w": 3.3,
+            "h": 0.62
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "prompt": "[Video or photo title]\nWatch: [link label]",
+          "chars_per_line": 33,
+          "max_lines": 2,
+          "max_chars": 59,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 131,
+          "ph_type": "body",
+          "key": "footer_right",
+          "role": "footer marking and date",
+          "nowrap": true,
+          "purpose": "Distribution marking and the date of this version (mono, right aligned). In PowerPoint the box does not wrap (text longer than the budget runs left past the box edge, visible at once); Google Slides and LibreOffice wrap it under the footer instead, so keep it within the budget.",
+          "box": {
+            "x": 6,
+            "y": 5.14,
+            "w": 3,
+            "h": 0.26
+          },
+          "font": {
+            "face": "Source Code Pro",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 17
+          },
+          "align": "right",
+          "valign": "middle",
+          "prompt": "[Internal] \u00b7 [YYYY-MM-DD]",
+          "chars_per_line": 25,
+          "max_lines": 1,
+          "max_chars": 25,
+          "budget_basis": "Source Code Pro 14 pt, 0.1167 in/char measured; packing 1"
+        }
+      ],
+      "layout_part": "ppt/slideLayouts/slideLayout4.xml"
+    },
+    {
+      "name": "ATR - Quad Blank",
+      "purpose": "Header, hairlines and footer only, with one open body placeholder for a custom quad or a full-slide figure.",
+      "font_rule": "Source Sans 3; Source Code Pro footer.",
+      "fixed_elements": [
+        "Gold label plate 0.62 in at (0.50, 0.14) with the navy ATR mark (h 0.375 in, 1 X clear space inside the plate)",
+        "Header hairline D6DEE8 0.75 pt at y 1.00 from x 0.50 to 9.50",
+        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Lab  \u00b7  Kent State University\" Source Sans 3 14 slate at x 0.50..5.90",
+        "Native slide-number field (Source Code Pro 14 navy) at x 9.00..9.50"
+      ],
+      "slide_number_field": true,
+      "placeholders": [
+        {
+          "idx": 103,
+          "ph_type": "title",
+          "key": "title",
+          "role": "project title",
+          "purpose": "Project title as a goal or finding, not a paper title. Two lines maximum (24/28 pt), anchored to the top of the box so a third line is visible at once (it runs into the header rule). If it wraps to a third line, shorten the title; never reduce the size.",
+          "box": {
+            "x": 1.32,
+            "y": 0.14,
+            "w": 4.68,
+            "h": 0.78
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 24,
+            "bold": true,
+            "color": "003976",
+            "line": 28
+          },
+          "valign": "top",
+          "prompt": "[Title]",
+          "chars_per_line": 29,
+          "max_lines": 2,
+          "max_chars": 52,
+          "budget_basis": "Arial 24 pt bold, 0.1586 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 104,
+          "ph_type": "body",
+          "key": "meta",
+          "role": "header metadata",
+          "purpose": "Three right-aligned lines of metadata, top aligned with the title; keep each line under the budget.",
+          "box": {
+            "x": 6.2,
+            "y": 0.14,
+            "w": 3.3,
+            "h": 0.75
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 14,
+            "bold": false,
+            "color": "4A5868",
+            "line": 18
+          },
+          "align": "right",
+          "valign": "top",
+          "prompt": "[Line 1]\n[Line 2]\n[Line 3]",
+          "chars_per_line": 37,
+          "max_lines": 3,
+          "max_chars": 99,
+          "budget_basis": "Arial 14 pt, 0.0869 in/char measured; packing 0.9"
+        },
+        {
+          "idx": 105,
+          "ph_type": "body",
+          "key": "body",
+          "role": "open body",
+          "purpose": "Open content zone 9.0 x 3.84 in. Delete it to draw your own quadrants.",
+          "box": {
+            "x": 0.5,
+            "y": 1.12,
+            "w": 9,
+            "h": 3.84
+          },
+          "font": {
+            "face": "Source Sans 3",
+            "size": 16,
+            "bold": false,
+            "color": "1B2533",
+            "line": 20
+          },
+          "bullets": true,
+          "prompt": "[Body text]",
+          "chars_per_line": 88,
+          "max_lines": 13,
+          "max_chars": 972,
+          "budget_basis": "Arial 16 pt, 0.0990 in/char measured; packing 0.85"
+        },
+        {
+          "idx": 108,
+          "ph_type": "body",
+          "key": "footer_right",
+          "role": "footer marking and date",
+          "nowrap": true,
+          "purpose": "Distribution marking and the date of this version (mono, right aligned). In PowerPoint the box does not wrap (text longer than the budget runs left past the box edge, visible at once); Google Slides and LibreOffice wrap it under the footer instead, so keep it within the budget.",
+          "box": {
+            "x": 6,
+            "y": 5.14,
+            "w": 3,
+            "h": 0.26
+          },
+          "font": {
+            "face": "Source Code Pro",
+            "size": 14,
+            "bold": false,
+            "color": "003976",
+            "line": 17
+          },
+          "align": "right",
+          "valign": "middle",
+          "prompt": "[Internal] \u00b7 [YYYY-MM-DD]",
+          "chars_per_line": 25,
+          "max_lines": 1,
+          "max_chars": 25,
+          "budget_basis": "Source Code Pro 14 pt, 0.1167 in/char measured; packing 1"
+        }
+      ],
+      "layout_part": "ppt/slideLayouts/slideLayout5.xml"
+    }
+  ],
+  "showcase_slides": {
+    "ppt/slides/slide1.xml": {
+      "layout": "ATR - NASA Research Quad",
+      "placeholders_replaced_or_removed": []
+    },
+    "ppt/slides/slide2.xml": {
+      "layout": "ATR - Project Status Quad",
+      "placeholders_replaced_or_removed": [
+        "q3",
+        "sponsor"
+      ]
+    },
+    "ppt/slides/slide3.xml": {
+      "layout": "ATR - Weekly Summary",
+      "placeholders_replaced_or_removed": []
+    },
+    "ppt/slides/slide4.xml": {
+      "layout": "ATR - NASA Research Quad",
+      "placeholders_replaced_or_removed": [
+        "q3fig1",
+        "q3fig2"
+      ]
+    }
+  }
+}

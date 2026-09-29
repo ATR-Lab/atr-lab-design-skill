@@ -1,0 +1,32 @@
+# Python packages for the ATR Lab skill scripts (Python 3.9+). Use a virtual environment; Homebrew and
+# Debian/Ubuntu Python refuse pip installs into the system interpreter:
+#   python3 -m venv .venv && .venv/bin/pip install -r scripts/requirements.txt
+# If one of the optional packages below has no wheel for your Python yet, install just the core block:
+#   .venv/bin/pip install "lxml>=4.9" "Pillow>=10.0" "numpy>=1.24" "defusedxml>=0.7" "python-pptx>=1.0" "fonttools>=4.40"
+# contrast.py, email_signature.py and render_office.sh need no packages (Pillow adds CSS named colors to
+# contrast.py and the --make-tile option to email_signature.py). This file covers every third-party import in
+# scripts/ and assets/tokens/ (PIL = Pillow, skimage = scikit-image, fontTools = fonttools).
+
+# ---- core: brand_check.py (linter), social_card.py, icons/recolor.py + badge.py, deck automation
+lxml>=4.9
+Pillow>=10.0
+numpy>=1.24
+defusedxml>=0.7
+python-pptx>=1.0
+fonttools>=4.40          # social_card.py kerning (it runs without it, unkerned, with a warning)
+
+# ---- optional: charts and paper figures (assets/tokens/atr_plot.py + atr.mplstyle, assets/tokens/src/)
+#   .venv/bin/pip install "matplotlib>=3.7"
+matplotlib>=3.7
+
+# ---- optional: icon pipeline (scripts/icons/): chroma key, skeleton QA, SVG tracing
+#   (icons/generate.py and icons/make_readme.py need only the standard library)
+#   .venv/bin/pip install "scipy>=1.10" "scikit-image>=0.21" "vtracer>=0.6"
+scipy>=1.10
+scikit-image>=0.21
+vtracer>=0.6
+
+# Not Python, install separately when needed:
+#   LibreOffice (soffice) + poppler (pdftoppm)  -> scripts/render_office.sh
+#   Codex CLI                                   -> scripts/codex_image.sh
+#   rsvg-convert (librsvg), optional            -> SVG to PNG outside Python

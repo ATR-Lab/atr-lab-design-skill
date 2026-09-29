@@ -1,0 +1,140 @@
+{
+  "_comment": "Skeleton of a 12-slide research talk (recipe in references/presentations.md). Every [bracket] is yours to replace; the chart uses example data and says so (EXAMPLE FIGURE) until real results replace it. Draft build: python3 scripts/new_deck.py scripts/examples/decks/research-talk-skeleton.json -o out/talk-draft.pptx --allow-placeholders --render. The final build must pass without --allow-placeholders.",
+  "template": "presentation",
+  "output": "research-talk.pptx",
+  "title": "[Talk title]",
+  "author": "[Presenter Name]",
+  "slides": [
+    {
+      "layout": "ATR - Title",
+      "eyebrow": "[VENUE]  ·  [MON. D, YYYY]",
+      "title": "[Talk title: the finding]",
+      "subtitle": "[One line on the contribution]",
+      "presenter": "[Presenter Name], [role]",
+      "notes": "Say the finding in the first minute. Venue and date in AP style, all caps (SEPT. 23, 2026)."
+    },
+    {
+      "layout": "ATR - Agenda",
+      "eyebrow": "TALK OUTLINE",
+      "title": "Agenda",
+      "item1": "Motivation",
+      "item2": "Approach",
+      "item3": "Results",
+      "item4": "Discussion",
+      "item5": "Next steps",
+      "timing1": "T+00",
+      "timing2": "T+03",
+      "timing3": "T+08",
+      "timing4": "T+13",
+      "timing5": "T+16",
+      "panel": [
+        ["SESSION"], "[Session name]",
+        ["SPEAKER"], "[Presenter Name]"
+      ],
+      "notes": "The five items are the section numbers every eyebrow and divider reuses (\"section\": N in the spec). Delete the timing fields for an untimed talk."
+    },
+    {
+      "layout": "ATR - Section Divider",
+      "section": 1,
+      "subtitle": "[Why this problem matters, in one line]"
+    },
+    {
+      "layout": "ATR - Title + Content",
+      "section": 1,
+      "title": "[The problem in one sentence]",
+      "body": [
+        "[Who has the problem and what it costs them]",
+        "[What current approaches miss]",
+        ["[One supporting detail]"],
+        "[The question this work answers]"
+      ],
+      "notes": "No figure slot filled here, so new_deck deletes it. Add \"figure\" with a real photo or plot (and \"figure_alt\") when you have one."
+    },
+    {
+      "layout": "ATR - Two Content",
+      "section": 2,
+      "title": "Baseline and proposed method",
+      "left_heading": "Baseline: [method]",
+      "left_body": ["[How it works]", "[Its limitation]"],
+      "right_heading": "Proposed: [method]",
+      "right_body": ["[How it works]", "[What changes]"]
+    },
+    {
+      "layout": "ATR - Chart + Takeaway",
+      "section": 3,
+      "title": "[Result as a sentence]",
+      "chart": {
+        "type": "bar",
+        "categories": ["Baseline", "Condition A", "Condition B", "Proposed"],
+        "series": [{"name": "Mean seconds per task", "values": [80, 70, 55, 45]}],
+        "number_format": "0 \"s\"",
+        "highlight": "Proposed",
+        "alt": "Bar chart of example data, not results: mean seconds per task for the baseline (80), condition A (70), condition B (55) and the proposed method (45), which is highlighted."
+      },
+      "source": "SOURCE // [study], n = [N], lower is better",
+      "number": "[44%]",
+      "label": "[what the number means, compared with what]",
+      "flag": "EXAMPLE FIGURE",
+      "notes": "Replace the example values with the real data, the flag with the source, and update the alt text with the real takeaway and numbers."
+    },
+    {
+      "layout": "ATR - Key Numbers",
+      "section": 3,
+      "title": "[Results at a glance]",
+      "label1": "[METRIC 1]",
+      "number1": "[00%]",
+      "text1": "[what was measured, compared with what]",
+      "label2": "[METRIC 2]",
+      "number2": "[00]",
+      "text2": "[what was measured, compared with what]",
+      "label3": "[METRIC 3]",
+      "number3": "[00]",
+      "text3": "[what was measured, compared with what]"
+    },
+    {
+      "layout": "ATR - Statement",
+      "eyebrow": "KEY TAKEAWAY",
+      "statement": "[The one sentence you want the audience to repeat.]",
+      "attribution": "[Presenter Name], [year]"
+    },
+    {
+      "layout": "ATR - Table",
+      "section": 5,
+      "title": "Plan and status",
+      "table": {
+        "header": ["Milestone", "Owner", "Due", "Status"],
+        "rows": [
+          ["[Requirements and study protocol]", "[Name]", "[YYYY-MM-DD]", {"status": "complete"}],
+          ["[Prototype]", "[Name]", "[YYYY-MM-DD]", {"status": "on-track"}],
+          ["[User study, n = [N]]", "[Name]", "[YYYY-MM-DD]", {"status": "at-risk"}],
+          ["[Analysis and paper draft]", "[Name]", "[YYYY-MM-DD]", {"status": "late"}],
+          ["[Submission to [Venue]]", "[Name]", "[YYYY-MM-DD]", {"status": "not-started"}]
+        ],
+        "mono_cols": [2]
+      },
+      "notes": "Status is a glyph plus a word plus a color (complete, on-track, at-risk, late, not-started), so nothing depends on color alone. Six body rows at most."
+    },
+    {
+      "layout": "ATR - References",
+      "title": "References",
+      "references": [
+        "[1]\t[Author, A. and Author, B.] [Title of the paper]. In [Proceedings], [year]. [DOI]",
+        "[2]\t[Author, C.] [Title]. [Journal], [volume]([issue]), [pages], [year]."
+      ]
+    },
+    {
+      "layout": "ATR - Acknowledgements",
+      "title": "Acknowledgements and funding",
+      "text": "This work was supported by [Sponsor] under [Grant No.]. We thank [collaborators] for [contribution].",
+      "grant1": ["[Sponsor]", "[Grant No.]"],
+      "notes": "Only real sponsors and award numbers, confirmed by the PI. Put each sponsor-supplied logo in logo1-logo4 (with \"logo1_alt\" and so on): the four panels are fixed on the layout, so with fewer sponsors move this to an ATR - Title + Content slide. NSF-funded work adds the disclaimer and the NSF full-color logo (0.625 in or larger)."
+    },
+    {
+      "layout": "ATR - Thank You",
+      "title": "Questions?",
+      "presenter": "[Presenter Name]",
+      "email": "[name]@kent.edu",
+      "message": "[One closing line]"
+    }
+  ]
+}

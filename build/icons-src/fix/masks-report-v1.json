@@ -1,0 +1,234 @@
+[
+ {
+  "source": "ai-neural-net-fix-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.609
+  ],
+  "bbox": [
+   61,
+   100,
+   450,
+   412
+  ],
+  "coverage": 0.1301,
+  "components": 1,
+  "holes": 2,
+  "stroke_px": 14.4,
+  "stroke_frac": 0.0282,
+  "fit_used": 0.76
+ },
+ {
+  "source": "dataset-fix-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.729
+  ],
+  "bbox": [
+   61,
+   69,
+   450,
+   442
+  ],
+  "coverage": 0.1682,
+  "components": 22,
+  "holes": 1,
+  "stroke_px": 22.0,
+  "stroke_frac": 0.043,
+  "fit_used": 0.76
+ },
+ {
+  "source": "digital-twin-fix-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   7
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.75
+  ],
+  "bbox": [
+   61,
+   64,
+   450,
+   448
+  ],
+  "coverage": 0.1233,
+  "components": 5,
+  "holes": 3,
+  "stroke_px": 16.0,
+  "stroke_frac": 0.0312,
+  "fit_used": 0.76
+ },
+ {
+  "source": "flight-simulator-fix-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.76
+  ],
+  "bbox": [
+   61,
+   61,
+   450,
+   450
+  ],
+  "coverage": 0.1692,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 22.6,
+  "stroke_frac": 0.0442,
+  "fit_used": 0.76
+ },
+ {
+  "source": "funding-fix-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.777,
+   0.361
+  ],
+  "bbox": [
+   57,
+   163,
+   455,
+   348
+  ],
+  "coverage": 0.17,
+  "components": 4,
+  "holes": 1,
+  "stroke_px": 47.2,
+  "stroke_frac": 0.0922,
+  "fit_used": 0.778
+ },
+ {
+  "source": "partnership-fix-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.768,
+   0.416
+  ],
+  "bbox": [
+   59,
+   149,
+   452,
+   362
+  ],
+  "coverage": 0.2005,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 56.0,
+  "stroke_frac": 0.1094,
+  "fit_used": 0.768
+ },
+ {
+  "source": "simulation-fix-v1.png",
+  "bg_measured": [
+   4,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.592
+  ],
+  "bbox": [
+   61,
+   104,
+   450,
+   407
+  ],
+  "coverage": 0.1934,
+  "components": 1,
+  "holes": 1,
+  "stroke_px": 17.1,
+  "stroke_frac": 0.0334,
+  "fit_used": 0.76
+ },
+ {
+  "source": "wireless-link-fix-v1.png",
+  "bg_measured": [
+   4,
+   249,
+   7
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.662
+  ],
+  "bbox": [
+   61,
+   86,
+   450,
+   425
+  ],
+  "coverage": 0.1517,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 34.0,
+  "stroke_frac": 0.0664,
+  "fit_used": 0.76
+ }
+]

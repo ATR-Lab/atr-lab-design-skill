@@ -1,0 +1,2873 @@
+[
+ {
+  "source": "ai-neural-net-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.627
+  ],
+  "bbox": [
+   61,
+   95,
+   450,
+   416
+  ],
+  "coverage": 0.1975,
+  "components": 1,
+  "holes": 13,
+  "stroke_px": 15.6,
+  "stroke_frac": 0.0305,
+  "fit_used": 0.76
+ },
+ {
+  "source": "ai-neural-net-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.549
+  ],
+  "bbox": [
+   61,
+   115,
+   450,
+   396
+  ],
+  "coverage": 0.1429,
+  "components": 1,
+  "holes": 21,
+  "stroke_px": 15.2,
+  "stroke_frac": 0.0297,
+  "fit_used": 0.76
+ },
+ {
+  "source": "ai-neural-net-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   13
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.66
+  ],
+  "bbox": [
+   61,
+   87,
+   450,
+   425
+  ],
+  "coverage": 0.2355,
+  "components": 1,
+  "holes": 6,
+  "stroke_px": 24.3,
+  "stroke_frac": 0.0475,
+  "fit_used": 0.76
+ },
+ {
+  "source": "ai-neural-net-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.727
+  ],
+  "bbox": [
+   61,
+   70,
+   450,
+   442
+  ],
+  "coverage": 0.2505,
+  "components": 1,
+  "holes": 6,
+  "stroke_px": 24.7,
+  "stroke_frac": 0.0483,
+  "fit_used": 0.76
+ },
+ {
+  "source": "ai-neural-net-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.619
+  ],
+  "bbox": [
+   61,
+   97,
+   450,
+   414
+  ],
+  "coverage": 0.2147,
+  "components": 1,
+  "holes": 6,
+  "stroke_px": 26.1,
+  "stroke_frac": 0.0509,
+  "fit_used": 0.76
+ },
+ {
+  "source": "award-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.58,
+   0.76
+  ],
+  "bbox": [
+   107,
+   61,
+   404,
+   450
+  ],
+  "coverage": 0.2367,
+  "components": 3,
+  "holes": 2,
+  "stroke_px": 56.6,
+  "stroke_frac": 0.1105,
+  "fit_used": 0.76
+ },
+ {
+  "source": "award-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.611,
+   0.76
+  ],
+  "bbox": [
+   99,
+   61,
+   412,
+   450
+  ],
+  "coverage": 0.2076,
+  "components": 3,
+  "holes": 1,
+  "stroke_px": 36.8,
+  "stroke_frac": 0.0718,
+  "fit_used": 0.76
+ },
+ {
+  "source": "calendar-event-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.736
+  ],
+  "bbox": [
+   61,
+   67,
+   450,
+   444
+  ],
+  "coverage": 0.307,
+  "components": 7,
+  "holes": 2,
+  "stroke_px": 36.0,
+  "stroke_frac": 0.0703,
+  "fit_used": 0.76
+ },
+ {
+  "source": "calendar-event-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.736
+  ],
+  "bbox": [
+   61,
+   67,
+   450,
+   444
+  ],
+  "coverage": 0.3087,
+  "components": 7,
+  "holes": 2,
+  "stroke_px": 38.0,
+  "stroke_frac": 0.0742,
+  "fit_used": 0.76
+ },
+ {
+  "source": "camera-vision-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.553
+  ],
+  "bbox": [
+   61,
+   114,
+   450,
+   397
+  ],
+  "coverage": 0.2745,
+  "components": 3,
+  "holes": 1,
+  "stroke_px": 40.0,
+  "stroke_frac": 0.0781,
+  "fit_used": 0.76
+ },
+ {
+  "source": "camera-vision-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.535
+  ],
+  "bbox": [
+   61,
+   119,
+   450,
+   393
+  ],
+  "coverage": 0.1413,
+  "components": 3,
+  "holes": 4,
+  "stroke_px": 18.4,
+  "stroke_frac": 0.036,
+  "fit_used": 0.76
+ },
+ {
+  "source": "code-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.758,
+   0.518
+  ],
+  "bbox": [
+   61,
+   123,
+   449,
+   388
+  ],
+  "coverage": 0.1367,
+  "components": 3,
+  "holes": 0,
+  "stroke_px": 43.9,
+  "stroke_frac": 0.0857,
+  "fit_used": 0.76
+ },
+ {
+  "source": "code-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.533
+  ],
+  "bbox": [
+   61,
+   119,
+   450,
+   392
+  ],
+  "coverage": 0.1389,
+  "components": 3,
+  "holes": 0,
+  "stroke_px": 45.6,
+  "stroke_frac": 0.0891,
+  "fit_used": 0.76
+ },
+ {
+  "source": "dataset-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.758
+  ],
+  "bbox": [
+   61,
+   62,
+   450,
+   450
+  ],
+  "coverage": 0.4609,
+  "components": 3,
+  "holes": 0,
+  "stroke_px": 106.0,
+  "stroke_frac": 0.207,
+  "fit_used": 0.76
+ },
+ {
+  "source": "dataset-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.711,
+   0.76
+  ],
+  "bbox": [
+   74,
+   61,
+   438,
+   450
+  ],
+  "coverage": 0.2563,
+  "components": 3,
+  "holes": 1,
+  "stroke_px": 38.0,
+  "stroke_frac": 0.0742,
+  "fit_used": 0.76
+ },
+ {
+  "source": "digital-twin-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.771,
+   0.393
+  ],
+  "bbox": [
+   58,
+   155,
+   453,
+   356
+  ],
+  "coverage": 0.1029,
+  "components": 6,
+  "holes": 6,
+  "stroke_px": 16.0,
+  "stroke_frac": 0.0312,
+  "fit_used": 0.772
+ },
+ {
+  "source": "digital-twin-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.779,
+   0.35
+  ],
+  "bbox": [
+   56,
+   166,
+   455,
+   345
+  ],
+  "coverage": 0.089,
+  "components": 9,
+  "holes": 7,
+  "stroke_px": 14.4,
+  "stroke_frac": 0.0282,
+  "fit_used": 0.78
+ },
+ {
+  "source": "digital-twin-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.779,
+   0.354
+  ],
+  "bbox": [
+   56,
+   165,
+   455,
+   346
+  ],
+  "coverage": 0.1119,
+  "components": 2,
+  "holes": 6,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.779
+ },
+ {
+  "source": "digital-twin-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.777,
+   0.367
+  ],
+  "bbox": [
+   57,
+   162,
+   455,
+   350
+  ],
+  "coverage": 0.1136,
+  "components": 2,
+  "holes": 6,
+  "stroke_px": 19.7,
+  "stroke_frac": 0.0385,
+  "fit_used": 0.777
+ },
+ {
+  "source": "digital-twin-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.783,
+   0.33
+  ],
+  "bbox": [
+   55,
+   171,
+   456,
+   340
+  ],
+  "coverage": 0.098,
+  "components": 2,
+  "holes": 6,
+  "stroke_px": 17.9,
+  "stroke_frac": 0.0349,
+  "fit_used": 0.784
+ },
+ {
+  "source": "digital-twin-alt-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.777,
+   0.35
+  ],
+  "bbox": [
+   57,
+   166,
+   455,
+   345
+  ],
+  "coverage": 0.1148,
+  "components": 6,
+  "holes": 6,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.78
+ },
+ {
+  "source": "digital-twin-alt-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.771,
+   0.389
+  ],
+  "bbox": [
+   58,
+   156,
+   453,
+   355
+  ],
+  "coverage": 0.119,
+  "components": 6,
+  "holes": 6,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.773
+ },
+ {
+  "source": "embedded-chip-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.758
+  ],
+  "bbox": [
+   61,
+   61,
+   450,
+   449
+  ],
+  "coverage": 0.2518,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 38.0,
+  "stroke_frac": 0.0742,
+  "fit_used": 0.76
+ },
+ {
+  "source": "embedded-chip-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.75,
+   0.76
+  ],
+  "bbox": [
+   64,
+   61,
+   448,
+   450
+  ],
+  "coverage": 0.2518,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 36.0,
+  "stroke_frac": 0.0703,
+  "fit_used": 0.76
+ },
+ {
+  "source": "flight-simulator-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.752
+  ],
+  "bbox": [
+   61,
+   63,
+   450,
+   448
+  ],
+  "coverage": 0.202,
+  "components": 1,
+  "holes": 2,
+  "stroke_px": 35.4,
+  "stroke_frac": 0.0691,
+  "fit_used": 0.76
+ },
+ {
+  "source": "flight-simulator-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.76
+  ],
+  "bbox": [
+   61,
+   61,
+   450,
+   450
+  ],
+  "coverage": 0.1975,
+  "components": 2,
+  "holes": 2,
+  "stroke_px": 33.9,
+  "stroke_frac": 0.0663,
+  "fit_used": 0.76
+ },
+ {
+  "source": "funding-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.592,
+   0.76
+  ],
+  "bbox": [
+   104,
+   61,
+   407,
+   450
+  ],
+  "coverage": 0.257,
+  "components": 2,
+  "holes": 4,
+  "stroke_px": 36.0,
+  "stroke_frac": 0.0703,
+  "fit_used": 0.76
+ },
+ {
+  "source": "funding-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.57,
+   0.76
+  ],
+  "bbox": [
+   110,
+   61,
+   402,
+   450
+  ],
+  "coverage": 0.2573,
+  "components": 5,
+  "holes": 1,
+  "stroke_px": 44.0,
+  "stroke_frac": 0.0859,
+  "fit_used": 0.76
+ },
+ {
+  "source": "haptic-glove-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.666,
+   0.76
+  ],
+  "bbox": [
+   85,
+   61,
+   426,
+   450
+  ],
+  "coverage": 0.2601,
+  "components": 2,
+  "holes": 2,
+  "stroke_px": 48.7,
+  "stroke_frac": 0.0951,
+  "fit_used": 0.76
+ },
+ {
+  "source": "haptic-glove-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.623,
+   0.76
+  ],
+  "bbox": [
+   96,
+   61,
+   415,
+   450
+  ],
+  "coverage": 0.1518,
+  "components": 1,
+  "holes": 3,
+  "stroke_px": 18.1,
+  "stroke_frac": 0.0354,
+  "fit_used": 0.76
+ },
+ {
+  "source": "human-robot-interaction-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.475
+  ],
+  "bbox": [
+   61,
+   134,
+   450,
+   377
+  ],
+  "coverage": 0.1709,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 39.7,
+  "stroke_frac": 0.0775,
+  "fit_used": 0.76
+ },
+ {
+  "source": "human-robot-interaction-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.482
+  ],
+  "bbox": [
+   61,
+   132,
+   450,
+   379
+  ],
+  "coverage": 0.1343,
+  "components": 6,
+  "holes": 1,
+  "stroke_px": 28.6,
+  "stroke_frac": 0.0559,
+  "fit_used": 0.76
+ },
+ {
+  "source": "joystick-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.76
+  ],
+  "bbox": [
+   61,
+   61,
+   450,
+   450
+  ],
+  "coverage": 0.2453,
+  "components": 3,
+  "holes": 0,
+  "stroke_px": 92.0,
+  "stroke_frac": 0.1797,
+  "fit_used": 0.76
+ },
+ {
+  "source": "joystick-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.682
+  ],
+  "bbox": [
+   61,
+   81,
+   450,
+   430
+  ],
+  "coverage": 0.1773,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 32.6,
+  "stroke_frac": 0.0636,
+  "fit_used": 0.76
+ },
+ {
+  "source": "k12-outreach-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.756
+  ],
+  "bbox": [
+   61,
+   62,
+   450,
+   449
+  ],
+  "coverage": 0.236,
+  "components": 3,
+  "holes": 2,
+  "stroke_px": 40.0,
+  "stroke_frac": 0.0781,
+  "fit_used": 0.76
+ },
+ {
+  "source": "k12-outreach-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.729
+  ],
+  "bbox": [
+   61,
+   69,
+   450,
+   442
+  ],
+  "coverage": 0.2349,
+  "components": 3,
+  "holes": 2,
+  "stroke_px": 38.0,
+  "stroke_frac": 0.0742,
+  "fit_used": 0.76
+ },
+ {
+  "source": "lidar-sensor-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.758
+  ],
+  "bbox": [
+   61,
+   62,
+   450,
+   450
+  ],
+  "coverage": 0.1608,
+  "components": 4,
+  "holes": 1,
+  "stroke_px": 30.4,
+  "stroke_frac": 0.0593,
+  "fit_used": 0.76
+ },
+ {
+  "source": "lidar-sensor-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.74
+  ],
+  "bbox": [
+   61,
+   66,
+   450,
+   445
+  ],
+  "coverage": 0.1096,
+  "components": 4,
+  "holes": 3,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.76
+ },
+ {
+  "source": "lidar-sensor-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.645
+  ],
+  "bbox": [
+   61,
+   91,
+   450,
+   421
+  ],
+  "coverage": 0.194,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 34.0,
+  "stroke_frac": 0.0664,
+  "fit_used": 0.76
+ },
+ {
+  "source": "lidar-sensor-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.699
+  ],
+  "bbox": [
+   61,
+   77,
+   450,
+   435
+  ],
+  "coverage": 0.1868,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 34.9,
+  "stroke_frac": 0.0682,
+  "fit_used": 0.76
+ },
+ {
+  "source": "lidar-sensor-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.691
+  ],
+  "bbox": [
+   61,
+   79,
+   450,
+   433
+  ],
+  "coverage": 0.1736,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 30.0,
+  "stroke_frac": 0.0586,
+  "fit_used": 0.76
+ },
+ {
+  "source": "location-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.512,
+   0.76
+  ],
+  "bbox": [
+   125,
+   61,
+   387,
+   450
+  ],
+  "coverage": 0.2329,
+  "components": 1,
+  "holes": 1,
+  "stroke_px": 82.0,
+  "stroke_frac": 0.1602,
+  "fit_used": 0.76
+ },
+ {
+  "source": "location-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.541,
+   0.76
+  ],
+  "bbox": [
+   117,
+   61,
+   394,
+   450
+  ],
+  "coverage": 0.2376,
+  "components": 1,
+  "holes": 1,
+  "stroke_px": 82.5,
+  "stroke_frac": 0.1611,
+  "fit_used": 0.76
+ },
+ {
+  "source": "milestone-flag-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.627,
+   0.76
+  ],
+  "bbox": [
+   95,
+   61,
+   416,
+   450
+  ],
+  "coverage": 0.1808,
+  "components": 1,
+  "holes": 1,
+  "stroke_px": 50.0,
+  "stroke_frac": 0.0977,
+  "fit_used": 0.76
+ },
+ {
+  "source": "milestone-flag-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.662,
+   0.76
+  ],
+  "bbox": [
+   86,
+   61,
+   425,
+   450
+  ],
+  "coverage": 0.1671,
+  "components": 2,
+  "holes": 0,
+  "stroke_px": 46.0,
+  "stroke_frac": 0.0898,
+  "fit_used": 0.76
+ },
+ {
+  "source": "mobile-rover-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.74
+  ],
+  "bbox": [
+   61,
+   66,
+   450,
+   445
+  ],
+  "coverage": 0.2382,
+  "components": 3,
+  "holes": 3,
+  "stroke_px": 44.0,
+  "stroke_frac": 0.0859,
+  "fit_used": 0.76
+ },
+ {
+  "source": "mobile-rover-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.584
+  ],
+  "bbox": [
+   61,
+   106,
+   450,
+   405
+  ],
+  "coverage": 0.1305,
+  "components": 3,
+  "holes": 4,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.76
+ },
+ {
+  "source": "partnership-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.762,
+   0.445
+  ],
+  "bbox": [
+   61,
+   142,
+   451,
+   370
+  ],
+  "coverage": 0.174,
+  "components": 1,
+  "holes": 3,
+  "stroke_px": 30.0,
+  "stroke_frac": 0.0586,
+  "fit_used": 0.762
+ },
+ {
+  "source": "partnership-D-v2.png",
+  "bg_measured": [
+   4,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.771,
+   0.396
+  ],
+  "bbox": [
+   58,
+   154,
+   453,
+   357
+  ],
+  "coverage": 0.1698,
+  "components": 5,
+  "holes": 0,
+  "stroke_px": 32.6,
+  "stroke_frac": 0.0636,
+  "fit_used": 0.771
+ },
+ {
+  "source": "partnership-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.771,
+   0.398
+  ],
+  "bbox": [
+   58,
+   154,
+   453,
+   358
+  ],
+  "coverage": 0.1428,
+  "components": 1,
+  "holes": 4,
+  "stroke_px": 24.1,
+  "stroke_frac": 0.047,
+  "fit_used": 0.771
+ },
+ {
+  "source": "partnership-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.764,
+   0.438
+  ],
+  "bbox": [
+   60,
+   144,
+   451,
+   368
+  ],
+  "coverage": 0.1674,
+  "components": 1,
+  "holes": 4,
+  "stroke_px": 22.6,
+  "stroke_frac": 0.0442,
+  "fit_used": 0.764
+ },
+ {
+  "source": "partnership-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.77,
+   0.404
+  ],
+  "bbox": [
+   59,
+   152,
+   453,
+   359
+  ],
+  "coverage": 0.1409,
+  "components": 1,
+  "holes": 7,
+  "stroke_px": 21.3,
+  "stroke_frac": 0.0415,
+  "fit_used": 0.77
+ },
+ {
+  "source": "partnership-alt-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.762,
+   0.447
+  ],
+  "bbox": [
+   61,
+   141,
+   451,
+   370
+  ],
+  "coverage": 0.1808,
+  "components": 1,
+  "holes": 3,
+  "stroke_px": 30.0,
+  "stroke_frac": 0.0586,
+  "fit_used": 0.762
+ },
+ {
+  "source": "partnership-alt-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.771,
+   0.398
+  ],
+  "bbox": [
+   58,
+   154,
+   453,
+   358
+  ],
+  "coverage": 0.1699,
+  "components": 5,
+  "holes": 0,
+  "stroke_px": 32.6,
+  "stroke_frac": 0.0636,
+  "fit_used": 0.771
+ },
+ {
+  "source": "path-planning-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.715
+  ],
+  "bbox": [
+   61,
+   73,
+   450,
+   439
+  ],
+  "coverage": 0.0977,
+  "components": 11,
+  "holes": 0,
+  "stroke_px": 26.0,
+  "stroke_frac": 0.0508,
+  "fit_used": 0.76
+ },
+ {
+  "source": "path-planning-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.752,
+   0.76
+  ],
+  "bbox": [
+   63,
+   61,
+   448,
+   450
+  ],
+  "coverage": 0.1431,
+  "components": 15,
+  "holes": 0,
+  "stroke_px": 28.0,
+  "stroke_frac": 0.0547,
+  "fit_used": 0.76
+ },
+ {
+  "source": "path-planning-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.672
+  ],
+  "bbox": [
+   61,
+   84,
+   450,
+   428
+  ],
+  "coverage": 0.1101,
+  "components": 2,
+  "holes": 0,
+  "stroke_px": 26.3,
+  "stroke_frac": 0.0514,
+  "fit_used": 0.76
+ },
+ {
+  "source": "path-planning-E-v2.png",
+  "bg_measured": [
+   2,
+   248,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.758,
+   0.635
+  ],
+  "bbox": [
+   62,
+   93,
+   450,
+   418
+  ],
+  "coverage": 0.0927,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 26.0,
+  "stroke_frac": 0.0508,
+  "fit_used": 0.76
+ },
+ {
+  "source": "path-planning-E-v3.png",
+  "bg_measured": [
+   3,
+   248,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.668
+  ],
+  "bbox": [
+   61,
+   85,
+   450,
+   427
+  ],
+  "coverage": 0.0962,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 26.0,
+  "stroke_frac": 0.0508,
+  "fit_used": 0.76
+ },
+ {
+  "source": "presentation-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.729
+  ],
+  "bbox": [
+   61,
+   69,
+   450,
+   442
+  ],
+  "coverage": 0.2546,
+  "components": 4,
+  "holes": 1,
+  "stroke_px": 38.0,
+  "stroke_frac": 0.0742,
+  "fit_used": 0.76
+ },
+ {
+  "source": "presentation-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.719
+  ],
+  "bbox": [
+   61,
+   72,
+   450,
+   440
+  ],
+  "coverage": 0.2482,
+  "components": 4,
+  "holes": 1,
+  "stroke_px": 36.0,
+  "stroke_frac": 0.0703,
+  "fit_used": 0.76
+ },
+ {
+  "source": "quadruped-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.531
+  ],
+  "bbox": [
+   61,
+   120,
+   450,
+   392
+  ],
+  "coverage": 0.1596,
+  "components": 2,
+  "holes": 0,
+  "stroke_px": 27.2,
+  "stroke_frac": 0.0531,
+  "fit_used": 0.76
+ },
+ {
+  "source": "quadruped-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.502
+  ],
+  "bbox": [
+   61,
+   127,
+   450,
+   384
+  ],
+  "coverage": 0.1093,
+  "components": 1,
+  "holes": 7,
+  "stroke_px": 16.0,
+  "stroke_frac": 0.0312,
+  "fit_used": 0.76
+ },
+ {
+  "source": "quadruped-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.523
+  ],
+  "bbox": [
+   61,
+   122,
+   450,
+   390
+  ],
+  "coverage": 0.1656,
+  "components": 3,
+  "holes": 0,
+  "stroke_px": 28.3,
+  "stroke_frac": 0.0552,
+  "fit_used": 0.76
+ },
+ {
+  "source": "quadruped-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.521
+  ],
+  "bbox": [
+   61,
+   122,
+   450,
+   389
+  ],
+  "coverage": 0.1714,
+  "components": 2,
+  "holes": 0,
+  "stroke_px": 29.1,
+  "stroke_frac": 0.0569,
+  "fit_used": 0.76
+ },
+ {
+  "source": "quadruped-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.477
+  ],
+  "bbox": [
+   61,
+   133,
+   450,
+   377
+  ],
+  "coverage": 0.1273,
+  "components": 1,
+  "holes": 2,
+  "stroke_px": 21.3,
+  "stroke_frac": 0.0415,
+  "fit_used": 0.76
+ },
+ {
+  "source": "results-chart-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.619,
+   0.76
+  ],
+  "bbox": [
+   97,
+   61,
+   414,
+   450
+  ],
+  "coverage": 0.2624,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 50.0,
+  "stroke_frac": 0.0977,
+  "fit_used": 0.76
+ },
+ {
+  "source": "results-chart-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.668,
+   0.76
+  ],
+  "bbox": [
+   85,
+   61,
+   427,
+   450
+  ],
+  "coverage": 0.2451,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 60.0,
+  "stroke_frac": 0.1172,
+  "fit_used": 0.76
+ },
+ {
+  "source": "ros-graph-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.73
+  ],
+  "bbox": [
+   61,
+   69,
+   450,
+   443
+  ],
+  "coverage": 0.1751,
+  "components": 1,
+  "holes": 2,
+  "stroke_px": 26.9,
+  "stroke_frac": 0.0526,
+  "fit_used": 0.76
+ },
+ {
+  "source": "ros-graph-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.742
+  ],
+  "bbox": [
+   61,
+   66,
+   450,
+   446
+  ],
+  "coverage": 0.1784,
+  "components": 1,
+  "holes": 2,
+  "stroke_px": 30.0,
+  "stroke_frac": 0.0586,
+  "fit_used": 0.76
+ },
+ {
+  "source": "safety-shield-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.625,
+   0.76
+  ],
+  "bbox": [
+   96,
+   61,
+   416,
+   450
+  ],
+  "coverage": 0.1893,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 38.0,
+  "stroke_frac": 0.0742,
+  "fit_used": 0.76
+ },
+ {
+  "source": "safety-shield-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.654,
+   0.76
+  ],
+  "bbox": [
+   88,
+   61,
+   423,
+   450
+  ],
+  "coverage": 0.1892,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 36.8,
+  "stroke_frac": 0.0718,
+  "fit_used": 0.76
+ },
+ {
+  "source": "simulation-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.559
+  ],
+  "bbox": [
+   61,
+   113,
+   450,
+   399
+  ],
+  "coverage": 0.1397,
+  "components": 1,
+  "holes": 11,
+  "stroke_px": 22.0,
+  "stroke_frac": 0.043,
+  "fit_used": 0.76
+ },
+ {
+  "source": "simulation-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.5
+  ],
+  "bbox": [
+   61,
+   128,
+   450,
+   384
+  ],
+  "coverage": 0.1284,
+  "components": 1,
+  "holes": 11,
+  "stroke_px": 20.6,
+  "stroke_frac": 0.0402,
+  "fit_used": 0.76
+ },
+ {
+  "source": "simulation-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.506
+  ],
+  "bbox": [
+   61,
+   126,
+   450,
+   385
+  ],
+  "coverage": 0.1172,
+  "components": 1,
+  "holes": 7,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.76
+ },
+ {
+  "source": "simulation-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.5
+  ],
+  "bbox": [
+   61,
+   128,
+   450,
+   384
+  ],
+  "coverage": 0.1094,
+  "components": 1,
+  "holes": 8,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.76
+ },
+ {
+  "source": "simulation-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.496
+  ],
+  "bbox": [
+   61,
+   129,
+   450,
+   383
+  ],
+  "coverage": 0.0927,
+  "components": 1,
+  "holes": 8,
+  "stroke_px": 17.9,
+  "stroke_frac": 0.0349,
+  "fit_used": 0.76
+ },
+ {
+  "source": "team-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.496
+  ],
+  "bbox": [
+   61,
+   129,
+   450,
+   383
+  ],
+  "coverage": 0.2082,
+  "components": 6,
+  "holes": 0,
+  "stroke_px": 62.0,
+  "stroke_frac": 0.1211,
+  "fit_used": 0.76
+ },
+ {
+  "source": "team-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.545
+  ],
+  "bbox": [
+   61,
+   116,
+   450,
+   395
+  ],
+  "coverage": 0.1757,
+  "components": 6,
+  "holes": 0,
+  "stroke_px": 34.0,
+  "stroke_frac": 0.0664,
+  "fit_used": 0.76
+ },
+ {
+  "source": "teleoperation-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.779,
+   0.359
+  ],
+  "bbox": [
+   56,
+   164,
+   455,
+   348
+  ],
+  "coverage": 0.1342,
+  "components": 4,
+  "holes": 2,
+  "stroke_px": 27.2,
+  "stroke_frac": 0.0531,
+  "fit_used": 0.778
+ },
+ {
+  "source": "teleoperation-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.773,
+   0.383
+  ],
+  "bbox": [
+   58,
+   158,
+   454,
+   354
+  ],
+  "coverage": 0.0923,
+  "components": 5,
+  "holes": 3,
+  "stroke_px": 18.0,
+  "stroke_frac": 0.0352,
+  "fit_used": 0.774
+ },
+ {
+  "source": "teleoperation-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.764,
+   0.432
+  ],
+  "bbox": [
+   60,
+   145,
+   451,
+   366
+  ],
+  "coverage": 0.1297,
+  "components": 4,
+  "holes": 2,
+  "stroke_px": 22.6,
+  "stroke_frac": 0.0442,
+  "fit_used": 0.765
+ },
+ {
+  "source": "teleoperation-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.771,
+   0.4
+  ],
+  "bbox": [
+   58,
+   153,
+   453,
+   358
+  ],
+  "coverage": 0.1257,
+  "components": 5,
+  "holes": 3,
+  "stroke_px": 20.0,
+  "stroke_frac": 0.0391,
+  "fit_used": 0.771
+ },
+ {
+  "source": "teleoperation-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.77,
+   0.402
+  ],
+  "bbox": [
+   59,
+   153,
+   453,
+   359
+  ],
+  "coverage": 0.0919,
+  "components": 3,
+  "holes": 2,
+  "stroke_px": 18.4,
+  "stroke_frac": 0.036,
+  "fit_used": 0.77
+ },
+ {
+  "source": "teleoperation-alt-D-v1.png",
+  "bg_measured": [
+   3,
+   249,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.766,
+   0.432
+  ],
+  "bbox": [
+   60,
+   145,
+   452,
+   366
+  ],
+  "coverage": 0.1396,
+  "components": 5,
+  "holes": 2,
+  "stroke_px": 24.1,
+  "stroke_frac": 0.047,
+  "fit_used": 0.765
+ },
+ {
+  "source": "teleoperation-alt-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.764,
+   0.439
+  ],
+  "bbox": [
+   60,
+   143,
+   451,
+   368
+  ],
+  "coverage": 0.1446,
+  "components": 6,
+  "holes": 1,
+  "stroke_px": 26.0,
+  "stroke_frac": 0.0508,
+  "fit_used": 0.763
+ },
+ {
+  "source": "telepresence-robot-A-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.574,
+   0.76
+  ],
+  "bbox": [
+   109,
+   61,
+   403,
+   450
+  ],
+  "coverage": 0.1763,
+  "components": 3,
+  "holes": 1,
+  "stroke_px": 31.1,
+  "stroke_frac": 0.0608,
+  "fit_used": 0.76
+ },
+ {
+  "source": "telepresence-robot-A-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   5
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.58,
+   0.76
+  ],
+  "bbox": [
+   107,
+   61,
+   404,
+   450
+  ],
+  "coverage": 0.1168,
+  "components": 1,
+  "holes": 5,
+  "stroke_px": 18.4,
+  "stroke_frac": 0.036,
+  "fit_used": 0.76
+ },
+ {
+  "source": "video-demo-D-v1.png",
+  "bg_measured": [
+   3,
+   248,
+   10
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.537
+  ],
+  "bbox": [
+   61,
+   118,
+   450,
+   393
+  ],
+  "coverage": 0.1904,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 36.0,
+  "stroke_frac": 0.0703,
+  "fit_used": 0.76
+ },
+ {
+  "source": "video-demo-D-v2.png",
+  "bg_measured": [
+   3,
+   248,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.555
+  ],
+  "bbox": [
+   61,
+   114,
+   450,
+   398
+  ],
+  "coverage": 0.2192,
+  "components": 2,
+  "holes": 1,
+  "stroke_px": 41.0,
+  "stroke_frac": 0.0801,
+  "fit_used": 0.76
+ },
+ {
+  "source": "website-globe-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.75,
+   0.76
+  ],
+  "bbox": [
+   64,
+   61,
+   448,
+   450
+  ],
+  "coverage": 0.2845,
+  "components": 1,
+  "holes": 6,
+  "stroke_px": 39.6,
+  "stroke_frac": 0.0773,
+  "fit_used": 0.76
+ },
+ {
+  "source": "website-globe-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.748
+  ],
+  "bbox": [
+   61,
+   64,
+   450,
+   447
+  ],
+  "coverage": 0.2648,
+  "components": 1,
+  "holes": 6,
+  "stroke_px": 36.0,
+  "stroke_frac": 0.0703,
+  "fit_used": 0.76
+ },
+ {
+  "source": "website-globe-E-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   12
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.756
+  ],
+  "bbox": [
+   61,
+   62,
+   450,
+   449
+  ],
+  "coverage": 0.2357,
+  "components": 1,
+  "holes": 6,
+  "stroke_px": 32.0,
+  "stroke_frac": 0.0625,
+  "fit_used": 0.76
+ },
+ {
+  "source": "website-globe-E-v2.png",
+  "bg_measured": [
+   2,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.758
+  ],
+  "bbox": [
+   61,
+   62,
+   450,
+   450
+  ],
+  "coverage": 0.2572,
+  "components": 1,
+  "holes": 8,
+  "stroke_px": 30.3,
+  "stroke_frac": 0.0591,
+  "fit_used": 0.76
+ },
+ {
+  "source": "website-globe-E-v3.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.76,
+   0.758
+  ],
+  "bbox": [
+   61,
+   62,
+   450,
+   450
+  ],
+  "coverage": 0.2203,
+  "components": 1,
+  "holes": 6,
+  "stroke_px": 28.0,
+  "stroke_frac": 0.0547,
+  "fit_used": 0.76
+ },
+ {
+  "source": "wireless-link-B-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   11
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.52,
+   0.76
+  ],
+  "bbox": [
+   122,
+   61,
+   388,
+   450
+  ],
+  "coverage": 0.1208,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 32.3,
+  "stroke_frac": 0.0631,
+  "fit_used": 0.76
+ },
+ {
+  "source": "wireless-link-B-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   8
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.594,
+   0.76
+  ],
+  "bbox": [
+   104,
+   61,
+   408,
+   450
+  ],
+  "coverage": 0.1239,
+  "components": 4,
+  "holes": 0,
+  "stroke_px": 33.7,
+  "stroke_frac": 0.0659,
+  "fit_used": 0.76
+ },
+ {
+  "source": "workshop-idea-C-v1.png",
+  "bg_measured": [
+   2,
+   249,
+   9
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.631,
+   0.76
+  ],
+  "bbox": [
+   94,
+   61,
+   417,
+   450
+  ],
+  "coverage": 0.1896,
+  "components": 6,
+  "holes": 0,
+  "stroke_px": 32.2,
+  "stroke_frac": 0.063,
+  "fit_used": 0.76
+ },
+ {
+  "source": "workshop-idea-C-v2.png",
+  "bg_measured": [
+   3,
+   249,
+   6
+  ],
+  "bg_ok": true,
+  "canvas": [
+   512,
+   512
+  ],
+  "bbox_frac": [
+   0.549,
+   0.758
+  ],
+  "bbox": [
+   115,
+   62,
+   396,
+   450
+  ],
+  "coverage": 0.1329,
+  "components": 6,
+  "holes": 1,
+  "stroke_px": 34.0,
+  "stroke_frac": 0.0664,
+  "fit_used": 0.76
+ }
+]

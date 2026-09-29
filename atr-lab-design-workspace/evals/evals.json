@@ -1,0 +1,101 @@
+{
+  "skill_name": "atr-lab-design",
+  "evals": [
+    {
+      "id": 1,
+      "name": "sponsor-intro-deck",
+      "prompt": "I'm meeting with a couple of engineers from a robotics company next month who might sponsor our lab. Can you make me a short PowerPoint (6-8 slides) that introduces the ATR Lab, explains our telepresence and Physical AI work, makes the case for sponsoring us, and ends with how to reach us? Save it as sponsor-intro.pptx.",
+      "expected_output": "A 6-8 slide .pptx built on the ATR presentation template layouts (Hazard Gold system): navy/gold palette, Source Sans 3, ATR logo + separate KSU academic wordmark (no athletic Flash logo), verified facts only with [placeholders] for unknowns, verified handles (@atrlab_kent, GitHub ATR-Lab) and no @atr_kent, speaker notes, alt text, no overflow.",
+      "files": [],
+      "expectations": [
+        "sponsor-intro.pptx exists",
+        "Deck has 6-8 slides",
+        "Slides are built on ATR template layouts",
+        "No forbidden/incorrect facts (@atr_kent, wrong college, Room 236, old phone, wrong name)",
+        "Only brand fonts (or the Arial fallback) are used",
+        "Speaker notes on at least 75% of slides",
+        "Closing/contact uses the verified lab website",
+        "brand_check reports 0 errors",
+        "No athletic Flash logo or retired block logo",
+        "No fabricated or inflated claims (verified facts or visible placeholders only)",
+        "Visually on-brand and free of overflow/collisions (render reviewed)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "nasa-quad-chart",
+      "prompt": "We need a NASA quad chart for our new paper: 'Latency-Adaptive Haptic Feedback for Remote Manipulation' ([Author list]), IEEE Robotics and Automation Letters, 2026, DOI 10.1109/LRA.2026.1234567. Background: remote operators lose grasp precision when round-trip delay goes above about 200 ms. Analysis: within-subjects study with 24 participants, three latency conditions (50, 250 and 500 ms), adaptive vs fixed haptic gain. Results: adaptive feedback cut grasp failures by 31% at 500 ms. Significance: it makes Earth-based teleoperation of lunar surface robots more practical. Funded by NASA grant 80NSSC26K1234 under the NASA EPSCoR program. Save it as haptics-quad.pptx.",
+      "expected_output": "A single-slide (or single main slide) quad chart following NASA GSFC guidance: headings exactly 'Background or Science Question', 'Analysis', 'Results', 'Significance', 'Acknowledgements'; Arial >= 14 pt; main text navy/blue; short citation + DOI under the title; the NASA acknowledgement sentence with grant number and program; a results figure with labelled axes and units (or a clearly marked figure placeholder); details in speaker notes; ATR/KSU branding.",
+      "files": [],
+      "expectations": [
+        "haptics-quad.pptx exists",
+        "All five NASA headings appear verbatim",
+        "DOI 10.1109/LRA.2026.1234567 appears on the slide",
+        "NASA acknowledgement sentence with grant number and EPSCoR program",
+        "No explicit text size below 14 pt",
+        "Explicit fonts on the quad are Arial (NASA guidance)",
+        "Speaker notes present",
+        "No forbidden/incorrect facts",
+        "brand_check reports 0 errors",
+        "Results figure has labelled axes and units, with no invented data",
+        "Quad reads as a strong, well-filled communication piece"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "k12-instagram-post",
+      "prompt": "Make an Instagram post announcing that registration is open for our middle school summer robotics workshop, June 14-18, 2027, 9am to 3pm on the Kent State campus. Registration link: [link]. I need the image (portrait format), the caption and the alt text.",
+      "expected_output": "A 1080x1350 PNG in the ATR brand (navy/gold, Source Sans 3, legible on a phone, safe zones), a caption in AP/KSU style (June 14-18, 9 a.m.-3 p.m., no Oxford comma, 'Kent State University' first reference), camel-case hashtags, correct Instagram handle (@atr_lab) or none rather than @atr_kent, no invented details, alt text provided, no photos of identifiable minors.",
+      "files": [],
+      "expectations": [
+        "A PNG image was delivered",
+        "Image is 1080 x 1350 (Instagram portrait)",
+        "At least 70% of pixels are within the brand palette",
+        "Caption delivered",
+        "Alt text delivered (>= 80 characters)",
+        "Caption uses AP time style (a.m./p.m.)",
+        "No forbidden/incorrect facts (e.g. @atr_kent)",
+        "Any lab handle in the caption is the verified Instagram handle @atr_lab",
+        "Image text is accurate (no wrong handle, no invented details) and legible on a phone",
+        "Image is engaging and on-brand for a K-12 family audience"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "flyer-brand-review",
+      "prompt": "A student made this flyer for our summer camp: eval-inputs/summer-camp-flyer-DRAFT.pptx. Can you check it for brand problems and fix it? Save the fixed version as summer-camp-flyer-FIXED.pptx and give me a list of what you changed.",
+      "expected_output": "Identifies most planted defects: athletic Flash logo, retired block ATR logo, white text on gold (contrast), off-palette gold, Comic Sans/Papyrus/Calibri fonts, gold text on white, 'KSU' in copy, 'College of Arts and Sciences', Oxford comma, '&', ordinals and time style, wrong contact (Room 236 / 330-672-9060), @atr_kent, wrong lab name 'Advanced Tele-Robotics Lab', tiny/low-contrast text, missing alt text. Produces a fixed flyer that uses the current ATR mark + KSU academic wordmark, brand fonts/colors and passes a brand check.",
+      "files": [
+        "eval-inputs/summer-camp-flyer-DRAFT.pptx"
+      ],
+      "expectations": [
+        "summer-camp-flyer-FIXED.pptx exists",
+        "Response identifies at least 10 of 14 planted defect categories",
+        "Fixed flyer contains no forbidden/incorrect facts",
+        "Fixed flyer uses only brand fonts (or Arial)",
+        "Fixed flyer has no Oxford comma and no '&' in copy",
+        "brand_check on the fixed flyer reports 0 errors",
+        "Fixed flyer has no athletic or retired logo",
+        "Fixed flyer is visually on-brand, legible and print-ready apart from flagged placeholders"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "vendobot-paper-announcement",
+      "prompt": "Write a LinkedIn post and a short news blurb for the department website announcing our HRI 2026 paper on VendoBot. Keep it accurate, don't make up results.",
+      "expected_output": "Two pieces of copy that use the correct lab name on first reference ('Advanced Telerobotics Research Lab' at Kent State University), 'the lab' afterward, KSU/AP style (no Oxford comma, 'and' not '&'), no fabricated results/authors/quotes (bracketed placeholders instead), correct handles, plain-language framing, a CTA, and alt-text guidance if an image is suggested.",
+      "files": [],
+      "expectations": [
+        "Both linkedin-post.md and news-blurb.md exist",
+        "Full lab name 'Advanced Telerobotics Research Lab' used",
+        "'Kent State University' named",
+        "No forbidden/incorrect facts",
+        "No '&' in the copy",
+        "HRI 2026 named",
+        "No 'KSU' abbreviation in running copy",
+        "No fabricated results, quotes or authors; claims match the public abstract",
+        "Kent State editorial style (no Oxford comma, 'the lab' after first reference, no 'Dr.' in news copy)"
+      ]
+    }
+  ]
+}

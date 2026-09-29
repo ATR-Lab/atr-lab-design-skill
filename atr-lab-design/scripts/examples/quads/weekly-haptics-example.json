@@ -1,0 +1,32 @@
+{
+  "_example": "EXAMPLE SPEC, not a real week. It continues the fictional haptic-feedback example from nasa-haptics-example.json; every item is invented to show the layout. Bracketed values are unknowns. Build: python3 scripts/quad_chart.py scripts/examples/quads/weekly-haptics-example.json -o weekly-example.pptx --allow-placeholders --check --render",
+  "type": "weekly",
+  "example_tag": true,
+  "title": "Adaptive haptics: weekly summary",
+  "week_of": "Sept. 28, 2026",
+  "student": "[Student name]",
+  "advisor": "[Advisor]",
+  "accomplishments": [
+    "Delay estimator now runs online on the testbed.",
+    "Pilot run at 500 ms with two lab members completed.",
+    "Field-trial protocol drafted and sent for review."
+  ],
+  "path_forward": [
+    "Tune the feedback gain for 250 ms by Oct. 9.",
+    "Pilot the outdoor route on Oct. 14.",
+    "Need: decision on buying a second haptic device."
+  ],
+  "risks": [
+    "Haptic device lead time: order this week.",
+    "Need weekend access to the lab."
+  ],
+  "week_notes": [
+    "Question: fixed or adaptive gain for the demo?"
+  ],
+  "media": {
+    "title": "Pilot run at 500 ms (video)",
+    "label": "Watch: [link label]"
+  },
+  "version_date": "2026-09-29",
+  "notes": "Link the media label to the video: select the label, Insert > Link, paste the URL (or give \"url\" in the spec)."
+}

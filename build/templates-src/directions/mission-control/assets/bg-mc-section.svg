@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <pattern id="grid" patternUnits="userSpaceOnUse" width="120" height="120">
+      <path d="M24.5,0 V120 M0,24.5 H120 M48.5,0 V120 M0,48.5 H120 M72.5,0 V120 M0,72.5 H120 M96.5,0 V120 M0,96.5 H120" stroke="#F3F6FA" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+      <path d="M0.5,0 V120 M0,0.5 H120" stroke="#F3F6FA" stroke-opacity="0.18" stroke-width="1" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#003976"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+<path d="M1824.0,332.6 L1728.0,332.6 L1632.0,332.6 M1680.0,582.0 L1632.0,498.8 L1584.0,415.7 L1488.0,415.7 M1824.0,831.4 L1776.0,914.5 L1680.0,914.5 L1632.0,831.4 L1680.0,748.2 L1728.0,665.1 L1824.0,665.1 L1872.0,582.0 L1920.0,498.8 M1632.0,665.1 L1584.0,748.2 L1536.0,831.4 M1536.0,665.1 L1728.0,665.1 L1632.0,498.8 Z M1488.0,914.5 L1584.0,914.5 L1536.0,831.4 Z" fill="none" stroke="#EFAB00" stroke-width="3.0" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="0.95"/>
+<path d="M1920.0,831.4 L1872.0,748.2 L1824.0,665.1 L1776.0,582.0 L1728.0,498.8 L1776.0,415.7 L1824.0,332.6 M1584.0,582.0 L1680.0,582.0 L1632.0,498.8 Z" fill="none" stroke="#2C8ECD" stroke-width="3.0" stroke-linejoin="miter" stroke-linecap="butt"/>
+<rect x="1819.0" y="327.6" width="10" height="10" fill="#EFAB00"/>
+<rect x="1627.0" y="327.6" width="10" height="10" fill="#EFAB00"/>
+<rect x="1675.0" y="577.0" width="10" height="10" fill="#EFAB00"/>
+<rect x="1483.0" y="410.7" width="10" height="10" fill="#EFAB00"/>
+<rect x="1819.0" y="826.4" width="10" height="10" fill="#EFAB00"/>
+<rect x="1915.0" y="493.8" width="10" height="10" fill="#EFAB00"/>
+<rect x="1627.0" y="660.1" width="10" height="10" fill="#EFAB00"/>
+<rect x="1531.0" y="826.4" width="10" height="10" fill="#EFAB00"/>
+<polygon points="1689.6,576.4 1766.4,576.4 1728.0,509.9" fill="#EFAB00"/>
+<polygon points="1891.2,737.2 1948.8,737.2 1920.0,687.3" fill="#EFAB00"/>
+</svg>

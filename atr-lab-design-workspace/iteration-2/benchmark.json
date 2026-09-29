@@ -1,0 +1,354 @@
+{
+  "metadata": {
+    "skill_name": "atr-lab-design",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-09-29T14:06:41Z",
+    "evals_run": [
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 264.5,
+        "tokens": 197415,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A PNG image was delivered",
+          "passed": true,
+          "evidence": "['atr-social-summer-workshop-2026-09-29-1080x1350.png']"
+        },
+        {
+          "text": "Image is 1080 x 1350 (Instagram portrait)",
+          "passed": true,
+          "evidence": "(1080, 1350)"
+        },
+        {
+          "text": "At least 70% of pixels are within the brand palette",
+          "passed": true,
+          "evidence": "91% near-palette"
+        },
+        {
+          "text": "Caption delivered",
+          "passed": true,
+          "evidence": "441 chars"
+        },
+        {
+          "text": "Alt text delivered (>= 80 characters)",
+          "passed": true,
+          "evidence": "312 chars"
+        },
+        {
+          "text": "Caption uses AP time style (a.m./p.m.)",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No forbidden/incorrect facts (e.g. @atr_kent)",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "Any lab handle in the caption is the verified Instagram handle @atr_lab",
+          "passed": true,
+          "evidence": "handles: []"
+        },
+        {
+          "text": "Image text is accurate (no wrong handle, no invented details) and legible on a phone",
+          "passed": true,
+          "evidence": "AP date/time, Kent Campus, link in bio; text >= 40 px.",
+          "judgment": true
+        },
+        {
+          "text": "Image is engaging and on-brand for a K-12 family audience",
+          "passed": true,
+          "evidence": "New gold outreach card: large navy headline, illustration integrated on the stage, hazard band; brand fonts and palette.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 11,
+        "failed": 0,
+        "total": 11,
+        "time_seconds": 458.8,
+        "tokens": 141748,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "haptics-quad.pptx exists",
+          "passed": true,
+          "evidence": "iteration-2/eval-nasa-quad-chart/with_skill/run-1/outputs/haptics-quad.pptx"
+        },
+        {
+          "text": "All five NASA headings appear verbatim",
+          "passed": true,
+          "evidence": "missing: []"
+        },
+        {
+          "text": "DOI 10.1109/LRA.2026.1234567 appears on the slide",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "NASA acknowledgement sentence with grant number and EPSCoR program",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No explicit text size below 14 pt",
+          "passed": true,
+          "evidence": "sizes <14: []"
+        },
+        {
+          "text": "Explicit fonts on the quad are Arial (NASA guidance)",
+          "passed": true,
+          "evidence": "non-Arial: []"
+        },
+        {
+          "text": "Speaker notes present",
+          "passed": true,
+          "evidence": "1 slides with notes"
+        },
+        {
+          "text": "No forbidden/incorrect facts",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "brand_check reports 0 errors",
+          "passed": true,
+          "evidence": "{'error': 0, 'warning': 3, 'info': 3}; first: []"
+        },
+        {
+          "text": "Results figure has labelled axes and units, with no invented data",
+          "passed": true,
+          "evidence": "Big-number callout (31% at 500 ms, n = 24) instead of a single-bar chart; no values invented for 50/250 ms.",
+          "judgment": true
+        },
+        {
+          "text": "Quad reads as a strong, well-filled communication piece",
+          "passed": true,
+          "evidence": "Callout fills the Results quadrant and leads the eye; panels balanced. Header used 'Sept. 2026' (guide fixed afterwards to AP 'September 2026' / '2026').",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.7,
+        "passed": 7,
+        "failed": 3,
+        "total": 10,
+        "time_seconds": 595.9,
+        "tokens": 119164,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A PNG image was delivered",
+          "passed": true,
+          "evidence": "['atr-summer-robotics-workshop-2027-instagram.png']"
+        },
+        {
+          "text": "Image is 1080 x 1350 (Instagram portrait)",
+          "passed": true,
+          "evidence": "(1080, 1350)"
+        },
+        {
+          "text": "At least 70% of pixels are within the brand palette",
+          "passed": true,
+          "evidence": "92% near-palette"
+        },
+        {
+          "text": "Caption delivered",
+          "passed": true,
+          "evidence": "605 chars"
+        },
+        {
+          "text": "Alt text delivered (>= 80 characters)",
+          "passed": true,
+          "evidence": "346 chars"
+        },
+        {
+          "text": "Caption uses AP time style (a.m./p.m.)",
+          "passed": false,
+          "evidence": ""
+        },
+        {
+          "text": "No forbidden/incorrect facts (e.g. @atr_kent)",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "Any lab handle in the caption is the verified Instagram handle @atr_lab",
+          "passed": true,
+          "evidence": "handles: []"
+        },
+        {
+          "text": "Image text is accurate (no wrong handle, no invented details) and legible on a phone",
+          "passed": false,
+          "evidence": "'9 AM - 3 PM' (not AP); non-brand condensed display font; otherwise legible.",
+          "judgment": true
+        },
+        {
+          "text": "Image is engaging and on-brand for a K-12 family audience",
+          "passed": false,
+          "evidence": "Very engaging (big headline, cartoon robot), but off-brand fonts and all-caps; sampled #023876 navy instead of #003976.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.727,
+        "passed": 8,
+        "failed": 3,
+        "total": 11,
+        "time_seconds": 552.6,
+        "tokens": 134021,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "haptics-quad.pptx exists",
+          "passed": true,
+          "evidence": "iteration-2/eval-nasa-quad-chart/without_skill/run-1/outputs/haptics-quad.pptx"
+        },
+        {
+          "text": "All five NASA headings appear verbatim",
+          "passed": false,
+          "evidence": "missing: ['Background or Science Question', 'Acknowledgements']"
+        },
+        {
+          "text": "DOI 10.1109/LRA.2026.1234567 appears on the slide",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "NASA acknowledgement sentence with grant number and EPSCoR program",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No explicit text size below 14 pt",
+          "passed": false,
+          "evidence": "sizes <14: [11.0, 12.0, 13.0]"
+        },
+        {
+          "text": "Explicit fonts on the quad are Arial (NASA guidance)",
+          "passed": true,
+          "evidence": "non-Arial: []"
+        },
+        {
+          "text": "Speaker notes present",
+          "passed": true,
+          "evidence": "1 slides with notes"
+        },
+        {
+          "text": "No forbidden/incorrect facts",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "brand_check reports 0 errors",
+          "passed": false,
+          "evidence": "{'error': 8, 'warning': 25, 'info': 4}; first: ['Chart has no alt text.', 'Text at 11 pt is below the 12 pt hard floor (design floor 14 pt) for projected slides (1 r', 'Text at 11 pt is below the 12 pt hard floor (design floor 14 pt) for projected slides (1 r']"
+        },
+        {
+          "text": "Results figure has labelled axes and units, with no invented data",
+          "passed": true,
+          "evidence": "Indexed bar chart (fixed=100, adaptive=69) derived from the 31% relative reduction, labelled 'index'.",
+          "judgment": true
+        },
+        {
+          "text": "Quad reads as a strong, well-filled communication piece",
+          "passed": true,
+          "evidence": "Rich: loop diagram, latency axis, big 31% callout, Earth-Moon graphic. (But headings not verbatim and some text < 14 pt.)",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 361.65,
+        "stddev": 137.3908,
+        "min": 264.5,
+        "max": 458.8
+      },
+      "tokens": {
+        "mean": 169581.5,
+        "stddev": 39362.5132,
+        "min": 141748,
+        "max": 197415
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.7135,
+        "stddev": 0.0191,
+        "min": 0.7,
+        "max": 0.727
+      },
+      "time_seconds": {
+        "mean": 574.25,
+        "stddev": 30.6177,
+        "min": 552.6,
+        "max": 595.9
+      },
+      "tokens": {
+        "mean": 126592.5,
+        "stddev": 10505.4854,
+        "min": 119164,
+        "max": 134021
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.29",
+      "time_seconds": "-212.6",
+      "tokens": "+42989"
+    }
+  },
+  "notes": []
+}

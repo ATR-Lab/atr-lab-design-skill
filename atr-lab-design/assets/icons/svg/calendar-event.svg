@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><svg color="#003976" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="512" height="512">
+<path d="M0,0 L33,1 L41,8 L48,16 L49,17 L49,97 L323,97 L322,91 L323,15 L332,6 L336,1 L415,1 L421,7 L421,9 L425,11 L428,15 L429,20 L429,96 L530,97 L543,111 L548,116 L556,123 L556,125 L559,126 L564,131 L573,140 L575,143 L575,709 L567,716 L532,751 L531,753 L-160,753 L-165,748 L-174,738 L-182,730 L-190,723 L-195,719 L-195,717 L-199,715 L-203,710 L-203,142 L-194,133 L-189,128 L-182,121 L-177,116 L-171,109 L-163,102 L-157,97 L-57,96 L-57,18 L-50,10 L-41,1 Z M-115,200 L-120,205 L-132,216 L-133,275 L-129,276 L502,276 L504,275 L504,217 L490,203 L486,200 L444,201 L17,201 Z M-132,337 L-133,352 L-133,654 L-132,671 L-124,679 L-121,683 L-119,683 L-119,685 L-117,685 L-117,687 L488,687 L497,678 L499,677 L499,675 L501,675 L504,671 L504,337 Z " fill="currentColor" transform="translate(325,135)"/>
+<path d="M0,0 L100,0 L103,3 L103,103 L99,106 L2,107 L-1,104 L-1,2 Z " fill="currentColor" transform="translate(269,516)"/>
+<path d="M0,0 L99,0 L101,2 L101,105 L99,106 L0,106 L-1,105 L-1,1 Z " fill="currentColor" transform="translate(461,516)"/>
+<path d="M0,0 L100,0 L101,2 L101,103 L98,106 L76,107 L0,106 L-3,104 L-3,3 Z " fill="currentColor" transform="translate(653,516)"/>
+<path d="M0,0 L99,0 L102,3 L102,103 L100,106 L0,107 L-2,105 L-2,2 Z " fill="currentColor" transform="translate(270,672)"/>
+<path d="M0,0 L100,0 L101,1 L101,105 L98,107 L1,107 L-1,106 L-1,1 Z " fill="currentColor" transform="translate(461,672)"/>
+<path d="M0,0 L100,0 L102,2 L101,106 L2,107 L-2,105 L-2,1 Z " fill="currentColor" transform="translate(652,672)"/>
+</svg>

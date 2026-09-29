@@ -1,0 +1,14 @@
+{
+  "template": "outreach",
+  "size": "portrait",
+  "background": "gold",
+  "eyebrow": "REGISTRATION OPEN",
+  "title": "Middle school summer robotics workshop",
+  "date": "[June 14-18, 2027]",
+  "time": "[9 a.m.-3 p.m.]",
+  "place": "Kent Campus",
+  "cta": "Register through the link in our bio",
+  "icon": "k12-outreach",
+  "image": "assets/illustrations/illus-k12-robot-build.png",
+  "image_alt": "Illustration: three students build a small wheeled robot at a workbench"
+}

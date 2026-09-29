@@ -1,0 +1,52 @@
+{
+  "_example": "EXAMPLE SPEC, not an ATR Lab result. The paper, venue, DOI, participant count, delays, the 31% result, the grant number and the program come from an illustrative evaluation prompt; the 50 ms and 250 ms chart values are invented to show the layout. Bracketed values are unknowns: replace them before any real use. Build: python3 scripts/quad_chart.py scripts/examples/quads/nasa-haptics-example.json -o nasa-example.pptx --allow-placeholders --check --render",
+  "type": "nasa",
+  "example_tag": true,
+  "title": "Adaptive haptic feedback cuts grasp failures by 31% at 500 ms",
+  "citation": {
+    "authors": "[First author] et al.",
+    "year": 2026,
+    "venue": "IEEE RA-L",
+    "doi": "10.1109/LRA.2026.1234567"
+  },
+  "pi": "[PI name]",
+  "program": "NASA EPSCoR",
+  "date": "2026",
+  "background": [
+    "Over a slow network, a remote operator feels contact late, so the grip no longer matches what the robot touches.",
+    "Can feedback that adapts to the delay keep remote grasps reliable?"
+  ],
+  "analysis": [
+    "24 participants grasped objects remotely at 50, 250 and 500 ms of delay, with fixed and with latency-adaptive feedback.",
+    "NASA resources used: [name them, or none]"
+  ],
+  "figures": [
+    {
+      "chart": {
+        "type": "bar",
+        "categories": ["50 ms", "250 ms", "500 ms"],
+        "series": [{"name": "Fewer grasp failures with adaptive feedback", "values": [4, 15, 31]}],
+        "category_title": "Delay",
+        "value_title": "Fewer grasp failures (%)",
+        "label_format": "0\"%\"",
+        "highlight": [2],
+        "min": 0,
+        "max": 40,
+        "flag": "Illustrative data"
+      },
+      "alt": "Horizontal bar chart of grasp failures avoided with latency-adaptive haptic feedback compared with fixed feedback, by network delay: 4% fewer at 50 ms, 15% fewer at 250 ms and 31% fewer at 500 ms (highlighted), 24 participants. Example values: only the 31% at 500 ms comes from the example prompt."
+    }
+  ],
+  "caption": "Fig. 1: fewer grasp failures (%) by delay, n = 24",
+  "significance": [
+    "At 500 ms of delay, adaptive feedback cut grasp failures by 31% compared with fixed feedback.",
+    "Robots operated over slow links could grasp reliably without waiting for faster networks."
+  ],
+  "grant": "80NSSC26K1234",
+  "notes": [
+    "Methods: 24 participants performed remote grasps at 50, 250 and 500 ms of added network delay, once with fixed haptic feedback and once with latency-adaptive haptic feedback. [Add the task, the apparatus and the statistical test.]",
+    "Result: 31% fewer grasp failures with adaptive feedback at 500 ms. [Add the 50 ms and 250 ms values from the paper; the chart shows placeholders.]",
+    "Acronyms: RA-L = IEEE Robotics and Automation Letters.",
+    "Full reference: [Authors] (2026). Latency-Adaptive Haptic Feedback for Remote Manipulation. IEEE Robotics and Automation Letters. doi:10.1109/LRA.2026.1234567"
+  ]
+}

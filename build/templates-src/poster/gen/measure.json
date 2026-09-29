@@ -1,0 +1,4492 @@
+[
+ {
+  "label": "landscape/standard eyebrow",
+  "kind": "template",
+  "text": "[VENUE SHORT NAME]  ·  [CITY]  ·  [MON. DD, YYYY]",
+  "font": "bold",
+  "pt": 32,
+  "w": 28,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard title",
+  "kind": "template",
+  "text": "[Poster title: the main finding in one or two lines]",
+  "font": "bold",
+  "pt": 96,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard authors",
+  "kind": "template",
+  "text": "[First Author]1, [Second Author]2, [Third Author]1 and [Faculty Mentor]1",
+  "font": "bold",
+  "pt": 48,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard affiliations 1",
+  "kind": "template",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard affiliations 2",
+  "kind": "template",
+  "text": "2 [Second affiliation, if any]",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard qr label",
+  "kind": "template",
+  "text": "[THE PAPER]",
+  "font": "mono",
+  "pt": 24,
+  "w": 3.26,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard section 01",
+  "kind": "template",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard lead",
+  "kind": "template",
+  "text": "[One sentence on the problem and why it matters for telepresence, tele-embodiment or Physical AI, up to 150 characters.]",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/standard paragraph",
+  "kind": "template",
+  "text": "[Two or three sentences of context, up to 260 characters: the gap in prior work, the setting and the research question. Keep about one fifth of the poster as text and let the figures carry the argument.]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "landscape/standard section 02",
+  "kind": "template",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard approach 1",
+  "kind": "template",
+  "text": "[System or method: what was built and how it works, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard approach 2",
+  "kind": "template",
+  "text": "[Study design: participants, tasks, conditions and measures]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard approach 3",
+  "kind": "template",
+  "text": "[Analysis: statistics, models or metrics used]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard panel hint 01",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard caption1",
+  "kind": "template",
+  "text": "FIG. 01 // [System overview: replace with an architecture diagram or a labeled photo of the setup.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard section 03",
+  "kind": "template",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard panel hint 02",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard captionA",
+  "kind": "template",
+  "text": "FIG. 02 // [Main result: a plot from atr_plot.py at 300 dpi, legend on the plot, units on the axes.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard panel hint 03",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard captionB",
+  "kind": "template",
+  "text": "FIG. 03 // [Second result or a photo of the robot in the task; caption a concept illustration as such.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard stat numeral",
+  "kind": "template",
+  "text": "[38%]",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard stat label",
+  "kind": "template",
+  "text": "[What the number means: the metric, the comparison, n and the test, up to 105 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/standard findings 1",
+  "kind": "template",
+  "text": "[Finding 1: the effect, its direction and size, with the statistic, the confidence interval and n]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 2",
+  "kind": "template",
+  "text": "[Finding 2: the comparison the figures show, and how large the difference is in task terms]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 3",
+  "kind": "template",
+  "text": "[Finding 3: robustness across participants, failure modes or timing, with the numbers]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 4",
+  "kind": "template",
+  "text": "[What did not work, why, and what it means for the next iteration of the system, up to 150 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard source",
+  "kind": "template",
+  "text": "SOURCE // [STUDY OR DATASET], N = [N]",
+  "font": "mono",
+  "pt": 24,
+  "w": 13.25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard section 04",
+  "kind": "template",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard conclusions 1",
+  "kind": "template",
+  "text": "[Takeaway 1: the claim the evidence supports, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard conclusions 2",
+  "kind": "template",
+  "text": "[Takeaway 2: what it means for design or practice]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard conclusions 3",
+  "kind": "template",
+  "text": "[Limitation that bounds the claim]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard section 05",
+  "kind": "template",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard future 1",
+  "kind": "template",
+  "text": "[Next experiment or system iteration]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard future 2",
+  "kind": "template",
+  "text": "[Open question the community should take up]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard future 3",
+  "kind": "template",
+  "text": "[Dataset, code or deployment plan]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard label REFERENCES",
+  "kind": "template",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard references 1",
+  "kind": "template",
+  "text": "[1] [A. Author, B. Author and C. Author], \"[Title of the paper],\" in [Proc. Conference], [City], [Year], pp. [1-8].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard references 2",
+  "kind": "template",
+  "text": "[2] [A. Author and B. Author], \"[Title of the article],\" [Journal], vol. [N], no. [N], pp. [1-12], [Year].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard references 3",
+  "kind": "template",
+  "text": "[3] [A. Author], \"[Title of the paper],\" in [Proc. Conference], [Year], pp. [1-6].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard label ACKNOWLEDGMENT",
+  "kind": "template",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard acknowledgments",
+  "kind": "template",
+  "text": "[Collaborators, participants and facilities.] This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.5,
+  "tracking": 0,
+  "maxLines": 9
+ },
+ {
+  "label": "landscape/standard contact",
+  "kind": "template",
+  "text": "[Presenter Name]  ·  [presenter@kent.edu]  ·  Advanced Telerobotics Research Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard contact 2",
+  "kind": "template",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard stamp",
+  "kind": "template",
+  "text": "ATR LAB  //  [VENUE]  //  [YYYY-MM-DD]",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long eyebrow",
+  "kind": "template",
+  "text": "[VENUE SHORT NAME]  ·  [CITY]  ·  [MON. DD, YYYY]",
+  "font": "bold",
+  "pt": 32,
+  "w": 28,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long title",
+  "kind": "template",
+  "text": "[Poster title on up to three lines at 80 pt: the main finding and the number behind it, 115 characters]",
+  "font": "bold",
+  "pt": 80,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long authors",
+  "kind": "template",
+  "text": "[First Author]1, [Second Author]2, [Third Author]1, [Fourth Author]3, [Fifth Author]2, [Sixth Author]1 and [Faculty Mentor]1",
+  "font": "bold",
+  "pt": 48,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long affiliations 1",
+  "kind": "template",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long affiliations 2",
+  "kind": "template",
+  "text": "2 [Second affiliation: department, university, city, state, country]",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long affiliations 3",
+  "kind": "template",
+  "text": "3 [Third affiliation, if any]",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long qr label",
+  "kind": "template",
+  "text": "[THE PAPER]",
+  "font": "mono",
+  "pt": 24,
+  "w": 3.26,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long section 01",
+  "kind": "template",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long lead",
+  "kind": "template",
+  "text": "[One sentence on the problem and why it matters for telepresence, tele-embodiment or Physical AI, up to 150 characters.]",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/long paragraph",
+  "kind": "template",
+  "text": "[Two or three sentences of context, up to 260 characters: the gap in prior work, the setting and the research question. Keep about one fifth of the poster as text and let the figures carry the argument.]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "landscape/long section 02",
+  "kind": "template",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long approach 1",
+  "kind": "template",
+  "text": "[System or method: what was built and how it works, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long approach 2",
+  "kind": "template",
+  "text": "[Study design: participants, tasks, conditions and measures]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long approach 3",
+  "kind": "template",
+  "text": "[Analysis: statistics, models or metrics used]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long panel hint 01",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long caption1",
+  "kind": "template",
+  "text": "FIG. 01 // [System overview: replace with an architecture diagram or a labeled photo of the setup.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long section 03",
+  "kind": "template",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long panel hint 02",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long captionA",
+  "kind": "template",
+  "text": "FIG. 02 // [Main result: a plot from atr_plot.py at 300 dpi, legend on the plot, units on the axes.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long panel hint 03",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long captionB",
+  "kind": "template",
+  "text": "FIG. 03 // [Second result or a photo of the robot in the task; caption a concept illustration as such.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long stat numeral",
+  "kind": "template",
+  "text": "[38%]",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long stat label",
+  "kind": "template",
+  "text": "[What the number means: the metric, the comparison, n and the test, up to 105 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/long findings 1",
+  "kind": "template",
+  "text": "[Finding 1: the effect, its direction and size, with the statistic, the confidence interval and n]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long findings 2",
+  "kind": "template",
+  "text": "[Finding 2: the comparison the figures show, and how large the difference is in task terms]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long findings 3",
+  "kind": "template",
+  "text": "[Finding 3: robustness across participants, failure modes or timing, with the numbers]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long findings 4",
+  "kind": "template",
+  "text": "[What did not work, why, and what it means for the next iteration of the system, up to 150 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long source",
+  "kind": "template",
+  "text": "SOURCE // [STUDY OR DATASET], N = [N]",
+  "font": "mono",
+  "pt": 24,
+  "w": 13.25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long section 04",
+  "kind": "template",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long conclusions 1",
+  "kind": "template",
+  "text": "[Takeaway 1: the claim the evidence supports, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long conclusions 2",
+  "kind": "template",
+  "text": "[Takeaway 2: what it means for design or practice]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long conclusions 3",
+  "kind": "template",
+  "text": "[Limitation that bounds the claim]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long section 05",
+  "kind": "template",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long future 1",
+  "kind": "template",
+  "text": "[Next experiment or system iteration]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long future 2",
+  "kind": "template",
+  "text": "[Open question the community should take up]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long future 3",
+  "kind": "template",
+  "text": "[Dataset, code or deployment plan]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long label REFERENCES",
+  "kind": "template",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long references 1",
+  "kind": "template",
+  "text": "[1] [A. Author, B. Author and C. Author], \"[Title of the paper],\" in [Proc. Conference], [City], [Year], pp. [1-8].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long references 2",
+  "kind": "template",
+  "text": "[2] [A. Author and B. Author], \"[Title of the article],\" [Journal], vol. [N], no. [N], pp. [1-12], [Year].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long references 3",
+  "kind": "template",
+  "text": "[3] [A. Author], \"[Title of the paper],\" in [Proc. Conference], [Year], pp. [1-6].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long label ACKNOWLEDGMENT",
+  "kind": "template",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long acknowledgments",
+  "kind": "template",
+  "text": "[Collaborators, participants and facilities.] This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.5,
+  "tracking": 0,
+  "maxLines": 9
+ },
+ {
+  "label": "landscape/long contact",
+  "kind": "template",
+  "text": "[Presenter Name]  ·  [presenter@kent.edu]  ·  Advanced Telerobotics Research Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long contact 2",
+  "kind": "template",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long stamp",
+  "kind": "template",
+  "text": "ATR LAB  //  [VENUE]  //  [YYYY-MM-DD]",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard eyebrow",
+  "kind": "template",
+  "text": "[VENUE SHORT NAME]  ·  [CITY]  ·  [MON. DD, YYYY]",
+  "font": "bold",
+  "pt": 32,
+  "w": 28,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard title",
+  "kind": "template",
+  "text": "[Poster title: the main finding in one or two lines]",
+  "font": "bold",
+  "pt": 96,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard authors",
+  "kind": "template",
+  "text": "[First Author]1, [Second Author]2, [Third Author]1 and [Faculty Mentor]1",
+  "font": "bold",
+  "pt": 48,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard affiliations 1",
+  "kind": "template",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard affiliations 2",
+  "kind": "template",
+  "text": "2 [Second affiliation, if any]",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard qr label",
+  "kind": "template",
+  "text": "[THE PAPER]",
+  "font": "mono",
+  "pt": 24,
+  "w": 3.26,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard section 01",
+  "kind": "template",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard lead",
+  "kind": "template",
+  "text": "[One sentence on the problem and why it matters for telepresence, tele-embodiment or Physical AI, up to 150 characters.]",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/standard paragraph",
+  "kind": "template",
+  "text": "[Two or three sentences of context, up to 260 characters: the gap in prior work, the setting and the research question. Keep about one fifth of the poster as text and let the figures carry the argument.]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "landscape/standard section 02",
+  "kind": "template",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard approach 1",
+  "kind": "template",
+  "text": "[System or method: what was built and how it works, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard approach 2",
+  "kind": "template",
+  "text": "[Study design: participants, tasks, conditions and measures]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard approach 3",
+  "kind": "template",
+  "text": "[Analysis: statistics, models or metrics used]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard panel hint 01",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard caption1",
+  "kind": "template",
+  "text": "FIG. 01 // [System overview: replace with an architecture diagram or a labeled photo of the setup.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard section 03",
+  "kind": "template",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard panel hint 02",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard captionA",
+  "kind": "template",
+  "text": "FIG. 02 // [Main result: a plot from atr_plot.py at 300 dpi, legend on the plot, units on the axes.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard panel hint 03",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard captionB",
+  "kind": "template",
+  "text": "FIG. 03 // [Second result or a photo of the robot in the task; caption a concept illustration as such.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard stat numeral",
+  "kind": "template",
+  "text": "[38%]",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard stat label",
+  "kind": "template",
+  "text": "[What the number means: the metric, the comparison, n and the test, up to 105 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/standard findings 1",
+  "kind": "template",
+  "text": "[Finding 1: the effect, its direction and size, with the statistic, the confidence interval and n]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 2",
+  "kind": "template",
+  "text": "[Finding 2: the comparison the figures show, and how large the difference is in task terms]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 3",
+  "kind": "template",
+  "text": "[Finding 3: robustness across participants, failure modes or timing, with the numbers]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 4",
+  "kind": "template",
+  "text": "[What did not work, why, and what it means for the next iteration of the system, up to 150 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard source",
+  "kind": "template",
+  "text": "SOURCE // [STUDY OR DATASET], N = [N]",
+  "font": "mono",
+  "pt": 24,
+  "w": 13.25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard section 04",
+  "kind": "template",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard conclusions 1",
+  "kind": "template",
+  "text": "[Takeaway 1: the claim the evidence supports, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard conclusions 2",
+  "kind": "template",
+  "text": "[Takeaway 2: what it means for design or practice]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard conclusions 3",
+  "kind": "template",
+  "text": "[Limitation that bounds the claim]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard section 05",
+  "kind": "template",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard future 1",
+  "kind": "template",
+  "text": "[Next experiment or system iteration]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard future 2",
+  "kind": "template",
+  "text": "[Open question the community should take up]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard future 3",
+  "kind": "template",
+  "text": "[Dataset, code or deployment plan]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard label REFERENCES",
+  "kind": "template",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard references 1",
+  "kind": "template",
+  "text": "[1] [A. Author, B. Author and C. Author], \"[Title of the paper],\" in [Proc. Conference], [City], [Year], pp. [1-8].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard references 2",
+  "kind": "template",
+  "text": "[2] [A. Author and B. Author], \"[Title of the article],\" [Journal], vol. [N], no. [N], pp. [1-12], [Year].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard references 3",
+  "kind": "template",
+  "text": "[3] [A. Author], \"[Title of the paper],\" in [Proc. Conference], [Year], pp. [1-6].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard label ACKNOWLEDGMENT",
+  "kind": "template",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard acknowledgments",
+  "kind": "template",
+  "text": "[Collaborators, participants and facilities.] This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.5,
+  "tracking": 0,
+  "maxLines": 9
+ },
+ {
+  "label": "landscape/standard contact",
+  "kind": "template",
+  "text": "[Presenter Name]  ·  [presenter@kent.edu]  ·  Advanced Telerobotics Research Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard contact 2",
+  "kind": "template",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard stamp",
+  "kind": "template",
+  "text": "ATR LAB  //  [VENUE]  //  [YYYY-MM-DD]",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard eyebrow",
+  "kind": "template",
+  "text": "[VENUE SHORT NAME]  ·  [CITY]  ·  [MON. DD, YYYY]",
+  "font": "bold",
+  "pt": 32,
+  "w": 25,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard title",
+  "kind": "template",
+  "text": "[Poster title: the main finding in one or two lines]",
+  "font": "bold",
+  "pt": 96,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard authors",
+  "kind": "template",
+  "text": "[First Author]1, [Second Author]2, [Third Author]1 and [Faculty Mentor]1",
+  "font": "bold",
+  "pt": 48,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard affiliations 1",
+  "kind": "template",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard affiliations 2",
+  "kind": "template",
+  "text": "2 [Second affiliation, if any]",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard qr label",
+  "kind": "template",
+  "text": "SCAN FOR [THE PAPER]",
+  "font": "mono",
+  "pt": 24,
+  "w": 8.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard section 01",
+  "kind": "template",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard lead",
+  "kind": "template",
+  "text": "[One sentence on the problem and why it matters for telepresence, tele-embodiment or Physical AI, up to 150 characters.]",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/standard paragraph",
+  "kind": "template",
+  "text": "[Two or three sentences of context, up to 260 characters: the gap in prior work, the setting and the research question. Keep about one fifth of the poster as text and let the figures carry the argument.]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "portrait/standard section 02",
+  "kind": "template",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard approach 1",
+  "kind": "template",
+  "text": "[System or method: what was built and how it works, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard approach 2",
+  "kind": "template",
+  "text": "[Study design: participants, tasks, conditions and measures]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard approach 3",
+  "kind": "template",
+  "text": "[Analysis: statistics, models or metrics used]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 01",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard caption1",
+  "kind": "template",
+  "text": "FIG. 01 // [System overview: replace with an architecture diagram or a labeled photo of the setup.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 02",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard caption2",
+  "kind": "template",
+  "text": "FIG. 02 // [Study setup: a photo of the real hardware, or a concept illustration captioned as such.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard section 03",
+  "kind": "template",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.067,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard panel hint 03",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard captionA",
+  "kind": "template",
+  "text": "FIG. 03 // [Main result: a plot from atr_plot.py at 300 dpi, legend on the plot, units on the axes.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 04",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard captionB",
+  "kind": "template",
+  "text": "FIG. 04 // [Second result: the comparison that supports the key number, up to 95 characters.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard stat numeral",
+  "kind": "template",
+  "text": "[38%]",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard stat label",
+  "kind": "template",
+  "text": "[What the number means: the metric, the comparison, n and the test, up to 105 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/standard findings 1",
+  "kind": "template",
+  "text": "[Finding 1: the effect, its direction and size, with the statistic, the confidence interval and n]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 2",
+  "kind": "template",
+  "text": "[Finding 2: the comparison the figures show, and how large the difference is in task terms]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 3",
+  "kind": "template",
+  "text": "[Finding 3: robustness across participants, failure modes or timing, with the numbers]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 4",
+  "kind": "template",
+  "text": "[What did not work, why, and what it means for the next iteration of the system, up to 150 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard source",
+  "kind": "template",
+  "text": "SOURCE // [STUDY OR DATASET], N = [N]",
+  "font": "mono",
+  "pt": 24,
+  "w": 12.917,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard section 04",
+  "kind": "template",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard conclusions 1",
+  "kind": "template",
+  "text": "[Takeaway 1: the claim the evidence supports, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard conclusions 2",
+  "kind": "template",
+  "text": "[Takeaway 2: what it means for design or practice]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard conclusions 3",
+  "kind": "template",
+  "text": "[Limitation that bounds the claim]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard section 05",
+  "kind": "template",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard future 1",
+  "kind": "template",
+  "text": "[Next experiment or system iteration]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard future 2",
+  "kind": "template",
+  "text": "[Dataset, code or deployment plan]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard label REFERENCES",
+  "kind": "template",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard references 1",
+  "kind": "template",
+  "text": "[1] [A. Author, B. Author and C. Author], \"[Title of the paper],\" in [Proc. Conference], [City], [Year], pp. [1-8].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard references 2",
+  "kind": "template",
+  "text": "[2] [A. Author and B. Author], \"[Title of the article],\" [Journal], vol. [N], no. [N], pp. [1-12], [Year].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard references 3",
+  "kind": "template",
+  "text": "[3] [A. Author], \"[Title of the paper],\" in [Proc. Conference], [Year], pp. [1-6].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard label ACKNOWLEDGMENT",
+  "kind": "template",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard acknowledgments",
+  "kind": "template",
+  "text": "[Collaborators, participants and facilities.] This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.333,
+  "tracking": 0,
+  "maxLines": 14
+ },
+ {
+  "label": "portrait/standard contact",
+  "kind": "template",
+  "text": "[Presenter Name]  ·  [presenter@kent.edu]  ·  ATR Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard contact 2",
+  "kind": "template",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard stamp",
+  "kind": "template",
+  "text": "ATR LAB  //  [VENUE]  //  [YYYY-MM-DD]",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long eyebrow",
+  "kind": "template",
+  "text": "[VENUE SHORT NAME]  ·  [CITY]  ·  [MON. DD, YYYY]",
+  "font": "bold",
+  "pt": 32,
+  "w": 25,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long title",
+  "kind": "template",
+  "text": "[Poster title on up to three lines at 80 pt: the main finding and the number behind it, 115 characters]",
+  "font": "bold",
+  "pt": 80,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long authors",
+  "kind": "template",
+  "text": "[First Author]1, [Second Author]2, [Third Author]1, [Fourth Author]3, [Fifth Author]2, [Sixth Author]1 and [Faculty Mentor]1",
+  "font": "bold",
+  "pt": 48,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long affiliations 1",
+  "kind": "template",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long affiliations 2",
+  "kind": "template",
+  "text": "2 [Second affiliation: department, university, city, state, country]",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long affiliations 3",
+  "kind": "template",
+  "text": "3 [Third affiliation, if any]",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long qr label",
+  "kind": "template",
+  "text": "SCAN FOR [THE PAPER]",
+  "font": "mono",
+  "pt": 24,
+  "w": 8.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long section 01",
+  "kind": "template",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long lead",
+  "kind": "template",
+  "text": "[One sentence on the problem and why it matters for telepresence, tele-embodiment or Physical AI, up to 150 characters.]",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/long paragraph",
+  "kind": "template",
+  "text": "[Two or three sentences of context, up to 260 characters: the gap in prior work, the setting and the research question. Keep about one fifth of the poster as text and let the figures carry the argument.]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "portrait/long section 02",
+  "kind": "template",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long approach 1",
+  "kind": "template",
+  "text": "[System or method: what was built and how it works, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long approach 2",
+  "kind": "template",
+  "text": "[Study design: participants, tasks, conditions and measures]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long approach 3",
+  "kind": "template",
+  "text": "[Analysis: statistics, models or metrics used]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long panel hint 01",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long caption1",
+  "kind": "template",
+  "text": "FIG. 01 // [System overview: replace with an architecture diagram or a labeled photo of the setup.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long panel hint 02",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long caption2",
+  "kind": "template",
+  "text": "FIG. 02 // [Study setup: a photo of the real hardware, or a concept illustration captioned as such.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long section 03",
+  "kind": "template",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.067,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long panel hint 03",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long captionA",
+  "kind": "template",
+  "text": "FIG. 03 // [Main result: a plot from atr_plot.py at 300 dpi, legend on the plot, units on the axes.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long panel hint 04",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long captionB",
+  "kind": "template",
+  "text": "FIG. 04 // [Second result: the comparison that supports the key number, up to 95 characters.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long stat numeral",
+  "kind": "template",
+  "text": "[38%]",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long stat label",
+  "kind": "template",
+  "text": "[What the number means: the metric, the comparison, n and the test, up to 105 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/long findings 1",
+  "kind": "template",
+  "text": "[Finding 1: the effect, its direction and size, with the statistic, the confidence interval and n]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long findings 2",
+  "kind": "template",
+  "text": "[Finding 2: the comparison the figures show, and how large the difference is in task terms]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long findings 3",
+  "kind": "template",
+  "text": "[Finding 3: robustness across participants, failure modes or timing, with the numbers]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long findings 4",
+  "kind": "template",
+  "text": "[What did not work, why, and what it means for the next iteration of the system, up to 150 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long source",
+  "kind": "template",
+  "text": "SOURCE // [STUDY OR DATASET], N = [N]",
+  "font": "mono",
+  "pt": 24,
+  "w": 12.917,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long section 04",
+  "kind": "template",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long conclusions 1",
+  "kind": "template",
+  "text": "[Takeaway 1: the claim the evidence supports, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long conclusions 2",
+  "kind": "template",
+  "text": "[Takeaway 2: what it means for design or practice]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long conclusions 3",
+  "kind": "template",
+  "text": "[Limitation that bounds the claim]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long section 05",
+  "kind": "template",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long future 1",
+  "kind": "template",
+  "text": "[Next experiment or system iteration]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long future 2",
+  "kind": "template",
+  "text": "[Dataset, code or deployment plan]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long label REFERENCES",
+  "kind": "template",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long references 1",
+  "kind": "template",
+  "text": "[1] [A. Author, B. Author and C. Author], \"[Title of the paper],\" in [Proc. Conference], [City], [Year], pp. [1-8].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long references 2",
+  "kind": "template",
+  "text": "[2] [A. Author and B. Author], \"[Title of the article],\" [Journal], vol. [N], no. [N], pp. [1-12], [Year].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long references 3",
+  "kind": "template",
+  "text": "[3] [A. Author], \"[Title of the paper],\" in [Proc. Conference], [Year], pp. [1-6].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long label ACKNOWLEDGMENT",
+  "kind": "template",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long acknowledgments",
+  "kind": "template",
+  "text": "[Collaborators, participants and facilities.] This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.333,
+  "tracking": 0,
+  "maxLines": 14
+ },
+ {
+  "label": "portrait/long contact",
+  "kind": "template",
+  "text": "[Presenter Name]  ·  [presenter@kent.edu]  ·  ATR Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long contact 2",
+  "kind": "template",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long stamp",
+  "kind": "template",
+  "text": "ATR LAB  //  [VENUE]  //  [YYYY-MM-DD]",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard eyebrow",
+  "kind": "template",
+  "text": "[VENUE SHORT NAME]  ·  [CITY]  ·  [MON. DD, YYYY]",
+  "font": "bold",
+  "pt": 32,
+  "w": 25,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard title",
+  "kind": "template",
+  "text": "[Poster title: the main finding in one or two lines]",
+  "font": "bold",
+  "pt": 96,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard authors",
+  "kind": "template",
+  "text": "[First Author]1, [Second Author]2, [Third Author]1 and [Faculty Mentor]1",
+  "font": "bold",
+  "pt": 48,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard affiliations 1",
+  "kind": "template",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard affiliations 2",
+  "kind": "template",
+  "text": "2 [Second affiliation, if any]",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard qr label",
+  "kind": "template",
+  "text": "SCAN FOR [THE PAPER]",
+  "font": "mono",
+  "pt": 24,
+  "w": 8.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard section 01",
+  "kind": "template",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard lead",
+  "kind": "template",
+  "text": "[One sentence on the problem and why it matters for telepresence, tele-embodiment or Physical AI, up to 150 characters.]",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/standard paragraph",
+  "kind": "template",
+  "text": "[Two or three sentences of context, up to 260 characters: the gap in prior work, the setting and the research question. Keep about one fifth of the poster as text and let the figures carry the argument.]",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "portrait/standard section 02",
+  "kind": "template",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard approach 1",
+  "kind": "template",
+  "text": "[System or method: what was built and how it works, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard approach 2",
+  "kind": "template",
+  "text": "[Study design: participants, tasks, conditions and measures]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard approach 3",
+  "kind": "template",
+  "text": "[Analysis: statistics, models or metrics used]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 01",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard caption1",
+  "kind": "template",
+  "text": "FIG. 01 // [System overview: replace with an architecture diagram or a labeled photo of the setup.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 02",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard caption2",
+  "kind": "template",
+  "text": "FIG. 02 // [Study setup: a photo of the real hardware, or a concept illustration captioned as such.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard section 03",
+  "kind": "template",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.067,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard panel hint 03",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard captionA",
+  "kind": "template",
+  "text": "FIG. 03 // [Main result: a plot from atr_plot.py at 300 dpi, legend on the plot, units on the axes.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 04",
+  "kind": "template",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard captionB",
+  "kind": "template",
+  "text": "FIG. 04 // [Second result: the comparison that supports the key number, up to 95 characters.]",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard stat numeral",
+  "kind": "template",
+  "text": "[38%]",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard stat label",
+  "kind": "template",
+  "text": "[What the number means: the metric, the comparison, n and the test, up to 105 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/standard findings 1",
+  "kind": "template",
+  "text": "[Finding 1: the effect, its direction and size, with the statistic, the confidence interval and n]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 2",
+  "kind": "template",
+  "text": "[Finding 2: the comparison the figures show, and how large the difference is in task terms]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 3",
+  "kind": "template",
+  "text": "[Finding 3: robustness across participants, failure modes or timing, with the numbers]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 4",
+  "kind": "template",
+  "text": "[What did not work, why, and what it means for the next iteration of the system, up to 150 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard source",
+  "kind": "template",
+  "text": "SOURCE // [STUDY OR DATASET], N = [N]",
+  "font": "mono",
+  "pt": 24,
+  "w": 12.917,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard section 04",
+  "kind": "template",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard conclusions 1",
+  "kind": "template",
+  "text": "[Takeaway 1: the claim the evidence supports, up to 85 characters]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard conclusions 2",
+  "kind": "template",
+  "text": "[Takeaway 2: what it means for design or practice]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard conclusions 3",
+  "kind": "template",
+  "text": "[Limitation that bounds the claim]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard section 05",
+  "kind": "template",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard future 1",
+  "kind": "template",
+  "text": "[Next experiment or system iteration]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard future 2",
+  "kind": "template",
+  "text": "[Dataset, code or deployment plan]",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard label REFERENCES",
+  "kind": "template",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard references 1",
+  "kind": "template",
+  "text": "[1] [A. Author, B. Author and C. Author], \"[Title of the paper],\" in [Proc. Conference], [City], [Year], pp. [1-8].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard references 2",
+  "kind": "template",
+  "text": "[2] [A. Author and B. Author], \"[Title of the article],\" [Journal], vol. [N], no. [N], pp. [1-12], [Year].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard references 3",
+  "kind": "template",
+  "text": "[3] [A. Author], \"[Title of the paper],\" in [Proc. Conference], [Year], pp. [1-6].",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard label ACKNOWLEDGMENT",
+  "kind": "template",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard acknowledgments",
+  "kind": "template",
+  "text": "[Collaborators, participants and facilities.] This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.333,
+  "tracking": 0,
+  "maxLines": 14
+ },
+ {
+  "label": "portrait/standard contact",
+  "kind": "template",
+  "text": "[Presenter Name]  ·  [presenter@kent.edu]  ·  ATR Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard contact 2",
+  "kind": "template",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard stamp",
+  "kind": "template",
+  "text": "ATR LAB  //  [VENUE]  //  [YYYY-MM-DD]",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard eyebrow",
+  "kind": "stress",
+  "text": "CONFERENCE ON INTELLIGENT ROBOTS  ·  KENT, OHIO  ·  SEPT. 3, 2026",
+  "font": "bold",
+  "pt": 32,
+  "w": 28,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard title",
+  "kind": "stress",
+  "text": "Gesture-enabled telepresence control keeps remote manipulation time",
+  "font": "bold",
+  "pt": 96,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard authors",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez1 and Faculty Mentor Name1",
+  "font": "bold",
+  "pt": 48,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard affiliations 1",
+  "kind": "stress",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard affiliations 2",
+  "kind": "stress",
+  "text": "2 Department of Mechanical Engineering, Example State University, Columbus, Ohio, USA, and the Example Clinic",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard qr label",
+  "kind": "stress",
+  "text": "THE PAPER",
+  "font": "mono",
+  "pt": 24,
+  "w": 3.26,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard section 01",
+  "kind": "stress",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard lead",
+  "kind": "stress",
+  "text": "Remote operators of telepresence robots lose situational awareness and slow down when network latency exceeds 200 ms, which limits tele-embodiment for",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/standard paragraph",
+  "kind": "stress",
+  "text": "Prior work compensates for latency with predictive display or shared autonomy, but both assume a joystick or keyboard interface. Gesture interfaces are more natural for novice operators, yet their robustness under latency has not been measured. We ask whether",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "landscape/standard section 02",
+  "kind": "stress",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard approach 1",
+  "kind": "stress",
+  "text": "A gesture-enabled telepresence robot with a stereo camera head, a 6-DoF arm and an",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard approach 2",
+  "kind": "stress",
+  "text": "Within-subjects study with 24 participants, three latency conditions (50, 150 and 300",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard approach 3",
+  "kind": "stress",
+  "text": "Mixed-effects models on completion time and error rate, NASA-TLX workload, and a",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard panel hint 01",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard caption1",
+  "kind": "stress",
+  "text": "FIG. 01 // System overview: the operator station, the network emulator and the robot with its on-board",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard section 03",
+  "kind": "stress",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard panel hint 02",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard captionA",
+  "kind": "stress",
+  "text": "FIG. 02 // Mean task completion time by latency condition and interface, with 95 percent confidence",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard panel hint 03",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard captionB",
+  "kind": "stress",
+  "text": "FIG. 03 // Error rate by latency condition and interface; wrong-object grasps counted as errors, with 95",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard stat numeral",
+  "kind": "stress",
+  "text": "38%",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard stat label",
+  "kind": "stress",
+  "text": "Lower mean task time than the joystick baseline at 300 ms latency, paired t-test, p < 0.01, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/standard findings 1",
+  "kind": "stress",
+  "text": "Task completion time fell by 38 percent at 300 ms latency with intent prediction (paired t-test, p < 0.01, 95 percent CI 31 to 44 percent, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 2",
+  "kind": "stress",
+  "text": "The advantage grew with latency: at 50 ms the interfaces were indistinguishable, at 150 ms the gap was 14 percent and at 300 ms it reached 38 percent",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 3",
+  "kind": "stress",
+  "text": "Twenty-one of 24 participants were faster with gesture control in every latency condition; the three exceptions had prior joystick teleoperation",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard findings 4",
+  "kind": "stress",
+  "text": "Prediction failed on cluttered scenes with more than four candidate objects, producing wrong pre-shaped grasps in 9 percent of trials, so the next",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/standard source",
+  "kind": "stress",
+  "text": "SOURCE // LATENCY STUDY, SPRING 2026, N = 24",
+  "font": "mono",
+  "pt": 24,
+  "w": 13.25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard section 04",
+  "kind": "stress",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard conclusions 1",
+  "kind": "stress",
+  "text": "Local intent prediction makes gesture teleoperation robust to latency up to 300 ms",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard conclusions 2",
+  "kind": "stress",
+  "text": "Telepresence systems for care and inspection should predict intent on the robot",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard conclusions 3",
+  "kind": "stress",
+  "text": "A single task family, laboratory network emulation and a student sample bound the",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard section 05",
+  "kind": "stress",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard future 1",
+  "kind": "stress",
+  "text": "Field study with three home-care operators over four weeks on a consumer network with",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard future 2",
+  "kind": "stress",
+  "text": "Whether shared autonomy and intent prediction interact, or whether one subsumes the",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard future 3",
+  "kind": "stress",
+  "text": "Release of the 1,728-trial dataset, the ROS 2 intent-prediction package and the study",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard label REFERENCES",
+  "kind": "stress",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard references 1",
+  "kind": "stress",
+  "text": "[1] A. Author, B. Author and C. Author, \"Intent prediction for latency-tolerant gesture teleoperation of mobile",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard references 2",
+  "kind": "stress",
+  "text": "[2] D. Author and E. Author, \"Measuring operator workload in immersive teleoperation: a systematic review,\" IEEE",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard references 3",
+  "kind": "stress",
+  "text": "[3] F. Author, \"Gesture-enabled telepresence robots for remote care,\" in Proc. ACM/IEEE Int. Conf. Human-Robot",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/standard label ACKNOWLEDGMENT",
+  "kind": "stress",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard acknowledgments",
+  "kind": "stress",
+  "text": "We thank the participants and the department machine shop. This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.5,
+  "tracking": 0,
+  "maxLines": 9
+ },
+ {
+  "label": "landscape/standard contact",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez  ·  akowalcz@kent.edu  ·  Advanced Telerobotics Research Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard contact 2",
+  "kind": "stress",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/standard stamp",
+  "kind": "stress",
+  "text": "ATR LAB  //  IROS 2026, PITTSBURGH  //  2026-09-03",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long eyebrow",
+  "kind": "stress",
+  "text": "CONFERENCE ON INTELLIGENT ROBOTS  ·  KENT, OHIO  ·  SEPT. 3, 2026",
+  "font": "bold",
+  "pt": 32,
+  "w": 28,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long title",
+  "kind": "stress",
+  "text": "Gesture-enabled telepresence control keeps remote manipulation time under 300 ms of network latency in a 24-participant",
+  "font": "bold",
+  "pt": 80,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long authors",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez1, Muhammad Abdul-Rahman2, Priyanka Venkataraman3, Jonathan Whitfield-Okonkwo1 and Faculty Mentor Name1",
+  "font": "bold",
+  "pt": 48,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long affiliations 1",
+  "kind": "stress",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long affiliations 2",
+  "kind": "stress",
+  "text": "2 Department of Mechanical Engineering, Example State University, Columbus, Ohio, USA, and the Example Clinic",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long affiliations 3",
+  "kind": "stress",
+  "text": "3 School of Computing and Information, Example University of the Midwest, Chicago, Illinois, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 28,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long qr label",
+  "kind": "stress",
+  "text": "THE PAPER",
+  "font": "mono",
+  "pt": 24,
+  "w": 3.26,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long section 01",
+  "kind": "stress",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long lead",
+  "kind": "stress",
+  "text": "Remote operators of telepresence robots lose situational awareness and slow down when network latency exceeds 200 ms, which limits tele-embodiment for",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/long paragraph",
+  "kind": "stress",
+  "text": "Prior work compensates for latency with predictive display or shared autonomy, but both assume a joystick or keyboard interface. Gesture interfaces are more natural for novice operators, yet their robustness under latency has not been measured. We ask whether",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "landscape/long section 02",
+  "kind": "stress",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long approach 1",
+  "kind": "stress",
+  "text": "A gesture-enabled telepresence robot with a stereo camera head, a 6-DoF arm and an",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long approach 2",
+  "kind": "stress",
+  "text": "Within-subjects study with 24 participants, three latency conditions (50, 150 and 300",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long approach 3",
+  "kind": "stress",
+  "text": "Mixed-effects models on completion time and error rate, NASA-TLX workload, and a",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long panel hint 01",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long caption1",
+  "kind": "stress",
+  "text": "FIG. 01 // System overview: the operator station, the network emulator and the robot with its on-board",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long section 03",
+  "kind": "stress",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long panel hint 02",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long captionA",
+  "kind": "stress",
+  "text": "FIG. 02 // Mean task completion time by latency condition and interface, with 95 percent confidence",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long panel hint 03",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 9,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long captionB",
+  "kind": "stress",
+  "text": "FIG. 03 // Error rate by latency condition and interface; wrong-object grasps counted as errors, with 95",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long stat numeral",
+  "kind": "stress",
+  "text": "38%",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long stat label",
+  "kind": "stress",
+  "text": "Lower mean task time than the joystick baseline at 300 ms latency, paired t-test, p < 0.01, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "landscape/long findings 1",
+  "kind": "stress",
+  "text": "Task completion time fell by 38 percent at 300 ms latency with intent prediction (paired t-test, p < 0.01, 95 percent CI 31 to 44 percent, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long findings 2",
+  "kind": "stress",
+  "text": "The advantage grew with latency: at 50 ms the interfaces were indistinguishable, at 150 ms the gap was 14 percent and at 300 ms it reached 38 percent",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long findings 3",
+  "kind": "stress",
+  "text": "Twenty-one of 24 participants were faster with gesture control in every latency condition; the three exceptions had prior joystick teleoperation",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long findings 4",
+  "kind": "stress",
+  "text": "Prediction failed on cluttered scenes with more than four candidate objects, producing wrong pre-shaped grasps in 9 percent of trials, so the next",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.75,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "landscape/long source",
+  "kind": "stress",
+  "text": "SOURCE // LATENCY STUDY, SPRING 2026, N = 24",
+  "font": "mono",
+  "pt": 24,
+  "w": 13.25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long section 04",
+  "kind": "stress",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long conclusions 1",
+  "kind": "stress",
+  "text": "Local intent prediction makes gesture teleoperation robust to latency up to 300 ms",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long conclusions 2",
+  "kind": "stress",
+  "text": "Telepresence systems for care and inspection should predict intent on the robot",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long conclusions 3",
+  "kind": "stress",
+  "text": "A single task family, laboratory network emulation and a student sample bound the",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long section 05",
+  "kind": "stress",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.9,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long future 1",
+  "kind": "stress",
+  "text": "Field study with three home-care operators over four weeks on a consumer network with",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long future 2",
+  "kind": "stress",
+  "text": "Whether shared autonomy and intent prediction interact, or whether one subsumes the",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long future 3",
+  "kind": "stress",
+  "text": "Release of the 1,728-trial dataset, the ROS 2 intent-prediction package and the study",
+  "font": "reg",
+  "pt": 32,
+  "w": 10,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long label REFERENCES",
+  "kind": "stress",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long references 1",
+  "kind": "stress",
+  "text": "[1] A. Author, B. Author and C. Author, \"Intent prediction for latency-tolerant gesture teleoperation of mobile",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long references 2",
+  "kind": "stress",
+  "text": "[2] D. Author and E. Author, \"Measuring operator workload in immersive teleoperation: a systematic review,\" IEEE",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long references 3",
+  "kind": "stress",
+  "text": "[3] F. Author, \"Gesture-enabled telepresence robots for remote care,\" in Proc. ACM/IEEE Int. Conf. Human-Robot",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.5,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "landscape/long label ACKNOWLEDGMENT",
+  "kind": "stress",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.5,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long acknowledgments",
+  "kind": "stress",
+  "text": "We thank the participants and the department machine shop. This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.5,
+  "tracking": 0,
+  "maxLines": 9
+ },
+ {
+  "label": "landscape/long contact",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez  ·  akowalcz@kent.edu  ·  Advanced Telerobotics Research Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long contact 2",
+  "kind": "stress",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 33,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "landscape/long stamp",
+  "kind": "stress",
+  "text": "ATR LAB  //  IROS 2026, PITTSBURGH  //  2026-09-03",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard eyebrow",
+  "kind": "stress",
+  "text": "CONFERENCE ON INTELLIGENT ROBOTS  ·  KENT, OHIO  ·  SEPT. 3, 2026",
+  "font": "bold",
+  "pt": 32,
+  "w": 25,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard title",
+  "kind": "stress",
+  "text": "Gesture-enabled telepresence control keeps remote manipulation",
+  "font": "bold",
+  "pt": 96,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard authors",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez1 and Faculty Mentor Name1",
+  "font": "bold",
+  "pt": 48,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard affiliations 1",
+  "kind": "stress",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard affiliations 2",
+  "kind": "stress",
+  "text": "2 Department of Mechanical Engineering, Example State University, Columbus, Ohio, USA, and the Example",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard qr label",
+  "kind": "stress",
+  "text": "SCAN FOR THE PAPER",
+  "font": "mono",
+  "pt": 24,
+  "w": 8.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard section 01",
+  "kind": "stress",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard lead",
+  "kind": "stress",
+  "text": "Remote operators of telepresence robots lose situational awareness and slow down when network latency exceeds 200 ms, which limits tele-embodiment for",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/standard paragraph",
+  "kind": "stress",
+  "text": "Prior work compensates for latency with predictive display or shared autonomy, but both assume a joystick or keyboard interface. Gesture interfaces are more natural for novice operators, yet their robustness under latency has not been measured. We ask whether",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "portrait/standard section 02",
+  "kind": "stress",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard approach 1",
+  "kind": "stress",
+  "text": "A gesture-enabled telepresence robot with a stereo camera head, a 6-DoF arm and an",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard approach 2",
+  "kind": "stress",
+  "text": "Within-subjects study with 24 participants, three latency conditions (50, 150 and 300",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard approach 3",
+  "kind": "stress",
+  "text": "Mixed-effects models on completion time and error rate, NASA-TLX workload, and a",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 01",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard caption1",
+  "kind": "stress",
+  "text": "FIG. 01 // System overview: the operator station, the network emulator and the robot with its on-board",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 02",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard caption2",
+  "kind": "stress",
+  "text": "FIG. 02 // Study setup: the pick-and-place arena, the three latency conditions and the two interfaces the",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard section 03",
+  "kind": "stress",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.067,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard panel hint 03",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard captionA",
+  "kind": "stress",
+  "text": "FIG. 03 // Mean task completion time by latency condition and interface, with 95 percent confidence",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard panel hint 04",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard captionB",
+  "kind": "stress",
+  "text": "FIG. 04 // Error rate by latency condition and interface; wrong-object grasps counted as errors, with 95",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard stat numeral",
+  "kind": "stress",
+  "text": "38%",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard stat label",
+  "kind": "stress",
+  "text": "Lower mean task time than the joystick baseline at 300 ms latency, paired t-test, p < 0.01, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/standard findings 1",
+  "kind": "stress",
+  "text": "Task completion time fell by 38 percent at 300 ms latency with intent prediction (paired t-test, p < 0.01, 95 percent CI 31 to 44 percent, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 2",
+  "kind": "stress",
+  "text": "The advantage grew with latency: at 50 ms the interfaces were indistinguishable, at 150 ms the gap was 14 percent and at 300 ms it reached 38 percent",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 3",
+  "kind": "stress",
+  "text": "Twenty-one of 24 participants were faster with gesture control in every latency condition; the three exceptions had prior joystick teleoperation",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard findings 4",
+  "kind": "stress",
+  "text": "Prediction failed on cluttered scenes with more than four candidate objects, producing wrong pre-shaped grasps in 9 percent of trials, so the next",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/standard source",
+  "kind": "stress",
+  "text": "SOURCE // LATENCY STUDY, SPRING 2026, N = 24",
+  "font": "mono",
+  "pt": 24,
+  "w": 12.917,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard section 04",
+  "kind": "stress",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard conclusions 1",
+  "kind": "stress",
+  "text": "Local intent prediction makes gesture teleoperation robust to latency up to 300 ms",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard conclusions 2",
+  "kind": "stress",
+  "text": "Telepresence systems for care and inspection should predict intent on the robot",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard conclusions 3",
+  "kind": "stress",
+  "text": "A single task family, laboratory network emulation and a student sample bound the",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard section 05",
+  "kind": "stress",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard future 1",
+  "kind": "stress",
+  "text": "Field study with three home-care operators over four weeks on a consumer network with",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard future 2",
+  "kind": "stress",
+  "text": "Whether shared autonomy and intent prediction interact, or whether one subsumes the",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard label REFERENCES",
+  "kind": "stress",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard references 1",
+  "kind": "stress",
+  "text": "[1] A. Author, B. Author and C. Author, \"Intent prediction for latency-tolerant gesture teleoperation of mobile",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard references 2",
+  "kind": "stress",
+  "text": "[2] D. Author and E. Author, \"Measuring operator workload in immersive teleoperation: a systematic review,\" IEEE",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard references 3",
+  "kind": "stress",
+  "text": "[3] F. Author, \"Gesture-enabled telepresence robots for remote care,\" in Proc. ACM/IEEE Int. Conf. Human-Robot",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/standard label ACKNOWLEDGMENT",
+  "kind": "stress",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard acknowledgments",
+  "kind": "stress",
+  "text": "We thank the participants and the department machine shop. This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.333,
+  "tracking": 0,
+  "maxLines": 14
+ },
+ {
+  "label": "portrait/standard contact",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez  ·  akowalcz@kent.edu  ·  ATR Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard contact 2",
+  "kind": "stress",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/standard stamp",
+  "kind": "stress",
+  "text": "ATR LAB  //  IROS 2026, PITTSBURGH  //  2026-09-03",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long eyebrow",
+  "kind": "stress",
+  "text": "CONFERENCE ON INTELLIGENT ROBOTS  ·  KENT, OHIO  ·  SEPT. 3, 2026",
+  "font": "bold",
+  "pt": 32,
+  "w": 25,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long title",
+  "kind": "stress",
+  "text": "Gesture-enabled telepresence control keeps remote manipulation time under 300 ms of network latency in a",
+  "font": "bold",
+  "pt": 80,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long authors",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez1, Muhammad Abdul-Rahman2, Priyanka Venkataraman3 and Faculty Mentor Name1",
+  "font": "bold",
+  "pt": 48,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long affiliations 1",
+  "kind": "stress",
+  "text": "1 Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long affiliations 2",
+  "kind": "stress",
+  "text": "2 Department of Mechanical Engineering, Example State University, Columbus, Ohio, USA, and the Example",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long affiliations 3",
+  "kind": "stress",
+  "text": "3 School of Computing and Information, Example University of the Midwest, Chicago, Illinois, USA",
+  "font": "reg",
+  "pt": 32,
+  "w": 25,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long qr label",
+  "kind": "stress",
+  "text": "SCAN FOR THE PAPER",
+  "font": "mono",
+  "pt": 24,
+  "w": 8.4,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long section 01",
+  "kind": "stress",
+  "text": "Motivation",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long lead",
+  "kind": "stress",
+  "text": "Remote operators of telepresence robots lose situational awareness and slow down when network latency exceeds 200 ms, which limits tele-embodiment for",
+  "font": "bold",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/long paragraph",
+  "kind": "stress",
+  "text": "Prior work compensates for latency with predictive display or shared autonomy, but both assume a joystick or keyboard interface. Gesture interfaces are more natural for novice operators, yet their robustness under latency has not been measured. We ask whether",
+  "font": "reg",
+  "pt": 32,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 6
+ },
+ {
+  "label": "portrait/long section 02",
+  "kind": "stress",
+  "text": "Approach",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long approach 1",
+  "kind": "stress",
+  "text": "A gesture-enabled telepresence robot with a stereo camera head, a 6-DoF arm and an",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long approach 2",
+  "kind": "stress",
+  "text": "Within-subjects study with 24 participants, three latency conditions (50, 150 and 300",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long approach 3",
+  "kind": "stress",
+  "text": "Mixed-effects models on completion time and error rate, NASA-TLX workload, and a",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long panel hint 01",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long caption1",
+  "kind": "stress",
+  "text": "FIG. 01 // System overview: the operator station, the network emulator and the robot with its on-board",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long panel hint 02",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long caption2",
+  "kind": "stress",
+  "text": "FIG. 02 // Study setup: the pick-and-place arena, the three latency conditions and the two interfaces the",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long section 03",
+  "kind": "stress",
+  "text": "Results",
+  "font": "bold",
+  "pt": 60,
+  "w": 20.067,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long panel hint 03",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long captionA",
+  "kind": "stress",
+  "text": "FIG. 03 // Mean task completion time by latency condition and interface, with 95 percent confidence",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long panel hint 04",
+  "kind": "stress",
+  "text": "[Drop a figure here: fill the panel edge to edge, 150 dpi or more at this size, no border or shadow]",
+  "font": "reg",
+  "pt": 24,
+  "w": 8.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long captionB",
+  "kind": "stress",
+  "text": "FIG. 04 // Error rate by latency condition and interface; wrong-object grasps counted as errors, with 95",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long stat numeral",
+  "kind": "stress",
+  "text": "38%",
+  "font": "slab",
+  "pt": 144,
+  "w": 6.5,
+  "tracking": -2,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long stat label",
+  "kind": "stress",
+  "text": "Lower mean task time than the joystick baseline at 300 ms latency, paired t-test, p < 0.01, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 6.5,
+  "tracking": 0,
+  "maxLines": 4
+ },
+ {
+  "label": "portrait/long findings 1",
+  "kind": "stress",
+  "text": "Task completion time fell by 38 percent at 300 ms latency with intent prediction (paired t-test, p < 0.01, 95 percent CI 31 to 44 percent, n = 24",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long findings 2",
+  "kind": "stress",
+  "text": "The advantage grew with latency: at 50 ms the interfaces were indistinguishable, at 150 ms the gap was 14 percent and at 300 ms it reached 38 percent",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long findings 3",
+  "kind": "stress",
+  "text": "Twenty-one of 24 participants were faster with gesture control in every latency condition; the three exceptions had prior joystick teleoperation",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long findings 4",
+  "kind": "stress",
+  "text": "Prediction failed on cluttered scenes with more than four candidate objects, producing wrong pre-shaped grasps in 9 percent of trials, so the next",
+  "font": "reg",
+  "pt": 32,
+  "w": 12.417,
+  "tracking": 0,
+  "maxLines": 3
+ },
+ {
+  "label": "portrait/long source",
+  "kind": "stress",
+  "text": "SOURCE // LATENCY STUDY, SPRING 2026, N = 24",
+  "font": "mono",
+  "pt": 24,
+  "w": 12.917,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long section 04",
+  "kind": "stress",
+  "text": "Conclusions",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long conclusions 1",
+  "kind": "stress",
+  "text": "Local intent prediction makes gesture teleoperation robust to latency up to 300 ms",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long conclusions 2",
+  "kind": "stress",
+  "text": "Telepresence systems for care and inspection should predict intent on the robot",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long conclusions 3",
+  "kind": "stress",
+  "text": "A single task family, laboratory network emulation and a student sample bound the",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long section 05",
+  "kind": "stress",
+  "text": "Future work",
+  "font": "bold",
+  "pt": 60,
+  "w": 8.733,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long future 1",
+  "kind": "stress",
+  "text": "Field study with three home-care operators over four weeks on a consumer network with",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long future 2",
+  "kind": "stress",
+  "text": "Whether shared autonomy and intent prediction interact, or whether one subsumes the",
+  "font": "reg",
+  "pt": 32,
+  "w": 9.833,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long label REFERENCES",
+  "kind": "stress",
+  "text": "REFERENCES",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long references 1",
+  "kind": "stress",
+  "text": "[1] A. Author, B. Author and C. Author, \"Intent prediction for latency-tolerant gesture teleoperation of mobile",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long references 2",
+  "kind": "stress",
+  "text": "[2] D. Author and E. Author, \"Measuring operator workload in immersive teleoperation: a systematic review,\" IEEE",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long references 3",
+  "kind": "stress",
+  "text": "[3] F. Author, \"Gesture-enabled telepresence robots for remote care,\" in Proc. ACM/IEEE Int. Conf. Human-Robot",
+  "font": "reg",
+  "pt": 24,
+  "w": 10.333,
+  "tracking": 0,
+  "maxLines": 2
+ },
+ {
+  "label": "portrait/long label ACKNOWLEDGMENT",
+  "kind": "stress",
+  "text": "ACKNOWLEDGMENTS AND FUNDING",
+  "font": "bold",
+  "pt": 28,
+  "w": 10.333,
+  "tracking": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long acknowledgments",
+  "kind": "stress",
+  "text": "We thank the participants and the department machine shop. This material is based upon work supported by the U.S. National Science Foundation under award No. [NNNNNNN]. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation.",
+  "font": "reg",
+  "pt": 24,
+  "w": 7.333,
+  "tracking": 0,
+  "maxLines": 14
+ },
+ {
+  "label": "portrait/long contact",
+  "kind": "stress",
+  "text": "Alexandra Kowalczyk-Fernandez  ·  akowalcz@kent.edu  ·  ATR Lab, Kent State University",
+  "font": "reg",
+  "pt": 32,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long contact 2",
+  "kind": "stress",
+  "text": "www.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+  "font": "reg",
+  "pt": 24,
+  "w": 21,
+  "tracking": 0,
+  "maxLines": 1
+ },
+ {
+  "label": "portrait/long stamp",
+  "kind": "stress",
+  "text": "ATR LAB  //  IROS 2026, PITTSBURGH  //  2026-09-03",
+  "font": "mono",
+  "pt": 24,
+  "w": 11,
+  "tracking": 0,
+  "maxLines": 1
+ }
+]

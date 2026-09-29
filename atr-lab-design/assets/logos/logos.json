@@ -1,0 +1,1331 @@
+{
+ "palette": {
+  "navy": "#003976",
+  "gold": "#EFAB00",
+  "black": "#000000",
+  "white": "#FFFFFF"
+ },
+ "clear_space": {
+  "horizontal": {
+   "X_over_height": 0.329,
+   "X_over_width": 0.1249
+  },
+  "horizontal-short": {
+   "X_over_height": 0.329,
+   "X_over_width": 0.1249
+  },
+  "stacked": {
+   "X_over_height": 0.2359,
+   "X_over_width": 0.3169
+  },
+  "stacked-ksu": {
+   "X_over_height": 0.2159,
+   "X_over_width": 0.2907
+  },
+  "mark": {
+   "X_over_height": 0.3283,
+   "X_over_width": 0.3389
+  },
+  "seal": {
+   "X_over_height": 0.1175,
+   "X_over_width": 0.1213
+  },
+  "badge": {
+   "X_over_height": 0.2087,
+   "X_over_width": 0.2748
+  }
+ },
+ "min_size": {
+  "horizontal": {
+   "dimension": "width",
+   "print_in": 4.0,
+   "screen_px": 620
+  },
+  "horizontal-short": {
+   "dimension": "width",
+   "print_in": 1.25,
+   "screen_px": 180
+  },
+  "stacked": {
+   "dimension": "height",
+   "print_in": 1.0,
+   "screen_px": 140
+  },
+  "stacked-ksu": {
+   "dimension": "height",
+   "print_in": 2.0,
+   "screen_px": 310
+  },
+  "mark": {
+   "dimension": "height",
+   "print_in": 0.25,
+   "screen_px": 24
+  },
+  "seal": {
+   "dimension": "height",
+   "print_in": 1.5,
+   "screen_px": 210
+  },
+  "badge": {
+   "dimension": "height",
+   "print_in": 0.5,
+   "screen_px": 80
+  }
+ },
+ "aspect_w_over_h": {
+  "horizontal": 2.6337,
+  "horizontal-short": 2.6334,
+  "stacked": 0.7443,
+  "stacked-ksu": 0.7426,
+  "mark": 0.9686,
+  "seal": 0.9679,
+  "badge": 0.7592
+ },
+ "backgrounds": {
+  "navy": "white, mist, gold; light, calm photo areas",
+  "black": "white, mist, gold; one-colour black print (fax, laser engraving, newsprint)",
+  "white": "navy, midnight, black; dark, calm photo areas",
+  "gold": "navy, midnight, black; dark photo areas (never white or mist)",
+  "twotone": "white, mist (only at large sizes, see minimum sizes)",
+  "twotone-reverse": "navy, midnight; dark, calm photo areas"
+ },
+ "files": [
+  {
+   "file": "png/atr-horizontal-navy-3000.png",
+   "lockup": "horizontal",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    3000,
+    1139
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-navy-1000.png",
+   "lockup": "horizontal",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-navy.svg",
+   "lockup": "horizontal",
+   "variant": "navy",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.7
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-black-3000.png",
+   "lockup": "horizontal",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    3000,
+    1139
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-black-1000.png",
+   "lockup": "horizontal",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-black.svg",
+   "lockup": "horizontal",
+   "variant": "black",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.7
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-white-3000.png",
+   "lockup": "horizontal",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    3000,
+    1139
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-white-1000.png",
+   "lockup": "horizontal",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-white.svg",
+   "lockup": "horizontal",
+   "variant": "white",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.7
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-twotone-3000.png",
+   "lockup": "horizontal",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    3000,
+    1139
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-twotone-1000.png",
+   "lockup": "horizontal",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-twotone.svg",
+   "lockup": "horizontal",
+   "variant": "twotone",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.7
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-twotone-reverse-3000.png",
+   "lockup": "horizontal",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    3000,
+    1139
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-twotone-reverse-1000.png",
+   "lockup": "horizontal",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-twotone-reverse.svg",
+   "lockup": "horizontal",
+   "variant": "twotone-reverse",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.7
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-navy-3000.png",
+   "lockup": "horizontal-short",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    3000,
+    1140
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-navy-1000.png",
+   "lockup": "horizontal-short",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-short-navy.svg",
+   "lockup": "horizontal-short",
+   "variant": "navy",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.73
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-black-3000.png",
+   "lockup": "horizontal-short",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    3000,
+    1140
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-black-1000.png",
+   "lockup": "horizontal-short",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-short-black.svg",
+   "lockup": "horizontal-short",
+   "variant": "black",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.73
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-white-3000.png",
+   "lockup": "horizontal-short",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    3000,
+    1140
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-white-1000.png",
+   "lockup": "horizontal-short",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-short-white.svg",
+   "lockup": "horizontal-short",
+   "variant": "white",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.73
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-twotone-3000.png",
+   "lockup": "horizontal-short",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    3000,
+    1140
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-twotone-1000.png",
+   "lockup": "horizontal-short",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-short-twotone.svg",
+   "lockup": "horizontal-short",
+   "variant": "twotone",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.73
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-twotone-reverse-3000.png",
+   "lockup": "horizontal-short",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    3000,
+    1140
+   ]
+  },
+  {
+   "file": "png/atr-horizontal-short-twotone-reverse-1000.png",
+   "lockup": "horizontal-short",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    1000,
+    380
+   ]
+  },
+  {
+   "file": "svg/atr-horizontal-short-twotone-reverse.svg",
+   "lockup": "horizontal-short",
+   "variant": "twotone-reverse",
+   "format": "svg",
+   "px": [
+    1000.0,
+    379.73
+   ]
+  },
+  {
+   "file": "png/atr-stacked-navy-3000.png",
+   "lockup": "stacked",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    2233,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-navy-1000.png",
+   "lockup": "stacked",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    745,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-navy.svg",
+   "lockup": "stacked",
+   "variant": "navy",
+   "format": "svg",
+   "px": [
+    744.29,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-black-3000.png",
+   "lockup": "stacked",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    2233,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-black-1000.png",
+   "lockup": "stacked",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    745,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-black.svg",
+   "lockup": "stacked",
+   "variant": "black",
+   "format": "svg",
+   "px": [
+    744.29,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-white-3000.png",
+   "lockup": "stacked",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    2233,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-white-1000.png",
+   "lockup": "stacked",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    745,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-white.svg",
+   "lockup": "stacked",
+   "variant": "white",
+   "format": "svg",
+   "px": [
+    744.29,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-twotone-3000.png",
+   "lockup": "stacked",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    2233,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-twotone-1000.png",
+   "lockup": "stacked",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    745,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-twotone.svg",
+   "lockup": "stacked",
+   "variant": "twotone",
+   "format": "svg",
+   "px": [
+    744.29,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-twotone-reverse-3000.png",
+   "lockup": "stacked",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    2233,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-twotone-reverse-1000.png",
+   "lockup": "stacked",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    745,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-twotone-reverse.svg",
+   "lockup": "stacked",
+   "variant": "twotone-reverse",
+   "format": "svg",
+   "px": [
+    744.29,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-navy-3000.png",
+   "lockup": "stacked-ksu",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    2228,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-navy-1000.png",
+   "lockup": "stacked-ksu",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    743,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-ksu-navy.svg",
+   "lockup": "stacked-ksu",
+   "variant": "navy",
+   "format": "svg",
+   "px": [
+    742.61,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-black-3000.png",
+   "lockup": "stacked-ksu",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    2228,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-black-1000.png",
+   "lockup": "stacked-ksu",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    743,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-ksu-black.svg",
+   "lockup": "stacked-ksu",
+   "variant": "black",
+   "format": "svg",
+   "px": [
+    742.61,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-white-3000.png",
+   "lockup": "stacked-ksu",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    2228,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-white-1000.png",
+   "lockup": "stacked-ksu",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    743,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-ksu-white.svg",
+   "lockup": "stacked-ksu",
+   "variant": "white",
+   "format": "svg",
+   "px": [
+    742.61,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-twotone-3000.png",
+   "lockup": "stacked-ksu",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    2228,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-twotone-1000.png",
+   "lockup": "stacked-ksu",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    743,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-ksu-twotone.svg",
+   "lockup": "stacked-ksu",
+   "variant": "twotone",
+   "format": "svg",
+   "px": [
+    742.61,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-twotone-reverse-3000.png",
+   "lockup": "stacked-ksu",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    2228,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-stacked-ksu-twotone-reverse-1000.png",
+   "lockup": "stacked-ksu",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    743,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-stacked-ksu-twotone-reverse.svg",
+   "lockup": "stacked-ksu",
+   "variant": "twotone-reverse",
+   "format": "svg",
+   "px": [
+    742.61,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-mark-navy-3000.png",
+   "lockup": "mark",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    2906,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-mark-navy-1000.png",
+   "lockup": "mark",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    969,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-mark-navy.svg",
+   "lockup": "mark",
+   "variant": "navy",
+   "format": "svg",
+   "px": [
+    968.64,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-mark-black-3000.png",
+   "lockup": "mark",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    2906,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-mark-black-1000.png",
+   "lockup": "mark",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    969,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-mark-black.svg",
+   "lockup": "mark",
+   "variant": "black",
+   "format": "svg",
+   "px": [
+    968.64,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-mark-white-3000.png",
+   "lockup": "mark",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    2906,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-mark-white-1000.png",
+   "lockup": "mark",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    969,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-mark-white.svg",
+   "lockup": "mark",
+   "variant": "white",
+   "format": "svg",
+   "px": [
+    968.64,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-mark-gold-3000.png",
+   "lockup": "mark",
+   "variant": "gold",
+   "format": "png",
+   "px": [
+    2906,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-mark-gold-1000.png",
+   "lockup": "mark",
+   "variant": "gold",
+   "format": "png",
+   "px": [
+    969,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-mark-gold.svg",
+   "lockup": "mark",
+   "variant": "gold",
+   "format": "svg",
+   "px": [
+    968.64,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-seal-navy-3000.png",
+   "lockup": "seal",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    2904,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-seal-navy-1000.png",
+   "lockup": "seal",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    968,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-seal-navy.svg",
+   "lockup": "seal",
+   "variant": "navy",
+   "format": "svg",
+   "px": [
+    967.95,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-seal-black-3000.png",
+   "lockup": "seal",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    2904,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-seal-black-1000.png",
+   "lockup": "seal",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    968,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-seal-black.svg",
+   "lockup": "seal",
+   "variant": "black",
+   "format": "svg",
+   "px": [
+    967.95,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-seal-white-3000.png",
+   "lockup": "seal",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    2904,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-seal-white-1000.png",
+   "lockup": "seal",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    968,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-seal-white.svg",
+   "lockup": "seal",
+   "variant": "white",
+   "format": "svg",
+   "px": [
+    967.95,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-seal-gold-3000.png",
+   "lockup": "seal",
+   "variant": "gold",
+   "format": "png",
+   "px": [
+    2904,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-seal-gold-1000.png",
+   "lockup": "seal",
+   "variant": "gold",
+   "format": "png",
+   "px": [
+    968,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-seal-gold.svg",
+   "lockup": "seal",
+   "variant": "gold",
+   "format": "svg",
+   "px": [
+    967.95,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-seal-twotone-3000.png",
+   "lockup": "seal",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    2904,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-seal-twotone-1000.png",
+   "lockup": "seal",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    968,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-seal-twotone.svg",
+   "lockup": "seal",
+   "variant": "twotone",
+   "format": "svg",
+   "px": [
+    967.95,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-seal-twotone-reverse-3000.png",
+   "lockup": "seal",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    2904,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-seal-twotone-reverse-1000.png",
+   "lockup": "seal",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    968,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-seal-twotone-reverse.svg",
+   "lockup": "seal",
+   "variant": "twotone-reverse",
+   "format": "svg",
+   "px": [
+    967.95,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-badge-navy-3000.png",
+   "lockup": "badge",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    2278,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-badge-navy-1000.png",
+   "lockup": "badge",
+   "variant": "navy",
+   "format": "png",
+   "px": [
+    760,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-badge-navy.svg",
+   "lockup": "badge",
+   "variant": "navy",
+   "format": "svg",
+   "px": [
+    759.19,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-badge-black-3000.png",
+   "lockup": "badge",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    2278,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-badge-black-1000.png",
+   "lockup": "badge",
+   "variant": "black",
+   "format": "png",
+   "px": [
+    760,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-badge-black.svg",
+   "lockup": "badge",
+   "variant": "black",
+   "format": "svg",
+   "px": [
+    759.19,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-badge-white-3000.png",
+   "lockup": "badge",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    2278,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-badge-white-1000.png",
+   "lockup": "badge",
+   "variant": "white",
+   "format": "png",
+   "px": [
+    760,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-badge-white.svg",
+   "lockup": "badge",
+   "variant": "white",
+   "format": "svg",
+   "px": [
+    759.19,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-badge-gold-3000.png",
+   "lockup": "badge",
+   "variant": "gold",
+   "format": "png",
+   "px": [
+    2278,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-badge-gold-1000.png",
+   "lockup": "badge",
+   "variant": "gold",
+   "format": "png",
+   "px": [
+    760,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-badge-gold.svg",
+   "lockup": "badge",
+   "variant": "gold",
+   "format": "svg",
+   "px": [
+    759.19,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-badge-twotone-3000.png",
+   "lockup": "badge",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    2278,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-badge-twotone-1000.png",
+   "lockup": "badge",
+   "variant": "twotone",
+   "format": "png",
+   "px": [
+    760,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-badge-twotone.svg",
+   "lockup": "badge",
+   "variant": "twotone",
+   "format": "svg",
+   "px": [
+    759.19,
+    1000.0
+   ]
+  },
+  {
+   "file": "png/atr-badge-twotone-reverse-3000.png",
+   "lockup": "badge",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    2278,
+    3000
+   ]
+  },
+  {
+   "file": "png/atr-badge-twotone-reverse-1000.png",
+   "lockup": "badge",
+   "variant": "twotone-reverse",
+   "format": "png",
+   "px": [
+    760,
+    1000
+   ]
+  },
+  {
+   "file": "svg/atr-badge-twotone-reverse.svg",
+   "lockup": "badge",
+   "variant": "twotone-reverse",
+   "format": "svg",
+   "px": [
+    759.19,
+    1000.0
+   ]
+  },
+  {
+   "file": "icons/favicon.ico",
+   "lockup": "favicon",
+   "variant": "gold on navy tile (16/32 px: roof filled; 48 px: full mark)",
+   "format": "ico",
+   "background": "browser tab (legacy); link with sizes=\"32x32\"",
+   "sizes": [
+    [
+     16,
+     16
+    ],
+    [
+     32,
+     32
+    ],
+    [
+     48,
+     48
+    ]
+   ],
+   "px": [
+    48,
+    48
+   ]
+  },
+  {
+   "file": "icons/favicon.svg",
+   "lockup": "favicon",
+   "variant": "gold on navy tile, roof filled (small-size mark)",
+   "format": "svg",
+   "background": "browser tab (modern browsers)",
+   "px": [
+    512.0,
+    512.0
+   ]
+  },
+  {
+   "file": "icons/favicon-32.png",
+   "lockup": "favicon",
+   "variant": "gold on navy tile, roof filled",
+   "format": "png",
+   "background": "browser tab / bookmarks",
+   "px": [
+    32,
+    32
+   ]
+  },
+  {
+   "file": "icons/apple-touch-icon-180.png",
+   "lockup": "app-icon",
+   "variant": "gold mark on navy, full bleed, opaque",
+   "format": "png",
+   "background": "iOS home screen",
+   "px": [
+    180,
+    180
+   ]
+  },
+  {
+   "file": "icons/icon-192.png",
+   "lockup": "app-icon",
+   "variant": "gold mark on navy, full bleed, maskable-safe",
+   "format": "png",
+   "background": "PWA manifest: purpose any (section 10)",
+   "px": [
+    192,
+    192
+   ]
+  },
+  {
+   "file": "icons/icon-512.png",
+   "lockup": "app-icon",
+   "variant": "gold mark on navy, full bleed, maskable-safe",
+   "format": "png",
+   "background": "PWA manifest: purpose any, plus a separate maskable entry (section 10)",
+   "px": [
+    512,
+    512
+   ]
+  },
+  {
+   "file": "icons/icon-maskable.svg",
+   "lockup": "app-icon",
+   "variant": "gold mark on navy, full bleed",
+   "format": "svg",
+   "background": "source for other app-icon sizes",
+   "px": [
+    512.0,
+    512.0
+   ]
+  },
+  {
+   "file": "icons/atr-avatar-mark-navy.png",
+   "lockup": "avatar",
+   "variant": "gold mark on navy, circle-crop safe",
+   "format": "png",
+   "background": "social profile picture (primary)",
+   "px": [
+    1080,
+    1080
+   ]
+  },
+  {
+   "file": "icons/atr-avatar-seal-white.png",
+   "lockup": "avatar",
+   "variant": "navy roundel on white, circle-crop safe",
+   "format": "png",
+   "background": "social profile picture (formal)",
+   "px": [
+    1080,
+    1080
+   ]
+  },
+  {
+   "file": "ksu/ksu-wordmark-color.png",
+   "lockup": "ksu-wordmark",
+   "variant": "colour (lab's template raster; not for print, see section 7)",
+   "format": "png",
+   "background": "white, mist",
+   "px": [
+    1022,
+    976
+   ]
+  },
+  {
+   "file": "ksu/ksu-wordmark-white.png",
+   "lockup": "ksu-wordmark",
+   "variant": "all-white reverse",
+   "format": "png",
+   "background": "navy, midnight",
+   "px": [
+    1022,
+    976
+   ]
+  },
+  {
+   "file": "cobrand/atr-ksu-cobrand-navy.png",
+   "lockup": "cobrand-preview",
+   "variant": "ATR horizontal-short navy + KSU colour (internal preview)",
+   "format": "png",
+   "background": "white, mist",
+   "px": [
+    3307,
+    760
+   ]
+  },
+  {
+   "file": "cobrand/atr-ksu-cobrand-reverse.png",
+   "lockup": "cobrand-preview",
+   "variant": "ATR horizontal-short twotone-reverse + KSU white (internal preview)",
+   "format": "png",
+   "background": "navy, midnight",
+   "px": [
+    3307,
+    760
+   ]
+  }
+ ]
+}

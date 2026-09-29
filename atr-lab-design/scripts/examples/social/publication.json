@@ -1,0 +1,12 @@
+{
+  "template": "publication",
+  "size": "square",
+  "background": "navy",
+  "eyebrow": ["NEW PAPER", "[CONFERENCE 2026]"],
+  "title": "Immersive Teleoperation for Physical AI: Gesture-Enabled Control of a Telepresence Robot",
+  "authors": "[Author One], [Author Two] and Jong-Hoon Kim",
+  "venue": "[Conference or journal name], [City], [Month YYYY]",
+  "link": "DOI // [10.xxxx/xxxxx]",
+  "cta": "Read the paper at atr.cs.kent.edu",
+  "icon": "publication"
+}

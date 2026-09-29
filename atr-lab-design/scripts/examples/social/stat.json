@@ -1,0 +1,10 @@
+{
+  "template": "stat",
+  "size": "square",
+  "background": "navy",
+  "eyebrow": ["KEY RESULT", "EXAMPLE FIGURE"],
+  "value": "[44%]",
+  "label": "less time per task with gesture control than with keyboard and mouse",
+  "source": "[Study name], n = [N]",
+  "icon": "results-chart"
+}

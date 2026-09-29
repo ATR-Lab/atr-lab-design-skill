@@ -1,0 +1,45 @@
+{
+  "_example": "EXAMPLE SPEC, not an ATR Lab result. The same fictional haptics study as nasa-haptics-example.json, but the paper reported ONE number (31% fewer grasp failures at 500 ms), so the Results panel is a callout figure instead of a bar chart: no values were invented for the other delays. Bracketed values are unknowns: replace them before any real use. Build: python3 scripts/quad_chart.py scripts/examples/quads/nasa-callout-example.json -o nasa-callout.pptx --allow-placeholders --check --render",
+  "type": "nasa",
+  "example_tag": true,
+  "title": "Adaptive haptic feedback cuts grasp failures by 31% at 500 ms",
+  "citation": {
+    "authors": "[First author] et al.",
+    "year": 2026,
+    "venue": "IEEE RA-L",
+    "doi": "10.1109/LRA.2026.1234567"
+  },
+  "pi": "[PI name]",
+  "program": "NASA EPSCoR",
+  "date": "2026",
+  "background": [
+    "Remote operators lose grasp precision once the round-trip delay goes above about 200 ms.",
+    "Can touch (haptic) feedback that adapts to the delay keep remote grasps reliable?"
+  ],
+  "analysis": [
+    "Each of 24 participants made remote grasps at 50, 250 and 500 ms of delay, with adaptive and with fixed haptic gain (feedback strength).",
+    "NASA resources used: [name them, or none]"
+  ],
+  "figures": [
+    {
+      "callout": {
+        "value": "31%",
+        "label": "fewer grasp failures with adaptive haptic feedback",
+        "context": "than with fixed haptic gain at 500 ms of delay, 24 participants"
+      },
+      "alt": "Callout: 31% fewer grasp failures with latency-adaptive haptic feedback than with fixed haptic gain at 500 ms of delay, 24 participants."
+    }
+  ],
+  "caption": "Fig. 1: fewer grasp failures (%) at 500 ms, n = 24",
+  "significance": [
+    "At 500 ms of delay, adaptive feedback cut grasp failures by 31% compared with fixed feedback.",
+    "Robots operated over slow links, such as lunar surface robots driven from Earth, could grasp reliably without waiting for faster networks."
+  ],
+  "grant": "80NSSC26K1234",
+  "notes": [
+    "Methods: within-subjects study. Each of 24 participants performed remote grasps in three latency conditions (50, 250 and 500 ms), with latency-adaptive haptic gain and with fixed haptic gain. [Add the task, apparatus and statistical test from the paper.]",
+    "Result: at 500 ms, adaptive feedback cut grasp failures by 31% compared with fixed feedback. The paper reports this value only, so the Results panel states it as a callout; [add the 50 ms and 250 ms results from the paper if a comparison chart is wanted].",
+    "Acronyms: RA-L = IEEE Robotics and Automation Letters; EPSCoR = Established Program to Stimulate Competitive Research; ms = milliseconds; haptic gain = the strength of the force feedback the operator feels.",
+    "Full reference: [Author list] (2026). Latency-Adaptive Haptic Feedback for Remote Manipulation. IEEE Robotics and Automation Letters. doi:10.1109/LRA.2026.1234567"
+  ]
+}

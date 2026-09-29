@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="518" viewBox="0 0 550 518">
+  <defs>
+    <pattern id="pgrid" patternUnits="userSpaceOnUse" width="120" height="120">
+      <path d="M24.5,0 V120 M0,24.5 H120 M48.5,0 V120 M0,48.5 H120 M72.5,0 V120 M0,72.5 H120 M96.5,0 V120 M0,96.5 H120" stroke="#F3F6FA" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+      <path d="M0.5,0 V120 M0,0.5 H120" stroke="#F3F6FA" stroke-opacity="0.18" stroke-width="1" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="550" height="518" fill="#003976"/>
+  <rect width="550" height="518" fill="url(#pgrid)"/>
+</svg>

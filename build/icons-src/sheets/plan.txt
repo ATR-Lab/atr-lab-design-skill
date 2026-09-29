@@ -1,0 +1,5 @@
+A=telepresence-robot,teleoperation,haptic-glove,quadruped,mobile-rover,lidar-sensor,camera-vision,ai-neural-net,digital-twin
+B=ros-graph,simulation,wireless-link,joystick,flight-simulator,path-planning,human-robot-interaction,safety-shield,embedded-chip
+C=team,k12-outreach,workshop-idea,award,calendar-event,location,website-globe,code,dataset
+D=milestone-flag,partnership,funding,presentation,results-chart,video-demo,teleoperation,digital-twin,partnership
+E=ai-neural-net,digital-twin,path-planning,simulation,lidar-sensor,quadruped,website-globe,partnership,teleoperation

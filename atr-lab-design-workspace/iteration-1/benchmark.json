@@ -1,0 +1,755 @@
+{
+  "metadata": {
+    "skill_name": "atr-lab-design",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-09-29T13:16:57Z",
+    "evals_run": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 4,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 606.3,
+        "tokens": 251171,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "summer-camp-flyer-FIXED.pptx exists",
+          "passed": true,
+          "evidence": "iteration-1/eval-flyer-brand-review/with_skill/outputs/summer-camp-flyer-FIXED.pptx"
+        },
+        {
+          "text": "Response identifies at least 10 of 14 planted defect categories",
+          "passed": true,
+          "evidence": "14/14: ['athletic logo', 'retired block logo', '@atr_kent handle', 'College of Arts and Sciences', 'white-on-gold contrast', 'non-brand fonts', 'Oxford comma', 'ampersand', 'wrong lab name', 'wrong contact (room/phone)', 'KSU abbreviation', 'time/date style', 'missing alt text', 'small/low-contrast text']"
+        },
+        {
+          "text": "Fixed flyer contains no forbidden/incorrect facts",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "Fixed flyer uses only brand fonts (or Arial)",
+          "passed": true,
+          "evidence": "non-brand: []"
+        },
+        {
+          "text": "Fixed flyer has no Oxford comma and no '&' in copy",
+          "passed": true,
+          "evidence": "oxford=False, amp=False"
+        },
+        {
+          "text": "brand_check on the fixed flyer reports 0 errors",
+          "passed": true,
+          "evidence": "{'error': 0, 'warning': 8, 'info': 2}; first: []"
+        },
+        {
+          "text": "Fixed flyer has no athletic or retired logo",
+          "passed": true,
+          "evidence": "[]"
+        },
+        {
+          "text": "Fixed flyer is visually on-brand, legible and print-ready apart from flagged placeholders",
+          "passed": true,
+          "evidence": "Rebuilt on the Event flyer template; correct ATR mark + KSU wordmark, brand fonts, AP style, placeholders listed.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 453.0,
+        "tokens": 216278,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A PNG image was delivered",
+          "passed": true,
+          "evidence": "['atr-social-summer-workshop-2026-09-29-1080x1350.png']"
+        },
+        {
+          "text": "Image is 1080 x 1350 (Instagram portrait)",
+          "passed": true,
+          "evidence": "(1080, 1350)"
+        },
+        {
+          "text": "At least 70% of pixels are within the brand palette",
+          "passed": true,
+          "evidence": "94% near-palette"
+        },
+        {
+          "text": "Caption delivered",
+          "passed": true,
+          "evidence": "442 chars"
+        },
+        {
+          "text": "Alt text delivered (>= 80 characters)",
+          "passed": true,
+          "evidence": "343 chars"
+        },
+        {
+          "text": "Caption uses AP time style (a.m./p.m.)",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No forbidden/incorrect facts (e.g. @atr_kent)",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "Any lab handle in the caption is the verified Instagram handle @atr_lab",
+          "passed": true,
+          "evidence": "handles: []"
+        },
+        {
+          "text": "Image text is accurate (no wrong handle, no invented details) and legible on a phone",
+          "passed": true,
+          "evidence": "All text >= 40 px, AP date/time, 'link in bio', no invented cost/grades.",
+          "judgment": true
+        },
+        {
+          "text": "Image is engaging and on-brand for a K-12 family audience",
+          "passed": false,
+          "evidence": "On-brand but subdued for kids; the white illustration strip at the top feels detached from the navy card.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.909,
+        "passed": 10,
+        "failed": 1,
+        "total": 11,
+        "time_seconds": 479.3,
+        "tokens": 148808,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "haptics-quad.pptx exists",
+          "passed": true,
+          "evidence": "iteration-1/eval-nasa-quad-chart/with_skill/outputs/haptics-quad.pptx"
+        },
+        {
+          "text": "All five NASA headings appear verbatim",
+          "passed": true,
+          "evidence": "missing: []"
+        },
+        {
+          "text": "DOI 10.1109/LRA.2026.1234567 appears on the slide",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "NASA acknowledgement sentence with grant number and EPSCoR program",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No explicit text size below 14 pt",
+          "passed": true,
+          "evidence": "sizes <14: []"
+        },
+        {
+          "text": "Explicit fonts on the quad are Arial (NASA guidance)",
+          "passed": true,
+          "evidence": "non-Arial: []"
+        },
+        {
+          "text": "Speaker notes present",
+          "passed": true,
+          "evidence": "1 slides with notes"
+        },
+        {
+          "text": "No forbidden/incorrect facts",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "brand_check reports 0 errors",
+          "passed": true,
+          "evidence": "{'error': 0, 'warning': 3, 'info': 3}; first: []"
+        },
+        {
+          "text": "Results figure has labelled axes and units, with no invented data",
+          "passed": true,
+          "evidence": "Native bar chart, axis titles and units, only the supplied 31% at 500 ms plotted; 50/250 ms left for the user.",
+          "judgment": true
+        },
+        {
+          "text": "Quad reads as a strong, well-filled communication piece",
+          "passed": false,
+          "evidence": "Compliant but visually thin: a single-bar chart and large empty areas; a big-number callout or a simple diagram would communicate better.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 11,
+        "failed": 0,
+        "total": 11,
+        "time_seconds": 552.1,
+        "tokens": 222316,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "sponsor-intro.pptx exists",
+          "passed": true,
+          "evidence": "iteration-1/eval-sponsor-intro-deck/with_skill/outputs/sponsor-intro.pptx"
+        },
+        {
+          "text": "Deck has 6-8 slides",
+          "passed": true,
+          "evidence": "8 slides"
+        },
+        {
+          "text": "Slides are built on ATR template layouts",
+          "passed": true,
+          "evidence": "layouts: ['ATR - Title', 'ATR - Content + Image', 'ATR - Two Content', 'ATR - Key Numbers', 'ATR - Statement', 'ATR - Three Icon Columns', 'ATR - Table', 'ATR - Thank You']"
+        },
+        {
+          "text": "No forbidden/incorrect facts (@atr_kent, wrong college, Room 236, old phone, wrong name)",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "Only brand fonts (or the Arial fallback) are used",
+          "passed": true,
+          "evidence": "non-brand: []; all: []"
+        },
+        {
+          "text": "Speaker notes on at least 75% of slides",
+          "passed": true,
+          "evidence": "8/8 slides with notes"
+        },
+        {
+          "text": "Closing/contact uses the verified lab website",
+          "passed": true,
+          "evidence": "found"
+        },
+        {
+          "text": "brand_check reports 0 errors",
+          "passed": true,
+          "evidence": "{'error': 0, 'warning': 0, 'info': 1}; first: []"
+        },
+        {
+          "text": "No athletic Flash logo or retired block logo",
+          "passed": true,
+          "evidence": "[]"
+        },
+        {
+          "text": "No fabricated or inflated claims (verified facts or visible placeholders only)",
+          "passed": true,
+          "evidence": "All claims trace to the skill's proof bank (NASA SUITS top 10 2020, WRS 1 of 11 2021, 53 GitHub repos dated, verified quote); no sponsor list, no career totals.",
+          "judgment": true
+        },
+        {
+          "text": "Visually on-brand and free of overflow/collisions (render reviewed)",
+          "passed": true,
+          "evidence": "Hazard Gold template, correct logos and KSU wordmark as separate signature; no overflow. Minor: slides 3 and 7 leave the bottom third empty.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 455.3,
+        "tokens": 212252,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Both linkedin-post.md and news-blurb.md exist",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "Full lab name 'Advanced Telerobotics Research Lab' used",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "'Kent State University' named",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No forbidden/incorrect facts",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "No '&' in the copy",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "HRI 2026 named",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No 'KSU' abbreviation in running copy",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No fabricated results, quotes or authors; claims match the public abstract",
+          "passed": true,
+          "evidence": "Authors from the proceedings TOC; 'improved' (softened from 'significantly'); [N] left as placeholder; no quotes invented.",
+          "judgment": true
+        },
+        {
+          "text": "Kent State editorial style (no Oxford comma, 'the lab' after first reference, no 'Dr.' in news copy)",
+          "passed": true,
+          "evidence": "Complies.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.625,
+        "passed": 5,
+        "failed": 3,
+        "total": 8,
+        "time_seconds": 475.7,
+        "tokens": 127742,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "summer-camp-flyer-FIXED.pptx exists",
+          "passed": true,
+          "evidence": "iteration-1/eval-flyer-brand-review/without_skill/outputs/summer-camp-flyer-FIXED.pptx"
+        },
+        {
+          "text": "Response identifies at least 10 of 14 planted defect categories",
+          "passed": true,
+          "evidence": "11/14: ['athletic logo', 'retired block logo', '@atr_kent handle', 'white-on-gold contrast', 'non-brand fonts', 'ampersand', 'wrong lab name', 'wrong contact (room/phone)', 'KSU abbreviation', 'time/date style', 'small/low-contrast text']"
+        },
+        {
+          "text": "Fixed flyer contains no forbidden/incorrect facts",
+          "passed": false,
+          "evidence": "found: ['@atr_kent', 'College of Arts and Sciences', 'Room 236', '330-672-9060', 'Mathematics and Computer Science Building']"
+        },
+        {
+          "text": "Fixed flyer uses only brand fonts (or Arial)",
+          "passed": true,
+          "evidence": "non-brand: []"
+        },
+        {
+          "text": "Fixed flyer has no Oxford comma and no '&' in copy",
+          "passed": true,
+          "evidence": "oxford=False, amp=False"
+        },
+        {
+          "text": "brand_check on the fixed flyer reports 0 errors",
+          "passed": false,
+          "evidence": "{'error': 2, 'warning': 6, 'info': 5}; first: ['Computer Science is in the College of Sciences and Humanities; Kent State lists \"College o', '\"@atr_kent\" is not a lab account; that handle does not exist. Found \"@atr_kent\".']"
+        },
+        {
+          "text": "Fixed flyer has no athletic or retired logo",
+          "passed": true,
+          "evidence": "[]"
+        },
+        {
+          "text": "Fixed flyer is visually on-brand, legible and print-ready apart from flagged placeholders",
+          "passed": false,
+          "evidence": "Clean layout, but keeps 'College of Arts and Sciences', Room 236, 330-672-9060, @atr_kent and the wrong building; uses the roundel as a 'seal' and Arial.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.7,
+        "passed": 7,
+        "failed": 3,
+        "total": 10,
+        "time_seconds": 595.9,
+        "tokens": 119164,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "A PNG image was delivered",
+          "passed": true,
+          "evidence": "['atr-summer-robotics-workshop-2027-instagram.png']"
+        },
+        {
+          "text": "Image is 1080 x 1350 (Instagram portrait)",
+          "passed": true,
+          "evidence": "(1080, 1350)"
+        },
+        {
+          "text": "At least 70% of pixels are within the brand palette",
+          "passed": true,
+          "evidence": "92% near-palette"
+        },
+        {
+          "text": "Caption delivered",
+          "passed": true,
+          "evidence": "605 chars"
+        },
+        {
+          "text": "Alt text delivered (>= 80 characters)",
+          "passed": true,
+          "evidence": "346 chars"
+        },
+        {
+          "text": "Caption uses AP time style (a.m./p.m.)",
+          "passed": false,
+          "evidence": ""
+        },
+        {
+          "text": "No forbidden/incorrect facts (e.g. @atr_kent)",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "Any lab handle in the caption is the verified Instagram handle @atr_lab",
+          "passed": true,
+          "evidence": "handles: []"
+        },
+        {
+          "text": "Image text is accurate (no wrong handle, no invented details) and legible on a phone",
+          "passed": false,
+          "evidence": "'9 AM - 3 PM' (not AP); non-brand condensed display font; otherwise legible.",
+          "judgment": true
+        },
+        {
+          "text": "Image is engaging and on-brand for a K-12 family audience",
+          "passed": false,
+          "evidence": "Very engaging (big headline, cartoon robot), but off-brand fonts and all-caps; sampled #023876 navy instead of #003976.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.727,
+        "passed": 8,
+        "failed": 3,
+        "total": 11,
+        "time_seconds": 552.6,
+        "tokens": 134021,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "haptics-quad.pptx exists",
+          "passed": true,
+          "evidence": "iteration-1/eval-nasa-quad-chart/without_skill/outputs/haptics-quad.pptx"
+        },
+        {
+          "text": "All five NASA headings appear verbatim",
+          "passed": false,
+          "evidence": "missing: ['Background or Science Question', 'Acknowledgements']"
+        },
+        {
+          "text": "DOI 10.1109/LRA.2026.1234567 appears on the slide",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "NASA acknowledgement sentence with grant number and EPSCoR program",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No explicit text size below 14 pt",
+          "passed": false,
+          "evidence": "sizes <14: [11.0, 12.0, 13.0]"
+        },
+        {
+          "text": "Explicit fonts on the quad are Arial (NASA guidance)",
+          "passed": true,
+          "evidence": "non-Arial: []"
+        },
+        {
+          "text": "Speaker notes present",
+          "passed": true,
+          "evidence": "1 slides with notes"
+        },
+        {
+          "text": "No forbidden/incorrect facts",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "brand_check reports 0 errors",
+          "passed": false,
+          "evidence": "{'error': 8, 'warning': 25, 'info': 4}; first: ['Chart has no alt text.', 'Text at 11 pt is below the 12 pt hard floor (design floor 14 pt) for projected slides (1 r', 'Text at 11 pt is below the 12 pt hard floor (design floor 14 pt) for projected slides (1 r']"
+        },
+        {
+          "text": "Results figure has labelled axes and units, with no invented data",
+          "passed": true,
+          "evidence": "Indexed bar chart (fixed=100, adaptive=69) derived from the 31% relative reduction, labelled 'index'.",
+          "judgment": true
+        },
+        {
+          "text": "Quad reads as a strong, well-filled communication piece",
+          "passed": true,
+          "evidence": "Rich: loop diagram, latency axis, big 31% callout, Earth-Moon graphic. (But headings not verbatim and some text < 14 pt.)",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.545,
+        "passed": 6,
+        "failed": 5,
+        "total": 11,
+        "time_seconds": 635.8,
+        "tokens": 176535,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "sponsor-intro.pptx exists",
+          "passed": true,
+          "evidence": "iteration-1/eval-sponsor-intro-deck/without_skill/outputs/sponsor-intro.pptx"
+        },
+        {
+          "text": "Deck has 6-8 slides",
+          "passed": true,
+          "evidence": "7 slides"
+        },
+        {
+          "text": "Slides are built on ATR template layouts",
+          "passed": false,
+          "evidence": "layouts: ['Blank', 'Blank', 'Blank', 'Blank', 'Blank', 'Blank', 'Blank']"
+        },
+        {
+          "text": "No forbidden/incorrect facts (@atr_kent, wrong college, Room 236, old phone, wrong name)",
+          "passed": false,
+          "evidence": "found: ['@atr_kent', 'Room 236', '330-672-9060']"
+        },
+        {
+          "text": "Only brand fonts (or the Arial fallback) are used",
+          "passed": true,
+          "evidence": "non-brand: []; all: ['Arial']"
+        },
+        {
+          "text": "Speaker notes on at least 75% of slides",
+          "passed": true,
+          "evidence": "7/7 slides with notes"
+        },
+        {
+          "text": "Closing/contact uses the verified lab website",
+          "passed": true,
+          "evidence": "found"
+        },
+        {
+          "text": "brand_check reports 0 errors",
+          "passed": false,
+          "evidence": "{'error': 31, 'warning': 66, 'info': 2}; first: ['Text at 10 pt is below the 12 pt hard floor (design floor 14 pt) for projected slides (1 r', 'Text at 10 pt is below the 12 pt hard floor (design floor 14 pt) for projected slides (1 r', 'Text at 11 pt is below the 12 pt hard floor (design floor 14 pt) for projected slides (1 r']"
+        },
+        {
+          "text": "No athletic Flash logo or retired block logo",
+          "passed": true,
+          "evidence": "[]"
+        },
+        {
+          "text": "No fabricated or inflated claims (verified facts or visible placeholders only)",
+          "passed": false,
+          "evidence": "Slide 2 presents the director's career '$14M+' and pre-lab '400+ media stories' and a 2012 start as lab stats; 'Supported by' list of sponsors without confirmation; contact slide has @atr_kent, Room 236 and 330-672-9060.",
+          "judgment": true
+        },
+        {
+          "text": "Visually on-brand and free of overflow/collisions (render reviewed)",
+          "passed": false,
+          "evidence": "Polished layout, but Arial throughout, Blank layouts (no template), roundel labelled/used as seal, 10-11 pt text; not the lab's template system.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.778,
+        "passed": 7,
+        "failed": 2,
+        "total": 9,
+        "time_seconds": 217.7,
+        "tokens": 106182,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Both linkedin-post.md and news-blurb.md exist",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "Full lab name 'Advanced Telerobotics Research Lab' used",
+          "passed": false,
+          "evidence": ""
+        },
+        {
+          "text": "'Kent State University' named",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No forbidden/incorrect facts",
+          "passed": true,
+          "evidence": "found: []"
+        },
+        {
+          "text": "No '&' in the copy",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "HRI 2026 named",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No 'KSU' abbreviation in running copy",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "text": "No fabricated results, quotes or authors; claims match the public abstract",
+          "passed": true,
+          "evidence": "Authors, DOI, abstract claim all sourced.",
+          "judgment": true
+        },
+        {
+          "text": "Kent State editorial style (no Oxford comma, 'the lab' after first reference, no 'Dr.' in news copy)",
+          "passed": false,
+          "evidence": "Uses 'Advanced Telerobotics Research (ATR) Lab' parenthetical and 'Dr. Jong-Hoon Kim'.",
+          "judgment": true
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9618,
+        "stddev": 0.0524,
+        "min": 0.9,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 509.2,
+        "stddev": 67.5027,
+        "min": 453.0,
+        "max": 606.3
+      },
+      "tokens": {
+        "mean": 210165.0,
+        "stddev": 37535.1323,
+        "min": 148808,
+        "max": 251171
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.675,
+        "stddev": 0.0913,
+        "min": 0.545,
+        "max": 0.778
+      },
+      "time_seconds": {
+        "mean": 495.54,
+        "stddev": 166.275,
+        "min": 217.7,
+        "max": 635.8
+      },
+      "tokens": {
+        "mean": 132728.8,
+        "stddev": 26618.8725,
+        "min": 106182,
+        "max": 176535
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.29",
+      "time_seconds": "+13.7",
+      "tokens": "+77436"
+    }
+  },
+  "notes": []
+}

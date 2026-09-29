@@ -1,0 +1,289 @@
+{
+ "bg-title-16x9": {
+  "source": "bg-title-A",
+  "source_size": [
+   1672,
+   941
+  ],
+  "field": "navy",
+  "measured_field": [
+   1.0,
+   60.0,
+   122.0
+  ],
+  "flat_fraction": 0.961,
+  "size": [
+   1920,
+   1080
+  ],
+  "exact_field_pct": 95.8,
+  "accent_exact_pct": {
+   "gold": 100.0,
+   "sky": 100.0
+  },
+  "erased_px": 0,
+  "zone_busy_pct": {
+   "title zone x0..1050": 0.0
+  }
+ },
+ "bg-section-16x9": {
+  "source": "bg-section-A",
+  "source_size": [
+   1672,
+   941
+  ],
+  "field": "gold",
+  "measured_field": [
+   237.0,
+   172.0,
+   3.0
+  ],
+  "flat_fraction": 0.969,
+  "size": [
+   1920,
+   1080
+  ],
+  "exact_field_pct": 96.7,
+  "accent_exact_pct": {
+   "navy": 100.0
+  },
+  "erased_px": 0,
+  "zone_busy_pct": {
+   "text zone x0..1152": 0.0
+  }
+ },
+ "bg-closing-16x9": {
+  "source": "bg-closing-A",
+  "source_size": [
+   1672,
+   941
+  ],
+  "field": "navy",
+  "measured_field": [
+   0.0,
+   59.0,
+   122.0
+  ],
+  "flat_fraction": 0.996,
+  "size": [
+   1920,
+   1080
+  ],
+  "exact_field_pct": 99.6,
+  "accent_exact_pct": {
+   "gold": 100.0,
+   "sky": 100.0
+  },
+  "erased_px": 0,
+  "zone_busy_pct": {
+   "outside bottom-right 400x300 keep-out": 0.001
+  }
+ },
+ "bg-light-16x9": {
+  "source": "bg-light-A",
+  "source_size": [
+   1672,
+   941
+  ],
+  "field": "mist",
+  "measured_field": [
+   242.0,
+   245.0,
+   249.0
+  ],
+  "flat_fraction": 0.988,
+  "size": [
+   1920,
+   1080
+  ],
+  "exact_field_pct": 98.8,
+  "accent_exact_pct": {
+   "line": 0.8,
+   "gold": 100.0
+  },
+  "erased_px": 5668,
+  "zone_busy_pct": {
+   "central 70% x200..1600": 0.0,
+   "footer zone x0..1600, y976..1080": 0.0,
+   "x140..1600, y690..1080": 0.0
+  }
+ },
+ "social-navy-1080x1080": {
+  "source": "tex-navy-square",
+  "source_size": [
+   1254,
+   1254
+  ],
+  "field": "navy",
+  "measured_field": [
+   1.0,
+   59.0,
+   119.0
+  ],
+  "flat_fraction": 0.978,
+  "size": [
+   1080,
+   1080
+  ],
+  "exact_field_pct": 97.6,
+  "accent_exact_pct": {
+   "gold": 100.0,
+   "sky": 100.0
+  },
+  "erased_px": 0,
+  "zone_busy_pct": {
+   "centre 60%": 0.0
+  }
+ },
+ "social-gold-1080x1080": {
+  "source": "tex-gold-square",
+  "source_size": [
+   1254,
+   1254
+  ],
+  "field": "gold",
+  "measured_field": [
+   236.0,
+   167.0,
+   8.0
+  ],
+  "flat_fraction": 0.965,
+  "size": [
+   1080,
+   1080
+  ],
+  "exact_field_pct": 96.3,
+  "accent_exact_pct": {
+   "navy": 100.0
+  },
+  "erased_px": 0,
+  "zone_busy_pct": {
+   "centre 60%": 0.0
+  }
+ },
+ "social-navy-1080x1350": {
+  "source": "tex-navy-portrait",
+  "source_size": [
+   1024,
+   1536
+  ],
+  "field": "navy",
+  "measured_field": [
+   2.0,
+   62.0,
+   121.0
+  ],
+  "flat_fraction": 0.971,
+  "size": [
+   1080,
+   1350
+  ],
+  "exact_field_pct": 98.9,
+  "accent_exact_pct": {
+   "gold": 100.0,
+   "sky": 100.0
+  },
+  "erased_px": 0,
+  "zone_busy_pct": {
+   "centre 60%": 0.0
+  }
+ },
+ "social-gold-1080x1350": {
+  "source": "tex-gold-portrait",
+  "source_size": [
+   1024,
+   1536
+  ],
+  "field": "gold",
+  "measured_field": [
+   237.0,
+   171.0,
+   4.0
+  ],
+  "flat_fraction": 0.959,
+  "size": [
+   1080,
+   1350
+  ],
+  "exact_field_pct": 97.0,
+  "accent_exact_pct": {
+   "navy": 100.0
+  },
+  "erased_px": 0,
+  "zone_busy_pct": {
+   "centre 60%": 0.0
+  }
+ },
+ "illus-telepresence": {
+  "source": "illus-telepresence-E",
+  "source_size": [
+   1536,
+   1024
+  ],
+  "crop": null,
+  "size": [
+   1467,
+   642
+  ],
+  "transparent": true,
+  "alpha_margins": {
+   "left": 24,
+   "top": 24,
+   "right": 24,
+   "bottom": 24
+  },
+  "border_opaque_px": 0,
+  "off_palette_gt24_pct_before": 12.3,
+  "off_palette_gt24_pct_after": 7.8,
+  "snapped_fraction": 0.918,
+  "within35_of_navy_pct": 25.7
+ },
+ "illus-vr-drone-training": {
+  "source": "illus-vr-drone-D",
+  "source_size": [
+   1536,
+   1024
+  ],
+  "crop": null,
+  "size": [
+   1327,
+   894
+  ],
+  "transparent": true,
+  "alpha_margins": {
+   "left": 24,
+   "top": 24,
+   "right": 24,
+   "bottom": 24
+  },
+  "border_opaque_px": 0,
+  "off_palette_gt24_pct_before": 50.8,
+  "off_palette_gt24_pct_after": 23.3,
+  "snapped_fraction": 0.766,
+  "within35_of_navy_pct": 36.4
+ },
+ "illus-k12-robot-build": {
+  "source": "illus-k12-robot-D",
+  "source_size": [
+   1536,
+   1024
+  ],
+  "crop": null,
+  "size": [
+   894,
+   878
+  ],
+  "transparent": true,
+  "alpha_margins": {
+   "left": 24,
+   "top": 24,
+   "right": 24,
+   "bottom": 24
+  },
+  "border_opaque_px": 0,
+  "off_palette_gt24_pct_before": 57.1,
+  "off_palette_gt24_pct_after": 42.9,
+  "snapped_fraction": 0.546,
+  "within35_of_navy_pct": 23.1
+ }
+}

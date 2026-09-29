@@ -1,0 +1,39 @@
+{
+  "_comment": "Smallest useful ATR deck: title, one content slide, closing. Build from the skill root: python3 scripts/new_deck.py scripts/examples/decks/minimal.json -o out/minimal.pptx --render --check. Facts are from references/brand-foundation.md; change the presenter lines to whoever gives the talk.",
+  "template": "presentation",
+  "output": "minimal.pptx",
+  "title": "Telepresence and Physical AI at Kent State",
+  "author": "Advanced Telerobotics Research Lab",
+  "slides": [
+    {
+      "layout": "ATR - Title",
+      "eyebrow": "LAB OVERVIEW",
+      "title": "Telepresence and Physical AI",
+      "subtitle": "What the lab builds and who builds it",
+      "presenter": "Jong-Hoon Kim, lab director",
+      "notes": "Open with the question the lab works on: how people and robots share work, across a distance and side by side."
+    },
+    {
+      "layout": "ATR - Title + Content",
+      "title": "What the lab does",
+      "body": [
+        "Telepresence robotics and tele-embodiment",
+        "Immersive teleoperation interfaces",
+        "Physical AI that works alongside people",
+        ["AI that senses and acts in the real world through a robot"],
+        "Summer programs for middle and high school students"
+      ],
+      "image": "assets/illustrations/illus-telepresence.png",
+      "image_alt": "Illustration: a remote operator wearing a VR headset controls a distant robot arm over a network link.",
+      "notes": "The illustration is a concept drawing, not lab hardware. Define Physical AI once for general audiences, as the sub-point does."
+    },
+    {
+      "layout": "ATR - Thank You",
+      "title": "Thank you",
+      "presenter": "Jong-Hoon Kim",
+      "email": "jkim72@kent.edu",
+      "message": "Questions and collaboration welcome.",
+      "notes": "The address and the FIND THE LAB contacts are fixed on the layout and verified."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "template": "event",
+  "size": "landscape",
+  "background": "navy",
+  "eyebrow": "OPEN LAB",
+  "title": "See the robots up close",
+  "date": "[Fri., Oct. 16]  ·  2-4 p.m.",
+  "cta": "RSVP at atr.cs.kent.edu",
+  "icon": "telepresence-robot"
+}

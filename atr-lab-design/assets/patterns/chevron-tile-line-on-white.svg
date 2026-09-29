@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.000" height="112.000" viewBox="0 0 96.000 112.000">
+  <!-- ATR chevron/gripper pattern: pitch 96px, leg run 28px (45deg, apex 90deg mitred), stroke 4px #D6DEE8 @1.0 on #FFFFFF; tile 96 x 112 -->
+  <defs>
+    <pattern id="chev" patternUnits="userSpaceOnUse" width="96" height="112">
+      <path d="M20.000,42.000 L48.000,14.000 L76.000,42.000 M-28.000,98.000 L0.000,70.000 L28.000,98.000 M68.000,98.000 L96.000,70.000 L124.000,98.000" fill="none" stroke="#D6DEE8" stroke-opacity="1.0" stroke-width="4" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="butt"/>
+    </pattern>
+  </defs>
+  <rect width="96.000" height="112.000" fill="#FFFFFF"/>
+  <rect width="96.000" height="112.000" fill="url(#chev)"/>
+</svg>

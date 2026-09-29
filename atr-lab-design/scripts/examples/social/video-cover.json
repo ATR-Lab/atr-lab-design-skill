@@ -1,0 +1,10 @@
+{
+  "template": "video-cover",
+  "size": "youtube-thumb",
+  "background": "navy",
+  "eyebrow": ["LAB DEMO", "TELEPRESENCE"],
+  "title": "Driving a robot with hand gestures",
+  "body": "Gesture-Enabled Telepresence Robot, live demo",
+  "tag": "EP. [03]",
+  "icon": "telepresence-robot"
+}

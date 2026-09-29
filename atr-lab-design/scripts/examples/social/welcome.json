@@ -1,0 +1,10 @@
+{
+  "template": "welcome",
+  "size": "square",
+  "background": "gold",
+  "eyebrow": ["WELCOME", "FALL 2026"],
+  "title": "Welcome to the lab, new members",
+  "body": "New graduate and undergraduate researchers join the Advanced Telerobotics Research Lab this semester. Say hello in room [NNN].",
+  "cta": "Meet the team at atr.cs.kent.edu",
+  "icon": "team"
+}

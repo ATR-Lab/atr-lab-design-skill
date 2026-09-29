@@ -1,0 +1,16 @@
+{
+  "unit": "inches per character, averaged over a prompt-like corpus of 1120 characters",
+  "roles": {
+    "Source Sans 3|24|b": 0.14604,
+    "Source Sans 3|16": 0.09169,
+    "Source Sans 3|14": 0.08021,
+    "Source Sans 3|14|b": 0.08534,
+    "Arial|24|b": 0.15862,
+    "Arial|20|b": 0.13227,
+    "Arial|16": 0.09898,
+    "Arial|14": 0.08687,
+    "Arial|14|b": 0.09274,
+    "Source Code Pro|14": 0.11667,
+    "Roboto Slab|16|b": 0.10533
+  }
+}

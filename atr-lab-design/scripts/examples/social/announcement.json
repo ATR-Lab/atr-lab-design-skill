@@ -1,0 +1,11 @@
+{
+  "template": "announcement",
+  "size": "square",
+  "background": "navy",
+  "eyebrow": ["LAB NEWS", "PHYSICAL AI"],
+  "title": "New Physical AI course opens for spring registration",
+  "body": "Hands-on robotics, teleoperation and AI agents, taught by ATR Lab researchers in the Department of Computer Science.",
+  "cta": "Details at atr.cs.kent.edu",
+  "icon": "ai-neural-net",
+  "alt_text": "Announcement from the Advanced Telerobotics Research Lab at Kent State University: a new Physical AI course opens for spring registration. Hands-on robotics, teleoperation and AI agents, taught by ATR Lab researchers in the Department of Computer Science. Details at atr.cs.kent.edu."
+}

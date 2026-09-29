@@ -1,0 +1,2858 @@
+{
+  "square": {
+    "file": "ATR-Social-Square-1080.pptx",
+    "px": [
+      1080,
+      1080
+    ],
+    "inches": [
+      11.25,
+      11.25
+    ],
+    "content": {
+      "x": [
+        72,
+        1008
+      ],
+      "navy": {
+        "cy0": 72,
+        "sigY": 834,
+        "cy1": 794,
+        "bandY": 1008,
+        "art": [
+          {
+            "key": "cluster-navy-corner",
+            "x": 848,
+            "y": 32
+          }
+        ],
+        "ebW": 760,
+        "bodyW": 936,
+        "headW": 936
+      },
+      "gold": {
+        "cy0": 108,
+        "sigY": 878,
+        "cy1": 838,
+        "bandY": 0,
+        "art": [
+          {
+            "key": "cluster-gold-corner",
+            "x": 848,
+            "y": 828
+          }
+        ],
+        "ebW": 936,
+        "bodyW": 760,
+        "headW": 936
+      }
+    },
+    "type_px": {
+      "eyebrow": [
+        36,
+        44
+      ],
+      "headline": [
+        96,
+        104
+      ],
+      "title": [
+        64,
+        70
+      ],
+      "display": [
+        128,
+        132
+      ],
+      "body": [
+        40,
+        50
+      ],
+      "mono": [
+        36,
+        44
+      ],
+      "quote": [
+        56,
+        68
+      ],
+      "stat": [
+        280,
+        288
+      ],
+      "name": [
+        40,
+        50
+      ],
+      "role": [
+        36,
+        44
+      ]
+    },
+    "layouts": [
+      {
+        "name": "Announcement",
+        "tile": "navy",
+        "shift": 52,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 124,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 188,
+            "w": 936,
+            "h": 312,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 72,
+            "y": 528,
+            "w": 936,
+            "h": 150,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "link": {
+            "x": 72,
+            "y": 698,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Event",
+        "tile": "gold",
+        "shift": 65,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 173,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 241,
+            "w": 936,
+            "h": 208,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "when": {
+            "x": 152,
+            "y": 481,
+            "w": 680,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "where": {
+            "x": 152,
+            "y": 601,
+            "w": 680,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 729,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Paper accepted",
+        "tile": "navy",
+        "shift": 65,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 137,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "title": {
+            "x": 72,
+            "y": 205,
+            "w": 936,
+            "h": 280,
+            "px": 64,
+            "lh": 70,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "authors": {
+            "x": 72,
+            "y": 513,
+            "w": 936,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "venue": {
+            "x": 72,
+            "y": 629,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 685,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Recruiting",
+        "tile": "gold",
+        "shift": 92,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 200,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 268,
+            "w": 936,
+            "h": 208,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "points": {
+            "x": 72,
+            "y": 508,
+            "w": 760,
+            "h": 174,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 702,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Milestone",
+        "tile": "navy",
+        "shift": 76,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 148,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "number": {
+            "x": 72,
+            "y": 208,
+            "w": 936,
+            "h": 288,
+            "px": 280,
+            "lh": 288,
+            "font": "Roboto Slab",
+            "bold": true,
+            "charSpacing": -2,
+            "type": "title"
+          },
+          "label": {
+            "x": 72,
+            "y": 504,
+            "w": 936,
+            "h": 150,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "source": {
+            "x": 72,
+            "y": 674,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Spotlight quote",
+        "tile": "navy",
+        "shift": 57,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 129,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "photo": {
+            "x": 72,
+            "y": 197,
+            "w": 300,
+            "h": 300,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "name": {
+            "x": 408,
+            "y": 274,
+            "w": 600,
+            "h": 50,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "role": {
+            "x": 408,
+            "y": 332,
+            "w": 600,
+            "h": 88,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "quote": {
+            "x": 200,
+            "y": 533,
+            "w": 808,
+            "h": 204,
+            "px": 56,
+            "lh": 68,
+            "font": "Roboto Slab",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Demo video cover",
+        "tile": "navy",
+        "shift": 1,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 73,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "frame": {
+            "x": 72,
+            "y": 133,
+            "w": 680,
+            "h": 383,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "title": {
+            "x": 72,
+            "y": 540,
+            "w": 936,
+            "h": 140,
+            "px": 64,
+            "lh": 70,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "flags": {
+            "x": 72,
+            "y": 696,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 748,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Thank you / Welcome",
+        "tile": "gold",
+        "shift": 148,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 256,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "display": {
+            "x": 72,
+            "y": 324,
+            "w": 936,
+            "h": 132,
+            "px": 128,
+            "lh": 132,
+            "font": "Source Sans 3 Black",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 72,
+            "y": 476,
+            "w": 760,
+            "h": 150,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "next": {
+            "x": 72,
+            "y": 646,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      }
+    ]
+  },
+  "portrait": {
+    "file": "ATR-Social-Portrait-1080x1350.pptx",
+    "px": [
+      1080,
+      1350
+    ],
+    "inches": [
+      11.25,
+      14.0625
+    ],
+    "content": {
+      "x": [
+        72,
+        1008
+      ],
+      "navy": {
+        "cy0": 72,
+        "sigY": 1104,
+        "cy1": 1064,
+        "bandY": 1278,
+        "art": [
+          {
+            "key": "cluster-navy-corner",
+            "x": 848,
+            "y": 32
+          }
+        ],
+        "ebW": 760,
+        "bodyW": 936,
+        "headW": 936
+      },
+      "gold": {
+        "cy0": 108,
+        "sigY": 1148,
+        "cy1": 1108,
+        "bandY": 0,
+        "art": [
+          {
+            "key": "cluster-gold-corner",
+            "x": 848,
+            "y": 1098
+          }
+        ],
+        "ebW": 936,
+        "bodyW": 760,
+        "headW": 936
+      }
+    },
+    "type_px": {
+      "eyebrow": [
+        36,
+        44
+      ],
+      "headline": [
+        112,
+        120
+      ],
+      "title": [
+        80,
+        88
+      ],
+      "display": [
+        144,
+        148
+      ],
+      "body": [
+        44,
+        54
+      ],
+      "mono": [
+        40,
+        48
+      ],
+      "quote": [
+        64,
+        76
+      ],
+      "stat": [
+        320,
+        328
+      ],
+      "name": [
+        44,
+        54
+      ],
+      "role": [
+        40,
+        48
+      ]
+    },
+    "layouts": [
+      {
+        "name": "Announcement",
+        "tile": "navy",
+        "shift": 95,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 167,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 231,
+            "w": 936,
+            "h": 480,
+            "px": 112,
+            "lh": 120,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 72,
+            "y": 739,
+            "w": 936,
+            "h": 162,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "link": {
+            "x": 72,
+            "y": 921,
+            "w": 936,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Event",
+        "tile": "gold",
+        "shift": 174,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 282,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 350,
+            "w": 936,
+            "h": 240,
+            "px": 112,
+            "lh": 120,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "when": {
+            "x": 152,
+            "y": 622,
+            "w": 680,
+            "h": 108,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "where": {
+            "x": 152,
+            "y": 750,
+            "w": 680,
+            "h": 108,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 886,
+            "w": 760,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Paper accepted",
+        "tile": "navy",
+        "shift": 112,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 184,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "title": {
+            "x": 72,
+            "y": 252,
+            "w": 936,
+            "h": 440,
+            "px": 80,
+            "lh": 88,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "authors": {
+            "x": 72,
+            "y": 720,
+            "w": 936,
+            "h": 108,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "venue": {
+            "x": 72,
+            "y": 844,
+            "w": 936,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 904,
+            "w": 936,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Recruiting",
+        "tile": "gold",
+        "shift": 112,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 220,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 288,
+            "w": 936,
+            "h": 360,
+            "px": 112,
+            "lh": 120,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "points": {
+            "x": 72,
+            "y": 680,
+            "w": 760,
+            "h": 248,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 948,
+            "w": 760,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Milestone",
+        "tile": "navy",
+        "shift": 156,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 228,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "number": {
+            "x": 72,
+            "y": 288,
+            "w": 936,
+            "h": 328,
+            "px": 320,
+            "lh": 328,
+            "font": "Roboto Slab",
+            "bold": true,
+            "charSpacing": -2,
+            "type": "title"
+          },
+          "label": {
+            "x": 72,
+            "y": 624,
+            "w": 936,
+            "h": 216,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "source": {
+            "x": 72,
+            "y": 860,
+            "w": 936,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Spotlight quote",
+        "tile": "navy",
+        "shift": 112,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 184,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "photo": {
+            "x": 72,
+            "y": 252,
+            "w": 360,
+            "h": 360,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "name": {
+            "x": 468,
+            "y": 353,
+            "w": 540,
+            "h": 54,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "role": {
+            "x": 468,
+            "y": 415,
+            "w": 540,
+            "h": 96,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "quote": {
+            "x": 200,
+            "y": 648,
+            "w": 808,
+            "h": 304,
+            "px": 64,
+            "lh": 76,
+            "font": "Roboto Slab",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Demo video cover",
+        "tile": "navy",
+        "shift": 42,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 114,
+            "w": 760,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "frame": {
+            "x": 72,
+            "y": 174,
+            "w": 936,
+            "h": 527,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "title": {
+            "x": 72,
+            "y": 725,
+            "w": 936,
+            "h": 176,
+            "px": 80,
+            "lh": 88,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "flags": {
+            "x": 72,
+            "y": 917,
+            "w": 936,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 973,
+            "w": 936,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Thank you / Welcome",
+        "tile": "gold",
+        "shift": 240,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 348,
+            "w": 936,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "display": {
+            "x": 72,
+            "y": 416,
+            "w": 936,
+            "h": 148,
+            "px": 144,
+            "lh": 148,
+            "font": "Source Sans 3 Black",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 72,
+            "y": 584,
+            "w": 760,
+            "h": 216,
+            "px": 44,
+            "lh": 54,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "next": {
+            "x": 72,
+            "y": 820,
+            "w": 760,
+            "h": 48,
+            "px": 40,
+            "lh": 48,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      }
+    ]
+  },
+  "story": {
+    "file": "ATR-Social-Story-1080x1920.pptx",
+    "px": [
+      1080,
+      1920
+    ],
+    "inches": [
+      11.25,
+      20
+    ],
+    "content": {
+      "x": [
+        72,
+        940
+      ],
+      "navy": {
+        "cy0": 288,
+        "sigY": 1118,
+        "cy1": 1078,
+        "bandY": 1848,
+        "art": [
+          {
+            "key": "cluster-navy-story-top",
+            "x": 576,
+            "y": 16
+          },
+          {
+            "key": "cluster-navy-story-bottom",
+            "x": 456,
+            "y": 1294
+          }
+        ],
+        "ebW": 868,
+        "bodyW": 868,
+        "headW": 868
+      },
+      "gold": {
+        "cy0": 288,
+        "sigY": 1118,
+        "cy1": 1078,
+        "bandY": 0,
+        "art": [
+          {
+            "key": "cluster-gold-story-bottom",
+            "x": 24,
+            "y": 1350
+          }
+        ],
+        "ebW": 868,
+        "bodyW": 868,
+        "headW": 868
+      }
+    },
+    "type_px": {
+      "eyebrow": [
+        36,
+        44
+      ],
+      "headline": [
+        96,
+        104
+      ],
+      "title": [
+        72,
+        78
+      ],
+      "display": [
+        128,
+        132
+      ],
+      "body": [
+        40,
+        50
+      ],
+      "mono": [
+        36,
+        44
+      ],
+      "quote": [
+        56,
+        68
+      ],
+      "stat": [
+        280,
+        288
+      ],
+      "name": [
+        40,
+        50
+      ],
+      "role": [
+        36,
+        44
+      ]
+    },
+    "layouts": [
+      {
+        "name": "Announcement",
+        "tile": "navy",
+        "shift": 34,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 322,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 386,
+            "w": 868,
+            "h": 416,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 72,
+            "y": 830,
+            "w": 868,
+            "h": 150,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "link": {
+            "x": 72,
+            "y": 1000,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Event",
+        "tile": "gold",
+        "shift": 95,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 383,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 451,
+            "w": 868,
+            "h": 208,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "when": {
+            "x": 152,
+            "y": 691,
+            "w": 788,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "where": {
+            "x": 152,
+            "y": 811,
+            "w": 788,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 939,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Paper accepted",
+        "tile": "navy",
+        "shift": 44,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 332,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "title": {
+            "x": 72,
+            "y": 400,
+            "w": 868,
+            "h": 390,
+            "px": 72,
+            "lh": 78,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "authors": {
+            "x": 72,
+            "y": 818,
+            "w": 868,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "venue": {
+            "x": 72,
+            "y": 934,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 990,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Recruiting",
+        "tile": "gold",
+        "shift": 41,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 329,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 72,
+            "y": 397,
+            "w": 868,
+            "h": 312,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "points": {
+            "x": 72,
+            "y": 741,
+            "w": 868,
+            "h": 232,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 993,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Milestone",
+        "tile": "navy",
+        "shift": 85,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 373,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "number": {
+            "x": 72,
+            "y": 433,
+            "w": 868,
+            "h": 288,
+            "px": 280,
+            "lh": 288,
+            "font": "Roboto Slab",
+            "bold": true,
+            "charSpacing": -2,
+            "type": "title"
+          },
+          "label": {
+            "x": 72,
+            "y": 729,
+            "w": 868,
+            "h": 200,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "source": {
+            "x": 72,
+            "y": 949,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Spotlight quote",
+        "tile": "navy",
+        "shift": 27,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 315,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "photo": {
+            "x": 72,
+            "y": 383,
+            "w": 360,
+            "h": 360,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "name": {
+            "x": 468,
+            "y": 490,
+            "w": 472,
+            "h": 50,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "role": {
+            "x": 468,
+            "y": 548,
+            "w": 472,
+            "h": 88,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "quote": {
+            "x": 200,
+            "y": 779,
+            "w": 740,
+            "h": 272,
+            "px": 56,
+            "lh": 68,
+            "font": "Roboto Slab",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Demo video cover",
+        "tile": "navy",
+        "shift": 5,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 293,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "frame": {
+            "x": 72,
+            "y": 353,
+            "w": 760,
+            "h": 428,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "title": {
+            "x": 72,
+            "y": 805,
+            "w": 868,
+            "h": 156,
+            "px": 72,
+            "lh": 78,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "flags": {
+            "x": 72,
+            "y": 977,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 72,
+            "y": 1029,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Thank you / Welcome",
+        "tile": "gold",
+        "shift": 153,
+        "placeholders": {
+          "eyebrow": {
+            "x": 72,
+            "y": 441,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "display": {
+            "x": 72,
+            "y": 509,
+            "w": 868,
+            "h": 132,
+            "px": 128,
+            "lh": 132,
+            "font": "Source Sans 3 Black",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 72,
+            "y": 661,
+            "w": 868,
+            "h": 200,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "next": {
+            "x": 72,
+            "y": 881,
+            "w": 868,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      }
+    ]
+  },
+  "landscape": {
+    "file": "ATR-Social-Landscape-1200x675.pptx",
+    "px": [
+      1200,
+      675
+    ],
+    "inches": [
+      12.5,
+      7.0313
+    ],
+    "content": {
+      "x": [
+        132,
+        1140
+      ],
+      "navy": {
+        "headW": 1008,
+        "bodyW": 1008,
+        "ebW": 768,
+        "art": [
+          {
+            "key": "cluster-navy-corner-L",
+            "x": 968,
+            "y": 24
+          }
+        ],
+        "cy0": 60,
+        "sigY": 505,
+        "cy1": 473,
+        "bandY": 0
+      },
+      "gold": {
+        "headW": 1008,
+        "bodyW": 808,
+        "ebW": 1008,
+        "cy0": 60,
+        "sigY": 505,
+        "cy1": 473,
+        "bandY": 0,
+        "art": [
+          {
+            "key": "cluster-gold-corner-L",
+            "x": 968,
+            "y": 443
+          }
+        ]
+      }
+    },
+    "type_px": {
+      "eyebrow": [
+        36,
+        44
+      ],
+      "headline": [
+        72,
+        78
+      ],
+      "title": [
+        52,
+        56
+      ],
+      "display": [
+        96,
+        100
+      ],
+      "body": [
+        40,
+        50
+      ],
+      "mono": [
+        36,
+        44
+      ],
+      "quote": [
+        44,
+        54
+      ],
+      "stat": [
+        220,
+        226
+      ],
+      "name": [
+        40,
+        50
+      ],
+      "role": [
+        36,
+        44
+      ]
+    },
+    "layouts": [
+      {
+        "name": "Announcement",
+        "tile": "navy",
+        "shift": 0,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 60,
+            "w": 768,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 132,
+            "y": 124,
+            "w": 1008,
+            "h": 156,
+            "px": 72,
+            "lh": 78,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 132,
+            "y": 308,
+            "w": 1008,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "link": {
+            "x": 132,
+            "y": 428,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Event",
+        "tile": "gold",
+        "shift": 26,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 86,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 132,
+            "y": 154,
+            "w": 400,
+            "h": 156,
+            "px": 72,
+            "lh": 78,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "when": {
+            "x": 652,
+            "y": 154,
+            "w": 488,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "where": {
+            "x": 652,
+            "y": 274,
+            "w": 488,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 572,
+            "y": 402,
+            "w": 568,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Paper accepted",
+        "tile": "navy",
+        "shift": 3,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 63,
+            "w": 768,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "title": {
+            "x": 132,
+            "y": 123,
+            "w": 1008,
+            "h": 168,
+            "px": 52,
+            "lh": 56,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "authors": {
+            "x": 132,
+            "y": 311,
+            "w": 1008,
+            "h": 50,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "venue": {
+            "x": 132,
+            "y": 373,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 132,
+            "y": 425,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Recruiting",
+        "tile": "gold",
+        "shift": 2,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 62,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 132,
+            "y": 122,
+            "w": 1008,
+            "h": 156,
+            "px": 72,
+            "lh": 78,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "points": {
+            "x": 132,
+            "y": 298,
+            "w": 808,
+            "h": 116,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 132,
+            "y": 426,
+            "w": 808,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Milestone",
+        "tile": "navy",
+        "shift": 0,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 60,
+            "w": 768,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "number": {
+            "x": 132,
+            "y": 120,
+            "w": 554,
+            "h": 289,
+            "px": 220,
+            "lh": 226,
+            "font": "Roboto Slab",
+            "bold": true,
+            "charSpacing": -2,
+            "type": "title"
+          },
+          "label": {
+            "x": 726,
+            "y": 120,
+            "w": 414,
+            "h": 289,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "source": {
+            "x": 132,
+            "y": 429,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Spotlight quote",
+        "tile": "navy",
+        "shift": 30,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 90,
+            "w": 768,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "photo": {
+            "x": 860,
+            "y": 158,
+            "w": 280,
+            "h": 280,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "name": {
+            "x": 132,
+            "y": 158,
+            "w": 688,
+            "h": 50,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "role": {
+            "x": 132,
+            "y": 212,
+            "w": 688,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "quote": {
+            "x": 240,
+            "y": 280,
+            "w": 580,
+            "h": 162,
+            "px": 44,
+            "lh": 54,
+            "font": "Roboto Slab",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Demo video cover",
+        "tile": "navy",
+        "shift": 6,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 66,
+            "w": 768,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "frame": {
+            "x": 640,
+            "y": 126,
+            "w": 500,
+            "h": 281,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "title": {
+            "x": 132,
+            "y": 126,
+            "w": 468,
+            "h": 168,
+            "px": 52,
+            "lh": 56,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "flags": {
+            "x": 132,
+            "y": 423,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Thank you / Welcome",
+        "tile": "gold",
+        "shift": 30,
+        "placeholders": {
+          "eyebrow": {
+            "x": 132,
+            "y": 90,
+            "w": 1008,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "display": {
+            "x": 132,
+            "y": 158,
+            "w": 1008,
+            "h": 100,
+            "px": 96,
+            "lh": 100,
+            "font": "Source Sans 3 Black",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 132,
+            "y": 278,
+            "w": 808,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "next": {
+            "x": 132,
+            "y": 398,
+            "w": 808,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      }
+    ]
+  },
+  "youtube": {
+    "file": "ATR-YouTube-Thumbnail-1280x720.pptx",
+    "px": [
+      1280,
+      720
+    ],
+    "inches": [
+      13.3333,
+      7.5
+    ],
+    "content": {
+      "x": [
+        136,
+        1216
+      ],
+      "navy": {
+        "headW": 1080,
+        "bodyW": 1080,
+        "ebW": 840,
+        "art": [
+          {
+            "key": "cluster-navy-corner-L",
+            "x": 1048,
+            "y": 24
+          }
+        ],
+        "cy0": 64,
+        "sigY": 520,
+        "cy1": 488,
+        "bandY": 0
+      },
+      "gold": {
+        "headW": 1080,
+        "bodyW": 880,
+        "ebW": 1080,
+        "cy0": 64,
+        "sigY": 520,
+        "cy1": 488,
+        "bandY": 0,
+        "art": [
+          {
+            "key": "cluster-gold-corner-YT",
+            "x": 1048,
+            "y": 470
+          }
+        ]
+      }
+    },
+    "type_px": {
+      "eyebrow": [
+        36,
+        44
+      ],
+      "headline": [
+        96,
+        104
+      ],
+      "title": [
+        64,
+        70
+      ],
+      "display": [
+        96,
+        100
+      ],
+      "body": [
+        40,
+        50
+      ],
+      "mono": [
+        36,
+        44
+      ],
+      "quote": [
+        44,
+        54
+      ],
+      "stat": [
+        220,
+        226
+      ],
+      "name": [
+        40,
+        50
+      ],
+      "role": [
+        36,
+        44
+      ]
+    },
+    "layouts": [
+      {
+        "name": "Announcement",
+        "tile": "navy",
+        "shift": 5,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 69,
+            "w": 840,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 136,
+            "y": 133,
+            "w": 1080,
+            "h": 208,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 136,
+            "y": 369,
+            "w": 1080,
+            "h": 50,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "link": {
+            "x": 136,
+            "y": 439,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Event",
+        "tile": "gold",
+        "shift": 32,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 96,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 136,
+            "y": 164,
+            "w": 480,
+            "h": 208,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "when": {
+            "x": 736,
+            "y": 164,
+            "w": 480,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "where": {
+            "x": 736,
+            "y": 284,
+            "w": 480,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 656,
+            "y": 412,
+            "w": 560,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Paper accepted",
+        "tile": "navy",
+        "shift": 23,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 87,
+            "w": 840,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "title": {
+            "x": 136,
+            "y": 147,
+            "w": 1080,
+            "h": 140,
+            "px": 64,
+            "lh": 70,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "authors": {
+            "x": 136,
+            "y": 307,
+            "w": 1080,
+            "h": 50,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "venue": {
+            "x": 136,
+            "y": 369,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 136,
+            "y": 421,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Recruiting",
+        "tile": "gold",
+        "shift": 34,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 98,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "headline": {
+            "x": 136,
+            "y": 158,
+            "w": 1080,
+            "h": 104,
+            "px": 96,
+            "lh": 104,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "points": {
+            "x": 136,
+            "y": 282,
+            "w": 880,
+            "h": 116,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "cta": {
+            "x": 136,
+            "y": 410,
+            "w": 880,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Milestone",
+        "tile": "navy",
+        "shift": 0,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 64,
+            "w": 840,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "number": {
+            "x": 136,
+            "y": 124,
+            "w": 594,
+            "h": 300,
+            "px": 220,
+            "lh": 226,
+            "font": "Roboto Slab",
+            "bold": true,
+            "charSpacing": -2,
+            "type": "title"
+          },
+          "label": {
+            "x": 770,
+            "y": 124,
+            "w": 446,
+            "h": 300,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "source": {
+            "x": 136,
+            "y": 444,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Spotlight quote",
+        "tile": "navy",
+        "shift": 36,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 100,
+            "w": 840,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "photo": {
+            "x": 916,
+            "y": 168,
+            "w": 300,
+            "h": 300,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "name": {
+            "x": 136,
+            "y": 168,
+            "w": 740,
+            "h": 50,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "role": {
+            "x": 136,
+            "y": 222,
+            "w": 740,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "quote": {
+            "x": 244,
+            "y": 290,
+            "w": 632,
+            "h": 162,
+            "px": 44,
+            "lh": 54,
+            "font": "Roboto Slab",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Demo video cover",
+        "tile": "navy",
+        "shift": 5,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 69,
+            "w": 840,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "frame": {
+            "x": 696,
+            "y": 129,
+            "w": 520,
+            "h": 293,
+            "bold": false,
+            "charSpacing": 0,
+            "type": "image"
+          },
+          "title": {
+            "x": 136,
+            "y": 129,
+            "w": 520,
+            "h": 210,
+            "px": 64,
+            "lh": 70,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "flags": {
+            "x": 136,
+            "y": 438,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      },
+      {
+        "name": "Thank you / Welcome",
+        "tile": "gold",
+        "shift": 36,
+        "placeholders": {
+          "eyebrow": {
+            "x": 136,
+            "y": 100,
+            "w": 1080,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Sans 3",
+            "bold": true,
+            "charSpacing": 3,
+            "type": "body"
+          },
+          "display": {
+            "x": 136,
+            "y": 168,
+            "w": 1080,
+            "h": 100,
+            "px": 96,
+            "lh": 100,
+            "font": "Source Sans 3 Black",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "title"
+          },
+          "support": {
+            "x": 136,
+            "y": 288,
+            "w": 880,
+            "h": 100,
+            "px": 40,
+            "lh": 50,
+            "font": "Source Sans 3",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          },
+          "next": {
+            "x": 136,
+            "y": 408,
+            "w": 880,
+            "h": 44,
+            "px": 36,
+            "lh": 44,
+            "font": "Source Code Pro",
+            "bold": false,
+            "charSpacing": 0,
+            "type": "body"
+          }
+        }
+      }
+    ]
+  }
+}

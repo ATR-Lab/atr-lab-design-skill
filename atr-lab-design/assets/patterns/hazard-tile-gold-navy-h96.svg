@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="543.000" height="96" viewBox="0 0 543.000 96">
+  <!-- tileable hazard tile: repeat horizontally; period 543.000px, height 96px -->
+  <rect width="543.000" height="96" fill="#003976"/>
+  <path fill="#EFAB00" d="M-543.000,0 L-271.500,0 L-367.500,96 L-639.000,96 Z M0.000,0 L271.500,0 L175.500,96 L-96.000,96 Z M543.000,0 L814.500,0 L718.500,96 L447.000,96 Z"/>
+</svg>

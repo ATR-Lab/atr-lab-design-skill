@@ -1,0 +1,183 @@
+{
+  "_comment": "12-slide sponsor and industry-partner introduction (references/pr-events-outreach.md 15.3; recipe in references/presentations.md). Every fact comes from references/brand-foundation.md (sections 1, 4, 8, 9 and 11) or the partner routes in references/pr-events-outreach.md 15.1-15.2; nothing is invented, so it builds without --allow-placeholders. Before a real meeting: clear the company with Philanthropy and Alumni Engagement or Sponsored Programs, tailor slide 1's eyebrow and the notes, recount the GitHub repositories, and replace the Kent State wordmark working copy with the official file. Build: python3 scripts/new_deck.py scripts/examples/decks/sponsor-intro.json -o out/sponsor-intro.pptx --render --check",
+  "template": "presentation",
+  "output": "sponsor-intro.pptx",
+  "title": "Partner with Kent State's Advanced Telerobotics Research Lab",
+  "author": "Advanced Telerobotics Research Lab",
+  "subject": "Sponsor and industry partner introduction",
+  "slides": [
+    {
+      "layout": "ATR - Title",
+      "eyebrow": "INDUSTRY PARTNER BRIEFING",
+      "title": "Partner with Kent State's ATR Lab",
+      "subtitle": "Telepresence robotics and Physical AI research",
+      "presenter": "Jong-Hoon Kim, lab director",
+      "notes": [
+        "Introduce the lab by its full name first: the Advanced Telerobotics Research Lab at Kent State University, in the Department of Computer Science.",
+        "For a specific meeting, put the partner's name and the date in the eyebrow (AP style: SEPT. 23, 2026) and open with the partnership idea in their words.",
+        "Before the meeting: clear the company with Philanthropy and Alumni Engagement (gifts) or the Office of Sponsored Programs (research agreements)."
+      ]
+    },
+    {
+      "layout": "ATR - Agenda",
+      "eyebrow": "TALK OUTLINE",
+      "title": "Agenda",
+      "item1": "Who we are",
+      "item2": "What we build",
+      "item3": "Proof so far",
+      "item4": "Students and programs",
+      "item5": "Ways to partner",
+      "panel": [
+        ["ABOUT THE LAB"],
+        "Exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and artificial intelligence.",
+        ["www.atr.cs.kent.edu"]
+      ],
+      "notes": "Five parts, about 15 minutes, then questions. The panel quotes the lab's own homepage line."
+    },
+    {
+      "layout": "ATR - Title + Content",
+      "section": 1,
+      "title": "From telepresence to Physical AI",
+      "body": [
+        "Heritage: telepresence, tele-embodiment and immersive teleoperation",
+        "Direction: Physical AI that works alongside people",
+        ["AI that senses and acts in the real world through a robot"],
+        "Real hardware, from humanoids to quadrupeds"
+      ],
+      "image": "assets/illustrations/illus-telepresence.png",
+      "image_alt": "Illustration: a remote operator wearing a VR headset controls a distant robot arm over a network link.",
+      "notes": [
+        "The lab opened in 2017 in the Department of Computer Science. Its first decade is telepresence: operating a robot from somewhere else and feeling present in it (the TeleBot line, the AARON AR system for NASA SUITS).",
+        "New work leads with Physical AI: robots that sense, decide and act in real settings alongside people. Keep telepresence in the story; it explains the name.",
+        "The drawing is a concept illustration, not lab hardware."
+      ]
+    },
+    {
+      "layout": "ATR - Three Icon Columns",
+      "section": 2,
+      "title": "Three research threads",
+      "icon1": "assets/icons/png/telepresence-robot-navy.png",
+      "icon1_alt": "",
+      "heading1": "Extending human presence",
+      "text1": "Robots people operate and inhabit at a distance",
+      "icon2": "assets/icons/png/humanoid-navy.png",
+      "icon2_alt": "",
+      "heading2": "Physical AI with people",
+      "text2": "Robots that sense, decide and act beside people",
+      "icon3": "assets/icons/png/student-navy.png",
+      "icon3_alt": "",
+      "heading3": "Learning by building",
+      "text3": "Students do real research on real hardware",
+      "notes": "These are the lab's message pillars 1 to 3. The icons repeat the headings, so they are marked decorative."
+    },
+    {
+      "layout": "ATR - Two Content",
+      "section": 2,
+      "title": "Platforms and projects today",
+      "left_heading": "Current platforms",
+      "left_body": [
+        "SoftBank Pepper",
+        "Unitree Go2 quadruped",
+        "Booster K1 humanoid",
+        "Yahboom ROS 2 robot",
+        "TeleBot-3R and TeleBot-4R"
+      ],
+      "right_heading": "Current projects",
+      "right_body": [
+        "VendoBot (HRI 2026)",
+        "Coffee Buddy",
+        "PepperKit: Pepper with an LLM voice agent",
+        "Expressive Motion on the Booster K1"
+      ],
+      "notes": "VendoBot was published in the HRI 2026 Companion proceedings (Edinburgh, March 2026). PepperKit gives Pepper a realtime LLM voice agent. TeleBot-4R has an XR interface for Meta Quest."
+    },
+    {
+      "layout": "ATR - Key Numbers",
+      "section": 3,
+      "title": "Recognition and open work",
+      "label1": "NASA SUITS 2020",
+      "number1": "Top 10",
+      "text1": "teams selected for the onsite challenge",
+      "label2": "FINALIST, 2021",
+      "number2": "1 of 11",
+      "text2": "World Robot Summit Plant Disaster Prevention Challenge",
+      "label3": "OPEN SOURCE",
+      "number3": "53",
+      "text3": "public repositories on GitHub (ATR-Lab)",
+      "notes": [
+        "Say it as the proof bank words it: selected as one of the top 10 teams for the onsite NASA SUITS challenge (2020); selected as one of 11 finalists in the World Robot Summit Plant Disaster Prevention Challenge (2021). The Kent Stater reported the lab's team was the only one from the United States; attribute it if you say it.",
+        "53 public repositories was the count on Sept. 28, 2026. Recount at github.com/ATR-Lab before presenting."
+      ]
+    },
+    {
+      "layout": "ATR - Timeline",
+      "section": 3,
+      "title": "Milestones since 2017",
+      "date1": "2017",
+      "step1": ["Lab opens", ["Department of Computer Science"]],
+      "date2": "2018",
+      "step2": ["TeleBot-2", ["World Robot Summit, Tokyo"]],
+      "date3": "2020",
+      "step3": ["AARON AR system", ["Paper award, IHCI 2020"]],
+      "date4": "2023",
+      "step4": ["ATR_FLUX", ["NASA SUITS team"]],
+      "date5": "2026",
+      "step5": ["VendoBot", ["HRI 2026 Companion, Edinburgh"]],
+      "notes": "Past projects are labeled with their years. 2020: AARON received the Best Conference Paper Award at IHCI 2020. 2023: the lab's ATR_FLUX team built the second generation of AARON, an AR system for spacesuit operations, for NASA SUITS."
+    },
+    {
+      "layout": "ATR - Statement",
+      "eyebrow": "IN THE LAB'S WORDS",
+      "statement": "“Creating a cooperative world where robots help humans rather than replace them.”",
+      "attribution": "ATR Lab news post, 2021",
+      "notes": "A pause before the students section. The quotation is the lab's own 2021 wording; keep it word for word."
+    },
+    {
+      "layout": "ATR - Content + Image",
+      "section": 4,
+      "title": "Students and programs",
+      "subhead": "From high school to doctoral study",
+      "body": [
+        "Undergraduate and graduate robotics courses",
+        "Summer research internship for high school students",
+        "Summer workshop for middle school students"
+      ],
+      "figure": "assets/illustrations/illus-k12-robot-build.png",
+      "figure_alt": "Illustration: three students build a small wheeled robot together at a table.",
+      "caption": "FIG. 01 // Concept illustration, not a lab photo",
+      "notes": "The 2026 summer programs are titled Hands-on Physical AI and Robotics, for high school students (internship) and for middle school students (workshop). New Physical AI Agent courses will be offered in 2027. Use real, consented photos when the lab has them."
+    },
+    {
+      "layout": "ATR - Section Divider (Outline)",
+      "section": 5,
+      "subtitle": "Every route runs through a Kent State office",
+      "notes": "The ask. Each route below has a university office that handles it; the lab does not negotiate terms itself."
+    },
+    {
+      "layout": "ATR - Table",
+      "section": 5,
+      "title": "How to work with the lab",
+      "table": {
+        "header": ["Route", "Kent State office", "Examples"],
+        "rows": [
+          ["Sponsored research", "Office of Sponsored Programs", "Projects, testing, data"],
+          ["Student support", "Philanthropy and Alumni Engagement", "Fellowships, scholarships"],
+          ["K-12 outreach", "Philanthropy and Alumni Engagement", "Camp scholarships, kits"],
+          ["Equipment", "Philanthropy and Alumni Engagement", "Equipment or in-kind support"]
+        ]
+      },
+      "notes": [
+        "Sponsored Programs negotiates and accepts research agreements (projects, testing, data, IP). Gifts of money, equipment or camp scholarships go through the Division of Philanthropy and Alumni Engagement (gifts@kent.edu).",
+        "Never promise IP terms, exclusivity, deliverables, naming rights or tax treatment: those belong to those offices."
+      ]
+    },
+    {
+      "layout": "ATR - Thank You",
+      "title": "Thank you",
+      "presenter": "Jong-Hoon Kim",
+      "email": "jkim72@kent.edu",
+      "message": "Book a lab visit to see the robots at work.",
+      "notes": "Visits are by appointment. Follow up within 24 hours with the one-pager and a proposed visit date."
+    }
+  ]
+}

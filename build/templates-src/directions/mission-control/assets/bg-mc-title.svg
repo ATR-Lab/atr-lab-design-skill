@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <pattern id="grid" patternUnits="userSpaceOnUse" width="120" height="120">
+      <path d="M24.5,0 V120 M0,24.5 H120 M48.5,0 V120 M0,48.5 H120 M72.5,0 V120 M0,72.5 H120 M96.5,0 V120 M0,96.5 H120" stroke="#F3F6FA" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+      <path d="M0.5,0 V120 M0,0.5 H120" stroke="#F3F6FA" stroke-opacity="0.18" stroke-width="1" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#003976"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+<path d="M1776.0,582.0 L1872.0,582.0 L1968.0,582.0 M1728.0,332.6 L1632.0,332.6 L1584.0,415.7 L1536.0,498.8 L1488.0,582.0 M1632.0,332.6 L1728.0,332.6 L1776.0,415.7 L1872.0,415.7 L1920.0,498.8 M1728.0,498.8 L1824.0,498.8 L1920.0,498.8 M1920.0,166.3 L1968.0,249.4 L1920.0,332.6 L1824.0,332.6 L1728.0,332.6 L1680.0,415.7 M1920.0,498.8 L1824.0,498.8 L1728.0,498.8 L1680.0,582.0 L1584.0,582.0 L1488.0,582.0 L1440.0,498.8 M1824.0,332.6 L1920.0,332.6 L1872.0,415.7 Z M1536.0,332.6 L1632.0,332.6 L1584.0,249.4 Z M1728.0,498.8 L1824.0,498.8 L1776.0,415.7 Z M1584.0,249.4 L1680.0,249.4 L1632.0,166.3 Z" fill="none" stroke="#EFAB00" stroke-width="3.0" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="0.95"/>
+<path d="M1968.0,582.0 L1920.0,498.8 L1824.0,498.8 L1728.0,498.8 L1632.0,498.8 L1536.0,498.8 L1440.0,498.8 M1776.0,415.7 L1872.0,415.7 L1968.0,415.7 M1872.0,249.4 L1968.0,249.4 L1920.0,332.6 Z" fill="none" stroke="#2C8ECD" stroke-width="3.0" stroke-linejoin="miter" stroke-linecap="butt"/>
+<rect x="1771.0" y="577.0" width="10" height="10" fill="#EFAB00"/>
+<rect x="1963.0" y="577.0" width="10" height="10" fill="#EFAB00"/>
+<rect x="1723.0" y="327.6" width="10" height="10" fill="#EFAB00"/>
+<rect x="1483.0" y="577.0" width="10" height="10" fill="#EFAB00"/>
+<rect x="1627.0" y="327.6" width="10" height="10" fill="#EFAB00"/>
+<rect x="1915.0" y="493.8" width="10" height="10" fill="#EFAB00"/>
+<rect x="1723.0" y="493.8" width="10" height="10" fill="#EFAB00"/>
+<rect x="1915.0" y="493.8" width="10" height="10" fill="#EFAB00"/>
+<rect x="1915.0" y="161.3" width="10" height="10" fill="#EFAB00"/>
+<rect x="1675.0" y="410.7" width="10" height="10" fill="#EFAB00"/>
+<rect x="1915.0" y="493.8" width="10" height="10" fill="#EFAB00"/>
+<rect x="1435.0" y="493.8" width="10" height="10" fill="#EFAB00"/>
+<polygon points="1843.2,676.2 1900.8,676.2 1872.0,726.1" fill="#EFAB00"/>
+<polygon points="1843.2,509.9 1900.8,509.9 1872.0,559.8" fill="#EFAB00"/>
+<polygon points="1562.4,317.3 1605.6,317.3 1584.0,279.9" fill="#EFAB00"/>
+<polygon points="1514.4,264.7 1557.6,264.7 1536.0,302.1" fill="#EFAB00"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.000" height="166.000" viewBox="0 0 96.000 166.000">
+  <!-- ATR triangle lattice: equilateral side 96px, stroke 1.5px #003976 @1.0 on #00295F; tile 96 x 166.000 -->
+  <defs>
+    <pattern id="tri" patternUnits="userSpaceOnUse" width="96" height="166.000">
+      <path d="M-0.750,0.000 L96.750,0.000 M-0.750,83.000 L96.750,83.000 M-0.750,166.000 L96.750,166.000 M-0.375,-0.649 L96.375,166.649 M47.625,-0.649 L96.375,83.649 M-0.375,82.351 L48.375,166.649 M-0.375,166.649 L96.375,-0.649 M-0.375,83.649 L48.375,-0.649 M47.625,166.649 L96.375,82.351" fill="none" stroke="#003976" stroke-opacity="1.0" stroke-width="1.5" stroke-linecap="butt"/>
+    </pattern>
+  </defs>
+  <rect width="96.000" height="166.000" fill="#00295F"/>
+  <rect width="96.000" height="166.000" fill="url(#tri)"/>
+</svg>

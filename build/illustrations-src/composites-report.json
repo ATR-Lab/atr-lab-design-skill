@@ -1,0 +1,259 @@
+{
+ "mark_source": "/Users/marcodotio/Developer/atr-lab-design-skill/atr-lab-design/assets/logos/png/atr-mark-gold-3000.png",
+ "files": {
+  "virtual-bg-navy-1920x1080": {
+   "size": [
+    1920,
+    1080
+   ],
+   "note": "bg-title-16x9 shifted 262px right on navy + gold mark upper-left (150px)",
+   "head_zone_busy_pct": 0.0,
+   "art_starts_x": 1420
+  },
+  "virtual-bg-light-1920x1080": {
+   "size": [
+    1920,
+    1080
+   ],
+   "note": "bg-light-16x9 + navy mark upper-left (150px)",
+   "head_zone_busy_pct": 0.0,
+   "art_starts_x": 1602
+  },
+  "virtual-bg-gold-1920x1080": {
+   "size": [
+    1920,
+    1080
+   ],
+   "note": "bg-section-16x9 shifted 109px right on gold + hazard band (gold/white 1920x64) top + navy mark upper-left",
+   "head_zone_busy_pct_below_band": 0.0,
+   "art_starts_x": 1420
+  },
+  "banner-linkedin-cover-1512x256-plain": {
+   "size": [
+    1512,
+    256
+   ],
+   "note": "LinkedIn company cover 1512x256; keep text in x 400..1492, y 20..236, avoid the bottom-left ~310 px (page logo overlap) (no mark)",
+   "safe_box": [
+    400,
+    20,
+    1492,
+    236
+   ],
+   "safe_box_busy_pct": 5.213
+  },
+  "banner-linkedin-cover-1512x256": {
+   "size": [
+    1512,
+    256
+   ],
+   "note": "LinkedIn company cover 1512x256; keep text in x 400..1492, y 20..236, avoid the bottom-left ~310 px (page logo overlap)",
+   "safe_box": [
+    400,
+    20,
+    1492,
+    236
+   ],
+   "safe_box_busy_pct_plain": 5.213,
+   "mark_bbox": [
+    679,
+    48,
+    834,
+    208
+   ],
+   "art_starts_x": 912
+  },
+  "banner-facebook-cover-1640x624-plain": {
+   "size": [
+    1640,
+    624
+   ],
+   "note": "Facebook Page cover 1640x624; keep text and logos in x 436..1070, y 40..545 (inside the 16:9 desktop and 2.4:1 mobile crops, clear of the profile picture) (no mark)",
+   "safe_box": [
+    436,
+    40,
+    1070,
+    545
+   ],
+   "safe_box_busy_pct": 0.0
+  },
+  "banner-facebook-cover-1640x624": {
+   "size": [
+    1640,
+    624
+   ],
+   "note": "Facebook Page cover 1640x624; keep text and logos in x 436..1070, y 40..545 (inside the 16:9 desktop and 2.4:1 mobile crops, clear of the profile picture)",
+   "safe_box": [
+    436,
+    40,
+    1070,
+    545
+   ],
+   "safe_box_busy_pct_plain": 0.0,
+   "mark_bbox": [
+    632,
+    167,
+    874,
+    417
+   ],
+   "art_starts_x": 1126,
+   "desktop_crop_x": [
+    0,
+    1109
+   ],
+   "mobile_crop_x": [
+    0,
+    1497
+   ],
+   "source_shift_px": 160
+  },
+  "banner-og-image-1200x630-plain": {
+   "size": [
+    1200,
+    630
+   ],
+   "note": "Open Graph / link-preview image 1200x630; keep text in x 60..1140, y 75..555 (X crops to 2:1, y 15..615) (no mark)",
+   "safe_box": [
+    60,
+    75,
+    1140,
+    555
+   ],
+   "safe_box_busy_pct": 0.982
+  },
+  "banner-og-image-1200x630": {
+   "size": [
+    1200,
+    630
+   ],
+   "note": "Open Graph / link-preview image 1200x630; keep text in x 60..1140, y 75..555 (X crops to 2:1, y 15..615)",
+   "safe_box": [
+    60,
+    75,
+    1140,
+    555
+   ],
+   "safe_box_busy_pct_plain": 0.982,
+   "mark_bbox": [
+    96,
+    195,
+    328,
+    435
+   ],
+   "art_starts_x": 974,
+   "text_zone_x": [
+    407,
+    974
+   ]
+  },
+  "banner-x-header-1500x500-plain": {
+   "size": [
+    1500,
+    500
+   ],
+   "note": "X header; safe text zone x 450..1450, y 70..430 (avoid bottom-left photo overlap and mobile crop) (no mark)",
+   "safe_box": [
+    450,
+    70,
+    1450,
+    430
+   ],
+   "safe_box_busy_pct": 5.499
+  },
+  "banner-x-header-1500x500": {
+   "size": [
+    1500,
+    500
+   ],
+   "note": "X header; safe text zone x 450..1450, y 70..430 (avoid bottom-left photo overlap and mobile crop)",
+   "safe_box": [
+    450,
+    70,
+    1450,
+    430
+   ],
+   "safe_box_busy_pct_plain": 5.499,
+   "mark_bbox": [
+    634,
+    130,
+    866,
+    370
+   ],
+   "art_starts_x": 905
+  },
+  "banner-youtube-2560x1440-plain": {
+   "size": [
+    2560,
+    1440
+   ],
+   "note": "YouTube banner; everything important inside the 1546x423 safe area (x 507..2053, y 508..931) (no mark)",
+   "safe_box": [
+    507,
+    508,
+    2053,
+    931
+   ],
+   "safe_box_busy_pct": 2.819
+  },
+  "banner-youtube-2560x1440": {
+   "size": [
+    2560,
+    1440
+   ],
+   "note": "YouTube banner; everything important inside the 1546x423 safe area (x 507..2053, y 508..931)",
+   "safe_box": [
+    507,
+    508,
+    2053,
+    931
+   ],
+   "safe_box_busy_pct_plain": 2.819,
+   "mark_bbox": [
+    1135,
+    570,
+    1426,
+    870
+   ],
+   "art_starts_x": 1544
+  },
+  "banner-github-social-1280x640-plain": {
+   "size": [
+    1280,
+    640
+   ],
+   "note": "GitHub social preview; 60px margins, mark left-centre, line-work right (no mark)",
+   "safe_box": [
+    60,
+    60,
+    1220,
+    580
+   ],
+   "safe_box_busy_pct": 2.4
+  },
+  "banner-github-social-1280x640": {
+   "size": [
+    1280,
+    640
+   ],
+   "note": "GitHub social preview; 60px margins, mark left-centre, line-work right",
+   "safe_box": [
+    60,
+    60,
+    1220,
+    580
+   ],
+   "safe_box_busy_pct_plain": 2.4,
+   "mark_bbox": [
+    120,
+    190,
+    372,
+    450
+   ],
+   "art_starts_x": 906,
+   "text_zone_x": [
+    410,
+    906
+   ]
+  }
+ }
+}

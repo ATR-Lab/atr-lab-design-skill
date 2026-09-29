@@ -1,0 +1,711 @@
+[
+ {
+  "label": "01 title",
+  "text": "Immersive Teleoperation for Physical AI",
+  "font": "bold",
+  "pt": 44,
+  "w": 6.9,
+  "maxLines": 2
+ },
+ {
+  "label": "01 subtitle",
+  "text": "[Subtitle: one line on the contribution of this talk]",
+  "font": "reg",
+  "pt": 24,
+  "w": 6.9,
+  "maxLines": 1
+ },
+ {
+  "label": "02 title",
+  "text": "Gesture-Enabled Telepresence Robot",
+  "font": "bold",
+  "pt": 44,
+  "w": 6.9,
+  "maxLines": 2
+ },
+ {
+  "label": "03 agenda 1",
+  "text": "Where the lab is going",
+  "font": "bold",
+  "pt": 22,
+  "w": 3.85,
+  "maxLines": 1
+ },
+ {
+  "label": "03 agenda 2",
+  "text": "Immersive teleoperation",
+  "font": "bold",
+  "pt": 22,
+  "w": 3.85,
+  "maxLines": 1
+ },
+ {
+  "label": "03 agenda 3",
+  "text": "Tele-embodiment",
+  "font": "bold",
+  "pt": 22,
+  "w": 3.85,
+  "maxLines": 1
+ },
+ {
+  "label": "03 agenda 4",
+  "text": "Results",
+  "font": "bold",
+  "pt": 22,
+  "w": 3.85,
+  "maxLines": 1
+ },
+ {
+  "label": "03 agenda 5",
+  "text": "What is next",
+  "font": "bold",
+  "pt": 22,
+  "w": 3.85,
+  "maxLines": 1
+ },
+ {
+  "label": "03 panel",
+  "paragraphs": [
+   {
+    "text": "ABOUT THE LAB",
+    "font": "bold",
+    "pt": 14,
+    "linePt": 18,
+    "afterPt": 8,
+    "tracking": 2.5
+   },
+   {
+    "text": "Exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and artificial intelligence.",
+    "font": "reg",
+    "pt": 18,
+    "linePt": 24,
+    "afterPt": 12
+   },
+   {
+    "text": "atr.cs.kent.edu",
+    "font": "mono",
+    "pt": 14,
+    "linePt": 18,
+    "afterPt": 0
+   }
+  ],
+  "w": 2.98,
+  "hAvail": 2.78
+ },
+ {
+  "label": "04 section title",
+  "text": "Immersive teleoperation",
+  "font": "bold",
+  "pt": 44,
+  "w": 5,
+  "maxLines": 2
+ },
+ {
+  "label": "04 section subtitle",
+  "text": "Immersed Pilot Training Simulator and the telepresence robot",
+  "font": "bold",
+  "pt": 20,
+  "w": 5,
+  "maxLines": 2
+ },
+ {
+  "label": "04 tele-embodiment",
+  "text": "Tele-embodiment",
+  "font": "bold",
+  "pt": 44,
+  "w": 5,
+  "maxLines": 1
+ },
+ {
+  "label": "05 toc 1",
+  "text": "Where the lab is going",
+  "font": "reg",
+  "pt": 16,
+  "w": 2.3200000000000003,
+  "maxLines": 1
+ },
+ {
+  "label": "05 toc 2",
+  "text": "Immersive teleoperation",
+  "font": "reg",
+  "pt": 16,
+  "w": 2.3200000000000003,
+  "maxLines": 1
+ },
+ {
+  "label": "05 toc 3",
+  "text": "Tele-embodiment",
+  "font": "reg",
+  "pt": 16,
+  "w": 2.3200000000000003,
+  "maxLines": 1
+ },
+ {
+  "label": "05 toc 4",
+  "text": "Results",
+  "font": "reg",
+  "pt": 16,
+  "w": 2.3200000000000003,
+  "maxLines": 1
+ },
+ {
+  "label": "05 toc 5",
+  "text": "What is next",
+  "font": "reg",
+  "pt": 16,
+  "w": 2.3200000000000003,
+  "maxLines": 1
+ },
+ {
+  "label": "05 section title",
+  "text": "Tele-embodiment",
+  "font": "bold",
+  "pt": 40,
+  "w": 4.4,
+  "maxLines": 2
+ },
+ {
+  "label": "06 bullet 1",
+  "text": "Six one-line bullets fit; more than that, split",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06 bullet 2",
+  "text": "Body is 18 pt Source Sans 3 ink, left aligned",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06 bullet 3",
+  "text": "Press Tab for a 16 pt slate sub-point",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06 bullet 4",
+  "text": "Sub-points carry detail, not a new argument",
+  "font": "reg",
+  "pt": 16,
+  "w": 5.056,
+  "maxLines": 1
+ },
+ {
+  "label": "06 bullet 5",
+  "text": "One gold accent per white slide: the plate",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06 bullet 6",
+  "text": "AP dates (Sept. 23, 2026), no Oxford comma",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06 title",
+  "text": "Keep titles to one line, sentence case",
+  "font": "bold",
+  "pt": 32,
+  "w": 8.18,
+  "maxLines": 1
+ },
+ {
+  "label": "06b bullet 1",
+  "text": "Gestures cut mean task time by 44 percent",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06b bullet 2",
+  "text": "VR controllers: second fastest, most workload",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06b bullet 3",
+  "text": "Latency above 120 ms cancelled the gain",
+  "font": "reg",
+  "pt": 18,
+  "w": 5.278,
+  "maxLines": 1
+ },
+ {
+  "label": "06b bullet 4",
+  "text": "Example findings, n = [N]",
+  "font": "reg",
+  "pt": 16,
+  "w": 5.056,
+  "maxLines": 1
+ },
+ {
+  "label": "06b title",
+  "text": "Results: task completion time by interface",
+  "font": "bold",
+  "pt": 32,
+  "w": 8.18,
+  "maxLines": 2
+ },
+ {
+  "label": "07 left heading",
+  "text": "Baseline: keyboard and mouse",
+  "font": "bold",
+  "pt": 22,
+  "w": 4.35,
+  "maxLines": 1
+ },
+ {
+  "label": "07 right heading",
+  "text": "Proposed: gesture control",
+  "font": "bold",
+  "pt": 22,
+  "w": 4.35,
+  "maxLines": 1
+ },
+ {
+  "label": "08 subhead",
+  "text": "One control loop across two places",
+  "font": "bold",
+  "pt": 22,
+  "w": 3.575,
+  "maxLines": 2
+ },
+ {
+  "label": "08 bullet 1",
+  "text": "The operator sees through the robot’s cameras in VR",
+  "font": "reg",
+  "pt": 18,
+  "w": 3.353,
+  "maxLines": 2
+ },
+ {
+  "label": "08 bullet 2",
+  "text": "Controllers and gestures map to robot motion",
+  "font": "reg",
+  "pt": 18,
+  "w": 3.353,
+  "maxLines": 2
+ },
+ {
+  "label": "08 bullet 3",
+  "text": "Feedback closes the loop over the network",
+  "font": "reg",
+  "pt": 18,
+  "w": 3.353,
+  "maxLines": 2
+ },
+ {
+  "label": "08 caption",
+  "text": "FIG. 01 // Operator, network and robot arm. Concept illustration, not lab hardware",
+  "font": "mono",
+  "pt": 14,
+  "w": 5.125,
+  "maxLines": 2
+ },
+ {
+  "label": "09 title",
+  "text": "K-12 programs in the lab",
+  "font": "bold",
+  "pt": 32,
+  "w": 3.4,
+  "maxLines": 2
+ },
+ {
+  "label": "09 bullet 1",
+  "text": "Summer internship for high school students",
+  "font": "reg",
+  "pt": 18,
+  "w": 3.978,
+  "maxLines": 2
+ },
+ {
+  "label": "09 bullet 2",
+  "text": "Summer workshop for middle school students",
+  "font": "reg",
+  "pt": 18,
+  "w": 3.978,
+  "maxLines": 2
+ },
+ {
+  "label": "09 bullet 3",
+  "text": "Hands-on Physical AI and robotics",
+  "font": "reg",
+  "pt": 18,
+  "w": 3.978,
+  "maxLines": 2
+ },
+ {
+  "label": "09 caption",
+  "text": "FIG. 02 // Concept illustration, not a lab photo.",
+  "font": "mono",
+  "pt": 14,
+  "w": 4.2,
+  "maxLines": 2
+ },
+ {
+  "label": "10 heading 1",
+  "text": "Telepresence robotics",
+  "font": "bold",
+  "pt": 20,
+  "w": 2.28,
+  "maxLines": 2
+ },
+ {
+  "label": "10 text 1",
+  "text": "Robots that carry your presence into a distant space.",
+  "font": "reg",
+  "pt": 18,
+  "w": 2.28,
+  "maxLines": 3
+ },
+ {
+  "label": "10 heading 2",
+  "text": "Tele-embodiment",
+  "font": "bold",
+  "pt": 20,
+  "w": 2.28,
+  "maxLines": 2
+ },
+ {
+  "label": "10 text 2",
+  "text": "Interfaces that make a distant body your own.",
+  "font": "reg",
+  "pt": 18,
+  "w": 2.28,
+  "maxLines": 3
+ },
+ {
+  "label": "10 heading 3",
+  "text": "Autonomy and Physical AI",
+  "font": "bold",
+  "pt": 20,
+  "w": 2.28,
+  "maxLines": 2
+ },
+ {
+  "label": "10 text 3",
+  "text": "Shared autonomy that keeps people in the loop.",
+  "font": "reg",
+  "pt": 18,
+  "w": 2.28,
+  "maxLines": 3
+ },
+ {
+  "label": "11 statement",
+  "text": "Carry your presence into a distant space, with a person always in the loop.",
+  "font": "bold",
+  "pt": 40,
+  "w": 7.5,
+  "maxLines": 3
+ },
+ {
+  "label": "12 number 1",
+  "text": "[44%]",
+  "font": "slab",
+  "pt": 52,
+  "w": 2.28,
+  "maxLines": 1
+ },
+ {
+  "label": "12 text 1",
+  "text": "less task time with gestures than keyboard and mouse",
+  "font": "reg",
+  "pt": 18,
+  "w": 2.28,
+  "maxLines": 3
+ },
+ {
+  "label": "12 number 2",
+  "text": "[24]",
+  "font": "slab",
+  "pt": 52,
+  "w": 2.28,
+  "maxLines": 1
+ },
+ {
+  "label": "12 text 2",
+  "text": "within-subjects study, four tasks per interface",
+  "font": "reg",
+  "pt": 18,
+  "w": 2.28,
+  "maxLines": 3
+ },
+ {
+  "label": "12 number 3",
+  "text": "[38]",
+  "font": "slab",
+  "pt": 52,
+  "w": 2.28,
+  "maxLines": 1
+ },
+ {
+  "label": "12 text 3",
+  "text": "ms median round trip, controller to gripper",
+  "font": "reg",
+  "pt": 18,
+  "w": 2.28,
+  "maxLines": 3
+ },
+ {
+  "label": "13 source",
+  "text": "SOURCE // Example data, n = [N], lower is better",
+  "font": "mono",
+  "pt": 14,
+  "w": 5.9,
+  "maxLines": 1
+ },
+ {
+  "label": "13 label",
+  "text": "less time per task with gestures than keyboard and mouse",
+  "font": "reg",
+  "pt": 18,
+  "w": 2.2,
+  "maxLines": 3
+ },
+ {
+  "label": "15 step 1",
+  "text": "Kickoff",
+  "font": "bold",
+  "pt": 18,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 detail 1",
+  "text": "Protocol and hardware",
+  "font": "reg",
+  "pt": 16,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 step 2",
+  "text": "Prototype",
+  "font": "bold",
+  "pt": 18,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 detail 2",
+  "text": "Gesture mapping v1",
+  "font": "reg",
+  "pt": 16,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 step 3",
+  "text": "User study",
+  "font": "bold",
+  "pt": 18,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 detail 3",
+  "text": "n = [N], four tasks",
+  "font": "reg",
+  "pt": 16,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 step 4",
+  "text": "Analysis",
+  "font": "bold",
+  "pt": 18,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 detail 4",
+  "text": "Task time, workload",
+  "font": "reg",
+  "pt": 16,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 step 5",
+  "text": "Publication",
+  "font": "bold",
+  "pt": 18,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "15 detail 5",
+  "text": "[Venue] submission",
+  "font": "reg",
+  "pt": 16,
+  "w": 1.7,
+  "maxLines": 2
+ },
+ {
+  "label": "16 name 1",
+  "text": "Dr. Jong-Hoon Kim",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 1",
+  "text": "Lab director",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 name 2",
+  "text": "[Name Surname]",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 2",
+  "text": "[Ph.D. student]",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 name 3",
+  "text": "[Name Surname]",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 3",
+  "text": "[Ph.D. student]",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 name 4",
+  "text": "[Name Surname]",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 4",
+  "text": "[M.S. student]",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 name 5",
+  "text": "[Name Surname]",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 5",
+  "text": "[M.S. student]",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 name 6",
+  "text": "[Name Surname]",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 6",
+  "text": "[Undergrad researcher]",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 name 7",
+  "text": "[Name Surname]",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 7",
+  "text": "[Undergrad researcher]",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 name 8",
+  "text": "[Name Surname]",
+  "font": "bold",
+  "pt": 16,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "16 role 8",
+  "text": "[Visiting scholar]",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 1
+ },
+ {
+  "label": "17 caption",
+  "text": "DEMO // [Title], [mm:ss], [Mon. D, YYYY]",
+  "font": "mono",
+  "pt": 14,
+  "w": 5.4,
+  "maxLines": 1
+ },
+ {
+  "label": "19 statement",
+  "text": "This work was supported by [Sponsor] under [Grant No.]. We thank [collaborators] for [contribution] and the students of [program].",
+  "font": "reg",
+  "pt": 18,
+  "w": 9,
+  "maxLines": 2
+ },
+ {
+  "label": "19 caption NSF",
+  "text": "National Science Foundation\nGrant No. 1234567",
+  "font": "reg",
+  "pt": 14,
+  "w": 2.025,
+  "maxLines": 3
+ }
+]

@@ -1,0 +1,3754 @@
+{
+ "layouts": [
+  {
+   "name": "ATR - Title",
+   "type": "title",
+   "placeholders": [
+    {
+     "idx": 101,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "[EVENT OR VENUE]  ·  [MONTH D, YYYY]",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 102,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Talk title, two lines maximum",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.82,
+      "equivalent_pt": 48
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 44,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "subtitle",
+     "shapeName": "subtitle",
+     "phType": "body",
+     "prompt": "Subtitle: one line on the contribution of this talk",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.88,
+      "equivalent_pt": 28
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 24,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "presenter",
+     "shapeName": "presenter",
+     "phType": "body",
+     "prompt": "[Presenter Name], [Title or degree program]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 25
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 20,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Title (Light)",
+   "type": "title",
+   "placeholders": [
+    {
+     "idx": 101,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "[COURSE OR REPORT]  ·  [MONTH D, YYYY]",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 102,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Talk title, two lines maximum",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.82,
+      "equivalent_pt": 48
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 44,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "subtitle",
+     "shapeName": "subtitle",
+     "phType": "body",
+     "prompt": "Subtitle: one line on the contribution of this talk",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.88,
+      "equivalent_pt": 28
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 24,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "presenter",
+     "shapeName": "presenter",
+     "phType": "body",
+     "prompt": "[Author Names]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 25
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 20,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Agenda",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 113,
+     "name": "item1",
+     "shapeName": "Item 1",
+     "phType": "body",
+     "prompt": "Section 1",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 114,
+     "name": "item2",
+     "shapeName": "Item 2",
+     "phType": "body",
+     "prompt": "Section 2",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 115,
+     "name": "item3",
+     "shapeName": "Item 3",
+     "phType": "body",
+     "prompt": "Section 3",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 116,
+     "name": "item4",
+     "shapeName": "Item 4",
+     "phType": "body",
+     "prompt": "Section 4",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 117,
+     "name": "item5",
+     "shapeName": "Item 5",
+     "phType": "body",
+     "prompt": "Section 5",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 118,
+     "name": "timing1",
+     "shapeName": "Timing 1",
+     "phType": "body",
+     "prompt": "T+00",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 119,
+     "name": "timing2",
+     "shapeName": "Timing 2",
+     "phType": "body",
+     "prompt": "T+00",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 120,
+     "name": "timing3",
+     "shapeName": "Timing 3",
+     "phType": "body",
+     "prompt": "T+00",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 121,
+     "name": "timing4",
+     "shapeName": "Timing 4",
+     "phType": "body",
+     "prompt": "T+00",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 122,
+     "name": "timing5",
+     "shapeName": "Timing 5",
+     "phType": "body",
+     "prompt": "T+00",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 123,
+     "name": "panel",
+     "shapeName": "panel",
+     "phType": "body",
+     "prompt": "About the lab, or a session card (SESSION / DATE / DURATION / SPEAKER). Delete this panel for a plain agenda.",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0.26,
+      0.26,
+      0.26,
+      0.26
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "EFAB00",
+       "font": "Source Code Pro",
+       "bold": false,
+       "lineSpacing": 18,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 1.02
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Section Divider",
+   "type": "secHead",
+   "placeholders": [
+    {
+     "idx": 101,
+     "name": "number",
+     "shapeName": "Section number",
+     "phType": "body",
+     "prompt": "01",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 60
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 60,
+     "fontFace": "Roboto Slab"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Section title",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.82,
+      "equivalent_pt": 48
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 44,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "subtitle",
+     "shapeName": "subtitle",
+     "phType": "body",
+     "prompt": "One line on what this section covers",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 25
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 20,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Section Divider (Outline)",
+   "type": "secHead",
+   "placeholders": [
+    {
+     "idx": 101,
+     "name": "number",
+     "shapeName": "Section number",
+     "phType": "body",
+     "prompt": "01",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 60
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 60,
+     "fontFace": "Roboto Slab"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Section title",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.83,
+      "equivalent_pt": 44
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 40,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "subtitle",
+     "shapeName": "subtitle",
+     "phType": "body",
+     "prompt": "One line on what this section covers",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 25
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 20,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 107,
+     "name": "outline",
+     "shapeName": "Outline",
+     "phType": "body",
+     "prompt": "01\tSection one\n02\tSection two",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0.38,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 20
+     },
+     "paraSpaceAfter": 14,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Title + Content",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "body",
+     "shapeName": "body",
+     "phType": "body",
+     "prompt": "Up to 7 bullets; press Tab for a sub-point",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "lineSpacing": 20,
+       "bullet": "▹",
+       "indent": 0.222,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "figure",
+     "shapeName": "Figure",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Title + Content (Two-line title)",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, up to two lines",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "body",
+     "shapeName": "body",
+     "phType": "body",
+     "prompt": "Up to 6 bullets; press Tab for a sub-point",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "lineSpacing": 20,
+       "bullet": "▹",
+       "indent": 0.222,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "figure",
+     "shapeName": "Figure",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Two Content",
+   "type": "twoObj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "left_heading",
+     "shapeName": "Left heading",
+     "phType": "body",
+     "prompt": "Column heading",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "left_body",
+     "shapeName": "Left body",
+     "phType": "body",
+     "prompt": "Bullets for this column",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "lineSpacing": 20,
+       "bullet": "▹",
+       "indent": 0.222,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 106,
+     "name": "right_heading",
+     "shapeName": "Right heading",
+     "phType": "body",
+     "prompt": "Column heading",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 107,
+     "name": "right_body",
+     "shapeName": "Right body",
+     "phType": "body",
+     "prompt": "Bullets for this column",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "lineSpacing": 20,
+       "bullet": "▹",
+       "indent": 0.222,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Content + Image",
+   "type": "objAndTx",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "subhead",
+     "shapeName": "subhead",
+     "phType": "body",
+     "prompt": "Lead statement, one or two lines",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.89,
+      "equivalent_pt": 26
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 22,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "body",
+     "shapeName": "body",
+     "phType": "body",
+     "prompt": "Up to three bullets",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "lineSpacing": 20,
+       "bullet": "▹",
+       "indent": 0.222,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 107,
+     "name": "figure",
+     "shapeName": "Figure",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 108,
+     "name": "caption",
+     "shapeName": "caption",
+     "phType": "body",
+     "prompt": "FIG. 01 // Caption; AI images say \"Concept illustration, not lab hardware\"",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.02,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Full-Bleed Image",
+   "type": "picTx",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, up to two lines",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "body",
+     "shapeName": "body",
+     "phType": "body",
+     "prompt": "Up to three bullets",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "lineSpacing": 20,
+       "bullet": "▹",
+       "indent": 0.222,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "caption",
+     "shapeName": "caption",
+     "phType": "body",
+     "prompt": "FIG. 02 // Caption, credit, date",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.02,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 106,
+     "name": "photo",
+     "shapeName": "Photo",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Three Icon Columns",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "icon1",
+     "shapeName": "Icon 1",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 106,
+     "name": "heading1",
+     "shapeName": "Heading 1",
+     "phType": "body",
+     "prompt": "Card heading",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 25
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 20,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 107,
+     "name": "text1",
+     "shapeName": "Text 1",
+     "phType": "body",
+     "prompt": "Two or three lines",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 109,
+     "name": "icon2",
+     "shapeName": "Icon 2",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 110,
+     "name": "heading2",
+     "shapeName": "Heading 2",
+     "phType": "body",
+     "prompt": "Card heading",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 25
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 20,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 111,
+     "name": "text2",
+     "shapeName": "Text 2",
+     "phType": "body",
+     "prompt": "Two or three lines",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 113,
+     "name": "icon3",
+     "shapeName": "Icon 3",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 114,
+     "name": "heading3",
+     "shapeName": "Heading 3",
+     "phType": "body",
+     "prompt": "Card heading",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 25
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 20,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 115,
+     "name": "text3",
+     "shapeName": "Text 3",
+     "phType": "body",
+     "prompt": "Two or three lines",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Statement",
+   "type": "cust",
+   "placeholders": [
+    {
+     "idx": 101,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "KEY TAKEAWAY",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 102,
+     "name": "statement",
+     "shapeName": "statement",
+     "phType": "title",
+     "prompt": "One sentence, three lines maximum",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.87,
+      "equivalent_pt": 46
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 40,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "attribution",
+     "shapeName": "attribution",
+     "phType": "body",
+     "prompt": "[Speaker or source], [year]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Key Numbers",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "label1",
+     "shapeName": "Label 1",
+     "phType": "body",
+     "prompt": "METRIC",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 106,
+     "name": "number1",
+     "shapeName": "Number 1",
+     "phType": "body",
+     "prompt": "[00]",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 56
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 52,
+     "fontFace": "Roboto Slab"
+    },
+    {
+     "idx": 107,
+     "name": "text1",
+     "shapeName": "Text 1",
+     "phType": "body",
+     "prompt": "What the number means, and n",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 109,
+     "name": "label2",
+     "shapeName": "Label 2",
+     "phType": "body",
+     "prompt": "METRIC",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 110,
+     "name": "number2",
+     "shapeName": "Number 2",
+     "phType": "body",
+     "prompt": "[00]",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 56
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 52,
+     "fontFace": "Roboto Slab"
+    },
+    {
+     "idx": 111,
+     "name": "text2",
+     "shapeName": "Text 2",
+     "phType": "body",
+     "prompt": "What the number means, and n",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 113,
+     "name": "label3",
+     "shapeName": "Label 3",
+     "phType": "body",
+     "prompt": "METRIC",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 114,
+     "name": "number3",
+     "shapeName": "Number 3",
+     "phType": "body",
+     "prompt": "[00]",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 56
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 52,
+     "fontFace": "Roboto Slab"
+    },
+    {
+     "idx": 115,
+     "name": "text3",
+     "shapeName": "Text 3",
+     "phType": "body",
+     "prompt": "What the number means, and n",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Chart + Takeaway",
+   "type": "chartAndTx",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "chart",
+     "shapeName": "Chart",
+     "phType": "chart",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "source",
+     "shapeName": "source",
+     "phType": "body",
+     "prompt": "SOURCE // [study or dataset], n = [N], lower is better",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 108,
+     "name": "number",
+     "shapeName": "Key number",
+     "phType": "body",
+     "prompt": "00%",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 68
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 64,
+     "fontFace": "Roboto Slab"
+    },
+    {
+     "idx": 109,
+     "name": "label",
+     "shapeName": "Key label",
+     "phType": "body",
+     "prompt": "What the number means",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 110,
+     "name": "flag",
+     "shapeName": "Flag",
+     "phType": "body",
+     "prompt": "EXAMPLE FIGURE",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Table",
+   "type": "tbl",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "table",
+     "shapeName": "Table",
+     "phType": "tbl",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Timeline",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 106,
+     "name": "date1",
+     "shapeName": "Date 1",
+     "phType": "body",
+     "prompt": "YYYY-MM",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 107,
+     "name": "step1",
+     "shapeName": "Step 1",
+     "phType": "body",
+     "prompt": "Milestone",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 20,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.92,
+      "equivalent_pt": 22
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 109,
+     "name": "date2",
+     "shapeName": "Date 2",
+     "phType": "body",
+     "prompt": "YYYY-MM",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 110,
+     "name": "step2",
+     "shapeName": "Step 2",
+     "phType": "body",
+     "prompt": "Milestone",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 20,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.92,
+      "equivalent_pt": 22
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 112,
+     "name": "date3",
+     "shapeName": "Date 3",
+     "phType": "body",
+     "prompt": "YYYY-MM",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 113,
+     "name": "step3",
+     "shapeName": "Step 3",
+     "phType": "body",
+     "prompt": "Milestone",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 20,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.92,
+      "equivalent_pt": 22
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 115,
+     "name": "date4",
+     "shapeName": "Date 4",
+     "phType": "body",
+     "prompt": "YYYY-MM",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 116,
+     "name": "step4",
+     "shapeName": "Step 4",
+     "phType": "body",
+     "prompt": "Milestone",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 20,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.92,
+      "equivalent_pt": 22
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 118,
+     "name": "date5",
+     "shapeName": "Date 5",
+     "phType": "body",
+     "prompt": "YYYY-MM",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 119,
+     "name": "step5",
+     "shapeName": "Step 5",
+     "phType": "body",
+     "prompt": "Milestone",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 20,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.92,
+      "equivalent_pt": 22
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Team",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "photo1",
+     "shapeName": "Photo 1",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "member1",
+     "shapeName": "Member 1",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 106,
+     "name": "photo2",
+     "shapeName": "Photo 2",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 107,
+     "name": "member2",
+     "shapeName": "Member 2",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 108,
+     "name": "photo3",
+     "shapeName": "Photo 3",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 109,
+     "name": "member3",
+     "shapeName": "Member 3",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 110,
+     "name": "photo4",
+     "shapeName": "Photo 4",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 111,
+     "name": "member4",
+     "shapeName": "Member 4",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 112,
+     "name": "photo5",
+     "shapeName": "Photo 5",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 113,
+     "name": "member5",
+     "shapeName": "Member 5",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 114,
+     "name": "photo6",
+     "shapeName": "Photo 6",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 115,
+     "name": "member6",
+     "shapeName": "Member 6",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 116,
+     "name": "photo7",
+     "shapeName": "Photo 7",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 117,
+     "name": "member7",
+     "shapeName": "Member 7",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 118,
+     "name": "photo8",
+     "shapeName": "Photo 8",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 119,
+     "name": "member8",
+     "shapeName": "Member 8",
+     "phType": "body",
+     "prompt": "Name\nRole",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 14,
+       "color": "4A5868",
+       "bold": false,
+       "lineSpacing": 17,
+       "bullet": false,
+       "indent": 0,
+       "lineSpacingPct": 0.92
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.9,
+      "equivalent_pt": 19
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Video",
+   "type": "cust",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 105,
+     "name": "media",
+     "shapeName": "Media",
+     "phType": "media",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 106,
+     "name": "caption",
+     "shapeName": "caption",
+     "phType": "body",
+     "prompt": "DEMO // [title], [mm:ss], [date recorded]",
+     "anchor": "middle",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "exact",
+      "pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Code Pro"
+    },
+    {
+     "idx": 107,
+     "name": "notes",
+     "shapeName": "Watch for",
+     "phType": "body",
+     "prompt": "What to watch for",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": {
+      "2": {
+       "size": 16,
+       "color": "4A5868",
+       "lineSpacing": 20,
+       "bullet": "▹",
+       "indent": 0.222,
+       "lineSpacingPct": 0.94
+      }
+     },
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - References",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "references",
+     "shapeName": "References",
+     "phType": "body",
+     "prompt": "[1]\tAuthor, A. and Author, B. Title. Venue, year.",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0.45,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.94,
+      "equivalent_pt": 20
+     },
+     "paraSpaceAfter": 8,
+     "fontSize": 16,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Acknowledgements",
+   "type": "obj",
+   "placeholders": [
+    {
+     "idx": 102,
+     "name": "eyebrow",
+     "shapeName": "eyebrow",
+     "phType": "body",
+     "prompt": "SECTION 00  ·  SECTION NAME",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Slide title, one line, sentence case",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.85,
+      "equivalent_pt": 36
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 32,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "text",
+     "shapeName": "Statement",
+     "phType": "body",
+     "prompt": "This work was supported by [Sponsor] under [Grant No.]. We thank [collaborators].",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 106,
+     "name": "logo1",
+     "shapeName": "Sponsor logo 1",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 107,
+     "name": "grant1",
+     "shapeName": "Grant 1",
+     "phType": "body",
+     "prompt": "[Sponsor]\n[Grant No.]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 109,
+     "name": "logo2",
+     "shapeName": "Sponsor logo 2",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 110,
+     "name": "grant2",
+     "shapeName": "Grant 2",
+     "phType": "body",
+     "prompt": "[Sponsor]\n[Grant No.]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 112,
+     "name": "logo3",
+     "shapeName": "Sponsor logo 3",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 113,
+     "name": "grant3",
+     "shapeName": "Grant 3",
+     "phType": "body",
+     "prompt": "[Sponsor]\n[Grant No.]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 115,
+     "name": "logo4",
+     "shapeName": "Sponsor logo 4",
+     "phType": "pic",
+     "prompt": "",
+     "anchor": "top",
+     "autofit": "none",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": null,
+     "paraSpaceAfter": 0,
+     "fontSize": null,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 116,
+     "name": "grant4",
+     "shapeName": "Grant 4",
+     "phType": "body",
+     "prompt": "[Sponsor]\n[Grant No.]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.97,
+      "equivalent_pt": 18
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 14,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Thank You",
+   "type": "cust",
+   "placeholders": [
+    {
+     "idx": 101,
+     "name": "title",
+     "shapeName": "title",
+     "phType": "title",
+     "prompt": "Thank you",
+     "anchor": "middle",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.8,
+      "equivalent_pt": 64
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 60,
+     "fontFace": "Source Sans 3 Black"
+    },
+    {
+     "idx": 102,
+     "name": "presenter",
+     "shapeName": "presenter",
+     "phType": "body",
+     "prompt": "[Presenter Name]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 0.88,
+      "equivalent_pt": 28
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 24,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 103,
+     "name": "email",
+     "shapeName": "email",
+     "phType": "body",
+     "prompt": "[presenter@kent.edu]",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    },
+    {
+     "idx": 104,
+     "name": "message",
+     "shapeName": "message",
+     "phType": "body",
+     "prompt": "Questions and collaboration welcome.",
+     "anchor": "top",
+     "autofit": "norm",
+     "insets": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "levels": null,
+     "hanging": 0,
+     "spacing": {
+      "mode": "pct",
+      "pct": 1.01,
+      "equivalent_pt": 24
+     },
+     "paraSpaceAfter": 0,
+     "fontSize": 18,
+     "fontFace": "Source Sans 3"
+    }
+   ]
+  },
+  {
+   "name": "ATR - Blank Branded",
+   "type": "blank",
+   "placeholders": []
+  }
+ ]
+}

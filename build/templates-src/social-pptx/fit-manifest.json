@@ -1,0 +1,3570 @@
+[
+ {
+  "canvas": "square",
+  "layout": "Announcement",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  ANNOUNCEMENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Announcement",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Summer robotics internship",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 312
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Announcement",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "High school students: spend your summer on a real robotics research team at Kent State University.",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 150
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Announcement",
+  "placeholder": "link",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Event",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  EVENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Event",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Robot demos and open lab night",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 208
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Event",
+  "placeholder": "when",
+  "items": [
+   {
+    "text": "[Thursday, Sept. 23]  ·  [6-8 p.m.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 680,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Event",
+  "placeholder": "where",
+  "items": [
+   {
+    "text": "[Room], Mathematical Sciences Building",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 680,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Event",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "RSVP: [link]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Paper accepted",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "PAPER ACCEPTED  ·  [VENUE 2027]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Paper accepted",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[Paper title: state the contribution in plain words, up to four lines at this size]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 280
+  },
+  "px": 64,
+  "lh": 70,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Paper accepted",
+  "placeholder": "authors",
+  "items": [
+   {
+    "text": "[Author One], [Author Two] and [Author Three], Advanced Telerobotics Research Lab",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Paper accepted",
+  "placeholder": "venue",
+  "items": [
+   {
+    "text": "[Conference], [City]  ·  [Month YYYY]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Paper accepted",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Read the paper: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Recruiting",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  JOIN THE LAB",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Recruiting",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Build real robots before you graduate.",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 208
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Recruiting",
+  "placeholder": "points",
+  "items": [
+   {
+    "text": "[Who can apply]",
+    "bullet": true
+   },
+   {
+    "text": "[What you would work on]",
+    "bullet": true
+   },
+   {
+    "text": "[How and when to apply]",
+    "bullet": true
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 174
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Recruiting",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu  ·  [Join page]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Milestone",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  MILESTONE",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Milestone",
+  "placeholder": "number",
+  "items": [
+   {
+    "text": "[10]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 288
+  },
+  "px": 280,
+  "lh": 288,
+  "font": "Roboto Slab",
+  "bold": true,
+  "charSpacing": -2,
+  "fontFile": "RobotoSlab-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Milestone",
+  "placeholder": "label",
+  "items": [
+   {
+    "text": "years of telerobotics research at Kent State: the lab opened its doors in spring 2017",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 150
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Milestone",
+  "placeholder": "source",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu/[news post]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Spotlight quote",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  [STUDENT SPOTLIGHT]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Spotlight quote",
+  "placeholder": "name",
+  "items": [
+   {
+    "text": "[First Last]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 600,
+   "h": 50
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Spotlight quote",
+  "placeholder": "role",
+  "items": [
+   {
+    "text": "[Ph.D. student, computer science]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 600,
+   "h": 88
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Spotlight quote",
+  "placeholder": "quote",
+  "items": [
+   {
+    "text": "[A short quote the person approved, 25 words or fewer.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 808,
+   "h": 204
+  },
+  "px": 56,
+  "lh": 68,
+  "font": "Roboto Slab",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "RobotoSlab-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Demo video cover",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  DEMO VIDEO",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Demo video cover",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[What the robot does, in five words]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 140
+  },
+  "px": 64,
+  "lh": 70,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Demo video cover",
+  "placeholder": "flags",
+  "items": [
+   {
+    "text": "[2X SPEED]  ·  [TELEOPERATED]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Demo video cover",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Full video on YouTube: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Thank you / Welcome",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  THANK YOU",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Thank you / Welcome",
+  "placeholder": "display",
+  "items": [
+   {
+    "text": "Thank you",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 132
+  },
+  "px": 128,
+  "lh": 132,
+  "font": "Source Sans 3 Black",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Black.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Thank you / Welcome",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "[to everyone who came to open lab night on Sept. 23, and to the partners who made it possible]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 150
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "square",
+  "layout": "Thank you / Welcome",
+  "placeholder": "next",
+  "items": [
+   {
+    "text": "Next: [event, date]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Announcement",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  ANNOUNCEMENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Announcement",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Summer robotics internship",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 480
+  },
+  "px": 112,
+  "lh": 120,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Announcement",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "High school students: spend your summer on a real robotics research team at Kent State University.",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 162
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Announcement",
+  "placeholder": "link",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Event",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  EVENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Event",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Robot demos and open lab night",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 240
+  },
+  "px": 112,
+  "lh": 120,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Event",
+  "placeholder": "when",
+  "items": [
+   {
+    "text": "[Thursday, Sept. 23]  ·  [6-8 p.m.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 680,
+   "h": 108
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Event",
+  "placeholder": "where",
+  "items": [
+   {
+    "text": "[Room], Mathematical Sciences Building, Kent State University",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 680,
+   "h": 108
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Event",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "RSVP: [link]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Paper accepted",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "PAPER ACCEPTED  ·  [VENUE 2027]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Paper accepted",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[Paper title: state the contribution in plain words, up to five lines at this size]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 440
+  },
+  "px": 80,
+  "lh": 88,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Paper accepted",
+  "placeholder": "authors",
+  "items": [
+   {
+    "text": "[Author One], [Author Two] and [Author Three], Advanced Telerobotics Research Lab",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 108
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Paper accepted",
+  "placeholder": "venue",
+  "items": [
+   {
+    "text": "[Conference], [City]  ·  [Month YYYY]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Paper accepted",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Read the paper: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Recruiting",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  JOIN THE LAB",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Recruiting",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Build real robots before you graduate.",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 360
+  },
+  "px": 112,
+  "lh": 120,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Recruiting",
+  "placeholder": "points",
+  "items": [
+   {
+    "text": "[Who can apply]",
+    "bullet": true
+   },
+   {
+    "text": "[What you would work on]",
+    "bullet": true
+   },
+   {
+    "text": "[Hours, credit or pay]",
+    "bullet": true
+   },
+   {
+    "text": "[How and when to apply]",
+    "bullet": true
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 248
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Recruiting",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu  ·  [Join page]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Milestone",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  MILESTONE",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Milestone",
+  "placeholder": "number",
+  "items": [
+   {
+    "text": "[10]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 328
+  },
+  "px": 320,
+  "lh": 328,
+  "font": "Roboto Slab",
+  "bold": true,
+  "charSpacing": -2,
+  "fontFile": "RobotoSlab-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Milestone",
+  "placeholder": "label",
+  "items": [
+   {
+    "text": "years of telerobotics research at Kent State: the lab opened its doors in spring 2017",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 216
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Milestone",
+  "placeholder": "source",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu/[news post]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Spotlight quote",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  [STUDENT SPOTLIGHT]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Spotlight quote",
+  "placeholder": "name",
+  "items": [
+   {
+    "text": "[First Last]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 540,
+   "h": 54
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Spotlight quote",
+  "placeholder": "role",
+  "items": [
+   {
+    "text": "[Ph.D. student, computer science]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 540,
+   "h": 96
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Spotlight quote",
+  "placeholder": "quote",
+  "items": [
+   {
+    "text": "[A short quote the person approved, 25 words or fewer.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 808,
+   "h": 304
+  },
+  "px": 64,
+  "lh": 76,
+  "font": "Roboto Slab",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "RobotoSlab-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Demo video cover",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  DEMO VIDEO",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Demo video cover",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[What the robot does, in five words]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 176
+  },
+  "px": 80,
+  "lh": 88,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Demo video cover",
+  "placeholder": "flags",
+  "items": [
+   {
+    "text": "[2X SPEED]  ·  [TELEOPERATED]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Demo video cover",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Full video on YouTube: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Thank you / Welcome",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  THANK YOU",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Thank you / Welcome",
+  "placeholder": "display",
+  "items": [
+   {
+    "text": "Thank you",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 936,
+   "h": 148
+  },
+  "px": 144,
+  "lh": 148,
+  "font": "Source Sans 3 Black",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Black.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Thank you / Welcome",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "[to everyone who came to open lab night on Sept. 23, and to the partners who made it possible]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 216
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "portrait",
+  "layout": "Thank you / Welcome",
+  "placeholder": "next",
+  "items": [
+   {
+    "text": "Next: [event, date]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 760,
+   "h": 48
+  },
+  "px": 40,
+  "lh": 48,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Announcement",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  ANNOUNCEMENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Announcement",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Summer robotics internship",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 416
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Announcement",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "High school students: spend your summer on a real robotics research team at Kent State University.",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 150
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Announcement",
+  "placeholder": "link",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Event",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  EVENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Event",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Robot demos and open lab night",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 208
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Event",
+  "placeholder": "when",
+  "items": [
+   {
+    "text": "[Thursday, Sept. 23]  ·  [6-8 p.m.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 788,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Event",
+  "placeholder": "where",
+  "items": [
+   {
+    "text": "[Room], Mathematical Sciences Building, Kent State University",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 788,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Event",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "RSVP: [link]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Paper accepted",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "PAPER ACCEPTED  ·  [VENUE 2027]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Paper accepted",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[Paper title: state the contribution in plain words, up to five lines at this size]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 390
+  },
+  "px": 72,
+  "lh": 78,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Paper accepted",
+  "placeholder": "authors",
+  "items": [
+   {
+    "text": "[Author One], [Author Two] and [Author Three], Advanced Telerobotics Research Lab",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Paper accepted",
+  "placeholder": "venue",
+  "items": [
+   {
+    "text": "[Conference], [City]  ·  [Month YYYY]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Paper accepted",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Read the paper: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Recruiting",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  JOIN THE LAB",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Recruiting",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Build real robots before you graduate.",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 312
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Recruiting",
+  "placeholder": "points",
+  "items": [
+   {
+    "text": "[Who can apply]",
+    "bullet": true
+   },
+   {
+    "text": "[What you would work on]",
+    "bullet": true
+   },
+   {
+    "text": "[Hours, credit or pay]",
+    "bullet": true
+   },
+   {
+    "text": "[How and when to apply]",
+    "bullet": true
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 232
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Recruiting",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu  ·  [Join page]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Milestone",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  MILESTONE",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Milestone",
+  "placeholder": "number",
+  "items": [
+   {
+    "text": "[10]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 288
+  },
+  "px": 280,
+  "lh": 288,
+  "font": "Roboto Slab",
+  "bold": true,
+  "charSpacing": -2,
+  "fontFile": "RobotoSlab-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Milestone",
+  "placeholder": "label",
+  "items": [
+   {
+    "text": "years of telerobotics research at Kent State: the lab opened its doors in spring 2017",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 200
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Milestone",
+  "placeholder": "source",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu/[news post]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Spotlight quote",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  [STUDENT SPOTLIGHT]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Spotlight quote",
+  "placeholder": "name",
+  "items": [
+   {
+    "text": "[First Last]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 472,
+   "h": 50
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Spotlight quote",
+  "placeholder": "role",
+  "items": [
+   {
+    "text": "[Ph.D. student, computer science]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 472,
+   "h": 88
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Spotlight quote",
+  "placeholder": "quote",
+  "items": [
+   {
+    "text": "[A short quote the person approved, 25 words or fewer.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 740,
+   "h": 272
+  },
+  "px": 56,
+  "lh": 68,
+  "font": "Roboto Slab",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "RobotoSlab-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Demo video cover",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  DEMO VIDEO",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Demo video cover",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[What the robot does, in five words]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 156
+  },
+  "px": 72,
+  "lh": 78,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Demo video cover",
+  "placeholder": "flags",
+  "items": [
+   {
+    "text": "[2X SPEED]  ·  [TELEOPERATED]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Demo video cover",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Full video on YouTube: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Thank you / Welcome",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  THANK YOU",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Thank you / Welcome",
+  "placeholder": "display",
+  "items": [
+   {
+    "text": "Thank you",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 132
+  },
+  "px": 128,
+  "lh": 132,
+  "font": "Source Sans 3 Black",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Black.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Thank you / Welcome",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "[to everyone who came to open lab night on Sept. 23, and to the partners who made it possible]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 200
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "story",
+  "layout": "Thank you / Welcome",
+  "placeholder": "next",
+  "items": [
+   {
+    "text": "Next: [event, date]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 868,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Announcement",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  ANNOUNCEMENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 768,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Announcement",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Hands-on Physical AI and robotics",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 156
+  },
+  "px": 72,
+  "lh": 78,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Announcement",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "Spend your summer on a real robotics research team at Kent State University.",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Announcement",
+  "placeholder": "link",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Event",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  EVENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Event",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Open lab night",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 400,
+   "h": 156
+  },
+  "px": 72,
+  "lh": 78,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Event",
+  "placeholder": "when",
+  "items": [
+   {
+    "text": "[Sept. 23]  ·  [6-8 p.m.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 488,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Event",
+  "placeholder": "where",
+  "items": [
+   {
+    "text": "[Room], Mathematical Sciences Building",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 488,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Event",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "RSVP: [link]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 568,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Paper accepted",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "PAPER ACCEPTED  ·  [VENUE 2027]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 768,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Paper accepted",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[Paper title: the contribution in plain words, up to three lines]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 168
+  },
+  "px": 52,
+  "lh": 56,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Paper accepted",
+  "placeholder": "authors",
+  "items": [
+   {
+    "text": "[Author One], [Author Two] and [Author Three]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 50
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Paper accepted",
+  "placeholder": "venue",
+  "items": [
+   {
+    "text": "[Conference], [City]  ·  [Month YYYY]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Paper accepted",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Read the paper: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Recruiting",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  JOIN THE LAB",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Recruiting",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Build real robots before you graduate",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 156
+  },
+  "px": 72,
+  "lh": 78,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Recruiting",
+  "placeholder": "points",
+  "items": [
+   {
+    "text": "[Who can apply]",
+    "bullet": true
+   },
+   {
+    "text": "[How and when to apply]",
+    "bullet": true
+   }
+  ],
+  "box": {
+   "w": 808,
+   "h": 116
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Recruiting",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu  ·  [Join page]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 808,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Milestone",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  MILESTONE",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 768,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Milestone",
+  "placeholder": "number",
+  "items": [
+   {
+    "text": "[10]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 554,
+   "h": 289
+  },
+  "px": 220,
+  "lh": 226,
+  "font": "Roboto Slab",
+  "bold": true,
+  "charSpacing": -2,
+  "fontFile": "RobotoSlab-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Milestone",
+  "placeholder": "label",
+  "items": [
+   {
+    "text": "years of telerobotics research at Kent State: the lab opened its doors in spring 2017",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 414,
+   "h": 289
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Milestone",
+  "placeholder": "source",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu/[news post]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Spotlight quote",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  [STUDENT SPOTLIGHT]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 768,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Spotlight quote",
+  "placeholder": "name",
+  "items": [
+   {
+    "text": "[First Last]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 688,
+   "h": 50
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Spotlight quote",
+  "placeholder": "role",
+  "items": [
+   {
+    "text": "[Ph.D. student, computer science]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 688,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Spotlight quote",
+  "placeholder": "quote",
+  "items": [
+   {
+    "text": "[A short quote the person approved, 20 words or fewer.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 580,
+   "h": 162
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Roboto Slab",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "RobotoSlab-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Demo video cover",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  DEMO VIDEO",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 768,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Demo video cover",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[What the robot does, in five words]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 468,
+   "h": 168
+  },
+  "px": 52,
+  "lh": 56,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Demo video cover",
+  "placeholder": "flags",
+  "items": [
+   {
+    "text": "[2X SPEED]  ·  [TELEOPERATED]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Thank you / Welcome",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  THANK YOU",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Thank you / Welcome",
+  "placeholder": "display",
+  "items": [
+   {
+    "text": "Thank you",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1008,
+   "h": 100
+  },
+  "px": 96,
+  "lh": 100,
+  "font": "Source Sans 3 Black",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Black.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Thank you / Welcome",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "[to everyone who came to open lab night]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 808,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "landscape",
+  "layout": "Thank you / Welcome",
+  "placeholder": "next",
+  "items": [
+   {
+    "text": "Next: [event, date]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 808,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Announcement",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  ANNOUNCEMENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 840,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Announcement",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Hands-on Physical AI",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 208
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Announcement",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "A real robotics research team at Kent State",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 50
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Announcement",
+  "placeholder": "link",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Event",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  EVENT",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Event",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Open lab night",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 480,
+   "h": 208
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Event",
+  "placeholder": "when",
+  "items": [
+   {
+    "text": "[Sept. 23]  ·  [6-8 p.m.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 480,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Event",
+  "placeholder": "where",
+  "items": [
+   {
+    "text": "[Room], Mathematical Sciences Building",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 480,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Event",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "RSVP: [link]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 560,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Paper accepted",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "PAPER ACCEPTED  ·  [VENUE 2027]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 840,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Paper accepted",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[Paper title in plain words, two lines]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 140
+  },
+  "px": 64,
+  "lh": 70,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Paper accepted",
+  "placeholder": "authors",
+  "items": [
+   {
+    "text": "[Author One], [Author Two] and [Author Three]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 50
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Paper accepted",
+  "placeholder": "venue",
+  "items": [
+   {
+    "text": "[Conference], [City]  ·  [Month YYYY]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Paper accepted",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "Read the paper: link in bio",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Recruiting",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  JOIN THE LAB",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Recruiting",
+  "placeholder": "headline",
+  "items": [
+   {
+    "text": "Join the lab",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 104
+  },
+  "px": 96,
+  "lh": 104,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Recruiting",
+  "placeholder": "points",
+  "items": [
+   {
+    "text": "[Who can apply]",
+    "bullet": true
+   },
+   {
+    "text": "[How and when to apply]",
+    "bullet": true
+   }
+  ],
+  "box": {
+   "w": 880,
+   "h": 116
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Recruiting",
+  "placeholder": "cta",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu  ·  [Join page]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 880,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Milestone",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  MILESTONE",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 840,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Milestone",
+  "placeholder": "number",
+  "items": [
+   {
+    "text": "[10]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 594,
+   "h": 300
+  },
+  "px": 220,
+  "lh": 226,
+  "font": "Roboto Slab",
+  "bold": true,
+  "charSpacing": -2,
+  "fontFile": "RobotoSlab-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Milestone",
+  "placeholder": "label",
+  "items": [
+   {
+    "text": "years of telerobotics research at Kent State: the lab opened its doors in spring 2017",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 446,
+   "h": 300
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Milestone",
+  "placeholder": "source",
+  "items": [
+   {
+    "text": "atr.cs.kent.edu/[news post]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Spotlight quote",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  [STUDENT SPOTLIGHT]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 840,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Spotlight quote",
+  "placeholder": "name",
+  "items": [
+   {
+    "text": "[First Last]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 740,
+   "h": 50
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Spotlight quote",
+  "placeholder": "role",
+  "items": [
+   {
+    "text": "[Ph.D. student, computer science]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 740,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Spotlight quote",
+  "placeholder": "quote",
+  "items": [
+   {
+    "text": "[A short quote the person approved, 20 words or fewer.]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 632,
+   "h": 162
+  },
+  "px": 44,
+  "lh": 54,
+  "font": "Roboto Slab",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "RobotoSlab-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Demo video cover",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  DEMO VIDEO",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 840,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Demo video cover",
+  "placeholder": "title",
+  "items": [
+   {
+    "text": "[What the robot does, in five words]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 520,
+   "h": 210
+  },
+  "px": 64,
+  "lh": 70,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Demo video cover",
+  "placeholder": "flags",
+  "items": [
+   {
+    "text": "[2X SPEED]  ·  [TELEOPERATED]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Thank you / Welcome",
+  "placeholder": "eyebrow",
+  "items": [
+   {
+    "text": "ATR LAB  ·  THANK YOU",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Sans 3",
+  "bold": true,
+  "charSpacing": 3,
+  "fontFile": "SourceSans3-Bold.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Thank you / Welcome",
+  "placeholder": "display",
+  "items": [
+   {
+    "text": "Thank you",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 1080,
+   "h": 100
+  },
+  "px": 96,
+  "lh": 100,
+  "font": "Source Sans 3 Black",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Black.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Thank you / Welcome",
+  "placeholder": "support",
+  "items": [
+   {
+    "text": "[to everyone who came to open lab night]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 880,
+   "h": 100
+  },
+  "px": 40,
+  "lh": 50,
+  "font": "Source Sans 3",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceSans3-Regular.ttf"
+ },
+ {
+  "canvas": "youtube",
+  "layout": "Thank you / Welcome",
+  "placeholder": "next",
+  "items": [
+   {
+    "text": "Next: [event, date]",
+    "bullet": false
+   }
+  ],
+  "box": {
+   "w": 880,
+   "h": 44
+  },
+  "px": 36,
+  "lh": 44,
+  "font": "Source Code Pro",
+  "bold": false,
+  "charSpacing": 0,
+  "fontFile": "SourceCodePro-Regular.ttf"
+ }
+]
