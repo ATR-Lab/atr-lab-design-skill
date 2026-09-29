@@ -463,8 +463,7 @@ Rules: print-and-merch.md §8-§12, logo-system.md §1, kent-state-compliance.md
       die-cuts with a 3/16 in border and the cut path on its own layer.
 - [ ] Kent State marks keep their ®. ATR marks never carry ®, and carry ™ or ℠ only if the Office of General
       Counsel says so.
-- [ ] No athletic marks, Kent State seal or sunburst; no merged ATR + Kent State lockup (the `assets/logos/cobrand/`
-      files are internal previews).
+- [ ] No athletic marks, Kent State seal or sunburst; no merged ATR + Kent State lockup.
 - [ ] Robot decals: nothing over e-stops (keep 1 in clear), warning or rating labels, sensors, vents, ports or joints;
       cast vinyl on curves (print-and-merch.md §10).
 - [ ] Sponsor logos: written permission, the confirmed tier, smaller than the ATR mark (print-and-merch.md §11). NSF

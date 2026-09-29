@@ -30,7 +30,7 @@ Kent State logo or a sponsor's logo. For the university rules behind the co-bran
 
 File names follow `assets/logos/{svg,png}/atr-<lockup>-<variant>[-1000|-3000].<ext>`. Scripts should read sizes,
 clear-space ratios and background pairings from `assets/logos/logos.json` instead of hard-coding them. `logos.json` lists
-every file in `assets/logos/` (the lockups, icons, KSU raster and cobrand previews) with its lockup, variant, pixel size and
+every file in `assets/logos/` (the lockups, icons and KSU raster) with its lockup, variant, pixel size and
 background pairing, plus the clear-space and minimum-size numbers.
 
 ---
@@ -285,10 +285,8 @@ The KSU rules themselves are in `references/kent-state-compliance.md` §6-§9. W
 
 **The rules**
 1. **Two separate signatures, never one lockup.** No shared divider rule, no merged file, no ATR name typeset under the KSU
-   logo, and nothing of ATR's inside the KSU logo's clear space. The files in `assets/logos/cobrand/` put the two logos in one
-   lockup with a divider. They are **internal previews only**: never put them on anything that leaves the lab.
-   `assets/logos/README.md` §7 still documents the divider spacing, but only for those internal previews. For anything
-   shared, and wherever the two files disagree, this section wins.
+   logo, and nothing of ATR's inside the KSU logo's clear space. Wherever `assets/logos/README.md` §7 and this section
+   disagree, this section wins.
 2. **Positions:** ATR at the left (top-left or bottom-left). KSU at the right:
    - **top-right** on document pages and plain poster headers (KSU's publication-page rule);
    - **bottom-right** on covers and slides (KSU's brochure-cover rule, extended by lab convention);
@@ -491,7 +489,6 @@ or ℠ (services) at the upper right, never ®. The gate, contacts and trademark
 | Cut the mark out of a horizontal lockup, or mix pieces from different lockups | The two drawings differ slightly (§2) | Use `atr-mark-*` |
 | Put the mark inside new containers (circles, hexagons, app-style tiles, shields) | Only the roundel, badge and app tiles are sanctioned containers | Use those files |
 | Lock the ATR logo to the KSU logo, a slogan, a URL, an event name or a partner logo | It creates a new, unapproved mark | Keep separate signatures (§9, §10) |
-| Use the `assets/logos/cobrand/` files publicly | They merge ATR and KSU with a divider, which KSU guidance advises against | Place the two logos separately |
 | Put text, images or logos inside the clear space, or closer than 0.25 in to a trim edge | It crowds the mark | Keep 1 X and 0.25 in |
 | Use a logo below its minimum size | Lettering breaks up | Step down: horizontal, then horizontal-short, then mark |
 | Animate the logo by morphing, spinning, bouncing or flashing | It distorts the mark, and flashing breaks accessibility rules | Fade or cut it in whole, with motion under 5 s |

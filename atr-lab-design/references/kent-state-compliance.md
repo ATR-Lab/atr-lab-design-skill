@@ -266,8 +266,7 @@ campaigns. When you contact UCM (§18):
 
 - **Two separate signatures.** The ATR logo and the KSU logo are never merged: no shared divider rule, no ATR mark inside the
   KSU clear space, no lab or department name typeset under the KSU logo, and no slogans attached to it. This follows from the
-  program-logo rule, the integrity rules and the ban on locking elements to the logo (§6, §8). The divider files in
-  `assets/logos/cobrand/` are internal previews only.
+  program-logo rule, the integrity rules and the ban on locking elements to the logo (§6, §8).
 - **Placement (lab convention built on KSU's rules):** ATR left, top-left or bottom-left. KSU right: top-right on document
   pages and plain poster headers (KSU's publication-page rule), bottom-right on covers and slides (its brochure-cover rule), or
   centered. The chosen spot must be plain. Where that corner has pattern, lattice or line-art, use the nearest plain right-hand

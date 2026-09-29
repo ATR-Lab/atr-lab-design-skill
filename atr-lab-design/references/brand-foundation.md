@@ -4,7 +4,7 @@ Who the Advanced Telerobotics Research Lab is, what it stands for and how it rel
 
 **Read this when** you need to name the lab, describe it, choose what to say to a given audience, write an "About" paragraph, check whether a claim is allowed, or put contact details and handles on anything.
 
-Facts here were verified on 2026-09-28 against the research notes in the repository's `research/` folder (outside the skill: `atr-lab-profile.md`, `ksu-brand-standards.md`). Anything in `[brackets]` is a placeholder that only the lab can fill. Re-verify titles, programs, handles and contact details every semester.
+Facts here were verified on 2026-09-28 against sourced research notes that are not shipped with the skill (`research/atr-lab-profile.md` and `research/ksu-brand-standards.md`, preserved in the skill repository's git history at tag `build-sources-2026-09-29`). Anything in `[brackets]` is a placeholder that only the lab can fill. Re-verify titles, programs, handles and contact details every semester.
 
 ## Contents
 

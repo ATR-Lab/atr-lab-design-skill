@@ -703,9 +703,9 @@ When writing copy for someone:
 
 ## 11. Going deeper
 
-The marketing library these rules adapt (MIT license, Copyright (c) 2025 Corey Haines) lives **outside this skill**, in the repository at `.claude/marketingskills/skills/`. It may not be installed wherever this skill runs; everything essential is already in this file. If it is available:
+The marketing library these rules adapt (https://github.com/coreyhaines31/marketingskills, MIT license, Copyright (c) 2025 Corey Haines) lives **outside this skill**. It may not be installed wherever this skill runs; everything essential is already in this file. If you have it (the paths below assume it is installed at `.claude/marketingskills/`):
 
-| Topic | File (relative to the repository root) |
+| Topic | File |
 |---|---|
 | Copywriting: headline formulas, "Now you can" test, Human Action Model, perception gap, page structures | `.claude/marketingskills/skills/copywriting/SKILL.md`, `.claude/marketingskills/skills/copywriting/references/copy-frameworks.md` |
 | Natural transitions | `.claude/marketingskills/skills/copywriting/references/natural-transitions.md` |

@@ -3,43 +3,13 @@
 __pycache__/
 *.pyc
 .venv/
-node_modules/
 
-# Local helper skills; only the project link to the ATR skill is committed
+# Local helper skills; only the link that loads the ATR skill in this repo is committed
 .claude/*
 !.claude/skills/
 .claude/skills/*
 !.claude/skills/atr-lab-design
 
-# Packaged output (build it with the zip command in the README)
-dist/
-
-# The retired block-letter logo that only served as a color reference
-assets/COLOR_REFERENCE_DELETE_ME.png
-
-# Build: keep generators, prompts and manifests; drop renders and generated binaries
-build/qa/
-build/README-previous.md
-build/**/*.png
-build/**/*.jpg
-build/**/*.pptx
-build/**/*.potx
-build/**/*.docx
-build/**/*.pdf
-build/**/*.log
-build/**/*.bak
-build/**/work/
-build/**/raw/
-build/**/rejected/
-build/**/logs/
-build/**/out-*/
-build/**/dist/
-build/**/derived/
-build/**/stress/
-build/**/fill-test/
-build/**/showcase/
-build/templates-src/directions/**/render/
-
-# Evals: keep prompts, assertions, grader, inputs and benchmarks; drop run outputs and review pages
-atr-lab-design-workspace/iteration-*/eval-*/
-atr-lab-design-workspace/iteration-*/review.html
+# Packaged output (build the Claude.ai zip with the command in the README)
+*.zip
+*.skill

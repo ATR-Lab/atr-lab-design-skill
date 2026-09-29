@@ -1304,28 +1304,6 @@
     1022,
     976
    ]
-  },
-  {
-   "file": "cobrand/atr-ksu-cobrand-navy.png",
-   "lockup": "cobrand-preview",
-   "variant": "ATR horizontal-short navy + KSU colour (internal preview)",
-   "format": "png",
-   "background": "white, mist",
-   "px": [
-    3307,
-    760
-   ]
-  },
-  {
-   "file": "cobrand/atr-ksu-cobrand-reverse.png",
-   "lockup": "cobrand-preview",
-   "variant": "ATR horizontal-short twotone-reverse + KSU white (internal preview)",
-   "format": "png",
-   "background": "navy, midnight",
-   "px": [
-    3307,
-    760
-   ]
   }
  ]
 }

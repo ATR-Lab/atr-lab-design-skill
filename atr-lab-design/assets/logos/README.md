@@ -23,7 +23,7 @@ tight to the artwork: **add the clear space in your layout**.
 | Certificates, formal/ceremonial, stickers, merch | `atr-seal-*` (the roundel); on white use `atr-seal-navy`, since `atr-seal-twotone` needs 2.8 in / 269 px of height (section 4) |
 | Browser tab, home screen, PWA | `icons/favicon.ico`, `icons/favicon.svg`, `icons/apple-touch-icon-180.png`, `icons/icon-192.png`, `icons/icon-512.png` |
 | Social profile picture | `icons/atr-avatar-mark-navy.png` (primary); `icons/atr-avatar-seal-white.png`, the roundel avatar, only as a formal alternative where it displays at 210 px or more |
-| ATR + Kent State together | two separate signatures: ATR at left/bottom-left, the KSU wordmark at right/bottom-right, each with its own clear space and no shared divider (section 7; the full rules are in `references/logo-system.md` §9). The `cobrand/` divider files are internal previews only, never for anything that leaves the lab |
+| ATR + Kent State together | two separate signatures: ATR at left/bottom-left, the KSU wordmark at right/bottom-right, each with its own clear space and no shared divider (section 7; the full rules are in `references/logo-system.md` §9). |
 | PowerPoint, Keynote, Google Slides | the `-3000.png` master (crisp when projected). SVG also works in PowerPoint for Microsoft 365; Google Slides does not accept SVG |
 | Web | SVG first; `-1000.png` as fallback |
 | Scripts / other tools | `logos.json` lists every file in this folder (logos, icons, KSU wordmark, co-brand previews) with lockup, variant, format, size and background, plus clear-space and minimum-size numbers |
@@ -224,8 +224,6 @@ Masters are exactly 3000 px on the long side; web files 1000 px. SVG sizes are i
 | `icons/atr-avatar-seal-white.png` | avatar | navy roundel on white, circle-crop safe | PNG | 1080 x 1080 | social profile picture (formal) |
 | `ksu/ksu-wordmark-color.png` | ksu-wordmark | colour (lab's template raster; not for print, see section 7) | PNG | 1022 x 976 | white, mist |
 | `ksu/ksu-wordmark-white.png` | ksu-wordmark | all-white reverse | PNG | 1022 x 976 | navy, midnight |
-| `cobrand/atr-ksu-cobrand-navy.png` | cobrand-preview | ATR horizontal-short navy + KSU colour (internal preview) | PNG | 3307 x 760 | white, mist |
-| `cobrand/atr-ksu-cobrand-reverse.png` | cobrand-preview | ATR horizontal-short twotone-reverse + KSU white (internal preview) | PNG | 3307 x 760 | navy, midnight |
 
 Icon geometry: favicon tiles are navy with a 12.5 % corner radius; at 16 px and in `favicon.svg` the filled-roof mark fills 98 % of the tile
 height, at 32 px 92 %, at 48 px the full mark 78 % (section 4). App icons keep the mark inside a circle of radius 0.40 x size (maskable safe zone 0.40);
@@ -241,22 +239,7 @@ K in KENT), with no shared divider rule. KSU wordmark: Stacked file at least 1.0
 its (R). The full rules (positions, the X + K minimum gap, which ATR lockup to use, placement on each background) are in
 `references/logo-system.md` §9, which wins wherever this file and that one differ.
 
-**Internal previews only.** The two `cobrand/` files join the logos with a divider rule. They are not a co-brand lockup: never put them
-on anything that leaves the lab (they exist for lab-internal slides or document footers where the two must sit in one row). For the
-record, that preview row is built like this:
-
-```
-[ ATR horizontal-short ]  X  |  X  [ KSU wordmark ]
-```
-
-- **Equal height**: the KSU wordmark is as tall as the ATR lockup (the height of the ATR mark).
-- **Divider**: one vertical hairline, the full lockup height, in the ATR type colour (navy on light, white on navy). Weight = the rule
-  inside the ATR horizontal lockup (1.3 % of the lockup height; about 0.75-1 pt when the lockup is 1 in tall).
-- **Spacing**: exactly **X** (ATR roof height) between each logo and the divider. At equal heights X = 0.329 H and the KSU clear
-  space (height of the K in KENT) = 0.301 H, so X satisfies both brands.
-- **Clear space around the group**: at least X on every side, and at least 1/4 in from any page edge (KSU rule).
-
-In both layouts:
+Also:
 - Use `horizontal-short` (or `stacked`) next to the KSU wordmark: the department line of `horizontal` and the Kent State line of
   `stacked-ksu` would repeat "Kent State University".
 - Don't merge the two into a new combined mark, don't recolour the KSU wordmark (use the colour file or the all-white reverse only),
@@ -265,7 +248,7 @@ In both layouts:
   raster from the lab's old presentation template. Its flat fills have been snapped to the exact Kent State `#003976` and `#EFAB00`
   (the original had drifted to about `#143672` and `#E7B742`), but it is still a low-resolution copy of what may be an older colour
   variant (it sets UNIVERSITY in navy). **For print, the web, large formats and anything public**, download the official vector
-  wordmark from https://www.kent.edu/brand/logos, or get it from UCM (it then replaces both `ksu/` files and the `cobrand/` previews).
+  wordmark from https://www.kent.edu/brand/logos, or get it from UCM (it then replaces both `ksu/` files).
 - Merchandise that shows "Kent State University" in any form (the KSU wordmark, the `horizontal` and `stacked-ksu` lockups,
   the roundel) needs an Affinity-licensed vendor and Kent State UCM approval.
 

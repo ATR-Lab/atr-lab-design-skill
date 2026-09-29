@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/banner.png" alt="ATR Lab Design Skill: a Claude skill for the Advanced Telerobotics Research Lab brand, Kent State University" width="100%">
+  <img src=".github/images/banner.png" alt="ATR Lab Design Skill: a Claude skill for the Advanced Telerobotics Research Lab brand, Kent State University" width="100%">
 </p>
 
 <p align="center">
@@ -44,9 +44,8 @@ It covers every part of the lab's marketing and design:
 - [The brand at a glance](#the-brand-at-a-glance)
 - [Scripts cheat sheet](#scripts-cheat-sheet)
 - [What's inside](#whats-inside)
-- [How well it works](#how-well-it-works)
 - [Keep it current](#keep-it-current)
-- [Maintainers](#maintainers)
+- [For maintainers](#for-maintainers)
 - [Credits and licenses](#credits-and-licenses)
 
 ---
@@ -199,24 +198,20 @@ with:
 
 ## What it makes
 
-<p align="center"><img src="docs/images/before-after.png" alt="Before and after: the lab's old presentation and quad chart templates compared with the new Hazard Gold templates" width="100%"></p>
-
-The design direction is called **Hazard Gold**. Three candidate directions were designed with Claude Fable 5.1 and a
-three-judge panel picked this one. It keeps what the lab already owned (the gold section slides, the hazard-stripe
-band and the gold mark) and fixes the rest: exact Kent State colors, readable contrast, the academic Kent State
-wordmark in place of the athletics logo, and verified contact details. The full list is in
-[docs/TEMPLATE-CHANGES.md](docs/TEMPLATE-CHANGES.md).
+Every template follows one design system, **Hazard Gold**. It uses white or navy fields, gold label plates with
+the navy ATR mark, Roboto Slab numerals and the gold hazard-stripe band on bookend edges, in exact Kent State colors,
+with the academic Kent State wordmark as a separate signature.
 
 ### Presentation: 22 layouts, placeholder-driven
 
-<p align="center"><img src="docs/images/gallery-presentation.png" alt="Showcase slides from the ATR presentation template: title, section divider, agenda, icon columns, key numbers, chart, milestones, image and closing slides" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-presentation.png" alt="Showcase slides from the ATR presentation template: title, section divider, agenda, icon columns, key numbers, chart, milestones, image and closing slides" width="100%"></p>
 
 Every layout is a real PowerPoint layout with placeholders: **Home → New Slide → ATR - …**. The showcase deck
 teaches each layout in its speaker notes. `scripts/new_deck.py` builds finished decks from a short JSON outline.
 
 ### Quad charts: NASA format, project status, weekly summary
 
-<p align="center"><img src="docs/images/gallery-quad.png" alt="ATR quad chart templates: NASA research quad, project status quad and weekly summary" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-quad.png" alt="ATR quad chart templates: NASA research quad, project status quad and weekly summary" width="100%"></p>
 
 The NASA layout follows the [GSFC quad chart guidance](https://cce-signin.gsfc.nasa.gov/online_help_docs/quadchart_help.html)
 word for word:
@@ -230,28 +225,28 @@ word for word:
 
 ### Research posters
 
-<p align="center"><img src="docs/images/gallery-posters.png" alt="ATR research poster templates, 48 by 36 inch landscape and 36 by 48 inch portrait" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-posters.png" alt="ATR research poster templates, 48 by 36 inch landscape and 36 by 48 inch portrait" width="100%"></p>
 
 ### Print: flyers, one-pager, certificate, signs, letterhead, badge
 
-<p align="center"><img src="docs/images/gallery-print.png" alt="ATR print collateral: event and recruiting flyers, project one-pager, certificate, door signs, letterhead and name badge" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-print.png" alt="ATR print collateral: event and recruiting flyers, project one-pager, certificate, door signs, letterhead and name badge" width="100%"></p>
 
 ### Social media
 
-<p align="center"><img src="docs/images/gallery-social.png" alt="ATR social media cards: K-12 outreach, event, publication, key result, recruiting and more" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-social.png" alt="ATR social media cards: K-12 outreach, event, publication, key result, recruiting and more" width="100%"></p>
 
 `scripts/social_card.py` renders on-brand cards and an alt-text sidecar from a short spec, at 7 platform sizes and in
 9 templates. The five PowerPoint social templates are for editing by hand.
 
 ### Logos and icons
 
-<p align="center"><img src="docs/images/gallery-logos.png" alt="ATR logo system: horizontal, stacked, mark, roundel and badge lockups on white, navy and gold" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-logos.png" alt="ATR logo system: horizontal, stacked, mark, roundel and badge lockups on white, navy and gold" width="100%"></p>
 
-<p align="center"><img src="docs/images/gallery-icons.png" alt="The 43 ATR brand icons, drawn in the geometry of the lab's mark" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-icons.png" alt="The 43 ATR brand icons, drawn in the geometry of the lab's mark" width="100%"></p>
 
 ## The brand at a glance
 
-<p align="center"><img src="docs/images/palette.png" alt="ATR palette: Kent State Blue #003976, Kent State Gold #EFAB00, Ink, Slate, Bronze, Mist, Line, Sky and Midnight" width="100%"></p>
+<p align="center"><img src=".github/images/palette.png" alt="ATR palette: Kent State Blue #003976, Kent State Gold #EFAB00, Ink, Slate, Bronze, Mist, Line, Sky and Midnight" width="100%"></p>
 
 - **Colors:**
   - Kent State Blue `#003976` (PMS 281) and Kent State Gold `#EFAB00` (PMS 124) lead.
@@ -332,32 +327,8 @@ atr-lab-design/                the skill (the only folder Claude needs)
                                social_card, email_signature, codex_image, icons/, examples/
 ```
 
-The rest of the repository is for maintainers: `build/` (the generators for every template and asset), `research/`
-(sourced research notes), `assets/` (the lab's original files), `atr-lab-design-workspace/` (the evals) and `docs/`.
-
-## How well it works
-
-The skill was tested the skill-creator way. Fresh Claude agents ran five realistic lab requests with the skill and
-without it:
-
-- a sponsor deck
-- a NASA quad chart
-- a K-12 Instagram post
-- a flyer brand review
-- a paper announcement
-
-| Iteration | With the skill | Without it |
-|---|---|---|
-| 1 (5 tasks, 49 checks) | **96%** | 68% |
-| 2 (2 tasks, after fixes) | **100%** | 71% |
-
-Without the skill, Claude:
-
-- repeated the non-existent `@atr_kent` handle and the old room and phone
-- presented the director's career funding as lab statistics
-- used off-brand fonts and shortened NASA's required headings
-
-The method, the per-task results and how to re-run them are in [docs/EVALS.md](docs/EVALS.md).
+The repository around it holds only this README, its images (`.github/images/`) and
+`.claude/skills/atr-lab-design`, a link that loads the skill in any Claude Code session opened here.
 
 ## Keep it current
 
@@ -365,25 +336,22 @@ The method, the per-task results and how to re-run them are in [docs/EVALS.md](d
   [`references/brand-foundation.md`](atr-lab-design/references/brand-foundation.md): §9 is the proof bank of
   claims with exact allowed wording, §10 holds the boilerplates, §11 the contacts. The skill won't claim anything
   that isn't there or supplied by the user.
-- **Open decisions** the skill cannot make on its own are in [docs/OPEN-QUESTIONS.md](docs/OPEN-QUESTIONS.md).
-  Examples: Kent State approval of the ATR mark, the official Kent State logo files, the director's sign-off on the
-  boilerplates, the lab's own room and phone.
-- **Templates and assets** are generated. Change the generator in `build/` and rebuild; never hand-edit a shipped
-  `.pptx`. See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
-- After any change, lint every template (`scripts/brand_check.py assets/templates/ --template` should report 0 errors
-  and 0 warnings) and re-run the evals.
+- **Open decisions** the skill cannot make on its own are listed in
+  [`references/kent-state-compliance.md`](atr-lab-design/references/kent-state-compliance.md) §19 and
+  [`references/brand-foundation.md`](atr-lab-design/references/brand-foundation.md) §12. Examples: Kent State
+  approval of the ATR mark, the official Kent State logo files, the director's sign-off on the boilerplates, the
+  lab's own room and phone. Until they are settled the skill uses a placeholder or the safer reading.
+- **After any change** to a template or reference, lint the templates:
+  `scripts/brand_check.py assets/templates/ --template` should report 0 errors and 0 warnings.
 
-## Maintainers
+## For maintainers
 
-| Doc | What it covers |
-|---|---|
-| [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) | Repository layout, toolchain, and how to regenerate each template and asset |
-| [docs/TEMPLATE-CHANGES.md](docs/TEMPLATE-CHANGES.md) | Old templates vs new, item by item, with lint counts |
-| [docs/EVALS.md](docs/EVALS.md) | Test method, results, and how to re-run |
-| [docs/OPEN-QUESTIONS.md](docs/OPEN-QUESTIONS.md) | Questions for the lab director, Kent State UCM and other offices |
-| [docs/CREDITS.md](docs/CREDITS.md) | Fonts, trademarks, generated imagery and third-party tools |
-| [`atr-lab-design/scripts/README.md`](atr-lab-design/scripts/README.md) | Every script's options, exit codes and limits |
-| [`atr-lab-design/assets/templates/README.md`](atr-lab-design/assets/templates/README.md) | The template catalog |
+- [`atr-lab-design/scripts/README.md`](atr-lab-design/scripts/README.md): every script's options, exit codes and limits.
+- [`atr-lab-design/assets/templates/README.md`](atr-lab-design/assets/templates/README.md): the template catalog.
+- The build scripts that generated the templates and assets, the sourced research notes and the test suite are not
+  needed to use the skill. They are preserved in git history at tag
+  [`build-sources-2026-09-29`](https://github.com/ATR-Lab/atr-lab-design-skill/tree/build-sources-2026-09-29):
+  `git checkout build-sources-2026-09-29` to regenerate or re-test.
 
 ## Credits and licenses
 
@@ -398,6 +366,6 @@ The method, the per-task results and how to re-run them are in [docs/EVALS.md](d
   CLI's image tool and finished by script. Every prompt is recorded in a manifest.
 - **The skill's own license** is to be decided by the lab.
 
-Full details are in [docs/CREDITS.md](docs/CREDITS.md).
+Font licenses are in [`atr-lab-design/assets/fonts/`](atr-lab-design/assets/fonts/).
 
 <p align="center"><sub>Advanced Telerobotics Research Lab · Department of Computer Science · Kent State University · <a href="https://www.atr.cs.kent.edu/">www.atr.cs.kent.edu</a></sub></p>
