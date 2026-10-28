@@ -398,6 +398,10 @@ catalog; `scripts/README.md` documents every script's options, exit codes and li
   matplotlib is for figures; scipy, scikit-image and vtracer are for the icon pipeline, which needs Python 3.12 or
   3.13 (vtracer crashes on 3.14). PyYAML is optional, for YAML deck specs. `contrast.py`, `email_signature.py` and
   `render_office.sh` need no packages.
+- **Installed as the Claude Code plugin** (`/plugin install atr-lab-design@atr-lab`), the venv lives in the
+  plugin's data folder, `${CLAUDE_PLUGIN_DATA}/venv` (normally `~/.claude/plugins/data/atr-lab-design-atr-lab/venv`),
+  not in this folder, because plugin updates replace this folder. `/atr-lab-design:setup` creates it; use its
+  `bin/python` as `python3`, and save output outside this folder.
 - **No bytecode in the skill.** Set `PYTHONDONTWRITEBYTECODE=1` before importing any module from the skill (for
   example `assets/tokens/atr_plot.py`), and remove any `__pycache__` or `.DS_Store` before sharing the skill.
 - **Fonts.** The brand fonts are in `assets/fonts/`. Install them for hand editing, embed them in any `.pptx` that

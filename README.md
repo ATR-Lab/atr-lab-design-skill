@@ -4,6 +4,7 @@
 
 <p align="center">
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-003976?style=flat-square&logo=claude&logoColor=white">
+  <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Kent State University" src="https://img.shields.io/badge/Kent%20State-ATR%20Lab-EFAB00?style=flat-square&labelColor=003976">
   <img alt="16 templates" src="https://img.shields.io/badge/templates-16-003976?style=flat-square">
   <img alt="43 icons" src="https://img.shields.io/badge/icons-43-003976?style=flat-square">
@@ -16,7 +17,8 @@
 that turns Claude into the **Advanced Telerobotics Research Lab's** in-house designer, copywriter and brand checker.
 Ask for a slide deck, a NASA quad chart, a research poster, a flyer, an Instagram post, a press release or a brand
 review, in plain words. Claude builds it on the lab's own templates, in Kent State colors and fonts, with only
-verified facts. It then checks the result before handing it over.
+verified facts. It then checks the result before handing it over. It ships as a **Claude Code plugin** with slash
+commands for the common jobs, and as a plain skill folder for Claude.ai and manual installs.
 
 It covers every part of the lab's marketing and design:
 
@@ -30,13 +32,10 @@ It covers every part of the lab's marketing and design:
 - **Scripts:** a brand and accessibility linter, a contrast checker, a renderer, and builders for decks, quad charts,
   social graphics and email signatures, plus an AI icon pipeline.
 
-> [!NOTE]
-> This repository is private to the ATR-Lab organization. You need access to it (and `gh auth login` or git
-> credentials) to install the skill.
-
 ## Contents
 
-- [Install with one prompt](#install-with-one-prompt)
+- [Install the Claude Code plugin](#install-the-claude-code-plugin)
+- [Or install with one prompt](#or-install-with-one-prompt)
 - [Other ways to install](#other-ways-to-install)
 - [Requirements](#requirements)
 - [Use it](#use-it)
@@ -50,18 +49,49 @@ It covers every part of the lab's marketing and design:
 
 ---
 
-## Install with one prompt
+## Install the Claude Code plugin
 
-Copy this into **Claude Code**, in a terminal or in the Code tab of the Claude desktop app. Claude will clone the
-repository, install the skill for all your projects, set up its Python tools and check that it works.
+In **Claude Code** (a terminal or the Code tab of the Claude desktop app), add the lab's marketplace and install
+the plugin:
+
+```text
+/plugin marketplace add ATR-Lab/atr-lab-design-skill
+/plugin install atr-lab-design@atr-lab
+```
+
+Then run the one-time setup, which creates the plugin's Python environment, checks for LibreOffice and poppler, and
+offers to install the brand fonts:
+
+```text
+/atr-lab-design:setup
+```
+
+The skill still triggers on its own for any lab design task. The commands call it explicitly:
+
+| Command | What it does |
+|---|---|
+| `/atr-lab-design:deck <audience, length and topic>` | Builds a slide deck on the lab template, renders it and checks it |
+| `/atr-lab-design:quad <type and facts>` | Builds a NASA, project-status or weekly quad chart |
+| `/atr-lab-design:social <platform and announcement>` | Makes the post image, caption, hashtags and alt text |
+| `/atr-lab-design:review <file or folder>` | Lints and renders someone's file against the brand, then fixes a copy |
+| `/atr-lab-design:copy <piece, audience and facts>` | Writes news, posts, emails, recruiting or sponsor copy in Kent State style |
+| `/atr-lab-design:setup` | Sets up or repairs the Python tools and checks the render dependencies |
+
+**Update** with `/plugin marketplace update atr-lab`, then `/plugin update atr-lab-design@atr-lab` if your Claude
+Code doesn't update plugins automatically. The Python environment lives in the plugin's data folder, so it survives
+updates; run `/atr-lab-design:setup` again when `scripts/requirements.txt` changes.
+
+## Or install with one prompt
+
+To install the skill from a git clone instead, so you can edit it or pull changes yourself, copy this into Claude
+Code. Claude will clone the repository, install the skill for all your projects, set up its Python tools and check
+that it works. Use one install method, not both, or the skill loads twice.
 
 ```text
 Install the ATR Lab design skill for me as a personal Claude Code skill.
 
-1. The skill is the atr-lab-design/ folder of the private GitHub repo ATR-Lab/atr-lab-design-skill.
-   Check that I'm signed in to GitHub with `gh auth status`. If I'm not, stop and ask me to run
-   `gh auth login` myself. Never ask for or handle my credentials.
-2. Clone it with `gh repo clone ATR-Lab/atr-lab-design-skill ~/.local/share/atr-lab-design-skill -- --depth 1`,
+1. The skill is the atr-lab-design/ folder of the GitHub repo ATR-Lab/atr-lab-design-skill.
+2. Clone it with `git clone --depth 1 https://github.com/ATR-Lab/atr-lab-design-skill.git ~/.local/share/atr-lab-design-skill`,
    or run `git -C ~/.local/share/atr-lab-design-skill pull` if that folder already exists.
    On Windows, use %LOCALAPPDATA%\atr-lab-design-skill instead.
 3. Make it a personal skill: create ~/.claude/skills if needed, then symlink
@@ -102,7 +132,7 @@ atr-lab-design/scripts/requirements.txt into its .venv, and tell me what changed
 <summary><b>Claude Code, by hand (personal: every project)</b></summary>
 
 ```bash
-gh repo clone ATR-Lab/atr-lab-design-skill ~/.local/share/atr-lab-design-skill -- --depth 1
+git clone --depth 1 https://github.com/ATR-Lab/atr-lab-design-skill.git ~/.local/share/atr-lab-design-skill
 mkdir -p ~/.claude/skills
 ln -sfn ~/.local/share/atr-lab-design-skill/atr-lab-design ~/.claude/skills/atr-lab-design
 cd ~/.local/share/atr-lab-design-skill/atr-lab-design
@@ -161,7 +191,9 @@ can't run, the skill says so and asks you to look at the file.
 ## Use it
 
 Just ask. The skill triggers on any marketing, communications or design task for the lab, including "our lab" when
-you're working in this repository. You don't have to name the skill.
+you're working in this repository. You don't have to name the skill. With the plugin installed, the
+[slash commands](#install-the-claude-code-plugin) call it explicitly, e.g. `/atr-lab-design:deck 8 slides for
+visiting sponsors`.
 
 | You want | Try asking |
 |---|---|
@@ -327,8 +359,13 @@ atr-lab-design/                the skill (the only folder Claude needs)
                                social_card, email_signature, codex_image, icons/, examples/
 ```
 
-The repository around it holds only this README, its images (`.github/images/`) and
-`.claude/skills/atr-lab-design`, a link that loads the skill in any Claude Code session opened here.
+The repository around it holds:
+
+- `.claude-plugin/`: `plugin.json` (the plugin, which points at `atr-lab-design/`) and `marketplace.json` (the
+  `atr-lab` marketplace that `/plugin marketplace add` reads)
+- `commands/`: the plugin's slash commands (`deck`, `quad`, `social`, `review`, `copy`, `setup`)
+- `.claude/skills/atr-lab-design`: a link that loads the skill in any Claude Code session opened here
+- this README and its images (`.github/images/`)
 
 ## Keep it current
 
@@ -348,6 +385,10 @@ The repository around it holds only this README, its images (`.github/images/`) 
 
 - [`atr-lab-design/scripts/README.md`](atr-lab-design/scripts/README.md): every script's options, exit codes and limits.
 - [`atr-lab-design/assets/templates/README.md`](atr-lab-design/assets/templates/README.md): the template catalog.
+- **Releasing a plugin update:** bump `version` in [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json) with
+  every change you want plugin users to get; Claude Code compares versions, so an unchanged version is not
+  re-installed. Check the manifests with `claude plugin validate .` and try the plugin from a checkout with
+  `claude --plugin-dir .`.
 - The build scripts that generated the templates and assets, the sourced research notes and the test suite are not
   needed to use the skill. They are preserved in git history at tag
   [`build-sources-2026-09-29`](https://github.com/ATR-Lab/atr-lab-design-skill/tree/build-sources-2026-09-29):

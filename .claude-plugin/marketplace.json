@@ -1,0 +1,17 @@
+{
+  "name": "atr-lab",
+  "metadata": {
+    "description": "Claude Code plugins from the Advanced Telerobotics Research Lab, Kent State University."
+  },
+  "owner": {
+    "name": "ATR Lab",
+    "url": "https://github.com/ATR-Lab"
+  },
+  "plugins": [
+    {
+      "name": "atr-lab-design",
+      "source": "./",
+      "description": "The ATR Lab brand and design system: decks, quad charts, posters, print, social posts, copy and brand reviews."
+    }
+  ]
+}
