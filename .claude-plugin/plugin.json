@@ -1,0 +1,14 @@
+{
+  "name": "atr-lab-design",
+  "version": "1.0.0",
+  "description": "Brand, marketing and graphic-design system for the Advanced Telerobotics Research Lab at Kent State University: decks, quad charts, posters, print, social posts, copy and brand reviews, built on the lab's templates and checked by script.",
+  "author": {
+    "name": "ATR Lab",
+    "url": "https://github.com/ATR-Lab"
+  },
+  "homepage": "https://github.com/ATR-Lab/atr-lab-design-skill",
+  "repository": "https://github.com/ATR-Lab/atr-lab-design-skill",
+  "keywords": ["kent-state", "atr-lab", "brand", "design", "slides", "quad-chart", "poster", "social-media"],
+  "icon": "./atr-lab-design/assets/logos/icons/atr-avatar-mark-navy.png",
+  "skills": ["./atr-lab-design"]
+}
