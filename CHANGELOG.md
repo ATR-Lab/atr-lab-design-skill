@@ -1,5 +1,34 @@
 # Changelog
 
+## 2.1.0 (Nov. 3, 2026)
+
+### Teo, design 2
+
+The lab mascot is redesigned from a lab lead's reference art and mapped onto the brand palette. Teo now has:
+
+- a boxy monitor head with two cat-ear fins and camera-lens pods;
+- a gold face drawn on a navy screen;
+- floating gloved hands;
+- an optional full body with a gimbal neck and a lens-barrel body, in anime cel shading.
+
+The first design (a round head with an antenna) is retired.
+
+- **Regenerated with Higgsfield GPT Image 2.5** (transparent background) in `assets/mascot/`, under the same file names, so scripts, presets and Discord emoji names keep working:
+  - the character sheet;
+  - an avatar that reads at 40 px;
+  - the profile banner, made with `banner.py`;
+  - four views each of the head and full body;
+  - nine expressions;
+  - eight emoji;
+  - five die-cut stickers.
+- The lead's reference art, the turnarounds and the expression sheet ship in `assets/mascot/references/` for new poses. `prompts.json` holds the style lock, generator settings and job ids.
+- `references/mascot.md`:
+  - new anatomy and colors (the face is always gold on navy);
+  - updated rules;
+  - how to make a new pose with Higgsfield, or with Codex and chroma keying as a fallback.
+- The `SKILL.md` brand card and task router describe the new design.
+- The generator and post-processing scripts are at tag `build-sources-2026-11-03-v2.1`.
+
 ## 2.0.0 (Nov. 3, 2026)
 
 Version 2 keeps the design system and improves the tooling around it. It answers two reviews written after real

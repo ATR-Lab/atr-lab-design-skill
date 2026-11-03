@@ -6,7 +6,7 @@
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Kent State University" src="https://img.shields.io/badge/Kent%20State-ATR%20Lab-EFAB00?style=flat-square&labelColor=003976">
-  <img alt="Version 2.0.0" src="https://img.shields.io/badge/version-2.0.0-003976?style=flat-square">
+  <img alt="Version 2.1.0" src="https://img.shields.io/badge/version-2.1.0-003976?style=flat-square">
   <img alt="19 templates" src="https://img.shields.io/badge/templates-19-003976?style=flat-square">
   <img alt="43 icons" src="https://img.shields.io/badge/icons-43-003976?style=flat-square">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-1B2533?style=flat-square">
@@ -39,7 +39,7 @@ It covers every part of the lab's marketing and design:
   revision workflow that rebuilds and re-exports only what an edit touches, tagged PDF export and inspection, QR codes
   verified from the final PDF, safe Office editing and an AI icon pipeline.
 
-**New in 2.0** (details in [CHANGELOG.md](CHANGELOG.md)): official Kent State artwork fetched and verified by
+**New in 2.1:** Teo's redesign (a monitor-headed robot with cat-ear fins and lens pods). **New in 2.0** (details in [CHANGELOG.md](CHANGELOG.md)): official Kent State artwork fetched and verified by
 checksum, the revision workflow (`project.py`), event flyers with named fields, QR codes verified from the final PDF,
 tagged PDF export with a QA report, banners and headers at any size, Discord, Slack and GitHub guidance, the Teo
 mascot, a searchable asset index, `doctor` and a test suite.
@@ -294,7 +294,7 @@ built from a short spec; the QR code is generated at its printed size and decode
 
 ### Teo, the lab mascot
 
-<p align="center"><img src=".github/images/gallery-mascot.png" alt="Teo character sheet: a friendly white robot head with a navy screen face, shown in four views, a full-body version, nine expressions, its colors and usage rules" width="100%"></p>
+<p align="center"><img src=".github/images/gallery-mascot.png" alt="Teo character sheet, design 2: a boxy monitor-headed robot with cat-ear fins, camera-lens pods and a gold face on a navy screen, shown in four views, a full-body gimbal version, nine expressions, its colors and usage rules" width="100%"></p>
 
 ### Logos and icons
 
