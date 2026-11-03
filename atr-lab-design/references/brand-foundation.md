@@ -6,6 +6,13 @@ Who the Advanced Telerobotics Research Lab is, what it stands for and how it rel
 
 Facts here were verified on 2026-09-28 against sourced research notes that are not shipped with the skill (`research/atr-lab-profile.md` and `research/ksu-brand-standards.md`, preserved in the skill repository's git history at tag `build-sources-2026-09-29`). Anything in `[brackets]` is a placeholder that only the lab can fill. Re-verify titles, programs, handles and contact details every semester.
 
+**Upstream.** The lab publishes the same facts in its public profile repository, https://github.com/ATR-Lab/about
+(`README.md`, `research.md`, `achievements.md`, `press-kit/`; the revised pages were on the `docs/revamp` branch in
+November 2026). Both were checked against each other on 2026-11-03 and agreed. If they ever disagree, use the one
+with the later "last reviewed" date, tell the user about the conflict and suggest fixing the other. Neither source
+may fill a `[bracket]` the other leaves open: the lab's room number, lab phone, LinkedIn page, giving URL and the
+items in §9 marked `[confirm]` stay placeholders until the lab confirms them.
+
 ## Contents
 
 1. [The lab in one screen](#1-the-lab-in-one-screen)

@@ -40,6 +40,17 @@ Options:
                       feed sheets through slice_sheet.py first)
   --report            print measurements as JSON (bbox fraction, stroke width, components, holes,
                       dilated_src_px when --min-stroke acted, looks_like_sheet)
+  --outline HEX       add an outline of this color around the keyed artwork (a hex such as 1B2533, or a
+                      token name such as navy or ink when the skill's atr_brand.py is next door). Use it
+                      with --keep-color for white or light artwork (a mascot, an emoji) that must stay
+                      visible on light themes; the outline follows inner edges too.
+  --outline-px N      outline width in output pixels (default with --outline: 1.2 % of --size, 6 px at 512)
+  --die-cut           sticker style: a white border around the whole silhouette (holes filled, rounded)
+                      plus a navy outline outside it (--outline overrides the outline color,
+                      --outline-px its width)
+  --die-cut-px N      width of the white die-cut border in output pixels (default 3.5 % of --size)
+  Outlines grow outward into the padding (12 % at the default fit); a warning is printed when they would
+  touch the canvas edge (lower --fit). Without these flags the output is unchanged.
 
 What it does (in order): measure the real background color from the canvas border, compute a
 hue/saturation/value distance from every pixel to that color, map the distance to alpha with a soft
@@ -368,7 +379,80 @@ def process(src, size=512, fit=0.76, fit_max=0.88, area_min=0.60, center="bbox",
     return out, info
 
 
-def main():
+NAVY_FALLBACK = "003976"   # assets/tokens/colors.json color.brand.navy (used only if the token file is missing)
+
+
+def resolve_color(value):
+    """(r, g, b) from a hex string or, when the skill's atr_brand.py is importable, a token name."""
+    v = str(value).strip()
+    h = v.lstrip("#")
+    if len(h) in (3, 6) and all(c in "0123456789abcdefABCDEF" for c in h):
+        if len(h) == 3:
+            h = "".join(c * 2 for c in h)
+        return hex_to_rgb(h)
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    try:
+        import atr_brand
+        return atr_brand.rgb(v)
+    except Exception as exc:
+        raise SystemExit(f"chroma_key.py: unknown color '{value}' (give a hex value or a brand token name): {exc}")
+
+
+def _navy():
+    try:
+        return resolve_color("navy")
+    except SystemExit:
+        return hex_to_rgb(NAVY_FALLBACK)
+
+
+def add_outline(im, outline_rgb=None, outline_px=0, die_cut=False, border_px=0, border_rgb=(255, 255, 255)):
+    """Return (RGBA image, info) with an anti-aliased outline and/or a die-cut border under the artwork.
+
+    Outline only: a ring of outline_px around every edge of the artwork (outer and inner), drawn under it,
+    so white artwork stays visible on white. Die cut: the silhouette with its holes filled, grown by
+    border_px in white, then by outline_px more in the outline color (navy by default), all under the
+    artwork, like a printed sticker. Distances are Euclidean, so corners come out round."""
+    arr = np.asarray(im.convert("RGBA")).astype(np.float32) / 255.0
+    a = arr[..., 3]
+    solid = a > 0.5
+    info = {}
+    if not solid.any():
+        return im, info
+    if die_cut:
+        sil = ndi.binary_fill_holes(solid)
+        d = ndi.distance_transform_edt(~sil)
+        white_a = np.clip(border_px + 0.5 - d, 0.0, 1.0)
+        ring_a = np.clip(border_px + outline_px + 0.5 - d, 0.0, 1.0)
+        info.update({"die_cut_px": int(border_px), "outline_px": int(outline_px)})
+    else:
+        d = ndi.distance_transform_edt(~solid)
+        white_a = np.zeros_like(a)
+        ring_a = np.clip(outline_px + 0.5 - d, 0.0, 1.0)
+        info.update({"outline_px": int(outline_px)})
+    H, W = a.shape
+    edge = np.concatenate([ring_a[0], ring_a[-1], ring_a[:, 0], ring_a[:, -1]])
+    if (edge > 0.02).any():
+        info["clipped"] = True
+    oc = np.array(outline_rgb if outline_rgb is not None else _navy(), np.float32) / 255.0
+    wc = np.array(border_rgb, np.float32) / 255.0
+    # composite (straight alpha): ring, then white border, then the artwork
+    out_rgb = np.broadcast_to(oc, (H, W, 3)).copy()
+    out_a = ring_a.copy()
+
+    def over(rgb_top, a_top, rgb_bot, a_bot):
+        a_out = a_top + a_bot * (1 - a_top)
+        safe = np.maximum(a_out, 1e-6)[..., None]
+        rgb = (rgb_top * a_top[..., None] + rgb_bot * (a_bot * (1 - a_top))[..., None]) / safe
+        return rgb, a_out
+    out_rgb, out_a = over(np.broadcast_to(wc, (H, W, 3)), white_a, out_rgb, out_a)
+    out_rgb, out_a = over(arr[..., :3], a, out_rgb, out_a)
+    res = np.dstack([np.clip(out_rgb, 0, 1), np.clip(out_a, 0, 1)])
+    return Image.fromarray((res * 255).round().astype(np.uint8), "RGBA"), info
+
+
+def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("src")
     ap.add_argument("dst")
@@ -395,7 +479,28 @@ def main():
                     help="morphological closing radius (source px) that bridges hairline gaps between parts that should touch")
     ap.add_argument("--strict", action="store_true", help="exit 3 when the source looks like an unsliced sheet")
     ap.add_argument("--report", action="store_true")
-    a = ap.parse_args()
+    ap.add_argument("--outline", help="outline color (hex or token name) drawn around the artwork")
+    ap.add_argument("--outline-px", type=int, default=None, help="outline width in output px")
+    ap.add_argument("--die-cut", action="store_true", help="sticker: white border plus a navy outline")
+    ap.add_argument("--die-cut-px", type=int, default=None, help="white die-cut border width in output px")
+    a = ap.parse_args(argv)
+    deco = None
+    if a.outline or a.die_cut:
+        deco = dict(outline_rgb=resolve_color(a.outline) if a.outline else None,
+                    outline_px=a.outline_px if a.outline_px is not None else max(1, round(a.size * 0.012)),
+                    die_cut=a.die_cut,
+                    border_px=(a.die_cut_px if a.die_cut_px is not None else max(1, round(a.size * 0.035)))
+                    if a.die_cut else 0)
+
+    def decorate(im, info, path):
+        if deco is None or im is None:
+            return im
+        im, extra = add_outline(im, **deco)
+        info.update(extra)
+        if extra.get("clipped"):
+            print(f"WARNING: the outline of {path} touches the canvas edge; lower --fit (e.g. 0.70) so it fits",
+                  file=sys.stderr)
+        return im
     kw = dict(size=a.size, fit=a.fit, fit_max=a.fit_max, area_min=a.area_min, center=a.center,
               hue_tol=a.hue_tol, soft=a.soft, clip_lo=a.clip_lo, clip_hi=a.clip_hi,
               min_speck=a.min_speck, fill_holes=a.fill_holes, bg_hex=a.bg, keep_color=a.keep_color,
@@ -417,12 +522,14 @@ def main():
             stem = os.path.splitext(f)[0]
             im, info = process(os.path.join(a.src, f), **kw)
             check_sheet(os.path.join(a.src, f), info)
+            im = decorate(im, info, os.path.join(a.src, f))
             if im is not None and not (a.strict and info.get("looks_like_sheet")):
                 im.save(os.path.join(a.dst, f"{stem}-mask.png"))
             reports.append(info)
     else:
         im, info = process(a.src, **kw)
         check_sheet(a.src, info)
+        im = decorate(im, info, a.src)
         if im is None:
             print(json.dumps(info), file=sys.stderr)
             sys.exit(2)

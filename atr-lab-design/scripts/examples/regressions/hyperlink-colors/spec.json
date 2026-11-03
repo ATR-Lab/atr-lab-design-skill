@@ -1,0 +1,58 @@
+{
+  "_comment": "Hyperlink color regression: each case is a text run on a surface. check_hyperlink_colors.py builds one slide from this file, exports it with LibreOffice (export_office.py) and samples the rendered text pixels. 'expect' is the color the text must render in; 'known_bad' marks the case that reproduces the bug (an explicit gold link color rendered as link blue on navy). theme_hlink is the hyperlink color of the ATR templates' theme (assets/templates/*.pptx, ppt/theme/theme1.xml), which LibreOffice uses for run hyperlinks.",
+  "slide_in": [
+    10,
+    7.5
+  ],
+  "theme_hlink": "#1D65B9",
+  "text": "example.org/register",
+  "size_pt": 28,
+  "url": "https://example.org/register",
+  "cases": [
+    {
+      "id": "run-link-gold-on-navy",
+      "surface": "#003976",
+      "color": "#EFAB00",
+      "link": "run",
+      "expect": "#EFAB00",
+      "known_bad": true,
+      "note": "The bug: a run hyperlink with an explicit gold color. LibreOffice draws it in the theme hyperlink color, #1D65B9 (about 2.0:1 on navy)."
+    },
+    {
+      "id": "run-link-navy-on-white",
+      "surface": "#FFFFFF",
+      "color": "#003976",
+      "link": "run",
+      "expect": "#003976",
+      "known_bad": true,
+      "note": "The same run hyperlink on white: the explicit navy is also replaced by #1D65B9 (readable on white, but not the color that was set)."
+    },
+    {
+      "id": "run-link-gold-hlinkclr-tx",
+      "surface": "#003976",
+      "color": "#EFAB00",
+      "link": "run-hlinkclr-tx",
+      "expect": "#EFAB00",
+      "known_bad": false,
+      "note": "Run hyperlink with the Office 2019 hlinkClr val=\"tx\" extension (use the text color)."
+    },
+    {
+      "id": "plain-gold-on-navy",
+      "surface": "#003976",
+      "color": "#EFAB00",
+      "link": "none",
+      "expect": "#EFAB00",
+      "known_bad": false,
+      "note": "Recommended fix: the printed fallback is plain text (no hyperlink); the QR picture carries the link."
+    },
+    {
+      "id": "shape-link-gold-on-navy",
+      "surface": "#003976",
+      "color": "#EFAB00",
+      "link": "shape",
+      "expect": "#EFAB00",
+      "known_bad": false,
+      "note": "The link on the text box itself (click action), not on the run: the run keeps its color."
+    }
+  ]
+}

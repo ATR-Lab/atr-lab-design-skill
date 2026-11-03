@@ -374,6 +374,12 @@ python3 scripts/new_deck.py draft.json -o out/draft.pptx --allow-placeholders --
 
 ### 8.2 The spec
 
+Event flyers (`"template": "event-flyer"`, `event-flyer-tabloid`, `event-flyer-17x22`) are filled by field name:
+`"workflow": [["Title", "detail"], ...]` fills step1-step3; `"tools": [{"label", "image", "alt"}]` fills the tools
+row (artwork as supplied, plain product names); a picture field may hold `{"qr": {"url", "size_in"}}`. Fields that
+follow another take defaults (`agenda_title`, `tools_label`, `registration_label`, `registration_url`). See
+`python3 scripts/atr_design.py layouts event-flyer --json` and `scripts/examples/print/event-workshop.json`.
+
 ```json
 {
   "template": "presentation",

@@ -1,0 +1,597 @@
+{
+  "schema": "atr-lab-design/official-sources/1",
+  "description": "Official Kent State University wordmark files the ATR Lab uses, with their exact source and checksum. The files themselves are not in the skill: fetch them with scripts/official_assets.py fetch <id|all>, which verifies each SHA-256.",
+  "publisher": "Kent State University, Division of University Communications and Marketing (UCM)",
+  "source_page": "https://www.kent.edu/brand/logos",
+  "terms": {
+    "redistribution": "not granted",
+    "summary": "Kent State publishes these files for download on its brand site but states no redistribution license. All official marks and logos are registered trademarks of Kent State University and \"may not be used without permission\"; licensing requests go to the Office of General Counsel. So the skill ships this manifest and a fetch command, not the files.",
+    "pages": [
+      "https://www.kent.edu/brand/logos",
+      "https://www.kent.edu/ucm/ownership-kent-state-university-marks-and-logos"
+    ],
+    "checked": "2026-11-03"
+  },
+  "retrieved": "2026-11-03",
+  "archives": {
+    "stacked": {
+      "url": "https://s3.amazonaws.com/undeniable.kent.edu/files/Kent+State+University+Stacked.zip",
+      "source_page": "https://www.kent.edu/brand/logos",
+      "bytes": 10117985,
+      "sha256": "a5bae3e3a4d4769e03b270600a61227489c3208d5598734bb2338020e551e7ed",
+      "sha256_note": "checksum of the archive when retrieved; Kent State may re-zip it, so only the member checksums below are enforced",
+      "retrieved": "2026-11-03"
+    },
+    "horizontal": {
+      "url": "https://s3.amazonaws.com/undeniable.kent.edu/brand/kent-state-university-Horizontal.zip",
+      "source_page": "https://www.kent.edu/brand/logos",
+      "bytes": 10105917,
+      "sha256": "88fc9f63910081e6d44531ccb7a19bc4615e2231aba9d0d2547a4c73cea75389",
+      "sha256_note": "checksum of the archive when retrieved; Kent State may re-zip it, so only the member checksums below are enforced",
+      "retrieved": "2026-11-03"
+    }
+  },
+  "not_listed": [
+    "Black, CMYK reverse and JPG versions (in the same archives; not used by the lab)",
+    "Horizontal 2G-RGB PNG (UNIVERSITY in gold; the lab uses the 2G-CMYK PNG, which matches the 2-color EPS)",
+    "University Seal (permissions required), K Emblem and all athletics marks (the lab does not use them)"
+  ],
+  "assets": [
+    {
+      "id": "ksu-stacked-color-png",
+      "lockup": "stacked",
+      "variant": "color",
+      "label": "Two-color: KENT STATE and UNIVERSITY in Kent State Blue, sunburst in Kent State Gold",
+      "format": "png",
+      "kind": "raster",
+      "colors": "Kent State Blue PMS 281 and Kent State Gold PMS 124 (EPS: spot colors)",
+      "background": "white or mist",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked,PNGs/kent_state_university_stacked_2-color.png",
+      "sha256": "1c3fe0d269b759dcd73d68116760808d79135d223d5a161ccc5c9d08fff1aaac",
+      "bytes": 65161,
+      "pixels": [
+        1022,
+        976
+      ],
+      "pixel_sha256": "063dca41c1771bf578d628bdc45dc09fe843347210a23f716d6985f372e653b8",
+      "native_ppi": 300,
+      "vector_master": "ksu-stacked-color-eps",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The default Kent State signature on white or mist: flyers, one-pagers, slides with a light background, documents, web pages. PNG: on-screen use and office files (300 ppi at 3.41 in wide; still 150 ppi or more up to 6.8 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-color-eps",
+      "lockup": "stacked",
+      "variant": "color",
+      "label": "Two-color: KENT STATE and UNIVERSITY in Kent State Blue, sunburst in Kent State Gold",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "Kent State Blue PMS 281 and Kent State Gold PMS 124 (EPS: spot colors)",
+      "background": "white or mist",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked EPSs/kent_state_university_stacked_2-color.eps",
+      "sha256": "aff954d16ab3839a6d826ae0ce4489576991d28b9d87c8869007d9ae02abbc4f",
+      "bytes": 1920834,
+      "size_pt": [
+        245.26,
+        234.3
+      ],
+      "raster_preview": "ksu-stacked-color-png",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The default Kent State signature on white or mist: flyers, one-pagers, slides with a light background, documents, web pages. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-color-cmyk-eps",
+      "lockup": "stacked",
+      "variant": "color",
+      "label": "Two-color, process CMYK build",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "process CMYK equivalents of PMS 281 and PMS 124",
+      "background": "white or mist",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked EPSs/kent_state_university_stacked_CMYK.eps",
+      "sha256": "65d98c9bef6186ec9ef9afa8679b9fb071d3bcd09fd7e2bd95c91c25d2fe494e",
+      "bytes": 1921214,
+      "size_pt": [
+        245.26,
+        234.3
+      ],
+      "raster_preview": "ksu-stacked-color-png",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "Vector master for printers that ask for process (CMYK) art instead of spot colors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-white-png",
+      "lockup": "stacked",
+      "variant": "white",
+      "label": "All White Reverse",
+      "format": "png",
+      "kind": "raster",
+      "colors": "white only",
+      "background": "navy or midnight (plain area)",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked,PNGs/kent_state_university_stacked_White.png",
+      "sha256": "03560b77ef909b64056c2cfda0dd1b0b363a01241dd557e33452b9969866e806",
+      "bytes": 65545,
+      "pixels": [
+        1022,
+        976
+      ],
+      "pixel_sha256": "9f78a02db4e5ec78402d40d18cdffa4f0d9b0c26fadb6d9aa01990c5ee4f3439",
+      "native_ppi": 300,
+      "vector_master": "ksu-stacked-white-eps",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The Kent State signature on navy or midnight: poster headers, navy flyer bands, title slides, web footers. PNG: on-screen use and office files (300 ppi at 3.41 in wide; still 150 ppi or more up to 6.8 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-white-eps",
+      "lockup": "stacked",
+      "variant": "white",
+      "label": "All White Reverse",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "white only",
+      "background": "navy or midnight (plain area)",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked EPSs/kent_state_university_stacked_White.eps",
+      "sha256": "303b5b9e8466a13ecbf9febc7fb62b6dc208b6bd8d3512b66a1505380dbe7cf2",
+      "bytes": 1875686,
+      "size_pt": [
+        245.26,
+        234.3
+      ],
+      "raster_preview": "ksu-stacked-white-png",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The Kent State signature on navy or midnight: poster headers, navy flyer bands, title slides, web footers. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-reverse-gold-png",
+      "lockup": "stacked",
+      "variant": "reverse-gold",
+      "label": "Two-Color Reverse: white type with a Kent State Gold sunburst",
+      "format": "png",
+      "kind": "raster",
+      "colors": "white and Kent State Gold PMS 124",
+      "background": "navy or midnight (plain area)",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked,PNGs/kent_state_university_stacked_124-White.png",
+      "sha256": "721f5e96b2b57c118a21a657ce4c0a3f05bfb4050f470ca161b75443221ffeed",
+      "bytes": 66294,
+      "pixels": [
+        1022,
+        976
+      ],
+      "pixel_sha256": "34929058e29520e7fd231974391ab2e7cf34f6bee6ffd295025330e08cbe1fea",
+      "native_ppi": 300,
+      "vector_master": "ksu-stacked-reverse-gold-eps",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "Alternative to the all-white reverse on navy when the gold sunburst should show. PNG: on-screen use and office files (300 ppi at 3.41 in wide; still 150 ppi or more up to 6.8 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-reverse-gold-eps",
+      "lockup": "stacked",
+      "variant": "reverse-gold",
+      "label": "Two-Color Reverse: white type with a Kent State Gold sunburst",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "white and Kent State Gold PMS 124",
+      "background": "navy or midnight (plain area)",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked EPSs/kent_state_university_stacked_124-White.eps",
+      "sha256": "3acfc6c05755b636327e3b4f853ddd976a103518a0bf5a3de4ab539586890094",
+      "bytes": 1879738,
+      "size_pt": [
+        245.26,
+        234.3
+      ],
+      "raster_preview": "ksu-stacked-reverse-gold-png",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "Alternative to the all-white reverse on navy when the gold sunburst should show. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-blue-png",
+      "lockup": "stacked",
+      "variant": "blue",
+      "label": "All Blue (one color)",
+      "format": "png",
+      "kind": "raster",
+      "colors": "Kent State Blue PMS 281 only",
+      "background": "white, mist or Kent State Gold",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked,PNGs/kent_state_university_stacked_1-color.png",
+      "sha256": "7831669f493ed343d5c3b7bc6592f1f2cd497522cff6770a8ade4d6f338912a4",
+      "bytes": 65004,
+      "pixels": [
+        1022,
+        976
+      ],
+      "pixel_sha256": "1379b64bcb31d5e537d3c001c5869bf7fb6f17dc5510b7a4941e11b78a5fafb9",
+      "native_ppi": 300,
+      "vector_master": "ksu-stacked-blue-eps",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "One-color jobs and the only Kent State version for a gold background. PNG: on-screen use and office files (300 ppi at 3.41 in wide; still 150 ppi or more up to 6.8 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-stacked-blue-eps",
+      "lockup": "stacked",
+      "variant": "blue",
+      "label": "All Blue (one color)",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "Kent State Blue PMS 281 only",
+      "background": "white, mist or Kent State Gold",
+      "archive": "stacked",
+      "member": "Kent State University Stacked/Kent State University Stacked EPSs/kent_state_university_stacked_1-color.eps",
+      "sha256": "cc95f701c447ed687a965df180a0dc5bf198055cbd2b0cbca076c85ee95f46f3",
+      "bytes": 1920302,
+      "size_pt": [
+        245.26,
+        234.3
+      ],
+      "raster_preview": "ksu-stacked-blue-png",
+      "min_size": {
+        "width_in": 1.05,
+        "width_px": 100,
+        "why": "Kent State minimum: one inch with UNIVERSITY at least one inch long; UNIVERSITY spans 99.6% of the Stacked width. Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.305,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "One-color jobs and the only Kent State version for a gold background. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-color-png",
+      "lockup": "horizontal",
+      "variant": "color",
+      "label": "Two-color: KENT STATE and UNIVERSITY in Kent State Blue, sunburst in Kent State Gold",
+      "format": "png",
+      "kind": "raster",
+      "colors": "Kent State Blue PMS 281 and Kent State Gold PMS 124 (EPS: spot colors)",
+      "background": "white or mist",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal PNGs/kent_state_university Horizontal_2G-CMYK.png",
+      "sha256": "25f34a640722a7440f0ac4d71c37b5418f320de2d6e039e7ab552f6f62979d2e",
+      "bytes": 61733,
+      "pixels": [
+        1792,
+        523
+      ],
+      "pixel_sha256": "5cc82587c39238cefb6b7b9046f058a455f774a0572909f07d4de86f00ad3a2b",
+      "native_ppi": 300,
+      "vector_master": "ksu-horizontal-color-eps",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The default Kent State signature on white or mist: flyers, one-pagers, slides with a light background, documents, web pages. PNG: on-screen use and office files (300 ppi at 5.97 in wide; still 150 ppi or more up to 11.9 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-color-eps",
+      "lockup": "horizontal",
+      "variant": "color",
+      "label": "Two-color: KENT STATE and UNIVERSITY in Kent State Blue, sunburst in Kent State Gold",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "Kent State Blue PMS 281 and Kent State Gold PMS 124 (EPS: spot colors)",
+      "background": "white or mist",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal EPSs/kent_state_university Horizontal_2-color.eps",
+      "sha256": "28f8b55a511966b26dec065830a6d86898ed066f6c9a16a25c89f76600f0125a",
+      "bytes": 1878194,
+      "size_pt": [
+        430.12,
+        125.56
+      ],
+      "raster_preview": "ksu-horizontal-color-png",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The default Kent State signature on white or mist: flyers, one-pagers, slides with a light background, documents, web pages. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-color-cmyk-eps",
+      "lockup": "horizontal",
+      "variant": "color",
+      "label": "Two-color, process CMYK build",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "process CMYK equivalents of PMS 281 and PMS 124",
+      "background": "white or mist",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal EPSs/kent_state_university Horizontal_CMYK.eps",
+      "sha256": "811d3278c877fc3383d549d1f68434a4f6115f9d8791a5aa973b1e37d3bebdfb",
+      "bytes": 1878682,
+      "size_pt": [
+        430.12,
+        125.56
+      ],
+      "raster_preview": "ksu-horizontal-color-png",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "Vector master for printers that ask for process (CMYK) art instead of spot colors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-white-png",
+      "lockup": "horizontal",
+      "variant": "white",
+      "label": "All White Reverse",
+      "format": "png",
+      "kind": "raster",
+      "colors": "white only",
+      "background": "navy or midnight (plain area)",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal PNGs/kent_state_university Horizontal_White.png",
+      "sha256": "a339f98b31c82d7fe557dd9ab97416503fe03925ecdd1dc424168c517fb4db0a",
+      "bytes": 59488,
+      "pixels": [
+        1792,
+        523
+      ],
+      "pixel_sha256": "16d192b85b9c681dc86b84928f2640e532ca55be2cc990729f1276ee53e345ee",
+      "native_ppi": 300,
+      "vector_master": "ksu-horizontal-white-eps",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The Kent State signature on navy or midnight: poster headers, navy flyer bands, title slides, web footers. PNG: on-screen use and office files (300 ppi at 5.97 in wide; still 150 ppi or more up to 11.9 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-white-eps",
+      "lockup": "horizontal",
+      "variant": "white",
+      "label": "All White Reverse",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "white only",
+      "background": "navy or midnight (plain area)",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal EPSs/kent_state_university Horizontal_White.eps",
+      "sha256": "959811c14899f8d4d680b43863c73c244a922caf6469ff3fca7f93fd85775c9a",
+      "bytes": 1859130,
+      "size_pt": [
+        430.12,
+        125.56
+      ],
+      "raster_preview": "ksu-horizontal-white-png",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "The Kent State signature on navy or midnight: poster headers, navy flyer bands, title slides, web footers. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-reverse-gold-png",
+      "lockup": "horizontal",
+      "variant": "reverse-gold",
+      "label": "Two-Color Reverse: white type with a Kent State Gold sunburst",
+      "format": "png",
+      "kind": "raster",
+      "colors": "white and Kent State Gold PMS 124",
+      "background": "navy or midnight (plain area)",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal PNGs/kent_state_university Horizontal_124-White.png",
+      "sha256": "7631cf62402364873eaa176b1e8e43be2a4ba0a5c2287ea1010156bf584b8012",
+      "bytes": 60982,
+      "pixels": [
+        1792,
+        523
+      ],
+      "pixel_sha256": "86cdf38aeae69ff4d31b7b1f1a4814cb44506f94efba561828dedcb297a49b62",
+      "native_ppi": 300,
+      "vector_master": "ksu-horizontal-reverse-gold-eps",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "Alternative to the all-white reverse on navy when the gold sunburst should show. PNG: on-screen use and office files (300 ppi at 5.97 in wide; still 150 ppi or more up to 11.9 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-reverse-gold-eps",
+      "lockup": "horizontal",
+      "variant": "reverse-gold",
+      "label": "Two-Color Reverse: white type with a Kent State Gold sunburst",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "white and Kent State Gold PMS 124",
+      "background": "navy or midnight (plain area)",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal EPSs/kent_state_university Horizontal_124-White.eps",
+      "sha256": "591eea5551c6c5432b369879a00b0577f8d03b877e83e2dc66eaca8463cb370d",
+      "bytes": 1861606,
+      "size_pt": [
+        430.12,
+        125.56
+      ],
+      "raster_preview": "ksu-horizontal-reverse-gold-png",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "Alternative to the all-white reverse on navy when the gold sunburst should show. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-blue-png",
+      "lockup": "horizontal",
+      "variant": "blue",
+      "label": "All Blue (one color)",
+      "format": "png",
+      "kind": "raster",
+      "colors": "Kent State Blue PMS 281 only",
+      "background": "white, mist or Kent State Gold",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal PNGs/kent_state_university Horizontal_1-color.png",
+      "sha256": "a72890783822d0969d9e5c95d7366023b6947a76cf656a44fd60d04d01cc02b2",
+      "bytes": 60448,
+      "pixels": [
+        1792,
+        523
+      ],
+      "pixel_sha256": "9af6d1d9dff6821331de32f5d134331df7e0eafa5f0367c31e9bf2df9288b8ad",
+      "native_ppi": 300,
+      "vector_master": "ksu-horizontal-blue-eps",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "One-color jobs and the only Kent State version for a gold background. PNG: on-screen use and office files (300 ppi at 5.97 in wide; still 150 ppi or more up to 11.9 in wide on posters).",
+      "retrieved": "2026-11-03"
+    },
+    {
+      "id": "ksu-horizontal-blue-eps",
+      "lockup": "horizontal",
+      "variant": "blue",
+      "label": "All Blue (one color)",
+      "format": "eps",
+      "kind": "vector",
+      "colors": "Kent State Blue PMS 281 only",
+      "background": "white, mist or Kent State Gold",
+      "archive": "horizontal",
+      "member": "kent state university Horizontal/kent state university Horizontal EPSs/kent_state_university Horizontal_1-color.eps",
+      "sha256": "befb736b62929fbbd363c122c4e37776bc9511f568b9aa78a72a4d214d09dcd3",
+      "bytes": 1877734,
+      "size_pt": [
+        430.12,
+        125.56
+      ],
+      "raster_preview": "ksu-horizontal-blue-png",
+      "min_size": {
+        "width_in": 1.2,
+        "width_px": 115,
+        "why": "Kent State minimum: UNIVERSITY at least one inch long; UNIVERSITY spans 84.3% of the Horizontal width (measured on the official PNG). Screens: lab convention, UNIVERSITY at least 96 px."
+      },
+      "clear_space": {
+        "k_height_ratio": 0.493,
+        "rule": "Keep the height of the K in KENT clear on every side."
+      },
+      "intended_use": "One-color jobs and the only Kent State version for a gold background. EPS: vector master for commercial print, large format and vendors.",
+      "retrieved": "2026-11-03"
+    }
+  ]
+}

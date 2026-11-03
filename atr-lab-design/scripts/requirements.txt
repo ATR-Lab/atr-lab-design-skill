@@ -7,7 +7,9 @@
 # contrast.py and the --make-tile option to email_signature.py). This file covers every third-party import in
 # scripts/ and assets/tokens/ (PIL = Pillow, skimage = scikit-image, fontTools = fonttools).
 
-# ---- core: brand_check.py (linter), social_card.py, icons/recolor.py + badge.py, deck automation
+# ---- core: brand_check.py (linter), new_deck.py, quad_chart.py, social_card.py, banner.py, atr_brand.py,
+#      asset_index.py, atr_design.py (assets, layouts, doctor), pptx_tools.py, icons/recolor.py + badge.py
+#      (official_assets.py and contrast.py need only the standard library)
 lxml>=4.9
 Pillow>=10.0
 numpy>=1.24
@@ -15,11 +17,19 @@ defusedxml>=0.7
 python-pptx>=1.0
 fonttools>=4.40          # social_card.py kerning (it runs without it, unkerned, with a warning)
 
+# ---- optional: QR codes and PDF checks (qr_code.py, export_office.py, project.py export)
+#   .venv/bin/pip install "qrcode[pil]>=7.4" "zxing-cpp>=2.2" "pypdf>=4.0"
+#   (export_office.py and project.py need pypdf even without QR codes)
+qrcode[pil]>=7.4
+zxing-cpp>=2.2
+pypdf>=4.0
+
 # ---- optional: charts and paper figures (assets/tokens/atr_plot.py + atr.mplstyle, assets/tokens/src/)
 #   .venv/bin/pip install "matplotlib>=3.7"
 matplotlib>=3.7
 
-# ---- optional: icon pipeline (scripts/icons/): chroma key, skeleton QA, SVG tracing
+# ---- optional: icon pipeline (scripts/icons/): chroma key (also --outline/--die-cut for emoji and stickers),
+#      skeleton QA, SVG tracing
 #   (icons/generate.py and icons/make_readme.py need only the standard library)
 #   .venv/bin/pip install "scipy>=1.10" "scikit-image>=0.21" "vtracer>=0.6"
 scipy>=1.10
@@ -27,6 +37,10 @@ scikit-image>=0.21
 vtracer>=0.6
 
 # Not Python, install separately when needed:
-#   LibreOffice (soffice) + poppler (pdftoppm)  -> scripts/render_office.sh
+#   LibreOffice (soffice) + poppler (pdftoppm)  -> render_office.sh, export_office.py, qr_code.py verify, project.py export
 #   Codex CLI                                   -> scripts/codex_image.sh
 #   rsvg-convert (librsvg), optional            -> SVG to PNG outside Python
+
+# ---- optional: tests (scripts/tests/)
+#   .venv/bin/pip install "pytest>=8"
+# Check what is installed and what is missing, with the fix command for each: python3 scripts/atr_design.py doctor

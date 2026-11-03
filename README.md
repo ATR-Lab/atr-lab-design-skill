@@ -6,7 +6,8 @@
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Kent State University" src="https://img.shields.io/badge/Kent%20State-ATR%20Lab-EFAB00?style=flat-square&labelColor=003976">
-  <img alt="16 templates" src="https://img.shields.io/badge/templates-16-003976?style=flat-square">
+  <img alt="Version 2.0.0" src="https://img.shields.io/badge/version-2.0.0-003976?style=flat-square">
+  <img alt="19 templates" src="https://img.shields.io/badge/templates-19-003976?style=flat-square">
   <img alt="43 icons" src="https://img.shields.io/badge/icons-43-003976?style=flat-square">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-1B2533?style=flat-square">
 </p>
@@ -26,11 +27,22 @@ It covers every part of the lab's marketing and design:
 - **Kent State compliance:** logo co-branding, athletics marks, trademark and merch licensing, and accessibility law.
 - **The visual system:** logos (traced to vector), color and design tokens, typography, 43 custom icons, patterns,
   backgrounds and concept illustrations.
-- **16 templates:** a presentation (22 layouts), quad charts (NASA format, project status, weekly summary), two
-  research posters, a flyer, a one-pager, a certificate, a name badge, door signs, a letterhead, an email signature
-  and five social media sizes.
-- **Scripts:** a brand and accessibility linter, a contrast checker, a renderer, and builders for decks, quad charts,
-  social graphics and email signatures, plus an AI icon pipeline.
+- **19 templates:** a presentation (22 layouts), quad charts (NASA format, project status, weekly summary), two
+  research posters, event and workshop flyers in Letter, Tabloid and 17 × 22 in with named fields and a registration
+  QR code, a flyer, a one-pager, a certificate, a name badge, door signs, a letterhead, an email signature and five
+  social media sizes.
+- **Teo, the lab mascot:** a character sheet, views, expressions, Discord and Slack emoji and stickers, with usage
+  rules.
+- **Scripts:** one front door (`atr_design.py`: find any asset, query a layout, check the environment), a brand and
+  accessibility linter that knows the official Kent State logo from the working copy, a contrast checker, a renderer,
+  builders for decks, quad charts, event flyers, social graphics, banners at any size and email signatures, a
+  revision workflow that rebuilds and re-exports only what an edit touches, tagged PDF export and inspection, QR codes
+  verified from the final PDF, safe Office editing and an AI icon pipeline.
+
+**New in 2.0** (details in [CHANGELOG.md](CHANGELOG.md)): official Kent State artwork fetched and verified by
+checksum, the revision workflow (`project.py`), event flyers with named fields, QR codes verified from the final PDF,
+tagged PDF export with a QA report, banners and headers at any size, Discord, Slack and GitHub guidance, the Teo
+mascot, a searchable asset index, `doctor` and a test suite.
 
 ## Contents
 
@@ -202,6 +214,9 @@ visiting sponsors`.
 | A research poster | *"Turn this abstract and these two figures into a 48×36 poster for IROS."* |
 | A social post | *"Instagram post announcing registration for our middle school summer robotics workshop, June 14-18, 2027, 9am-3pm: image, caption and alt text."* |
 | Print pieces | *"Flyer and a completion certificate for the K-12 summer camp."* · *"A door sign for the lab: robots in operation."* |
+| An event or workshop flyer | *"Workshop flyer, Letter and 17×22: 'Build robots with AI agents', Sat. Nov. 7, 11 a.m.-3 p.m., MSB Room 228, programming experience required, registration link https://…"* |
+| A follow-up edit | *"Change the registration link on both flyers to https://… and re-export."* · *"Swap in the official Kent State logo everywhere."* |
+| Banners and community | *"A GitHub README header for our new repo."* · *"Discord invite background and server banner."* · *"Teo stickers for the Discord."* |
 | Copy | *"LinkedIn post and a department news blurb for our HRI 2026 VendoBot paper. Don't make up results."* · *"Our 50-word boilerplate for a conference program."* |
 | A brand review | *"A student made this flyer. Check it against the brand and fix it."* · *"Lint every slide deck in this folder."* |
 | Brand questions | *"Can we put the Kent State logo next to ours on a T-shirt?"* · *"Which logo file goes on a navy slide?"* · *"Is gold text OK on white?"* |
@@ -259,6 +274,13 @@ word for word:
 
 <p align="center"><img src=".github/images/gallery-posters.png" alt="ATR research poster templates, 48 by 36 inch landscape and 36 by 48 inch portrait" width="100%"></p>
 
+### Event and workshop flyers: Letter, Tabloid, 17 × 22 in
+
+<p align="center"><img src=".github/images/gallery-event-flyers.png" alt="An ATR workshop flyer in three sizes: Letter, Tabloid and 17 by 22 inches, with event facts, a three-step workflow, a tools-covered row and a registration QR code" width="100%"></p>
+
+Named fields (`event_title`, `event_date`, `venue`, `requirements`, `workflow`, `tools`, `registration_qr` and more),
+built from a short spec; the QR code is generated at its printed size and decoded back from the final PDF.
+
 ### Print: flyers, one-pager, certificate, signs, letterhead, badge
 
 <p align="center"><img src=".github/images/gallery-print.png" alt="ATR print collateral: event and recruiting flyers, project one-pager, certificate, door signs, letterhead and name badge" width="100%"></p>
@@ -269,6 +291,10 @@ word for word:
 
 `scripts/social_card.py` renders on-brand cards and an alt-text sidecar from a short spec, at 7 platform sizes and in
 9 templates. The five PowerPoint social templates are for editing by hand.
+
+### Teo, the lab mascot
+
+<p align="center"><img src=".github/images/gallery-mascot.png" alt="Teo character sheet: a friendly white robot head with a navy screen face, shown in four views, a full-body version, nine expressions, its colors and usage rules" width="100%"></p>
 
 ### Logos and icons
 
@@ -309,6 +335,29 @@ The full rules are in [`SKILL.md`](atr-lab-design/SKILL.md) §1 and the 20 refer
 Run from `atr-lab-design/`, with `.venv/bin/python` as `python3`:
 
 ```bash
+# Once per machine: what's installed, what's missing and how to fix it
+python3 scripts/atr_design.py doctor
+
+# Find any file in the brand kit (no guessing names)
+python3 scripts/atr_design.py assets find telepresence --kind badge
+
+# The official Kent State wordmark (downloaded from kent.edu, checked by SHA-256, cached outside the skill)
+python3 scripts/official_assets.py fetch ksu-stacked-white-png
+
+# Event flyer with a registration QR code, then check the QR in the exported PDF
+python3 scripts/new_deck.py scripts/examples/print/event-workshop.json --template event-flyer-17x22 -o ~/out/flyer.pptx
+python3 scripts/export_office.py pdf ~/out/flyer.pptx --out-dir ~/out
+python3 scripts/qr_code.py verify ~/out/flyer.pdf --url https://example.org/register
+
+# Revise a set of deliverables: change one fact, rebuild and re-export only what it touches
+python3 scripts/project.py init ~/work/workshop --example workshop
+python3 scripts/project.py set registration_url https://example.org/new -p ~/work/workshop/project.json
+python3 scripts/project.py build --changed-only -p ~/work/workshop/project.json
+python3 scripts/project.py export --changed-only -p ~/work/workshop/project.json
+
+# Banners and headers at any size
+python3 scripts/atr_design.py banner --preset github-header --title "Repo name" --subtitle "One line" -o ~/out/header.png
+
 # Lint anything: .pptx .docx .svg .html/.css images, and copy in .md/.txt
 python3 scripts/brand_check.py path/to/file.pptx
 python3 scripts/brand_check.py caption.txt post.md
@@ -341,29 +390,35 @@ python3 scripts/email_signature.py --name "Your Name" --title "Ph.D. student" --
 ```
 atr-lab-design/                the skill (the only folder Claude needs)
 ├── SKILL.md                   entry point: brand card, task router, workflows, QA gate, facts policy
-├── references/                20 guides: brand-foundation, voice-and-copy, kent-state-compliance,
+├── references/                22 guides: brand-foundation, voice-and-copy, kent-state-compliance,
 │                              logo-system, color, typography, graphic-elements, iconography, imagery,
 │                              ai-image-pipeline, presentations, quad-charts, posters, social-media,
-│                              print-and-merch, web-and-digital, pr-events-outreach,
-│                              data-visualization, accessibility, qa-checklists
+│                              print-and-merch, web-and-digital, community-platforms, mascot,
+│                              pr-events-outreach, data-visualization, accessibility, qa-checklists
 ├── assets/
-│   ├── templates/             16 templates + layout contracts (*-layouts.json) + catalog README
-│   ├── logos/                 SVG + PNG lockups, favicons, avatars, Kent State working copy, logos.json
+│   ├── index.json             one record per asset, searched by `atr_design.py assets`
+│   ├── templates/             19 templates + layout contracts (*-layouts.json) + catalog README
+│   ├── logos/                 SVG + PNG lockups, favicons, avatars, Kent State working copy and the
+│   │                          official-file manifest (official-sources.json), logos.json
+│   ├── mascot/                Teo: character sheet, views, expressions, emoji, stickers, prompts
 │   ├── icons/                 43 icons: svg/, png/ (navy, gold, white, ink), badges/, masters/
 │   ├── illustrations/         backgrounds, concept illustrations, virtual backgrounds, platform banners
 │   ├── patterns/              hazard bands, triangle lattice, chevrons, blueprint grid
 │   ├── tokens/                colors.json, tokens.css/.scss, Tailwind preset, Office theme, palettes,
 │   │                          atr.mplstyle + atr_plot.py for figures
 │   └── fonts/                 Source Sans 3, Roboto Slab, Source Code Pro (+ licenses)
-└── scripts/                   brand_check, contrast, render_office, new_deck, quad_chart,
-                               social_card, email_signature, codex_image, icons/, examples/
+└── scripts/                   atr_design (front door), atr_brand, asset_index, brand_check, contrast,
+                               render_office, new_deck, quad_chart, social_card, banner, project,
+                               export_office, qr_code, pptx_tools, official_assets, email_signature,
+                               codex_image, icons/, examples/, tests/
 ```
 
 The repository around it holds:
 
 - `.claude-plugin/`: `plugin.json` (the plugin, which points at `atr-lab-design/`) and `marketplace.json` (the
   `atr-lab` marketplace that `/plugin marketplace add` reads)
-- `commands/`: the plugin's slash commands (`deck`, `quad`, `social`, `review`, `copy`, `setup`)
+- `commands/`: the plugin's slash commands (`deck`, `quad`, `social`, `event`, `banner`, `revise`, `review`, `copy`,
+  `setup`)
 - `.claude/skills/atr-lab-design`: a link that loads the skill in any Claude Code session opened here
 - this README and its images (`.github/images/`)
 
@@ -376,10 +431,12 @@ The repository around it holds:
 - **Open decisions** the skill cannot make on its own are listed in
   [`references/kent-state-compliance.md`](atr-lab-design/references/kent-state-compliance.md) §19 and
   [`references/brand-foundation.md`](atr-lab-design/references/brand-foundation.md) §12. Examples: Kent State
-  approval of the ATR mark, the official Kent State logo files, the director's sign-off on the boilerplates, the
-  lab's own room and phone. Until they are settled the skill uses a placeholder or the safer reading.
+  approval of the ATR mark, the director's sign-off on the boilerplates, the lab's own room and phone. (The official
+  Kent State logo files are now fetched on demand: `scripts/official_assets.py`.) Until they are settled the skill uses a placeholder or the safer reading.
 - **After any change** to a template or reference, lint the templates:
-  `scripts/brand_check.py assets/templates/ --template` should report 0 errors and 0 warnings.
+  `scripts/brand_check.py assets/templates/ --template` should report 0 errors and 0 warnings. After adding,
+  renaming or removing an asset, rerun `scripts/asset_index.py`. Run the tests:
+  `python3 -m pytest -q -p no:cacheprovider scripts/tests` (from `atr-lab-design/`).
 
 ## For maintainers
 
@@ -389,10 +446,11 @@ The repository around it holds:
   every change you want plugin users to get; Claude Code compares versions, so an unchanged version is not
   re-installed. Check the manifests with `claude plugin validate .` and try the plugin from a checkout with
   `claude --plugin-dir .`.
-- The build scripts that generated the templates and assets, the sourced research notes and the test suite are not
-  needed to use the skill. They are preserved in git history at tag
-  [`build-sources-2026-09-29`](https://github.com/ATR-Lab/atr-lab-design-skill/tree/build-sources-2026-09-29):
-  `git checkout build-sources-2026-09-29` to regenerate or re-test.
+- The build scripts that generated the templates and assets and the sourced research notes are not needed to use
+  the skill. The v1 sources are preserved at tag
+  [`build-sources-2026-09-29`](https://github.com/ATR-Lab/atr-lab-design-skill/tree/build-sources-2026-09-29); the
+  v2 additions (the event-flyer generator and the Teo mascot pipeline) at tag
+  [`build-sources-2026-11-03`](https://github.com/ATR-Lab/atr-lab-design-skill/tree/build-sources-2026-11-03).
 
 ## Credits and licenses
 

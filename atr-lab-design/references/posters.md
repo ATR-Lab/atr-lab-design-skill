@@ -55,6 +55,7 @@ Or build it from a spec: `python3 scripts/new_deck.py poster.json --render --che
 | File | Page | Use it for |
 |---|---|---|
 | `assets/templates/ATR-Research-Poster-48x36.pptx` | 48 × 36 in, landscape | The Kent State Undergraduate Research Symposium (Kent State University Libraries' poster guide specifies 48 in wide × 36 in high, https://libguides.library.kent.edu/smsppt/posters); the common US research-poster size; landscape A0 (ICRA 2026 regular posters) printed at 92% |
+| `assets/templates/ATR-Event-Flyer-17x22.pptx` | 17 × 22 in, portrait | Event and workshop posters for easels and hallway walls (24 pt floor); not a research poster (references/print-and-merch.md §5.1) |
 | `assets/templates/ATR-Research-Poster-36x48.pptx` | 36 × 48 in, portrait | Boards limited to 36 in wide × 48 in tall (IROS 2025); portrait A0 (HRI 2026 and 2027 late-breaking reports, ICRA 2026 late-breaking results) printed at 92% |
 
 Conference rules change every year: IROS 2025 took portrait posters up to 36 × 48 in, while IROS 2026 takes up

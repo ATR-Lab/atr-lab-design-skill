@@ -1,0 +1,783 @@
+{
+ "$schema": "atr-print-layouts/1",
+ "template": "ATR-Flyer-Letter.pptx",
+ "slide_size_in": [
+  8.5,
+  11
+ ],
+ "notes": [
+  "Semantic field names for the legacy flyer template (its placeholders were written with generic names). new_deck.py accepts these names and still accepts ph<idx> for every placeholder, so older specs keep building.",
+  "Budgets come from the template's own notes (build/templates-src/print/build-flyer.js at tag build-sources-2026-09-29): Source Sans 3 with 8-9% slack for the Arial fallback; boxes and sizes were read from the file.",
+  "For a workshop or event page with named date/time/venue/audience fields, a workflow panel, a tools row and a QR slot use ATR-Event-Flyer-Letter.pptx (event-flyer-letter-layouts.json), also in Tabloid and 17 x 22 in."
+ ],
+ "layouts": [
+  {
+   "index": 0,
+   "name": "Event flyer",
+   "purpose": "Event flyer: navy top field with the hazard band, two signatures, eyebrow, headline, subhead; WHEN / WHERE / WHO facts, activity list, safety line; mist illustration panel with a mono caption; navy register panel with a QR box.",
+   "when": "Demo days, open houses and K-12 programs led by a photo or illustration.",
+   "placeholders": [
+    {
+     "idx": 108,
+     "name": "eyebrow",
+     "type": "body",
+     "purpose": "Event type, AP date and time, ALL CAPS, segments separated by two spaces, a middle dot and two spaces; one line.",
+     "prompt": "[DEMO DAY]  ·  [SATURDAY, SEPT. 23, 2026]  ·  [9 A.M.-NOON]",
+     "max_chars": 60,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 12.0,
+      "bold": true,
+      "color": "EFAB00"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 2.15,
+      "w": 7.5,
+      "h": 0.25
+     },
+     "aliases": [
+      "ph108"
+     ]
+    },
+    {
+     "idx": 109,
+     "name": "title",
+     "type": "title",
+     "purpose": "Headline, two lines of about 18 characters (36 in all) at 48 pt Black; longer shrinks to 44 pt in PowerPoint. Cut words first.",
+     "prompt": "[Headline: two lines]",
+     "max_chars": 36,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3 Black",
+      "size_pt": 48.0,
+      "bold": false,
+      "color": "FFFFFF"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 2.42,
+      "w": 7.5,
+      "h": 1.5
+     },
+     "aliases": [
+      "ph109"
+     ],
+     "fallback_pt": 44
+    },
+    {
+     "idx": 110,
+     "name": "subhead",
+     "type": "body",
+     "purpose": "One sentence on who this is for and why to come; two lines at 18 pt.",
+     "prompt": "[One sentence on who this is for and why to come.]",
+     "max_chars": 120,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 18.0,
+      "bold": false,
+      "color": "FFFFFF"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 3.97,
+      "w": 7.2,
+      "h": 0.65
+     },
+     "aliases": [
+      "ph110"
+     ]
+    },
+    {
+     "idx": 113,
+     "name": "when",
+     "type": "body",
+     "purpose": "Date, time and check-in; up to three lines of about 40 characters.",
+     "prompt": "[When: up to three lines]",
+     "max_chars": 120,
+     "max_lines": 3,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 13.0,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 1.1,
+      "y": 5.29,
+      "w": 3.0,
+      "h": 0.72
+     },
+     "aliases": [
+      "ph113"
+     ]
+    },
+    {
+     "idx": 116,
+     "name": "where",
+     "type": "body",
+     "purpose": "Building (Mathematical Sciences Building is verified; the room is a placeholder), campus, city; up to three lines.",
+     "prompt": "[Where: up to three lines]",
+     "max_chars": 120,
+     "max_lines": 3,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 13.0,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 1.1,
+      "y": 6.44,
+      "w": 3.0,
+      "h": 0.72
+     },
+     "aliases": [
+      "ph116"
+     ]
+    },
+    {
+     "idx": 119,
+     "name": "who",
+     "type": "body",
+     "purpose": "Who it is for, cost and places; up to three lines.",
+     "prompt": "[Who: up to three lines]",
+     "max_chars": 120,
+     "max_lines": 3,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 13.0,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 1.1,
+      "y": 7.59,
+      "w": 3.0,
+      "h": 0.72
+     },
+     "aliases": [
+      "ph119"
+     ]
+    },
+    {
+     "idx": 120,
+     "name": "do_head",
+     "type": "body",
+     "purpose": "Heading of the activity list (\"What you will do\"); one line.",
+     "prompt": "What you will do",
+     "max_chars": 30,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 15.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 8.56,
+      "w": 3.6,
+      "h": 0.28
+     },
+     "aliases": [
+      "ph120"
+     ]
+    },
+    {
+     "idx": 121,
+     "name": "do_list",
+     "type": "body",
+     "purpose": "Three one-line activities.",
+     "prompt": "[Activity 1]\n[Activity 2]\n[Activity 3]",
+     "max_chars": 45,
+     "max_lines": null,
+     "max_paragraphs": 3,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 12.0,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 8.88,
+      "w": 3.6,
+      "h": 0.8
+     },
+     "aliases": [
+      "ph121"
+     ]
+    },
+    {
+     "idx": 122,
+     "name": "safety",
+     "type": "body",
+     "purpose": "Supervision, photo-release and accessibility line; two lines at 9 pt.",
+     "prompt": "[Supervision, photo-release and accessibility line, two lines.]",
+     "max_chars": 110,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 9.0,
+      "bold": false,
+      "color": "4A5868"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 9.74,
+      "w": 3.6,
+      "h": 0.34
+     },
+     "aliases": [
+      "ph122"
+     ]
+    },
+    {
+     "idx": 124,
+     "name": "fig_caption",
+     "type": "body",
+     "purpose": "Mono figure caption (\"FIG. 01 // ...\"); one line.",
+     "prompt": "FIG. 01 // [caption]",
+     "max_chars": 70,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Code Pro",
+      "size_pt": 8.0,
+      "bold": false,
+      "color": "4A5868"
+     },
+     "box_in": {
+      "x": 4.4,
+      "y": 8.08,
+      "w": 3.6,
+      "h": 0.3
+     },
+     "aliases": [
+      "ph124"
+     ]
+    },
+    {
+     "idx": 126,
+     "name": "cta_label",
+     "type": "body",
+     "purpose": "Call-to-action label in the navy panel, ALL CAPS; one line.",
+     "prompt": "REGISTER",
+     "max_chars": 18,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 10.0,
+      "bold": true,
+      "color": "EFAB00"
+     },
+     "box_in": {
+      "x": 4.65,
+      "y": 8.65,
+      "w": 1.9,
+      "h": 0.208
+     },
+     "aliases": [
+      "ph126"
+     ]
+    },
+    {
+     "idx": 127,
+     "name": "cta_head",
+     "type": "body",
+     "purpose": "Deadline line (\"Sign up by Sept. 1\"); one line.",
+     "prompt": "Sign up by [date]",
+     "max_chars": 18,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 15.0,
+      "bold": true,
+      "color": "FFFFFF"
+     },
+     "box_in": {
+      "x": 4.65,
+      "y": 8.91,
+      "w": 1.95,
+      "h": 0.3
+     },
+     "aliases": [
+      "ph127"
+     ]
+    },
+    {
+     "idx": 128,
+     "name": "cta_url",
+     "type": "body",
+     "purpose": "Clean URL printed in mono beside the QR box; one line.",
+     "prompt": "[atr.cs.kent.edu/k12]",
+     "max_chars": 22,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Code Pro",
+      "size_pt": 10.0,
+      "bold": false,
+      "color": "EFAB00"
+     },
+     "box_in": {
+      "x": 4.65,
+      "y": 9.25,
+      "w": 1.95,
+      "h": 0.26
+     },
+     "aliases": [
+      "ph128"
+     ]
+    },
+    {
+     "idx": 129,
+     "name": "cta_contact",
+     "type": "body",
+     "purpose": "Contact for questions; two lines at 9 pt.",
+     "prompt": "Questions: [name]@kent.edu\n330-672-[xxxx]",
+     "max_chars": 60,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 9.0,
+      "bold": false,
+      "color": "FFFFFF"
+     },
+     "box_in": {
+      "x": 4.65,
+      "y": 9.53,
+      "w": 1.95,
+      "h": 0.42
+     },
+     "aliases": [
+      "ph129"
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "Recruiting flyer",
+   "purpose": "Recruiting flyer: gold top field (navy text), three research-thread cards, what we look for, how to apply with three station plates and a QR box, equal-opportunity line; signatures on a white row above the footer.",
+   "when": "Open undergraduate and graduate research positions.",
+   "placeholders": [
+    {
+     "idx": 108,
+     "name": "eyebrow",
+     "type": "body",
+     "purpose": "JOIN THE LAB and the term, ALL CAPS; one line.",
+     "prompt": "JOIN THE LAB  ·  [FALL 2026] RESEARCH POSITIONS",
+     "max_chars": 60,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 12.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 0.82,
+      "w": 7.5,
+      "h": 0.25
+     },
+     "aliases": [
+      "ph108"
+     ]
+    },
+    {
+     "idx": 109,
+     "name": "title",
+     "type": "title",
+     "purpose": "Headline, two lines of about 18 characters (36 in all) at 48 pt Black, navy on gold.",
+     "prompt": "[Headline: two lines]",
+     "max_chars": 36,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3 Black",
+      "size_pt": 48.0,
+      "bold": false,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 1.1,
+      "w": 7.5,
+      "h": 1.5
+     },
+     "aliases": [
+      "ph109"
+     ],
+     "fallback_pt": 44
+    },
+    {
+     "idx": 110,
+     "name": "subhead",
+     "type": "body",
+     "purpose": "Positions and research threads; three lines at 15 pt across the full width.",
+     "prompt": "[Two or three lines on the positions and the research threads.]",
+     "max_chars": 210,
+     "max_lines": 3,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 15.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 3.22,
+      "w": 7.5,
+      "h": 0.85
+     },
+     "aliases": [
+      "ph110"
+     ]
+    },
+    {
+     "idx": 112,
+     "name": "card1_title",
+     "type": "body",
+     "purpose": "Research thread 1 title; two lines.",
+     "prompt": "[Thread 1]",
+     "max_chars": 40,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 13.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 0.7,
+      "y": 5.25,
+      "w": 1.9,
+      "h": 0.44
+     },
+     "aliases": [
+      "ph112"
+     ]
+    },
+    {
+     "idx": 113,
+     "name": "card1_body",
+     "type": "body",
+     "purpose": "One sentence on thread 1; two lines.",
+     "prompt": "[One sentence, two lines.]",
+     "max_chars": 60,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 10.5,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 0.7,
+      "y": 5.73,
+      "w": 1.9,
+      "h": 0.42
+     },
+     "aliases": [
+      "ph113"
+     ]
+    },
+    {
+     "idx": 115,
+     "name": "card2_title",
+     "type": "body",
+     "purpose": "Research thread 2 title; two lines.",
+     "prompt": "[Thread 2]",
+     "max_chars": 40,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 13.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 3.3,
+      "y": 5.25,
+      "w": 1.9,
+      "h": 0.44
+     },
+     "aliases": [
+      "ph115"
+     ]
+    },
+    {
+     "idx": 116,
+     "name": "card2_body",
+     "type": "body",
+     "purpose": "One sentence on thread 2; two lines.",
+     "prompt": "[One sentence, two lines.]",
+     "max_chars": 60,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 10.5,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 3.3,
+      "y": 5.73,
+      "w": 1.9,
+      "h": 0.42
+     },
+     "aliases": [
+      "ph116"
+     ]
+    },
+    {
+     "idx": 118,
+     "name": "card3_title",
+     "type": "body",
+     "purpose": "Research thread 3 title; two lines.",
+     "prompt": "[Thread 3]",
+     "max_chars": 40,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 13.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 5.9,
+      "y": 5.25,
+      "w": 1.9,
+      "h": 0.44
+     },
+     "aliases": [
+      "ph118"
+     ]
+    },
+    {
+     "idx": 119,
+     "name": "card3_body",
+     "type": "body",
+     "purpose": "One sentence on thread 3; two lines.",
+     "prompt": "[One sentence, two lines.]",
+     "max_chars": 60,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 10.5,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 5.9,
+      "y": 5.73,
+      "w": 1.9,
+      "h": 0.42
+     },
+     "aliases": [
+      "ph119"
+     ]
+    },
+    {
+     "idx": 120,
+     "name": "look_head",
+     "type": "body",
+     "purpose": "Heading (\"What we look for\"); one line.",
+     "prompt": "What we look for",
+     "max_chars": 30,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 15.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 6.4,
+      "w": 3.6,
+      "h": 0.28
+     },
+     "aliases": [
+      "ph120"
+     ]
+    },
+    {
+     "idx": 121,
+     "name": "look_list",
+     "type": "body",
+     "purpose": "Four requirement bullets, at most two of them two lines (about 90 characters each).",
+     "prompt": "[Requirement 1]\n[Requirement 2]\n[Requirement 3]\n[Requirement 4]",
+     "max_chars": 90,
+     "max_lines": null,
+     "max_paragraphs": 4,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 11.0,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 6.72,
+      "w": 3.6,
+      "h": 1.4
+     },
+     "aliases": [
+      "ph121"
+     ]
+    },
+    {
+     "idx": 122,
+     "name": "apply_head",
+     "type": "body",
+     "purpose": "Heading (\"How to apply\"); one line.",
+     "prompt": "How to apply",
+     "max_chars": 30,
+     "max_lines": 1,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 15.0,
+      "bold": true,
+      "color": "003976"
+     },
+     "box_in": {
+      "x": 4.4,
+      "y": 6.4,
+      "w": 3.6,
+      "h": 0.28
+     },
+     "aliases": [
+      "ph122"
+     ]
+    },
+    {
+     "idx": 125,
+     "name": "step1",
+     "type": "body",
+     "purpose": "Step 1 beside plate 01; two lines (about 90 characters).",
+     "prompt": "[Step 1, two lines]",
+     "max_chars": 90,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 10.5,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 4.9,
+      "y": 6.73,
+      "w": 3.1,
+      "h": 0.46
+     },
+     "aliases": [
+      "ph125"
+     ]
+    },
+    {
+     "idx": 128,
+     "name": "step2",
+     "type": "body",
+     "purpose": "Step 2 beside plate 02, next to the QR box; two lines (about 55 characters).",
+     "prompt": "[Step 2, two lines]",
+     "max_chars": 55,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 10.5,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 4.9,
+      "y": 7.23,
+      "w": 2.0,
+      "h": 0.46
+     },
+     "aliases": [
+      "ph128"
+     ]
+    },
+    {
+     "idx": 131,
+     "name": "step3",
+     "type": "body",
+     "purpose": "Step 3 beside plate 03, next to the QR box; two lines (about 55 characters).",
+     "prompt": "[Step 3, two lines]",
+     "max_chars": 55,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 10.5,
+      "bold": false,
+      "color": "1B2533"
+     },
+     "box_in": {
+      "x": 4.9,
+      "y": 7.73,
+      "w": 2.0,
+      "h": 0.46
+     },
+     "aliases": [
+      "ph131"
+     ]
+    },
+    {
+     "idx": 132,
+     "name": "eo",
+     "type": "body",
+     "purpose": "Equal opportunity statement from UCM or the Office of General Counsel; two lines at 8 pt (about 230 characters).",
+     "prompt": "[Equal opportunity statement]",
+     "max_chars": 230,
+     "max_lines": 2,
+     "max_paragraphs": null,
+     "font": {
+      "face": "Source Sans 3",
+      "size_pt": 8.0,
+      "bold": false,
+      "color": "4A5868"
+     },
+     "box_in": {
+      "x": 0.5,
+      "y": 8.2,
+      "w": 7.5,
+      "h": 0.28
+     },
+     "aliases": [
+      "ph132"
+     ]
+    }
+   ]
+  }
+ ]
+}

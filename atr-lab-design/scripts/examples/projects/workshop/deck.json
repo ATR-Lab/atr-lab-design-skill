@@ -1,0 +1,38 @@
+{
+  "_comment": "Three-slide workshop deck for project.py. It uses the date, time and durations but not the registration URL, so changing that URL does not rebuild the deck.",
+  "template": "presentation",
+  "title": "{{facts.event_title_plain}}",
+  "author": "Advanced Telerobotics Research Lab",
+  "slides": [
+    {
+      "layout": "ATR - Title",
+      "eyebrow": "{{facts.event_date_short|upper}}  ·  KENT STATE UNIVERSITY",
+      "title": "{{facts.event_title}}",
+      "subtitle": "Hands-on with Codex and Claude Code",
+      "presenter": "{{facts.event_time}}  ·  {{facts.venue_short}}",
+      "notes": "Welcome. The workshop runs {{facts.event_time}}: a {{facts.talk_duration}} talk, demos and a {{facts.lab_duration}} lab."
+    },
+    {
+      "layout": "ATR - Title + Content",
+      "title": "Today's plan",
+      "body": [
+        "A {{facts.talk_duration}} talk on agentic workflows",
+        "Live demos: inspect, repair and simulate",
+        "A {{facts.lab_duration}} hands-on lab",
+        [
+          "ROS 2 replay and TurtleBot3 simulation"
+        ],
+        "Wrap-up and questions"
+      ],
+      "image": "{{assets.figure}}",
+      "image_alt": "Concept illustration: a remote operator in a VR headset guides a distant robot arm over a network link.",
+      "notes": "The illustration is a concept drawing, not lab hardware."
+    },
+    {
+      "layout": "ATR - Thank You",
+      "title": "Thank you",
+      "message": "Questions and collaboration welcome.",
+      "notes": "The address and the contact grid are fixed on the layout and verified."
+    }
+  ]
+}

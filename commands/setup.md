@@ -18,6 +18,8 @@ Set up the atr-lab-design plugin on this machine.
    font folder (only needed for editing templates by hand). Skip any font file that is already installed and
    identical. Install only on a yes.
 5. Verify: from `${CLAUDE_PLUGIN_ROOT}/atr-lab-design`, run `"${CLAUDE_PLUGIN_DATA}/venv/bin/python"
-   scripts/brand_check.py --help` and `"${CLAUDE_PLUGIN_DATA}/venv/bin/python" scripts/new_deck.py --list-templates`.
+   scripts/atr_design.py doctor`. It checks every feature group (core, office, qr, icons, figures, ai-images) and
+   prints the fix command for each miss; core must pass. Optionally fetch the official Kent State wordmarks into the
+   cache with `scripts/official_assets.py fetch all` (it downloads from kent.edu; ask first).
 6. Report what was installed or already present, anything missing, and the commands: `/atr-lab-design:deck`,
-   `:quad`, `:social`, `:review`, `:copy`.
+   `:quad`, `:social`, `:event`, `:banner`, `:revise`, `:review`, `:copy`.
