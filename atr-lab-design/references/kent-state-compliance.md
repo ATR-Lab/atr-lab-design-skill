@@ -175,7 +175,7 @@ college-specific logo if UCM supplies one (§8).
 - Minimum (LEGACY): "one inch (1") with the word UNIVERSITY at least one inch in length". Scale up for large pieces (the
   LEGACY page's example is an 18 x 24 in poster). UNIVERSITY is the binding part. In the Stacked logo it spans 99.6% of the
   width (measured on the skill's copy), so a Stacked logo exactly 1 in wide falls just short. **Use the Stacked logo at
-  1.05 in wide or more**, and measure UNIVERSITY on the Horizontal file before you size it.
+  1.05 in wide or more**, and the Horizontal logo at **1.2 in wide or more** (UNIVERSITY spans 84.3% of its width, measured on the official PNG).
 - KSU publishes no minimum in pixels. **Lab convention:** UNIVERSITY at least 96 px long on screens (1 in at 96 px/in), which
   means a Stacked logo at least 100 px wide. Go larger where possible, and use at least 120 px wide on a 1080 px social graphic.
 - Keep it at least 1/4 in from the page edge, a gutter or a border (LEGACY, same page).
@@ -194,6 +194,7 @@ registered mark" and "may not be used as part of a headline or running text." Th
   PMS 873, Metallic blue PMS 8783 and Gold foil No. 817.
 - Reversed: All White Reverse, or Two-Color Reverse (white with a gold sunburst). "The logo must be reversed from 100
   percent of the foreground color." White or ghosted versions go only on backgrounds "that are not complicated or busy."
+- All Blue is in the fetched set (`ksu-*-blue-*`), so a gold background no longer needs a request to UCM.
 
 **Placement** (LEGACY): "Preferred placement for the logo is at the top right corner of a publication page or the bottom right
 corner of a brochure cover." KSU states no rule for slides or posters. UCM's own letterhead and PowerPoint preview center
@@ -205,10 +206,15 @@ lab's conventions per format, with measured clear positions on each supplied bac
 **Artwork** (LEGACY, https://www.kent.edu/ucm/miscellaneous-communications): "Only use print-quality electronic art."
 - Download it from https://www.kent.edu/brand/logos. College and school logos come from UCM
   (https://www.kent.edu/ucm/how-obtain-logos).
-- The skill's `assets/logos/ksu/ksu-wordmark-color.png` and `ksu-wordmark-white.png` are the Stacked logo extracted from an old
-  lab deck: 1022 x 976 px rasters (the color file has been corrected to #003976 and #EFAB00, but both are still the old
-  raster, not vector art). Use them for drafts and on-screen internal decks only. Anything public or printed gets the
-  official vector files.
+- The official Horizontal and Stacked files (EPS and PNG) are fetched and checksum-verified with
+  `python3 scripts/official_assets.py fetch <id>`. Sources, checksums, minimum sizes and intended uses are in
+  `assets/logos/ksu/official-sources.json` (retrieved 2026-11-03 from https://www.kent.edu/brand/logos). The skill
+  doesn't ship the files: all official marks are registered trademarks and "may not be used without permission"
+  (https://www.kent.edu/ucm/ownership-kent-state-university-marks-and-logos), and the brand site grants no
+  redistribution license.
+- The skill's `assets/logos/ksu/ksu-wordmark-color.png` and `ksu-wordmark-white.png` are a working copy (the Stacked
+  logo from an old lab deck, colors corrected, still a raster) for drafts and internal screens. Anything public or
+  printed uses the fetched official file: the PNG in office files, the EPS for printers.
 
 ---
 

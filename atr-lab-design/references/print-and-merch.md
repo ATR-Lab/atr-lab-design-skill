@@ -288,6 +288,19 @@ https://www.kent.edu/brand/templates.
 - Posting a PDF online: export a **tagged, accessible PDF** with real text (not an image of the flyer) and alt text
   on the photo and the QR code (references/accessibility.md).
 
+**Workshop and event flyers with named fields.** `assets/templates/ATR-Event-Flyer-Letter.pptx` (and the Tabloid
+and 17 × 22 in files) carry the event skeleton as named placeholders: `event_title`, `event_subtitle`, `event_date`,
+`event_time`, `venue`, `audience`, `agenda`, `requirements`, three workflow steps on navy plates, a tools-covered row,
+and a registration panel with `registration_head`, the printed `registration_url`, `contact` and a QR slot. Budgets
+per size are in `event-flyer-<size>-layouts.json` (Letter: title 2 × 23 characters, subtitle 2 × 64, fact rows 3 × 37,
+agenda 3 × 45, step titles 29, registration head 19, URL 21, contact 2 × 34). Tabloid sets the same content at about
+1.4× for a hallway board; the 17 × 22 in poster keeps every size at or above the 24 pt poster floor, so expect to cut
+words there (contact 2 × 26 characters). Build them with `scripts/new_deck.py` from
+`scripts/examples/print/event-workshop.json`; pick the profile for the size instead of enlarging the Letter file.
+Keep event, talk and lab durations as separate facts. Third-party product icons in the tools row go in as supplied
+(the vendor's brand kit first, then its official product site), with plain product names, apart from the host
+signatures; a documentation wordmark (one that says "Docs") is not a product logo.
+
 ### 5.2 One-pagers and fact sheets
 
 Same grid as the flyer, denser: Source Sans 3 11 pt body (12 pt for public and K-12 family pieces) at about 1.35×
@@ -303,8 +316,18 @@ references/pr-events-outreach.md.
 - Size: the printed code, quiet zone included, is at least **one tenth of the scanning distance** wide and never under
   **0.8 in (2 cm)** (the handout minimum). A banner read from 1.5 m needs a code about 6 in wide; the poster templates'
   codes (2.09 in portrait, 2.66 in landscape) are sized for scanning at the board (references/posters.md §8).
-- Encode a full `https://` URL with UTM tags to a page that will still exist next year; no link shorteners.
-  Print the clean URL under the code. Full rules: references/web-and-digital.md, section 9.
+- **Destination.** When the organizer gives a registration or form link, encode exactly that address: never add
+  tracking parameters or swap in another URL without asking. If it is a shortener (`forms.gle`, `bit.ly`), say that
+  Kent State guidance discourages shorteners and offer the full address (for a Google Form, the
+  `docs.google.com/forms/...` link), but use what the organizer decides. When you choose the
+  page yourself, prefer a full `https://` URL to a page that will still exist next year. Print the clean URL beside
+  the code as plain text (not styled as a hyperlink: Office link colors fail on navy) and link the QR picture.
+- **In a spec**, a QR code is a field: `{"registration_qr": {"qr": {"url": "https://...", "size_in": 1.0}}}`.
+  `scripts/qr_code.py` draws it navy on white at that physical size with the quiet zone inside the picture.
+- **Verify it from the final PDF**, not the PNG: `python3 scripts/qr_code.py verify flyer.pdf --url <url>` decodes
+  every code and compares it character for character, and reads the PDF link. A phone scan of a printed proof is
+  still a separate, human check; a reachable page is not a submitted form. Full rules: references/web-and-digital.md,
+  section 9.
 
 ### 5.4 Certificates
 

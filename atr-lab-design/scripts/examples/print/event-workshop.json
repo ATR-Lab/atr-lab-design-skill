@@ -1,0 +1,34 @@
+{
+  "_comment": "Agentic robotics workshop flyer (Nov. 2026) authored by field name on the event flyer template. Build the other sizes with --template event-flyer-tabloid or event-flyer-17x22. The tool icons point at ATR icons as stand-ins: replace them with the official product icons from each vendor's brand kit (never redrawn), keeping the plain product names. https://example.org/register is a placeholder destination.",
+  "template": "event-flyer",
+  "output": "atr-flyer-agentic-robotics-workshop-2026-11-07-letter.pptx",
+  "title": "Build robots with AI agents: workshop flyer",
+  "author": "Advanced Telerobotics Research Lab",
+  "slides": [
+    {
+      "layout": "Workshop flyer",
+      "eyebrow": "HANDS-ON WORKSHOP  ·  CODEX + CLAUDE CODE",
+      "event_title": "Build robots\nwith AI agents",
+      "event_subtitle": "Learn an agentic workflow through ROS 2 replay and TurtleBot3 simulation.",
+      "event_date": "Saturday, Nov. 7, 2026",
+      "event_time": "11 a.m.-3 p.m. EST",
+      "venue": "Mathematical Sciences Building\nRoom 228  ·  Kent State University",
+      "audience": "Programming experience required\nRobotics experience optional",
+      "agenda": ["Debug a point-cloud replay", "Understand and review a code change", "Run a TurtleBot3 simulation"],
+      "requirements": "Prepared Linux environment and an existing agent login required.",
+      "workflow": [
+        ["Inspect", "Understand the failing case"],
+        ["Repair", "Make and review a small diff"],
+        ["Simulate", "Observe the robot response"]
+      ],
+      "tools": [
+        {"label": "Claude Code", "image": "assets/icons/png/code-navy.png", "alt": "Claude Code product icon (stand-in artwork)"},
+        {"label": "Codex", "image": "assets/icons/png/ai-neural-net-navy.png", "alt": "Codex product icon (stand-in artwork)"}
+      ],
+      "registration_head": "Four-hour workshop",
+      "registration_qr": {"qr": {"url": "https://example.org/register", "size_in": 1.1}},
+      "contact": "atrlab.kent@gmail.com\n330-672-9980 (department)",
+      "notes": "Promotional event flyer. Programming experience required; robotics experience optional. The two-hour lab uses a prepared Linux ROS 2 environment and an existing Codex or Claude Code login. Registration destination is a placeholder until the real form URL is confirmed. Official Kent State wordmark required before print or public release."
+    }
+  ]
+}

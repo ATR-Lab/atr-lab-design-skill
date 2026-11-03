@@ -649,13 +649,15 @@ integrated, true peak no higher than -1 dBTP. Conference talk videos follow the 
 | Quiet zone | At least **4 modules** of clear space on every side | Part of the QR standard; borders, bleed and nearby art break the scan |
 | Size | The printed code, quiet zone included, is at least **one tenth of the scanning distance** wide, and never under **0.8 in (2 cm)** (handouts and flyers). Poster codes scanned at the board (about 0.5-0.7 m): 2-2.7 in, as in the poster templates (2.09 in portrait, 2.66 in landscape); scanned from 1 m: 4 in; a banner read from 1.5 m: 6 in; a slide seen from the back of a room: at least 20% of the slide height | Module size has to survive distance and phone cameras |
 | Error correction | Level M by default | A higher level only makes the code denser. Do not put a logo in the middle: place the ATR mark beside the code |
-| Content | Full `https://` URL with UTM tags, pointing to a page (not a file) that will exist next year; no link shorteners | Kent State guidance forbids shorteners; stable pages keep old flyers working |
+| Content | Full `https://` URL pointing to a page (not a file) that will exist next year; no link shorteners. When the organizer supplies the destination, encode it exactly: add UTM tags only when they ask, and if their link is a shortener, recommend the full URL instead of swapping it yourself | Kent State guidance forbids shorteners; stable pages keep old flyers working; a silently changed destination breaks the organizer's own tracking and trust |
 | Label | A call to action ("Scan to apply") and the clean URL printed under the code | Some people cannot scan; the URL is the fallback |
 | Digital copies | Alt text: "QR code to [destination]; the address [clean URL] is printed below it." | Screen-reader users get the destination |
 | Test | Scan from the final proof or the projected slide with an iPhone and an Android phone | Catch quiet-zone, size and contrast failures before printing |
 
-Generate the code as SVG or high-resolution PNG with a standard library (for example the Python packages `segno`
-or `qrcode`) and color it navy in the vector file, not by recoloring a low-resolution PNG.
+Generate the code with `python3 scripts/qr_code.py make "<url>" -o qr.png --size-in 1.25` (navy on white at the exact
+physical size, quiet zone included; it refuses gold, tints and inverted codes), or as a `qr` field in a
+`new_deck.py` spec. Check it with `python3 scripts/qr_code.py verify <final.pdf> --url "<url>"`, which decodes it from
+the rendered PDF and reads the PDF link. Never recolor a low-resolution PNG.
 
 ---
 
@@ -693,7 +695,7 @@ In-lab TVs, hallway monitors and demo-day screens. Kent State publishes an Adobe
 - [ ] Names and handles as verified; "Advanced Telerobotics Research Lab" on first reference; no @atr_kent.
 - [ ] Only verified contact details (department address, 330-672-9980); lab room and line as placeholders until confirmed.
 - [ ] Videos state the control mode (teleoperated, autonomous, scripted or simulated) and playback speed; AI images labeled "Illustration".
-- [ ] QR codes tested; UTM tags set; no shorteners.
+- [ ] QR codes decoded from the final PDF (`scripts/qr_code.py verify`) and scanned from a printed proof; the destination is the one the organizer approved; no shorteners unless the organizer chose one after you recommended the full URL.
 - [ ] Email: live text, PNG/JPG with alt and sizes, tested in Outlook and Gmail in light and dark mode, plain-text version.
 - [ ] Web changes on the lab site are cleared with the Web Team where policy requires (section 2.10).
 

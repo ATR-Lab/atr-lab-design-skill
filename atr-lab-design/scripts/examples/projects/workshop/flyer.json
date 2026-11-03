@@ -1,0 +1,29 @@
+{
+  "_comment": "Workshop flyer spec for project.py on the event flyer templates (named fields). One spec serves every size: each artifact in project.json picks the template profile (event-flyer, event-flyer-tabloid, event-flyer-17x22). {{facts.x}} comes from project.json; a fact that is a list (agenda, workflow) replaces the whole value. new_deck.py makes the QR code from registration_qr at the template's slot size and prints the clean URL in registration_url; project.py then verifies it in the exported PDF.",
+  "template": "event-flyer",
+  "title": "{{facts.event_title_plain}}",
+  "author": "Advanced Telerobotics Research Lab",
+  "slides": [
+    {
+      "layout": "Workshop flyer",
+      "eyebrow": "{{facts.eyebrow}}",
+      "event_title": "{{facts.event_title}}",
+      "event_subtitle": "{{facts.summary}}",
+      "event_date": "{{facts.event_date}}",
+      "event_time": "{{facts.event_time}}\n{{facts.talk_duration|capitalize}} talk, {{facts.lab_duration}} lab",
+      "venue": "{{facts.venue}}",
+      "audience": "{{facts.audience}}",
+      "agenda": "{{facts.agenda}}",
+      "requirements": "{{facts.requirements}}",
+      "workflow": "{{facts.workflow}}",
+      "tools": [
+        {"label": "Claude Code", "image": "{{assets.tool-claude-code}}", "alt": "Claude Code product icon (stand-in artwork)"},
+        {"label": "Codex", "image": "{{assets.tool-codex}}", "alt": "Codex product icon (stand-in artwork)"}
+      ],
+      "registration_head": "{{facts.event_duration}}",
+      "registration_qr": {"qr": {"url": "{{facts.registration_url}}"}},
+      "contact": "{{facts.contact}}",
+      "notes": "Event facts come from project.json. Programming experience required; robotics experience optional. The QR code and the printed address both point to the registration URL in project.json. The tool icons are ATR stand-ins: replace them with the vendors' official product icons (project.py replace-asset tool-claude-code <file>). The Kent State wordmark in the template is a working copy: replace it with the official file before sharing."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "character": "Teo, mascot of the Advanced Telerobotics Research Lab (Kent State University)",
+  "generator": "Codex CLI image_gen via scripts/codex_image.sh (Nov. 3, 2026); keyed from chroma green and outlined in navy",
+  "style_lock": "Keep exactly the same character design as the attached reference images: Teo, a friendly robot mascot. A rounded white helmet-like head with a navy #003976 screen face, two sky-blue #2C8ECD oval eyes, a small gold #EFAB00 curved smile, sky-blue ear pods on both sides, a short white antenna with a gold triangle tip. Small white floating gloved hands with sky-blue cuffs. Flat vector style, thick consistent navy outlines, no gradients, no shading, no text, no letters, no numbers, no watermark. Flat chroma green #00FF00 background with nothing else on it.",
+  "references": ["teo-avatar.png", "references/ref-turnaround-head.png"],
+  "references_full_body": ["teo-avatar.png", "references/ref-turnaround-body.png"],
+  "outputs": {
+    "references/ref-turnaround-head.png": "{style_lock} Show the same character four times in a single horizontal row, evenly spaced, identical size and baseline: front view, three-quarter view facing left, side profile facing left, back view. Neutral friendly pose, hands relaxed at the sides of the head. Wide 16:9 image.",
+    "references/ref-turnaround-body.png": "{style_lock} Show the same character four times in one horizontal row, evenly spaced, same height: front, three-quarter left, side profile left, back. Neutral pose. Wide 16:9 image. (Generated with the e-stop pose as a second reference, which gave the navy suit.)",
+    "references/ref-expressions.png": "{style_lock} A 3 by 3 grid of the character's head, front view, same size in every cell, each with a different expression on the navy screen face: happy smile, thinking (eyes looking up, one hand at chin), surprised, sorry/sad, determined, laughing, confused, sleeping (small gold z shape above), excited (sparkle eyes, gold and sky confetti). Square image.",
+    "emoji/teo_<pose>.png": "Emoji of Teo ... {style_lock-equivalent} The character fills about 85 percent of the frame and stays readable at 32 pixels. Pose and expression: <pose>. (Oct. 23, 2026; references: teo-avatar.png)"
+  },
+  "post_processing": "Key the green (scripts/icons/chroma_key.py --keep-color --outline 003976, or --die-cut for stickers), trim to a square with even padding, export 512 px (views, expressions), 256 px (emoji) or 320 px (stickers, under 512 KB)."
+}

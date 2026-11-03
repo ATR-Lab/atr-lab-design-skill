@@ -5,14 +5,21 @@ University) deliverables. Run them from the skill root (`atr-lab-design/`); all 
 
 **Read this when** you need to lint a finished file against the brand, check a color pair, render an Office
 file to PNG for visual QA, or find the right generator script (decks, posters and other template pieces, quad
-charts, icons, social cards, email signatures). Each script's rules live in the reference named in its row.
+charts, icons, social cards, banners, QR codes, email signatures), or revise and export a set of deliverables.
+Each script's rules live in the reference named in its row.
+
+**Start with the front door.** `python3 scripts/atr_design.py help` lists every command. `doctor` checks the
+environment once per machine, `assets find <words>` finds any file without guessing its name, and `layouts
+<template> --layout <name> --json` prints one layout's fields and budgets. The other commands hand off to the
+scripts below (`banner`, `official`, `qr`, `export`, `project`, `pptx`, `deck`, `quad`, `social`, `check`,
+`contrast`, `signature`).
 
 | Script | What it does | Needs |
 |---|---|---|
 | `scripts/brand_check.py` | Brand and accessibility linter for .pptx, .docx, .svg, .html/.css and images, and for copy in .md/.markdown/.txt (wording, placeholders and Kent State style, by line) | lxml, Pillow, numpy (defusedxml recommended) |
 | `scripts/new_deck.py` | Builds a deck, poster, flyer, certificate, badge, door sign or social tile from a JSON/YAML spec on the templates in `assets/templates/`; checks budgets, placeholders, wording and alt text, and flags content slides whose body fills under a third of its lines (info). Rules: references/presentations.md §8 and §4.7, references/posters.md §10, `assets/templates/README.md` | python-pptx, lxml, Pillow (PyYAML optional) |
 | `scripts/quad_chart.py` | Builds and checks quad charts (NASA, project status, weekly) from a JSON spec. Rules: references/quad-charts.md | python-pptx, lxml, Pillow |
-| `scripts/examples/` | Specs to copy: `decks/` for `new_deck.py`, `quads/` for `quad_chart.py`, `social/` for `social_card.py` | |
+| `scripts/examples/` | Specs to copy: `decks/` for `new_deck.py`, `print/` (event flyers), `quads/` for `quad_chart.py`, `social/` for `social_card.py`, `projects/` for `project.py`, `regressions/` (renderer pitfalls) | |
 | `scripts/contrast.py` | WCAG ratio for two colors (hex or token name), passing tokens for a background, fixes | standard library only |
 | `scripts/render_office.sh` | Office file to PDF and per-page PNGs with the brand fonts loaded | LibreOffice, poppler (`pdftoppm`) |
 | `scripts/requirements.txt` | Python packages: a core block (linter, social cards, decks) and optional blocks | pip, in a venv |
@@ -20,6 +27,16 @@ charts, icons, social cards, email signatures). Each script's rules live in the 
 | `scripts/codex_image.sh` | One AI image via the Codex CLI image tool (icons, textures, concept art) | Codex CLI |
 | `scripts/icons/` | The icon pipeline: generate, key, recolor, badge and trace the icon set; `anchor.png` is the style anchor every glyph is generated against | see `scripts/icons/README.md` |
 | `scripts/social_card.py` | Branded social tiles (PNG + alt-text sidecar) from a JSON spec | Pillow, numpy (fontTools optional, for kerning) |
+| `scripts/atr_design.py` | The unified CLI: `assets`, `layouts`, `doctor` built in; every other command delegated (loaded lazily, so a missing optional package only breaks its own command, exit 4 with the install command) | per command |
+| `scripts/atr_brand.py` | Brand values for code: `color`, `rgb`, `font`, `logo_path`, `logo_rules`, `icon_path`, `pattern_path`, `asset` (no hex literals or font paths in new scripts) | Pillow for `font()` |
+| `scripts/asset_index.py` | Builds `assets/index.json` (one record per asset: files, sizes, use, aliases, minimum size); `--check` fails when stale | Pillow |
+| `scripts/banner.py` | Banners, headers and thumbnails at any size or from 10 presets (GitHub header, Discord banner and invite splash, profile banner, X, YouTube, OG image, square thumbnail, 16:9 slide); lattice and hazard band drawn at the target size; keep-out zones enforced. Rules: references/community-platforms.md | Pillow, numpy |
+| `scripts/official_assets.py` | Fetches, verifies (SHA-256) and caches the official Kent State wordmark files listed in `assets/logos/ksu/official-sources.json` | standard library |
+| `scripts/qr_code.py` | QR codes at an exact printed size; decodes them back from the final PDF | qrcode[pil], zxing-cpp, pypdf |
+| `scripts/export_office.py` | Tagged PDF export with the brand fonts; reports tags, fonts, links and page sizes; renders only changed pages; compact contact sheets | pypdf, LibreOffice, poppler |
+| `scripts/project.py` | One manifest for a set of deliverables: scoped edits, `build`/`export --changed-only`, `replace-asset`, `status`, a QA report | the above |
+| `scripts/pptx_tools.py` | Safe Office edits: `scale` (inherited geometry, type and spacing together), `fields` (set named fields), `replace-picture` (by checksum or name); all idempotent | python-pptx, lxml, Pillow |
+| `scripts/tests/` | Offline pytest suite for the scripts (`python3 -m pytest -q -p no:cacheprovider scripts/tests`) | pytest |
 
 **Setup, once.** Homebrew and Debian/Ubuntu Python refuse `pip install` into the system interpreter
 ("externally-managed-environment"), so use a virtual environment:
@@ -244,3 +261,124 @@ stand-in for PowerPoint: line breaks can differ slightly, so leave the 10% width
   Formats and safe zones: `references/social-media.md`. Lint the PNG with `brand_check.py recruiting.png`
   (report-only colors plus logo detection) and the alt-text sidecar and caption with `brand_check.py
   recruiting.txt caption.txt`.
+
+## Brand toolkit: atr_design.py, atr_brand.py, asset_index.py
+
+- `python3 scripts/atr_design.py assets find telepresence --kind badge` searches `assets/index.json`; aliases work
+  (telepresence finds telepresence-robot, roundel finds seal, kent-state finds the wordmark) and a miss prints "did
+  you mean". `assets path <words>` prints just the path, for scripts.
+- `python3 scripts/atr_design.py layouts event-flyer --json` prints a template's layouts, fields, budgets and an
+  example; add `--layout NAME` for one layout.
+- `python3 scripts/atr_design.py doctor [--group core|office|qr|icons|figures|ai-images]` checks Python, packages,
+  brand fonts, LibreOffice, poppler, rsvg-convert, the Codex login and the cache folder, and prints the fix command
+  for each miss. It exits 0 only when core passes.
+- In your own code: `from atr_brand import color, rgb, font, logo_path, logo_rules, icon_path, pattern_path, asset`
+  (`font("sans-black", 96)` returns a Pillow font; colors use the same names as `contrast.py`).
+- After you add, rename or remove an asset, rerun `python3 scripts/asset_index.py` (`--check` exits 1 when the index
+  is stale; a test enforces it).
+
+## banner.py
+
+On-brand banners, headers and thumbnails: `python3 scripts/banner.py --preset github-header --title "Repo name"
+--subtitle "One line" [--image assets/mascot/views/teo-front.png | --icon NAME] -o header.png`, or `--size WxH`.
+`--list-presets` shows the presets and their rules; `--safe-zones` also writes a QA overlay. Each banner has a navy,
+midnight or white ground, the ATR lockup at its clear space and minimum width, brand-font text fitted down to
+legibility floors (11 px small text, 15 px titles at the size people see it), a triangle lattice drawn at the target
+size (no seams) and an optional hazard band. It refuses text on the band, in a keep-out zone (the Discord invite
+card, avatars) or below the floor, retired facts and `[placeholders]` (exit 2 or 3). Look at the PNG before you
+ship it. Platform rules: references/community-platforms.md.
+
+`icons/chroma_key.py` also takes `--outline HEX|token [--outline-px N]` (a dark outline so white art survives light
+themes) and `--die-cut [--die-cut-px N]` (stickers: white border and navy outline). Without them the output is
+unchanged.
+
+## official_assets.py: official Kent State wordmark files
+
+The skill's `assets/logos/ksu/ksu-wordmark-*.png` are a working copy for drafts. Anything shared, printed or
+published uses Kent State's official file. Kent State grants no redistribution license, so the skill ships a
+manifest (`assets/logos/ksu/official-sources.json`: source page, download URL, archive member, SHA-256, size,
+minimum size and use per variant) and this script fetches and verifies the files into
+`${ATR_DESIGN_CACHE:-~/.cache/atr-lab-design}/official/`.
+
+    python3 scripts/official_assets.py list                          # ids, sizes, cached or not
+    python3 scripts/official_assets.py fetch ksu-stacked-color-png   # prints the cached path
+    python3 scripts/official_assets.py path ksu-stacked-white-png    # cached path, or exit 1 and the fetch command
+    python3 scripts/official_assets.py verify logo.png               # exact SHA-256 check against the manifest
+    python3 scripts/official_assets.py fetch ksu-stacked-white-png --archive ~/Downloads/Stacked.zip
+
+Ids: `ksu-<stacked|horizontal>-<color|white|reverse-gold|blue>-<png|eps>` and `ksu-<lockup>-color-cmyk-eps`. Use the
+PNG in office files and on screens and give printers the EPS. A failed download is retried and then explained: it is
+a network problem, never proof that the artwork is unavailable. Exit status: 0 done, 1 no match, not cached or
+checksum mismatch, 2 could not run, 3 network failure after retries.
+
+`brand_check.py` recognizes the Kent State wordmark by shape but calls it **official** only on an exact match (its
+SHA-256 or identical pixels equal a file in `official-sources.json` or in a file passed with `--official-manifest`,
+such as a project's provenance JSON). A deliverable that still carries the working copy gets a **warning**, so
+`--strict` fails until the official file is in place (an info notice in `--template` or `--guidance` mode); anything
+else is "provenance not verified". Placed wordmarks are also checked for effective PPI (image pixels / placed inches:
+documents 300 target / 200 minimum, posters 150 / 100, slides 144 / 96, social and web 192 / 96) and for Kent State's
+minimum width (Stacked 1.05 in, Horizontal 1.2 in).
+
+## Revise and export a project: project.py, export_office.py, qr_code.py
+
+**project.py** keeps a set of deliverables in step with one manifest, `project.json`: the event facts once (date,
+time, event, talk and lab durations, venue, audience, requirements, registration URL, contact), the assets the
+artifacts use (with SHA-256) and the artifacts (a `new_deck.py` spec with `{{facts.x}}` placeholders, output formats,
+size, an optional QR code). Edits are scoped, and only what an edit reaches is rebuilt and re-exported.
+
+    python3 scripts/project.py init ~/work/workshop --example workshop
+    python3 scripts/project.py status -p ~/work/workshop/project.json
+    python3 scripts/project.py set registration_url https://example.org/register -p ~/work/workshop/project.json
+    python3 scripts/project.py build --changed-only -p ~/work/workshop/project.json
+    python3 scripts/project.py export --changed-only -p ~/work/workshop/project.json
+    python3 scripts/project.py replace-asset ksu-wordmark-white official:ksu-stacked-white-png -p ~/work/workshop/project.json
+
+`export` writes a tagged PDF per artifact, decodes the QR code from the rendered PDF, renders only changed pages,
+writes contact sheets, `deliverables.json` and `qa-report.md`. The report keeps source checks, facts verified in the
+PDF and the visual review still to do apart. Folders: `--work-dir`, `--cache-dir`, `--out-dir` (default next to the
+manifest, never inside the skill). Exit status: 0 done, 1 usage, 2 refused, 3 a check failed.
+
+**export_office.py** exports Office files to tagged PDF with the brand fonts and reports what the PDF contains:
+
+    python3 scripts/export_office.py pdf flyer.pptx --out-dir out/ --render --changed-pages
+    python3 scripts/export_office.py inspect out/flyer.pdf           # pages, sizes, tags, fonts, links
+    python3 scripts/export_office.py render out/deck.pdf --out-dir qa/ --pages 2-4
+    python3 scripts/export_office.py sheet qa/deck-page-*.png -o qa/deck-sheet.png
+
+PDF tags show that the export feature was used; they do not prove accessibility conformance.
+
+**qr_code.py** makes QR codes at an exact printed size (navy or black on white, 4-module quiet zone, at least 0.8 in)
+and checks them in the final PDF. It encodes the address exactly as given and never adds tracking parameters:
+
+    python3 scripts/qr_code.py make "https://example.org/register" -o qr.png --size-in 1.25
+    python3 scripts/qr_code.py verify out/flyer.pdf --url "https://example.org/register" [--check-reachable]
+
+`--check-reachable` reports whether the page answered; it does not show that a form was submitted.
+
+Regression: `scripts/examples/regressions/hyperlink-colors/` shows that LibreOffice draws a run hyperlink in the
+theme link color (`#1D65B9`, 2.0:1 on navy) whatever color the run sets. Print the address as plain text and link
+the QR picture, or put the link on the text box.
+
+## pptx_tools.py and event flyers in new_deck.py
+
+**pptx_tools.py** makes safe edits to Office files. Every operation is idempotent (a second run changes nothing):
+
+    python3 scripts/pptx_tools.py fields flyer.pptx --slide 1
+    python3 scripts/pptx_tools.py fields flyer.pptx --set "event_date=Saturday, Nov. 7, 2026" -o flyer-v2.pptx
+    python3 scripts/pptx_tools.py replace-picture flyer.pptx --match "Kent State signature" --with official.png -o flyer-v2.pptx
+    python3 scripts/pptx_tools.py scale deck.pptx -o deck-17x22.pptx --page 17x22 --min-pt 24
+
+`scale` snapshots inherited geometry first, then scales coordinates, sizes, fixed leading, paragraph and character
+spacing, insets, indents and table geometry together; pictures keep their aspect, alt text and links, and the new
+medium's type floors are rechecked (`--min-pt` lifts them, but does not resize boxes: render and check). `fields`
+lists or sets named fields (the legacy `ph<idx>` names still resolve). `replace-picture` swaps a picture by SHA-256 or
+shape name, everywhere or in one scope, keeping its height and anchor side. Library: `find_title(slide)` (by
+placeholder type), `set_named_field`, `replace_picture`, `place_qr`, `scale_presentation`, `type_floor_report`,
+`lift_type_floor`.
+
+**Event flyers** in `new_deck.py`: `"template": "event-flyer"` (Letter), `event-flyer-tabloid` or
+`event-flyer-17x22`; fields by name (`event_title`, `event_date`, `event_time`, `venue`, `audience`, `agenda`,
+`requirements`, `workflow`, `tools`, `registration_head`, `registration_qr`, `contact`). A QR code is
+`{"registration_qr": {"qr": {"url": "https://...", "size_in": 1.0}}}` (needs `qr_code.py`); the clean URL is printed
+in `registration_url` automatically. Example: `scripts/examples/print/event-workshop.json`.
+

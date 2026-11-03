@@ -24,7 +24,13 @@ Checks:
                variants and editorial style (KSU in running copy, "&" in unit names); in .md/.txt copy also
                a serial-comma heuristic, "Dr." and "(ATR) Lab", with line numbers (fenced code, inline code
                and URLs are skipped; style rules skip quotations)
-  logo         embedded retired block-letter ATR logo or Kent State athletic (Flash) logo, by dHash
+  logo         embedded retired block-letter ATR logo or Kent State athletic (Flash) logo, by dHash.
+               The Kent State wordmark is recognized by dHash too, but its provenance comes only from exact
+               matches: official (SHA-256 or identical pixels of a file in assets/logos/ksu/
+               official-sources.json or an --official-manifest override), the skill's working copy (a
+               warning on deliverables, info with --template/--guidance), or "provenance not verified"
+               (info). Placed wordmarks are also checked for effective PPI (image pixels
+               / placed inches, per medium) and Kent State's minimum size.
   raster       dominant colors of a raster image vs the palette (report only)
 
 Usage (paths relative to the skill root):
@@ -34,6 +40,8 @@ Usage (paths relative to the skill root):
   python3 scripts/brand_check.py news-post.md caption.txt       # copy: wording, placeholders, style
   python3 scripts/brand_check.py templates/ --template     # placeholders expected: report as info
   python3 scripts/brand_check.py style-guide.pptx --guidance  # "Never print @atr_kent" is guidance
+  python3 scripts/brand_check.py flyer.pptx --official-manifest design/brand-asset-sources.json
+                                           # also trust the checksums a project recorded for official files
 Exit status: 0 = no errors, 1 = errors found (or warnings with --strict),
              2 = could not run (missing path, unreadable or unsupported file, bad --tokens).
 Requires: Python 3.9+, lxml, Pillow, numpy; defusedxml recommended (see scripts/requirements.txt).
@@ -79,7 +87,7 @@ try:
 except ImportError:  # pragma: no cover
     _DXET = None
 
-VERSION = "1.2"  # 1.2: .md/.markdown/.txt copy with line numbers; 1.1: two-tier text-size floors
+VERSION = "1.3"  # 1.3: Kent State wordmark provenance (official / working copy / unverified) and effective PPI; 1.2: .md/.markdown/.txt copy with line numbers; 1.1: two-tier text-size floors
 SKILL_ROOT = C.SKILL_ROOT
 ATR_THEME = os.path.join(SKILL_ROOT, "assets", "tokens", "office-theme", "theme1.xml")
 
@@ -229,6 +237,8 @@ LOGO_REFS = [
     ("retired-block-atr", 0x43B6B4B0B8B8B8697FC1443EA281A100, 0x57B6B59C98981969FFC1443CA2A1A100, 2.232),
     ("athletic-flash", 0x0E4797578F9D2E2E304080E84E9792AF, 0x0E0F03C38B8E8E0600006062CE868787, 1.786),
     ("ksu-wordmark", 0x0CA9A52BA9A9B54A0053B88469927EAD, 0x0CA9A52BA9A9B54A1853B98469927EAD, 1.051),
+    # Kent State Horizontal logo (official 2-color PNG, https://www.kent.edu/brand/logos)
+    ("ksu-wordmark", 0x080855BAB6D54D4C00001B1469A6FF00, 0x080855BAB6D54D4C00181B1469B6FF02, 3.453),
 ]
 LOGO_MAX_BITS = 24      # match if Hamming distance <= 24 of 128 (unrelated art measured >= 34)
 LOGO_MAX_ASPECT = 1.30  # and trimmed aspect ratios within 30%
@@ -236,12 +246,12 @@ LOGO_INFO = {
     "retired-block-atr": ("error", "logo-retired", "Retired block-letter 'ATR' logo",
                           "Replace it with the current ATR mark or lockup from assets/logos/ (references/logo-system.md)."),
     "athletic-flash": ("error", "logo-athletic", "Kent State athletics 'Flash' K/eagle logo (athletics use only)",
-                       "Remove it; co-brand with the academic KENT STATE UNIVERSITY wordmark "
-                       "assets/logos/ksu/ksu-wordmark-color.png (or -white on navy)."),
-    "ksu-wordmark": ("info", "logo-ksu", "Kent State academic wordmark (lab-template raster)",
-                     "Good co-brand. This is the lab's working-copy raster (colors corrected, still low-resolution); "
-                     "for print, the web and large sizes use the official vector from "
-                     "https://www.kent.edu/brand/logos."),
+                       "Remove it; co-brand with the academic KENT STATE UNIVERSITY wordmark: "
+                       "python3 scripts/official_assets.py fetch ksu-stacked-color-png (or ksu-stacked-white-png "
+                       "on navy)."),
+    # Only a fallback: Kent State wordmark findings come from report_ksu(), which states the provenance.
+    "ksu-wordmark": ("info", "logo-ksu", "Kent State academic wordmark (provenance not verified)",
+                     "Fetch the official file: python3 scripts/official_assets.py fetch ksu-stacked-color-png."),
 }
 
 NEAR_MISS_DE = 5.0  # dE2000 up to this = "near-miss, snap to the token"; beyond = off-palette (nearest named)
@@ -540,8 +550,207 @@ def match_logo(im):
 
 
 def report_logo(rep: Report, rid: str, dist: int, location: str, **where):
+    """One finding for a recognized logo (retired ATR, athletics). The Kent State wordmark goes through
+    report_ksu(), which adds provenance and resolution."""
     sev, check, what, fix = LOGO_INFO[rid]
     rep.add(sev, check, f"{what} detected (dHash distance {dist}/128).", location, fix, logo=rid, **where)
+
+
+# --------------------------------------------------------------------------- Kent State wordmark: provenance
+
+# Recognition (the dHash match above) says an image LOOKS like the Kent State wordmark. Provenance is a
+# separate question, answered only by exact matches (scripts/official_assets.py): the file's SHA-256, or
+# its decoded pixels, equal an official file in assets/logos/ksu/official-sources.json or an
+# --official-manifest override ("official"), or the skill's working copy in assets/logos/ksu/
+# ("working-copy"). Anything else is "provenance not verified", however close the shape match.
+OFFICIAL_CMD = "python3 scripts/official_assets.py"
+KSU_MIN_IN = {"stacked": 1.05, "horizontal": 1.2}  # UNIVERSITY >= 1 in (references/kent-state-compliance.md 6)
+# Effective resolution of a placed raster = image pixels / placed inches. (label, target ppi, minimum ppi)
+# per medium: print documents are read at arm's length; posters from a few feet away; slides are shown at
+# 1920 px across 13.33 in (144 ppi); social and web graphics export at 96 px/in, so 192 ppi is 2x (Retina).
+PPI_RULES = {
+    "document": ("print documents", 300, 200),
+    "poster": ("posters", 150, 100),
+    "slide": ("projected slides", 144, 96),
+    "social": ("social graphics", 192, 96),
+    "web": ("web pages", 192, 96),
+}
+_UNKNOWN_PROV = {"status": "unknown", "id": None, "how": None, "asset": None, "source": None}
+_OA = None
+_OVERRIDES: dict = {}
+
+
+def _official_assets():
+    """The official_assets module from this folder, or None if it cannot be imported."""
+    global _OA
+    if _OA is None:
+        try:
+            import official_assets as mod  # noqa: E402  (same folder)
+            _OA = mod
+        except Exception:  # pragma: no cover
+            _OA = False
+    return _OA or None
+
+
+def official_overrides(opts) -> list:
+    """Checksums from --official-manifest files (manifests, provenance maps or image files), loaded once."""
+    paths = tuple(getattr(opts, "official_manifest", None) or ())
+    if paths not in _OVERRIDES:
+        oa = _official_assets()
+        _OVERRIDES[paths] = oa.load_overrides(paths) if (oa and paths) else []
+    return _OVERRIDES[paths]
+
+
+def provenance(rep: Report, data: bytes, pixels: bool = True) -> dict:
+    """Exact provenance of image bytes: official / working-copy / unknown (see official_assets.identify)."""
+    oa = _official_assets()
+    if oa is None or not data:
+        return dict(_UNKNOWN_PROV)
+    try:
+        return oa.identify(data, official_overrides(rep.opts), pixels=pixels and HAVE_PIL)
+    except Exception:
+        return dict(_UNKNOWN_PROV)
+
+
+def recognize(rep: Report, data, im):
+    """A known logo in an image -> (logo id, dHash distance or None, provenance or None), else None.
+    An exact official or working-copy match is the Kent State wordmark whatever its trim; otherwise the
+    dHash match decides, and only the Kent State wordmark gets a provenance."""
+    if data:
+        prov = provenance(rep, data, pixels=False)
+        if prov["status"] != "unknown":
+            m = match_logo(im) if im is not None else None
+            return "ksu-wordmark", (m[1] if m and m[0] == "ksu-wordmark" else None), prov
+    m = match_logo(im) if im is not None else None
+    if not m:
+        return None
+    if m[0] == "ksu-wordmark":
+        return m[0], m[1], provenance(rep, data, pixels=True)
+    return m[0], m[1], None
+
+
+def raster_size(data):
+    """(width, height) in pixels of encoded image bytes, or None."""
+    if not HAVE_PIL or not data:
+        return None
+    try:
+        return Image.open(io.BytesIO(data)).size
+    except Exception:
+        return None
+
+
+def placement(loc, w_emu, h_emu, size, crop=None, where=None):
+    """Placed size and effective PPI of a raster: pixels shown (after cropping) / placed inches."""
+    if not size or not w_emu or not h_emu or w_emu <= 0 or h_emu <= 0:
+        return None
+    l, t, r, b = crop or (0.0, 0.0, 0.0, 0.0)
+    pw, ph = size[0] * max(0.01, 1 - l - r), size[1] * max(0.01, 1 - t - b)
+    w_in, h_in = w_emu / 914400, h_emu / 914400
+    return {"loc": loc, "w_in": w_in, "h_in": h_in, "px_w": pw, "px_h": ph, "ppi": min(pw / w_in, ph / h_in),
+            "where": where or {}}
+
+
+def src_rect(el):
+    """Crop fractions (left, top, right, bottom) from an a:srcRect under el, or None."""
+    sr = el.find(".//a:srcRect", NS) if el is not None else None
+    if sr is None:
+        return None
+    try:
+        return tuple(int(sr.get(k, 0) or 0) / 100000 for k in ("l", "t", "r", "b"))
+    except ValueError:
+        return None
+
+
+def ksu_lockup(prov, size):
+    """'stacked' or 'horizontal' for a Kent State wordmark: from the manifest, else from the aspect ratio."""
+    a = (prov or {}).get("asset") or {}
+    if a.get("lockup") in KSU_MIN_IN:
+        return a["lockup"]
+    if size and size[1] and size[0] / size[1] > 2.0:
+        return "horizontal"
+    return "stacked"
+
+
+def report_ksu(rep: Report, dist, prov, location: str, size=None, placements=None, **where):
+    """Findings for a Kent State wordmark: one info finding with its provenance verdict and resolution,
+    plus warnings for a placement under the medium's minimum PPI or under Kent State's minimum size."""
+    prov = prov or dict(_UNKNOWN_PROV)
+    status = prov.get("status", "unknown")
+    dh = f" (dHash distance {dist}/128)" if dist is not None else ""
+    lockup = ksu_lockup(prov, size)
+    label, target, minimum = PPI_RULES.get(rep.medium, PPI_RULES["slide"])
+    places = [p for p in (placements or []) if p]
+    res = ""
+    worst = min(places, key=lambda p: p["ppi"]) if places else None
+    if worst:
+        ppi = worst["ppi"]
+        verdict = (f"fine for {label} ({target} ppi or more)" if ppi >= target - 0.5 else
+                   f"enough for {label} (target {target}, minimum {minimum} ppi)" if ppi >= minimum - 0.5 else
+                   f"below the {minimum} ppi minimum for {label}")
+        res = (f" Placed {worst['w_in']:.2f} x {worst['h_in']:.2f} in, {worst['px_w']:.0f} x {worst['px_h']:.0f} px: "
+               f"{ppi:.0f} ppi effective, {verdict}.")
+    elif size:
+        res = (f" {size[0]} x {size[1]} px: 300 ppi (print) up to {size[0] / 300:.2f} in wide, 150 ppi (posters) "
+               f"up to {size[0] / 150:.1f} in, 96 px/in (screens) up to {size[0] / 96:.1f} in.")
+    asset = prov.get("asset") or {}
+    vector = asset.get("vector_master") or (asset.get("id") if asset.get("kind") == "vector" else None)
+    extra = {"logo": "ksu-wordmark", "provenance": status}
+    if prov.get("id"):
+        extra["asset_id"] = prov["id"]
+    if worst:
+        extra["ppi"] = round(worst["ppi"])
+    if status == "official":
+        how = ("exact SHA-256" if prov.get("how") == "sha256" else
+               "identical pixels; the file was re-saved, so its checksum differs")
+        src = prov.get("source")
+        src_txt = "assets/logos/ksu/official-sources.json" if src in (None, "manifest") else \
+            f"--official-manifest {os.path.basename(str(src))}"
+        msg = f"Official Kent State wordmark, verified ({prov.get('id')}; {how}, {src_txt}).{res}"
+        fix = ""
+        if vector and rep.medium in ("document", "poster"):
+            fix = (f"For commercial or large-format print, the printer can also take the vector master: "
+                   f"{OFFICIAL_CMD} fetch {vector}.")
+        rep.add("info", "logo-ksu", msg, location, fix, **extra, **where)
+    elif status == "working-copy":
+        repl = prov.get("replacement") or f"ksu-{lockup}-color-png"
+        msg = (f"Kent State academic wordmark: the skill's working copy ({prov.get('source')}: old artwork with "
+               f"corrected colors), not the official file{dh}.{res}")
+        fix = (f"Fine for drafts and internal screen use. Before sharing or printing, put the official file in its "
+               f"place: {OFFICIAL_CMD} fetch {repl} (prints the cached path; references/kent-state-compliance.md "
+               "§6).")
+        # A deliverable that still carries the draft logo is a warning (so --strict blocks it); in a template or
+        # guidance file the working copy is expected, so it stays an info notice there.
+        opts = getattr(rep, "opts", None)
+        sev = "info" if (getattr(opts, "template", False) or getattr(opts, "guidance", False)) else "warning"
+        rep.add(sev, "logo-ksu", msg, location, fix, **extra, **where)
+    else:
+        msg = (f"Looks like the Kent State academic wordmark{dh}; provenance not verified (no exact match to the "
+               f"official files in assets/logos/ksu/official-sources.json or to the skill's working copy).{res}")
+        fix = (f"Use an official file: {OFFICIAL_CMD} fetch ksu-{lockup}-color-png (ksu-{lockup}-white-png on navy; "
+               f"'{OFFICIAL_CMD} list' shows all). If this is a file you downloaded from "
+               f"https://www.kent.edu/brand/logos, check it with '{OFFICIAL_CMD} verify <file>' or pass it, or the "
+               "project's provenance JSON, to brand_check.py with --official-manifest.")
+        rep.add("info", "logo-ksu", msg, location, fix, **extra, **where)
+    for p in places:
+        pw = dict(where)
+        pw.update(p.get("where") or {})
+        if p["ppi"] < minimum - 0.5:
+            if vector:
+                rfix = f"Place it smaller, or use the vector master for print: {OFFICIAL_CMD} fetch {vector}."
+            else:
+                rfix = (f"Use the official file ({OFFICIAL_CMD} fetch ksu-{lockup}-color-png or -white-png): its "
+                        "PNG is a 300 ppi master, and the EPS master is vector.")
+            rep.add("warning", "logo-ksu",
+                    f"Kent State wordmark at {p['ppi']:.0f} ppi effective ({p['px_w']:.0f} px across "
+                    f"{p['w_in']:.2f} in), below the {minimum} ppi minimum for {label}; it will look soft.",
+                    p["loc"], rfix, logo="ksu-wordmark", ppi=round(p["ppi"]), **pw)
+        if p["w_in"] < KSU_MIN_IN[lockup] - 0.005:
+            rep.add("warning", "logo-ksu",
+                    f"Kent State wordmark placed {p['w_in']:.2f} in wide, under Kent State's minimum of "
+                    f"{KSU_MIN_IN[lockup]:g} in for the {lockup} logo (UNIVERSITY must be at least 1 in long).",
+                    p["loc"], "Enlarge it, or leave it off this piece rather than shrink it "
+                              "(references/logo-system.md §9).",
+                    logo="ksu-wordmark", width_in=round(p["w_in"], 3), **pw)
 
 
 def open_image(data: bytes):
@@ -1009,8 +1218,9 @@ class PptxChecker:
         self.check_media()
         if slides and not self.found_ksu:
             rep.add("info", "logo-ksu", "No Kent State wordmark detected on any slide or layout.", "",
-                    "Kent State asks for its logo on every lab piece: add assets/logos/ksu/ksu-wordmark-color.png "
-                    "(or -white on navy) bottom-right, separate from the ATR mark (references/kent-state-compliance.md).")
+                    "Kent State asks for its logo on every lab piece: add the official file (python3 "
+                    "scripts/official_assets.py fetch ksu-stacked-color-png, or ksu-stacked-white-png on navy) "
+                    "bottom-right, separate from the ATR mark (references/kent-state-compliance.md).")
 
     # ---------------- helpers
     def layout_for(self, slide_path):
@@ -1387,7 +1597,7 @@ class PptxChecker:
             if f and f.rid:
                 r = self.pkg.rels(it.part).get(f.rid)
                 if r and not r[2]:
-                    self.media_uses.setdefault(r[1], []).append((loc, where))
+                    self.media_uses.setdefault(r[1], []).append((loc, where, it.bbox, src_rect(el)))
             if it.kind == "pic" and not static:
                 self.check_alt(el, loc, where, "Picture")
         if it.kind == "graphic" and not static:
@@ -1750,23 +1960,42 @@ class PptxChecker:
                          "label fewer points (references/data-visualization.md).", size_pt=min(sizes), **where)
 
     def check_media(self):
-        hits = OrderedDict()  # logo id -> {dist, media, uses}; one finding per logo, all locations listed
+        # (logo id, provenance, asset id) -> {dist, prov, media, uses, size, placements}; one finding per key,
+        # all locations listed
+        hits = OrderedDict()
         for mp, uses in self.media_uses.items():
             _, im = self.image_by_path(mp)
-            if im is None:
+            data = self.pkg.read(mp)
+            if im is None and not data:
                 continue
-            m = match_logo(im)
-            if not m:
+            r = recognize(self.rep, data, im)
+            if not r:
                 continue
-            if m[0] == "ksu-wordmark":
+            rid, dist, prov = r
+            if rid == "ksu-wordmark":
                 self.found_ksu = True
-            h = hits.setdefault(m[0], {"dist": m[1], "media": [], "uses": []})
-            h["dist"] = min(h["dist"], m[1])
+            key = (rid, prov["status"] if prov else None, prov["id"] if prov else None)
+            h = hits.setdefault(key, {"dist": dist, "prov": prov, "media": [], "uses": [], "size": None,
+                                      "placements": []})
+            if dist is not None:
+                h["dist"] = dist if h["dist"] is None else min(h["dist"], dist)
             h["media"].append(mp)
             h["uses"] += [u for u in uses if u[0] not in {x[0] for x in h["uses"]}]
-        for rid, h in hits.items():
-            report_logo(self.rep, rid, h["dist"], _loc_list([u[0] for u in h["uses"]], 5),
-                        media=h["media"] if len(h["media"]) > 1 else h["media"][0], **h["uses"][0][1])
+            if rid == "ksu-wordmark":
+                size = raster_size(data)
+                h["size"] = h["size"] or size
+                for u in uses:
+                    bb = u[2] if len(u) > 2 else None
+                    if bb:
+                        h["placements"].append(placement(u[0], bb[2], bb[3], size, u[3], u[1]))
+        for (rid, _, _), h in hits.items():
+            loc = _loc_list([u[0] for u in h["uses"]], 5)
+            media = h["media"] if len(h["media"]) > 1 else h["media"][0]
+            if rid == "ksu-wordmark":
+                report_ksu(self.rep, h["dist"], h["prov"], loc, size=h["size"], placements=h["placements"],
+                           media=media, **h["uses"][0][1])
+            else:
+                report_logo(self.rep, rid, h["dist"], loc, media=media, **h["uses"][0][1])
 
     def image_by_path(self, mp):
         if mp not in self.img_cache:
@@ -1926,6 +2155,7 @@ class DocxChecker:
             for p in pkg.rel_of_type(doc_path, typ):
                 parts.append((p, posixpath.basename(p).rsplit(".", 1)[0]))
         self.media_uses = OrderedDict()
+        self.media_place = OrderedDict()  # media path -> [(location, cx EMU, cy EMU, crop)]
         self.found_ksu = False
         for part, label in parts:
             root = pkg.xml(part)
@@ -1933,21 +2163,36 @@ class DocxChecker:
                 self.check_part(part, label, root)
         hits = OrderedDict()
         for mp, uses in self.media_uses.items():
-            im = open_image(pkg.read(mp) or b"")
-            m = match_logo(im) if im is not None else None
-            if m:
-                self.found_ksu |= m[0] == "ksu-wordmark"
-                h = hits.setdefault(m[0], {"dist": m[1], "media": [], "uses": []})
-                h["dist"] = min(h["dist"], m[1])
+            data = pkg.read(mp) or b""
+            im = open_image(data)
+            r = recognize(rep, data, im)
+            if r:
+                rid, dist, prov = r
+                self.found_ksu |= rid == "ksu-wordmark"
+                key = (rid, prov["status"] if prov else None, prov["id"] if prov else None)
+                h = hits.setdefault(key, {"dist": dist, "prov": prov, "media": [], "uses": [], "size": None,
+                                          "placements": []})
+                if dist is not None:
+                    h["dist"] = dist if h["dist"] is None else min(h["dist"], dist)
                 h["media"].append(mp)
                 h["uses"] += [u for u in uses if u not in h["uses"]]
-        for rid, h in hits.items():
-            report_logo(rep, rid, h["dist"], _loc_list(h["uses"], 5),
-                        media=h["media"] if len(h["media"]) > 1 else h["media"][0])
+                if rid == "ksu-wordmark":
+                    size = im.size if im is not None else None
+                    h["size"] = h["size"] or size
+                    for loc, cx, cy, crop in self.media_place.get(mp, []):
+                        h["placements"].append(placement(loc, cx, cy, size, crop))
+        for (rid, _, _), h in hits.items():
+            media = h["media"] if len(h["media"]) > 1 else h["media"][0]
+            if rid == "ksu-wordmark":
+                report_ksu(rep, h["dist"], h["prov"], _loc_list(h["uses"], 5), size=h["size"],
+                           placements=h["placements"], media=media)
+            else:
+                report_logo(rep, rid, h["dist"], _loc_list(h["uses"], 5), media=media)
         if not self.found_ksu:
             rep.add("info", "logo-ksu", "No Kent State wordmark detected in the document.", "",
                     "Kent State asks for its logo on every lab piece (top right on document pages; "
-                    "references/kent-state-compliance.md).")
+                    "references/kent-state-compliance.md). Get the official file with python3 "
+                    "scripts/official_assets.py fetch ksu-stacked-color-png.")
         self.check_theme()
 
     def style_chain(self, sid):
@@ -2091,6 +2336,17 @@ class DocxChecker:
             r = self.pkg.rels(part).get(rid) if rid else None
             if r and not r[2]:
                 self.media_uses.setdefault(r[1], []).append(loc)
+                bf = blip.getparent()
+                pic = bf.getparent() if bf is not None else None
+                ext = pic.find(".//a:xfrm/a:ext", NS) if pic is not None else None
+                if ext is None:
+                    ext = dr.find(".//wp:extent", NS)
+                if ext is not None:
+                    try:
+                        cx, cy = int(ext.get("cx", 0)), int(ext.get("cy", 0))
+                    except ValueError:
+                        cx = cy = 0
+                    self.media_place.setdefault(r[1], []).append((loc, cx, cy, src_rect(bf)))
         for sf in dr.iter(q("a", "solidFill")):
             c = first_color(sf, self.ctx)
             if c:
@@ -2410,19 +2666,23 @@ def check_html_file(path, rep):
             else:
                 check_text(rep, alt, loc + " alt", line=el.sourceline)
             src = el.get("src") or ""
-            im = None
+            im, data = None, None
             if src.startswith("data:image/") and ";base64," in src:
                 try:
-                    im = open_image(base64.b64decode(src.split(",", 1)[1]))
+                    data = base64.b64decode(src.split(",", 1)[1])
+                    im = open_image(data)
                 except (ValueError, TypeError):
-                    im = None
+                    im, data = None, None
             elif src and not re.match(r"^[a-z]+:|^//", src):
                 lp = os.path.normpath(os.path.join(base, src))
                 if os.path.isfile(lp) and not lp.lower().endswith(".svg"):
                     with open(lp, "rb") as f:
-                        im = open_image(f.read())
-            m = match_logo(im) if im is not None else None
-            if m:
+                        data = f.read()
+                    im = open_image(data)
+            m = recognize(rep, data, im) if (im is not None or data) else None
+            if m and m[0] == "ksu-wordmark":
+                report_ksu(rep, m[1], m[2], loc, size=raster_size(data), line=el.sourceline)
+            elif m:
                 report_logo(rep, m[0], m[1], loc, line=el.sourceline)
         elif tag == "svg":
             role = (el.get("role") or "").lower()
@@ -2575,19 +2835,23 @@ class SvgChecker:
                     self.painted.append((bb, fc[0]))
         if tag == "image":
             href = el.get(f"{{{XLINK}}}href") or el.get("href") or ""
-            im = None
+            im, data = None, None
             if href.startswith("data:image/") and ";base64," in href and not href.startswith("data:image/svg"):
                 try:
-                    im = open_image(base64.b64decode(href.split(",", 1)[1]))
+                    data = base64.b64decode(href.split(",", 1)[1])
+                    im = open_image(data)
                 except (ValueError, TypeError):
-                    im = None
+                    im, data = None, None
             elif href and not re.match(r"^[a-z]+:|^//", href) and self.path:
                 lp = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(self.path)), href))
                 if os.path.isfile(lp) and not lp.lower().endswith(".svg"):
                     with open(lp, "rb") as f:
-                        im = open_image(f.read())
-            mt = match_logo(im) if im is not None else None
-            if mt:
+                        data = f.read()
+                    im = open_image(data)
+            mt = recognize(rep, data, im) if (im is not None or data) else None
+            if mt and mt[0] == "ksu-wordmark":
+                report_ksu(rep, mt[1], mt[2], loc, size=raster_size(data), line=el.sourceline)
+            elif mt:
                 report_logo(rep, mt[0], mt[1], loc, line=el.sourceline)
         if tag == "text" and not defs:
             self.check_svg_text(el, st, loc)
@@ -2700,14 +2964,17 @@ def check_raster(path, rep):
         rep.add("warning", "parse", "Pillow/numpy not installed: raster checks skipped.")
         return
     with open(path, "rb") as f:
-        im = open_image(f.read())
+        data = f.read()
+    im = open_image(data)
     if im is None:
         rep.add("error", "parse", "Could not open the image.")
         return
     rep.meta["size_px"] = list(im.size)
     rep.meta["mode"] = im.mode
-    m = match_logo(im)
-    if m:
+    m = recognize(rep, data, im)
+    if m and m[0] == "ksu-wordmark":
+        report_ksu(rep, m[1], m[2], "whole image", size=im.size)
+    elif m:
         report_logo(rep, m[0], m[1], "whole image")
     rgba = im.convert("RGBA")
     rgba.thumbnail((256, 256))
@@ -3205,9 +3472,14 @@ def main(argv=None):
                "Slide number, date and footer placeholders have a 12 pt hard floor on every medium. "
                ".md/.markdown/.txt files have no size floor (medium: copy); fenced code, inline code and URLs are "
                "skipped, and a ```text fence is checked as copy. "
+               "Kent State wordmark: recognized by shape, but called official only on an exact match "
+               "(scripts/official_assets.py); the skill's working copy is a warning on deliverables (info with "
+               "--template or --guidance); placed copies are checked for effective PPI (print documents 300 "
+               "ppi target / 200 minimum, posters 150 / 100, slides 144 / 96, social and web 192 / 96) and "
+               "Kent State's minimum width (Stacked 1.05 in, Horizontal 1.2 in). "
                "Exit status: 0 no errors, 1 errors (or warnings with --strict), 2 could not run: a path is "
-               "missing, a file is unreadable or unsupported (the other files are still reported), or --tokens "
-               "cannot be read.")
+               "missing, a file is unreadable or unsupported (the other files are still reported), --tokens "
+               "or an --official-manifest file cannot be read.")
     ap.add_argument("paths", nargs="+", help="files or folders to check (folders skip README/LICENSE-style "
                                               "text files; name one to lint it)")
     ap.add_argument("--medium", choices=["auto", "slide", "poster", "document", "social", "web"], default="auto",
@@ -3233,6 +3505,10 @@ def main(argv=None):
     ap.add_argument("--no-inventory", dest="inventory", action="store_false", help="text report: omit colors/fonts")
     ap.add_argument("--strict", action="store_true", help="exit 1 on warnings too")
     ap.add_argument("--tokens", help="path to colors.json (default: the skill's assets/tokens/colors.json)")
+    ap.add_argument("--official-manifest", action="append", default=[], metavar="FILE",
+                    help="extra official Kent State artwork to trust by exact SHA-256 (repeatable): a manifest "
+                         "like assets/logos/ksu/official-sources.json, a project's provenance JSON "
+                         "({name: {sha256: ...}}) or the image file itself")
     ap.add_argument("--version", action="version", version=f"atr brand_check {VERSION}")
     opts = ap.parse_args(argv)
     missing = [p for p in opts.paths if not os.path.exists(p)]
@@ -3245,6 +3521,17 @@ def main(argv=None):
     except (OSError, ValueError) as e:
         print(f"brand_check.py: {e}", file=sys.stderr)
         return 2
+    if opts.official_manifest:
+        oa = _official_assets()
+        if oa is None:
+            print("brand_check.py: --official-manifest needs scripts/official_assets.py next to this script",
+                  file=sys.stderr)
+            return 2
+        try:
+            official_overrides(opts)
+        except oa.OfficialAssetError as e:
+            print(f"brand_check.py: {e}", file=sys.stderr)
+            return 2
     files = expand(opts.paths)
     if not files:
         print("brand_check.py: no supported files found", file=sys.stderr)

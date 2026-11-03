@@ -71,7 +71,7 @@ background pairing, plus the clear-space and minimum-size numbers.
 | Equipment or asset label | white | `assets/logos/svg/atr-badge-black.svg` or `atr-badge-navy.svg` | 0.5-1.0 in tall |
 | One-color job (laser engraving, fax, newsprint) | light | any `-black` variant | same minimums |
 | ATR next to Kent State | any | place the two separately, see §9 | never a merged file |
-| The Kent State logo itself | white or mist: color version; navy: all-white reverse | anything public or printed: the official vector Horizontal or Stacked file from UCM (https://www.kent.edu/brand/logos). Drafts and on-screen internal decks only: `assets/logos/ksu/ksu-wordmark-color.png` / `ksu-wordmark-white.png` (exact colors, but a raster; §9 rule 8) | UNIVERSITY at least 1 in long, which makes the Stacked file at least 1.05 in / 100 px wide (§9) |
+| The Kent State logo itself | white or mist: color version; navy: all-white reverse | anything shared, printed or published: the official file, fetched and checked with `python3 scripts/official_assets.py fetch <id>` (`ksu-stacked-color-png` / `ksu-stacked-white-png`, or `ksu-horizontal-*` where the space is wide; EPS masters for printers). Drafts and internal screen use only: `assets/logos/ksu/ksu-wordmark-color.png` / `ksu-wordmark-white.png` (§9 rule 8) | UNIVERSITY at least 1 in long, which makes the Stacked file at least 1.05 in / 100 px wide and the Horizontal file at least 1.2 in / 115 px wide (UNIVERSITY spans 84% of its width) (§9) |
 | Script or template generator | n/a | `assets/logos/logos.json` | read ratios from it |
 
 If a size in this table falls below the minimum in §7, drop one step down the ladder:
@@ -318,14 +318,20 @@ The KSU rules themselves are in `references/kent-state-compliance.md` §6-§9. W
    line of `stacked-ksu` would name Kent State University a second time. The full horizontal is fine on a page or slide
    where the KSU logo sits in a different zone, for example the title slide (ATR top-left, KSU at the bottom). When the two
    share a band (letter header, web footer, poster header, quad-chart footer), use horizontal-short.
-7. **Colors:** the KSU color logo on white or mist, the all-white reverse on navy or midnight. Don't place the KSU logo on
-   gold (the skill has no All Blue version). Move it to a white or navy area, or ask UCM for the All Blue file.
-8. **Files:** `assets/logos/ksu/ksu-wordmark-color.png` and `ksu-wordmark-white.png` are the KSU Stacked logo, extracted from
-   the old lab deck. The color file's inks have been snapped to exact `#003976` and `#EFAB00` (the old deck had drifted to
-   about `#143672` / `#E7B742`), but both files are still 1022 x 976 px rasters of old artwork, not UCM masters. They are
-   fine for drafts and on-screen internal decks. For print, posters, the web and anything public, get the official vector
-   file from UCM or https://www.kent.edu/brand/logos (Horizontal or Stacked), or use the College of Sciences and Humanities
-   logo if UCM supplies one. Don't edit, recolor or redraw the raster yourself.
+7. **Colors:** the KSU color logo on white or mist; the all-white reverse (or the two-color reverse with a gold
+   sunburst) on navy or midnight; the All Blue logo (`ksu-stacked-blue-png`, `ksu-horizontal-blue-png`) on gold.
+   Kent State's own files use blue `#003876`, not `#003976`; that is the official artwork, so leave it as it is.
+8. **Files:** the official Stacked and Horizontal logos come from https://www.kent.edu/brand/logos. Kent State grants
+   no redistribution license, so the skill does not ship them. `assets/logos/ksu/official-sources.json` records the
+   exact download URL, archive member and SHA-256 of each variant, and `python3 scripts/official_assets.py fetch <id>`
+   downloads, verifies and caches them outside the skill (`list` shows the ids). The PNGs are 300 ppi masters (Stacked
+   1022 x 976 px, Horizontal 1792 x 523 px), enough for office files, screens and posters at the sizes in §8. Give
+   printers the EPS master. `assets/logos/ksu/ksu-wordmark-color.png` and `-white.png` are a working copy: old raster
+   artwork with corrected colors, fine for drafts and internal screen use. Swap in the official file before anything is
+   shared. `brand_check.py` tells the three cases apart ("official ... verified", "working copy", "provenance not
+   verified") and warns on a deliverable that still carries the working copy. If a download fails, run it again or
+   download the zip in a browser and pass it with `--archive`; a failed fetch never means the artwork is unavailable.
+   Don't edit, recolor or redraw any version.
 9. **Never** the athletic "Flash" K/eagle, the Golden Flashes logos or the Flash caricature. The lab also doesn't use the
    KSU "K" Emblem.
 

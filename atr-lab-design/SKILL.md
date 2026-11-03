@@ -1,21 +1,30 @@
 ---
 name: atr-lab-design
-description: "Brand, marketing and graphic-design system for the Advanced Telerobotics Research (ATR) Lab at Kent State University: verified lab facts, Kent State rules, logos, colors, fonts, icons, templates and checking scripts. Use it for any marketing, communications or design task for the ATR Lab, the Advanced Telerobotics Research Lab or the Kent State telerobotics lab, and whenever someone in this repo says 'our lab': slides and decks, quad charts, posters, flyers, social posts and captions, press releases, newsletters, emails and signatures, logos, colors, fonts, icons, images, merch, the website, video thumbnails, figures and brand reviews, even when the request never mentions the brand."
+description: "Brand, marketing and graphic-design system for the Advanced Telerobotics Research (ATR) Lab at Kent State University: verified lab facts, Kent State rules, logos (with the official Kent State wordmark fetch), colors, fonts, icons, the Teo mascot, templates and build, export and checking scripts. Use it for any marketing, communications or design task for the ATR Lab, the Advanced Telerobotics Research Lab or the Kent State telerobotics lab, and whenever someone in this repo says 'our lab': slides and decks, quad charts, posters, event and workshop flyers with QR codes, social posts and captions, banners and GitHub headers, Discord and Slack servers, bots, emoji and stickers, press releases, newsletters, emails and signatures, logos, colors, fonts, icons, images, merch, the website, video thumbnails, figures, revising existing files and brand reviews, even when the request never mentions the brand."
 ---
 
 # ATR Lab design system
 
 Everything needed to make, write and check marketing and design work for the **Advanced Telerobotics Research Lab**
 (ATR Lab), Department of Computer Science, Kent State University: the verified facts, Kent State's brand and
-editorial rules, the logo library, color and type tokens, 43 icons, patterns and backgrounds, 16 ready templates
-(decks, quad charts, posters, print, social, letterhead, email signature) and scripts that build and lint files.
+editorial rules, the logo library, color and type tokens, 43 icons, patterns and backgrounds, the lab mascot Teo,
+19 ready templates (decks, quad charts, posters, event flyers, print, social, letterhead, email signature) and
+scripts that build, revise, export and lint files.
 All templates share one look, which the lab calls **Hazard Gold**: white or navy fields, gold label plates with the
 navy mark, Roboto Slab numerals and the gold hazard-stripe band on bookend edges only.
 
 **How to use it.** Read the brand card (§1) every time; it is enough for small jobs. Find the task in the router
-(§2), read only the references it names, follow the workflow (§3), then pass the QA gate (§4) before you hand
-anything over. The references hold the detail and the reasons; this file tells you where to look. When a reference
-and this file disagree, the reference wins; mention the conflict to the user.
+(§2) and **run the tool it names first**: the scripts carry the rules, sizes and checks, so you rarely need to
+read a whole reference or write drawing code. Open a reference only for the section the router names, follow the
+workflow (§3), then pass the QA gate (§4) before you hand anything over. When a reference and this file disagree,
+the reference wins; mention the conflict to the user.
+
+**Three habits that save the most time.**
+1. Once per machine: `python3 scripts/atr_design.py doctor` (it prints the fix for anything missing).
+2. Never guess a file name or hardcode a color or font path: `python3 scripts/atr_design.py assets find <words>`;
+   in code, `from atr_brand import color, font, logo_path, icon_path`.
+3. Never hand-write image code for a banner, header, splash or thumbnail: `python3 scripts/atr_design.py banner
+   --preset <name>`. For a follow-up edit to existing deliverables, use the revision workflow (§3.0), not a rebuild.
 
 Run every command from the skill root (the folder that holds this file). All paths below are relative to it.
 `python3` means a Python with `scripts/requirements.txt` installed (§7).
@@ -98,11 +107,34 @@ Run every command from the skill root (the folder that holds this file). All pat
   signature**: ATR at left or bottom-left, Kent State at right or bottom-right, each with its own clear space (the
   height of the "K"), no shared rule, Stacked file at least 1.05 in wide, ® kept. Where it cannot fit at that size
   (the quad layouts, small footers) or does not apply (profile avatars), leave it off and name Kent State in text
-  (logo-system.md §8-§9, kent-state-compliance.md §6). `assets/logos/ksu/` holds a
-  working copy (colors corrected, still a raster) for drafts and internal screens; anything printed or public gets
-  the official file from https://www.kent.edu/brand/logos. Tell the user this whenever a deliverable carries it.
+  (logo-system.md §8-§9, kent-state-compliance.md §6). `assets/logos/ksu/` holds a working copy (colors
+  corrected, still a raster) for drafts and internal screens only. **For anything shared, printed or published,
+  fetch the official file before you build:** `python3 scripts/official_assets.py fetch ksu-stacked-white-png`
+  (on navy; `ksu-stacked-color-png` on white, `ksu-stacked-blue-png` on gold, `ksu-horizontal-*` for wide spaces,
+  `-eps` for printers). It downloads from Kent State, checks the SHA-256 and prints the cached path. A failed
+  download is a network problem, never proof the artwork is unavailable: retry, or use `--archive` with a zip the
+  user downloads. `brand_check.py` warns on any deliverable that still carries the working copy.
 - The templates already place the signatures at the right sizes and positions. Start from them rather than placing
   logos by hand.
+
+### Mascot
+
+**Teo** ("teleoperator") is the lab's illustrated mascot and the face of its Discord bot: a white robot head with a
+navy screen face, sky eyes, a gold smile and floating gloved hands (`assets/mascot/`, character sheet included).
+Use it for Discord, Slack, K-12, workshops, events and stickers, always beside the lab's logo, never on formal
+pieces or in place of the mark (references/mascot.md).
+
+### Short-form voice (channel topics, captions, bot replies, cards)
+
+- First mention: "Advanced Telerobotics Research Lab"; then "the lab". "ATR Lab" only in display type and only on a
+  piece that also names Kent State. Never "ATR" alone or "KSU" in running copy.
+- Kent State/AP style: no Oxford comma; "and", not "&"; "Nov. 7"; "11 a.m.-3 p.m."; "Ph.D."; sentence case.
+- The safe one-liner: "The Advanced Telerobotics Research Lab at Kent State University is an innovation research
+  laboratory focused on exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and artificial
+  intelligence."
+- Handles: X @atrlab_kent, Instagram @atr_lab, GitHub ATR-Lab (never @atr_kent).
+- A finalist is not a winner; past projects carry their years; unconfirmed facts stay `[bracketed]`.
+- Plain, warm, specific; one call to action that points to a page the lab owns.
 
 ### The 12 things never to do
 
@@ -133,36 +165,47 @@ Run every command from the skill root (the folder that holds this file). All pat
 
 ## 2. Task router
 
-Read the named references first; they carry the rules, the worked examples and the reasons. "Use" lists the
-template, script or asset to start from. Anything about the lab's facts: references/brand-foundation.md.
+"Run first" is the tool to start from: it knows the sizes, budgets and rules, and checks its own output. "Read" is
+the reference section to open only when you need the reasons or a case the tool does not cover. Anything about the
+lab's facts: references/brand-foundation.md. Each row's last column is the check to pass before you ship.
 
-| Task | Read | Use |
-|---|---|---|
-| Slide deck, talk, lecture, defense, sponsor pitch, lab-meeting update | references/presentations.md (recipes §3, layouts §2) | `assets/templates/ATR-Presentation-Template.pptx` / `.potx`; `scripts/new_deck.py`; `scripts/examples/decks/` |
-| Quad chart (NASA publication, project status, weekly summary) | references/quad-charts.md | `assets/templates/ATR-Quad-Chart-Template.pptx`; `scripts/quad_chart.py`; `scripts/examples/quads/` |
-| Research poster | references/posters.md; references/data-visualization.md §5 | `assets/templates/ATR-Research-Poster-48x36.pptx`, `ATR-Research-Poster-36x48.pptx`; `scripts/new_deck.py` |
-| Flyer, one-pager, certificate, name badge, door or event sign | references/print-and-merch.md §1, §4-§7 | `assets/templates/ATR-Flyer-Letter.pptx`, `ATR-One-Pager-Letter.pptx`, `ATR-Certificate-Letter.pptx`, `ATR-Name-Badge.pptx`, `ATR-Door-Sign-Letter.pptx`; `scripts/new_deck.py` |
-| Social post image, carousel card, story, caption, hashtags, alt text | references/social-media.md (§4 sizes, §5 cards, §7 recipes); references/voice-and-copy.md | `scripts/social_card.py` + `scripts/examples/social/`; or `assets/templates/social/*.pptx` |
-| YouTube thumbnail, video cards, lower thirds, captions | references/web-and-digital.md §7-§8; references/imagery.md §10 | `assets/templates/social/ATR-YouTube-Thumbnail-1280x720.pptx`; `social_card.py --size youtube-thumb` |
-| Press release, news post, award or paper announcement, media kit | references/pr-events-outreach.md §1-§5; references/voice-and-copy.md §6.7 | brand-foundation.md §9 (proof bank) and §10 (boilerplates) |
-| Newsletter, outreach email, parent or teacher email | references/pr-events-outreach.md §13, §17; references/web-and-digital.md §4 | 600 px layout, web-safe fonts, PNG logos |
-| Email signature | references/web-and-digital.md §3 | `scripts/email_signature.py`; `assets/templates/email-signature.html` |
-| Recruiting (graduate, undergraduate, high school), sponsor ask, K-12 program copy | references/voice-and-copy.md §6.3-§6.6; references/pr-events-outreach.md §10, §14-§15 | Recruiting flyer layout; one-pager for sponsors |
-| Events: demo day, open lab, tours, K-12 camps, conference booths | references/pr-events-outreach.md §7-§13; references/kent-state-compliance.md §16 | Door-sign and flyer templates; `assets/patterns/` bands for signage |
-| Logos, co-branding, sponsor and partner logos, favicons, avatars | references/logo-system.md; references/kent-state-compliance.md §6-§9 | `assets/logos/`, `assets/logos/logos.json`, `assets/logos/icons/` |
-| Colors, contrast, dark mode, print color | references/color.md | `assets/tokens/`; `scripts/contrast.py` |
-| Fonts, type sizes, font problems after an import | references/typography.md | `assets/fonts/` |
-| Icons, feature grids | references/iconography.md | `assets/icons/` (`svg/`, `png/`, `badges/`); `scripts/icons/icons.json` to search |
-| Photos, video shoots, consent, stock or third-party images | references/imagery.md; references/kent-state-compliance.md §16 | Concept illustrations in `assets/illustrations/` when no real photo exists |
-| New icon, background, texture or concept illustration | references/ai-image-pipeline.md; references/imagery.md §11 | `scripts/codex_image.sh`; `scripts/icons/` |
-| Patterns, hazard band, layout grids, motion | references/graphic-elements.md | `assets/patterns/`, `assets/illustrations/` |
-| Charts and figures for slides, papers, posters; tables; Gantt | references/data-visualization.md | `assets/tokens/atr_plot.py`, `assets/tokens/atr.mplstyle`; native charts via `new_deck.py` |
-| Website, GitHub, YouTube channel art, QR codes, virtual backgrounds, hallway screens | references/web-and-digital.md | `assets/tokens/tokens.css`; `assets/illustrations/banner-*`, `virtual-bg-*` |
-| Merch, stickers, apparel, robot decals, banners and tablecloths | references/print-and-merch.md §7-§12; references/kent-state-compliance.md §10 | SVG logos; `assets/patterns/` chevron and hazard files |
-| Review or fix someone else's file | references/qa-checklists.md; then the reference behind each finding | `scripts/brand_check.py`; `scripts/render_office.sh` |
-| Accessibility questions, alt text, captions, tagged PDFs | references/accessibility.md | |
-| "Are we allowed to...?" (Kent State rules, approvals, contacts) | references/kent-state-compliance.md | §17 approval gates, §18 contacts |
-| About paragraph, bio, boilerplate, tagline, what to claim | references/brand-foundation.md §4-§10 | Copy §10 verbatim |
+| Task | Run first | Read (only if needed) | Check before you ship |
+|---|---|---|---|
+| Slide deck, talk, lecture, defense, sponsor pitch, lab-meeting update | `scripts/new_deck.py` on `presentation` from `scripts/examples/decks/`; `atr_design.py layouts presentation --layout <name> --json` | presentations.md §2-§3 | `new_deck.py ... --render --check`; look at every slide |
+| Quad chart (NASA publication, project status, weekly summary) | `scripts/quad_chart.py` from `scripts/examples/quads/` | quad-charts.md | `--check --render`; look at the PNG |
+| Research poster | `scripts/new_deck.py` with `poster-48x36` / `poster-36x48` | posters.md; data-visualization.md §5 | render at 40 dpi plus 100% crops |
+| **Event or workshop flyer** (date, venue, prerequisites, how it works, tools covered, registration QR) | `scripts/new_deck.py` with `event-flyer` (Letter), `event-flyer-tabloid` or `event-flyer-17x22`, from `scripts/examples/print/event-workshop.json`; fields by name, never by index | print-and-merch.md §5.1, §5.3 | official Kent State logo fetched; `qr_code.py verify` on the exported PDF |
+| Other print: flyer, one-pager, certificate, name badge, door or event sign | `scripts/new_deck.py` with `flyer`, `one-pager`, `certificate`, `badge`, `door-sign` | print-and-merch.md §1, §4-§7 | render at 150 dpi (300 for proofs) |
+| **Change one fact, link, QR code or logo in existing deliverables** | `scripts/project.py` (`status`, `set`, `replace-asset`, `build --changed-only`, `export --changed-only`); single files: `scripts/pptx_tools.py fields` / `replace-picture` | §3.0 below | the re-rendered pages and `qa-report.md` |
+| Enlarge or shrink an Office file to another size | `scripts/pptx_tools.py scale ... --page WxH` (prefer a real profile, such as the event flyers, when one exists) | | type floors for the new medium; render |
+| Export a tagged PDF and prove what is in it | `scripts/export_office.py pdf` / `inspect` | accessibility.md | tags are evidence of the export, not of conformance |
+| QR code | `scripts/qr_code.py make` (or a `qr` field in a spec) | web-and-digital.md §9 | `qr_code.py verify <final.pdf> --url <exact url>`; printed-proof phone scan |
+| Social post image, carousel card, story, caption, hashtags, alt text | `scripts/social_card.py` + `scripts/examples/social/` | social-media.md §4, §5, §7; voice-and-copy.md | look at the PNG at 390 px; lint the caption |
+| **Banner or header at any size**: GitHub README header or social preview, Discord banner, invite splash or profile banner, X header, YouTube banner, OG image, 16:9 title card, square thumbnail | `scripts/atr_design.py banner --preset <name>` (`--list-presets`, `--size WxH`, `--safe-zones`) | community-platforms.md §2, §7 | open the PNG and the `--safe-zones` copy |
+| **Discord or Slack**: server structure, rules, onboarding, emoji, stickers, role colors, bots | `assets/mascot/emoji/`, `assets/mascot/stickers/`, `assets/icons/badges/` (128 px emoji); `banner.py` for art | community-platforms.md | preview on dark `#313338` and white; `contrast.py` for role colors |
+| **The mascot Teo**: avatar, emoji, stickers, a new pose | `assets/mascot/` (character sheet, views, expressions); new poses with `scripts/codex_image.sh` + `icons/chroma_key.py --outline 003976` | mascot.md | side by side with the character sheet |
+| YouTube thumbnail, video cards, lower thirds, captions | `social_card.py --size youtube-thumb`; `assets/templates/social/ATR-YouTube-Thumbnail-1280x720.pptx` | web-and-digital.md §7-§8; imagery.md §10 | |
+| Press release, news post, award or paper announcement, media kit | brand-foundation.md §9 (proof bank) and §10 (boilerplates) | pr-events-outreach.md §1-§5; voice-and-copy.md §6.7 | `brand_check.py copy.md` |
+| Newsletter, outreach email, parent or teacher email | 600 px layout, web-safe fonts, PNG logos | pr-events-outreach.md §13, §17; web-and-digital.md §4 | |
+| Email signature | `scripts/email_signature.py` | web-and-digital.md §3 | `email_signature.py --check` |
+| Recruiting (graduate, undergraduate, high school), sponsor ask, K-12 program copy | Recruiting flyer layout; one-pager for sponsors | voice-and-copy.md §6.3-§6.6; pr-events-outreach.md §10, §14-§15 | `brand_check.py` |
+| Events: demo day, open lab, tours, K-12 camps, conference booths | Event flyer and door-sign templates; `assets/patterns/` bands for signage | pr-events-outreach.md §7-§13; kent-state-compliance.md §16 | |
+| Logos, co-branding, sponsor and partner logos, favicons, avatars | `atr_design.py assets find <logo words>`; **official Kent State file:** `scripts/official_assets.py fetch <id>` | logo-system.md; kent-state-compliance.md §6-§9 | `brand_check.py` says "official ... verified" |
+| Find any file in the brand kit | `scripts/atr_design.py assets find <words> [--kind K]` (aliases and "did you mean") | | |
+| Colors, contrast, dark mode, print color | `scripts/contrast.py <fg> <bg>`; in code `atr_brand.color()` | color.md | |
+| Fonts, type sizes, font problems after an import | `assets/fonts/`; in code `atr_brand.font()` | typography.md | |
+| Icons, feature grids | `atr_design.py assets find <words> --kind icon` (`svg/`, `png/`, `badges/`) | iconography.md | |
+| Photos, video shoots, consent, stock or third-party images | Concept illustrations in `assets/illustrations/` when no real photo exists | imagery.md; kent-state-compliance.md §16 | releases on file |
+| New icon, background, texture or concept illustration | `scripts/codex_image.sh`; `scripts/icons/` | ai-image-pipeline.md; imagery.md §11 | |
+| Patterns, hazard band, layout grids, motion | `assets/patterns/`; `banner.py` draws lattice and band at any size | graphic-elements.md | |
+| Charts and figures for slides, papers, posters; tables; Gantt | `assets/tokens/atr_plot.py`, `atr.mplstyle`; native charts via `new_deck.py` | data-visualization.md | |
+| Website, GitHub org, YouTube channel art, virtual backgrounds, hallway screens | `assets/tokens/tokens.css`; `banner.py`; `assets/illustrations/` | web-and-digital.md | |
+| Merch, stickers, apparel, robot decals, banners and tablecloths | SVG logos; `assets/patterns/` chevron and hazard files | print-and-merch.md §7-§12; kent-state-compliance.md §10 | UCM approval, licensed vendor |
+| Review or fix someone else's file | `scripts/brand_check.py <file> --all`; `scripts/render_office.sh` | qa-checklists.md | |
+| Accessibility questions, alt text, captions, tagged PDFs | `export_office.py inspect` for PDFs | accessibility.md | |
+| "Are we allowed to...?" (Kent State rules, approvals, contacts) | | kent-state-compliance.md §17 approval gates, §18 contacts | |
+| About paragraph, bio, boilerplate, tagline, what to claim | Copy brand-foundation.md §10 verbatim | brand-foundation.md §4-§10 | `brand_check.py copy.md` |
+| Set up or debug the environment | `scripts/atr_design.py doctor` | §7 below | |
 
 ---
 
@@ -171,6 +214,26 @@ template, script or asset to start from. Anything about the lab's facts: referen
 Each procedure is the short version; the reference named in its first step has the full rules. Save deliverables
 as new files named `atr-[piece]-[topic]-[yyyy-mm-dd][-vN]` (references/qa-checklists.md §1.5), outside the skill
 folder, and keep QA renders out of the deliverable folder. Never edit a template in place.
+
+### 3.0 Revise an existing artifact
+
+Most follow-up requests change one fact, link, QR code or asset. Change only that, rebuild only what it reaches and
+say which outputs changed.
+
+1. Keep a set of deliverables in a `project.json` (`python3 scripts/project.py init <folder> --example workshop`,
+   then move the facts into `facts`; keep event, talk and lab durations as separate facts). For a single file with
+   no project, use `scripts/pptx_tools.py fields --set name=value` or `replace-picture` instead (both idempotent).
+2. `project.py status -p <project.json>` shows each artifact's build, unresolved `[placeholders]`, empty facts, draft
+   assets (the working-copy Kent State wordmark), lint, export and QR state.
+3. Make the edit: a fact everywhere, `project.py set registration_url <url>` (`--artifact NAME` for one); an asset,
+   `project.py replace-asset <id> <file or official:id> [--scope a,b]` (safe to repeat); a layout or wording change,
+   that artifact's spec only.
+4. `project.py build --changed-only`, then `project.py export --changed-only`. Unaffected artifacts and unchanged
+   pages are skipped.
+5. Read `qa-report.md` and look at the re-rendered pages and contact sheets it lists. A clean lint is not a render
+   check, tags are not an accessibility verdict and a decoded QR code still needs a phone scan of a printed proof.
+6. Report what changed, what was verified in the PDF (the exact QR address decoded) and what a person still has to
+   check. Use the destination the user gives exactly: never add tracking parameters or swap in another URL.
 
 ### 3.1 Build a slide deck
 
@@ -231,18 +294,25 @@ layout and type into the placeholders; free text boxes lose the styles, reading 
 
 1. Check the gates in references/print-and-merch.md §1 first: official stationery is ordered through UCM, printing
    goes to a Kent State contracted printer, and anything with a mark on a product needs UCM approval.
-2. Start from the matching template (router, §2). For a poster, follow references/posters.md (sizes §2, budgets §5,
-   figures §7, QR §8). Fill by hand, or with `python3 scripts/new_deck.py` using `"template": "flyer"` (or
-   `one-pager`, `certificate`, `badge`, `door-sign`, `poster-48x36`, `poster-36x48`) and `"from_slide": N`;
-   `python3 scripts/new_deck.py --list-layouts flyer` shows the fields (references/presentations.md §8.5, §8.7).
+2. **Fetch the official Kent State wordmark first** if the piece will be shared (§1, Logos), then start from the
+   matching template (router, §2). Event and workshop flyers: `"template": "event-flyer"` (Letter),
+   `event-flyer-tabloid` or `event-flyer-17x22`, filled by field name from `scripts/examples/print/event-workshop.json`;
+   pick the profile for the size instead of enlarging Letter. For a poster, follow references/posters.md (sizes §2,
+   budgets §5, figures §7, QR §8). Other pieces: `"template": "flyer"` (or `one-pager`, `certificate`, `badge`,
+   `door-sign`, `poster-48x36`, `poster-36x48`) and `"from_slide": N`; `python3 scripts/atr_design.py layouts
+   <template> --json` shows the fields and budgets (references/presentations.md §8.5, §8.7).
 3. Write the copy with verified facts only. Pieces with Kent State marks carry the trademark line; paste any
    equal-opportunity or nondiscrimination statement from UCM or HR, never write one; K-12 safety and supervision lines
    only once the program is registered (references/voice-and-copy.md §3.6, §6.4-§6.5).
-4. QR codes: navy or black on white, a 4-module quiet zone, at least one tenth of the scanning distance wide and never
-   under 0.8 in, pointing to a stable page (references/web-and-digital.md §9).
-5. Replace the Kent State working-copy wordmark with the official file before anything is printed.
+4. QR codes: a `qr` field in the spec (`{"registration_qr": {"qr": {"url": ..., "size_in": 1.0}}}`), navy on white
+   at its physical size with the quiet zone inside the picture; the clean URL printed as plain text beside it. Encode
+   the destination the organizer gave exactly; if it is a shortener, recommend the full URL but do not swap it
+   (references/print-and-merch.md §5.3). After export, `python3 scripts/qr_code.py verify <pdf> --url <url>`.
+5. If a working-copy Kent State wordmark is still in the file, swap it: `project.py replace-asset ... official:<id>`
+   or `pptx_tools.py replace-picture`. `brand_check.py` warns until it is gone.
 6. Pass §4 (render at 150 dpi, 300 for proofs; posters at 40 dpi plus 100% crops) and references/qa-checklists.md
-   §2.3-§2.5. Deliver a press PDF and a tagged PDF for screens (qa-checklists.md §1.6).
+   §2.3-§2.5. Deliver a press PDF and a tagged PDF for screens (qa-checklists.md §1.6):
+   `python3 scripts/export_office.py pdf <file> --out-dir <dir>` and `inspect` for tags, fonts and links.
 
 ### 3.5 Review and fix someone else's file
 
@@ -291,6 +361,20 @@ layout and type into the placeholders; free text boxes lose the styles, reading 
    key and build with `scripts/icons/chroma_key.py` and `scripts/icons/build_set.py`.
 5. QA per ai-image-pipeline.md §10 and references/qa-checklists.md §2.15; keep the prompt manifest beside every file;
    caption concept art "Illustration" and never place it in an evidence slot.
+6. Emoji and stickers from keyed art: `scripts/icons/chroma_key.py IN OUT --keep-color --outline 003976` (emoji) or
+   `--die-cut` (stickers). New Teo poses use the style lock and references in `assets/mascot/prompts.json`
+   (references/mascot.md §5).
+
+### 3.8 Banners, community platforms and the mascot
+
+1. Banners, headers, splashes and thumbnails: `python3 scripts/atr_design.py banner --preset <name> --title ...
+   [--subtitle ...] [--image assets/mascot/views/teo-front.png | --icon <name>] -o out.png --safe-zones`. If the copy
+   does not fit, shorten it rather than forcing it below the floors. Open both PNGs.
+2. Discord and Slack: follow references/community-platforms.md for sizes (§2), the server structure the lab uses
+   (§3), the permission rules that trip people up (§4) and bots (§5). Preview every emoji, sticker and thumbnail on
+   Discord dark `#313338` and on white at display size before uploading.
+3. Teo: reuse `assets/mascot/` files as they are; check any new art against the character sheet
+   (references/mascot.md).
 
 ---
 
@@ -304,7 +388,8 @@ per-deliverable lists.
    the file for `[`, TODO, TBD, lorem and "Click to add" before you call it final.
 2. **Lint.** `python3 scripts/brand_check.py <file>` exits 0 (no errors); this includes captions, alt text and
    other copy saved as `.md` or `.txt`. Fix every warning or say why it stands. Use
-   `--template` and `--guidance` only on templates and teaching decks, never on deliverables.
+   `--template` and `--guidance` only on templates and teaching decks, never on deliverables. A deliverable that
+   still carries the working-copy Kent State wordmark gets a warning: fetch and swap the official file.
 3. **Render and look.** `scripts/render_office.sh <file> <qa-folder> 150` and open every PNG yourself: overflow,
    brand fonts actually rendered, logos on the right ground at or above minimum with clear space, nothing on a band or
    busy photo, grid alignment. The linter reads structure; only a render shows what the reader sees. For a `.pptx`,
@@ -313,8 +398,11 @@ per-deliverable lists.
    chart and icon group; decorative art flagged; unique slide titles and a logical reading order; nothing carried by
    color alone; captions on video; a tagged PDF or web page for anything posted online.
 5. **Report.** End with the definition-of-done block from references/qa-checklists.md §4, including "Still needed
-   from you" (the official Kent State logo file, UCM or director approvals, releases, facts to confirm). If you could
-   not render or lint something, say so instead of implying it was checked.
+   from you" (UCM or director approvals, releases, facts to confirm, a printed proof). Keep three kinds of evidence
+   apart: what you checked in the source and structure (lint, budgets), what you verified in the exported PDF (tags,
+   embedded fonts, links, the decoded QR address; `export_office.py inspect`, `qr_code.py verify`) and what a person
+   still has to look at (render review, phone scans, physical proofs). If you could not render or lint something,
+   say so instead of implying it was checked; a clean lint is never a render check.
 
 ---
 
@@ -324,6 +412,9 @@ The lab's public footprint contradicts itself (old handles, a wrong college, sta
 skill keeps one verified fact base: references/brand-foundation.md (checked 2026-09-28). Its §9 proof bank lists
 the claims you may make and the exact wording; §11 lists the contact details and a "Never print" list; §12 lists the
 known inconsistencies. Use only those facts, facts the user gives you, or facts you verify with a cited source.
+
+The lab's public profile repository, https://github.com/ATR-Lab/about, carries the same facts (brand-foundation.md,
+"Upstream"). If the two disagree, use the one with the later review date and tell the user.
 
 When the user supplies a fact that contradicts the fact base (an @atr_kent handle, Room 236, "College of Arts and
 Sciences"), do not use it: explain the conflict and use the verified value.
@@ -351,7 +442,7 @@ placeholder at the end so a person can clear it.
 
 ```
 SKILL.md                     this file
-references/                  20 guides (each starts with "Read this when"; TOCs in the long ones)
+references/                  22 guides (each starts with "Read this when"; TOCs in the long ones)
   brand-foundation.md          facts, names, positioning, proof bank, boilerplates, contacts
   voice-and-copy.md            voice, Kent State editorial style, templates, copy-editing sweep
   kent-state-compliance.md     university rules, approvals, contacts, open questions
@@ -359,10 +450,16 @@ references/                  20 guides (each starts with "Read this when"; TOCs 
   ai-image-pipeline.md         Codex image generation, keying, icon pipeline
   presentations.md  quad-charts.md  posters.md  social-media.md  print-and-merch.md
   web-and-digital.md  pr-events-outreach.md  data-visualization.md  accessibility.md
+  community-platforms.md       Discord, Slack, bots, emoji, stickers, GitHub README pattern
+  mascot.md                    Teo: anatomy, where it may appear, voice, new poses
   qa-checklists.md             release gate, per-deliverable lists, common fixes
 assets/
-  templates/                 16 templates, their layout contracts (*-layouts.json) and README.md (the catalog)
-  logos/                     svg/, png/ (-3000, -1000), icons/ (favicons, avatars), ksu/, logos.json
+  index.json                 one record per asset (search it with `atr_design.py assets find`)
+  templates/                 19 templates (incl. 3 event-flyer sizes), their layout contracts (*-layouts.json)
+                             and README.md (the catalog)
+  logos/                     svg/, png/ (-3000, -1000), icons/ (favicons, avatars), ksu/ (working copy and
+                             official-sources.json, the official Kent State file manifest), logos.json
+  mascot/                    Teo: character sheet, avatar, views, expressions, emoji, stickers, prompts.json
   icons/                     43 icons: svg/, png/ (navy, gold, white, ink), badges/, masters/
   illustrations/             title, section, closing and light backgrounds; social textures; 3 concept
                              illustrations; virtual backgrounds; platform banners; poster header
@@ -371,8 +468,18 @@ assets/
                              atr.mplstyle, atr_plot.py, palettes, contrast-matrix.md
   fonts/                     Source Sans 3, Roboto Slab, Source Code Pro (TTF + licenses)
 scripts/
+  atr_design.py              the front door: assets, layouts, doctor, banner, and every other tool below
+  atr_brand.py               brand values for code (colors, fonts, logos, icons, patterns)
+  asset_index.py             builds assets/index.json
   brand_check.py             brand and accessibility linter (.pptx, .docx, .svg, .html/.css, images,
-                             and copy in .md/.txt: facts, names, placeholders, Kent State style)
+                             and copy in .md/.txt: facts, names, placeholders, Kent State style,
+                             official vs working-copy Kent State wordmark, effective PPI)
+  banner.py                  banners, headers, splashes and thumbnails at any size (10 presets)
+  official_assets.py         fetch and verify the official Kent State wordmark files
+  project.py                 one manifest per set of deliverables: scoped edits, changed-only builds and exports
+  export_office.py           tagged PDF export and inspection, changed-page renders, contact sheets
+  qr_code.py                 QR codes at physical size; decode them from the final PDF
+  pptx_tools.py              safe Office edits: scale, named fields, picture replacement (idempotent)
   contrast.py                WCAG contrast for hex or token names, with fixes
   render_office.sh           Office file to PDF + PNGs with the brand fonts (private LibreOffice profile)
   new_deck.py                decks, posters, flyers and other templates from a JSON/YAML spec
@@ -380,8 +487,10 @@ scripts/
   social_card.py             social PNGs + alt-text sidecars from a JSON spec
   email_signature.py         Outlook-safe HTML and plain-text signatures; --check validates one
   codex_image.sh             one AI image via the Codex CLI
-  icons/                     icon pipeline (generate, key, recolor, badge, trace, build) and icons.json
-  examples/                  specs to copy: decks/, quads/, social/
+  icons/                     icon pipeline (generate, key with --outline/--die-cut, recolor, badge, trace,
+                             build) and icons.json
+  examples/                  specs to copy: decks/, print/, quads/, social/, projects/, regressions/
+  tests/                     offline pytest suite
   requirements.txt  README.md
 ```
 
@@ -392,9 +501,12 @@ catalog; `scripts/README.md` documents every script's options, exit codes and li
 
 ## 7. Environment
 
+- **Check first.** `python3 scripts/atr_design.py doctor` checks every feature group (core, office, qr, icons,
+  figures, ai-images) and prints the exact fix for each miss.
 - **Python.** 3.9 or newer, in a virtual environment: `python3 -m venv .venv && .venv/bin/pip install -r
   scripts/requirements.txt` (then use `.venv/bin/python` wherever this file says `python3`). The core block
   (lxml, Pillow, numpy, defusedxml, python-pptx, fonttools) covers the linter, decks, quads and social cards;
+  the `qr` group (qrcode, zxing-cpp, pypdf) is for QR codes, PDF inspection and project exports;
   matplotlib is for figures; scipy, scikit-image and vtracer are for the icon pipeline, which needs Python 3.12 or
   3.13 (vtracer crashes on 3.14). PyYAML is optional, for YAML deck specs. `contrast.py`, `email_signature.py` and
   `render_office.sh` need no packages.
@@ -402,6 +514,9 @@ catalog; `scripts/README.md` documents every script's options, exit codes and li
   plugin's data folder, `${CLAUDE_PLUGIN_DATA}/venv` (normally `~/.claude/plugins/data/atr-lab-design-atr-lab/venv`),
   not in this folder, because plugin updates replace this folder. `/atr-lab-design:setup` creates it; use its
   `bin/python` as `python3`, and save output outside this folder.
+- **Caches and output.** Official Kent State files and other downloads go to `${ATR_DESIGN_CACHE:-~/.cache/atr-lab-design}`;
+  project work, renders and deliverables go next to the project's `project.json` (`--work-dir`, `--cache-dir`,
+  `--out-dir`). Nothing is ever written inside the skill.
 - **No bytecode in the skill.** Set `PYTHONDONTWRITEBYTECODE=1` before importing any module from the skill (for
   example `assets/tokens/atr_plot.py`), and remove any `__pycache__` or `.DS_Store` before sharing the skill.
 - **Fonts.** The brand fonts are in `assets/fonts/`. Install them for hand editing, embed them in any `.pptx` that

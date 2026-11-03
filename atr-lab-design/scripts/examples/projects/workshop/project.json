@@ -1,0 +1,112 @@
+{
+  "_comment": "Example project modeled on the agentic robotics workshop (Nov. 7, 2026). Copy it out of the skill before building: python3 scripts/project.py init ~/work/workshop --example workshop. The registration URL is a placeholder (example.org); set the real one with: project.py set registration_url <url>. The Kent State wordmark starts as the template's working copy: project.py replace-asset ksu-wordmark-white official:ksu-stacked-white-png.",
+  "schema": "atr-project/1",
+  "name": "agentic-robotics-workshop",
+  "title": "Agentic workflows for robotics workshop",
+  "facts": {
+    "event_title": "Build robots\nwith AI agents",
+    "event_title_plain": "Build robots with AI agents",
+    "eyebrow": "HANDS-ON WORKSHOP  ·  CODEX + CLAUDE CODE",
+    "summary": "Learn an agentic workflow through ROS 2 replay and TurtleBot3 simulation.",
+    "event_date": "Saturday, Nov. 7, 2026",
+    "event_date_short": "Nov. 7, 2026",
+    "event_time": "11 a.m.-3 p.m. EST",
+    "event_duration": "Four-hour workshop",
+    "talk_duration": "45-minute",
+    "lab_duration": "two-hour",
+    "venue": "Mathematical Sciences Building\nRoom 228  ·  Kent State University",
+    "venue_short": "MSB room 228",
+    "audience": "Programming experience required\nRobotics experience optional",
+    "agenda": [
+      "Debug a point-cloud replay",
+      "Understand and review a code change",
+      "Run a TurtleBot3 simulation"
+    ],
+    "requirements": "Prepared Linux environment and an existing agent login required.",
+    "workflow": [
+      [
+        "Inspect",
+        "Understand the failing case"
+      ],
+      [
+        "Repair",
+        "Make and review a small diff"
+      ],
+      [
+        "Simulate",
+        "Observe the robot response"
+      ]
+    ],
+    "registration_url": "https://example.org/register",
+    "contact": "Questions: atrlab.kent@gmail.com"
+  },
+  "assets": {
+    "tool-claude-code": {
+      "path": "skill:assets/icons/png/code-navy.png",
+      "note": "ATR stand-in icon. Replace it with the official product icon from the vendor's brand kit, unmodified."
+    },
+    "tool-codex": {
+      "path": "skill:assets/icons/png/ai-neural-net-navy.png",
+      "note": "ATR stand-in icon. Replace it with the official product icon from the vendor's brand kit, unmodified."
+    },
+    "figure": {
+      "path": "skill:assets/illustrations/illus-telepresence.png",
+      "note": "Concept illustration shipped with the skill."
+    },
+    "ksu-wordmark-white": {
+      "path": "skill:assets/logos/ksu/ksu-wordmark-white.png",
+      "match": "skill:assets/logos/ksu/ksu-wordmark-white.png",
+      "scope": "all",
+      "alt": "Kent State University wordmark.",
+      "note": "The templates carry a working copy of this wordmark. Replace it before sharing: project.py replace-asset ksu-wordmark-white official:ksu-stacked-white-png (scripts/official_assets.py downloads and checks it)."
+    }
+  },
+  "artifacts": {
+    "flyer-letter": {
+      "spec": "flyer.json",
+      "template": "event-flyer",
+      "output": "agentic-robotics-flyer-letter",
+      "size": "8.5 x 11 in",
+      "formats": [
+        "pptx",
+        "pdf",
+        "png"
+      ],
+      "lint_medium": "document"
+    },
+    "flyer-tabloid": {
+      "spec": "flyer.json",
+      "template": "event-flyer-tabloid",
+      "output": "agentic-robotics-flyer-tabloid",
+      "size": "11 x 17 in",
+      "formats": [
+        "pptx",
+        "pdf",
+        "png"
+      ],
+      "lint_medium": "document"
+    },
+    "poster-17x22": {
+      "spec": "flyer.json",
+      "template": "event-flyer-17x22",
+      "output": "agentic-robotics-poster-17x22",
+      "size": "17 x 22 in",
+      "formats": [
+        "pptx",
+        "pdf",
+        "png"
+      ],
+      "lint_medium": "poster"
+    },
+    "deck": {
+      "spec": "deck.json",
+      "output": "agentic-robotics-workshop-slides",
+      "size": "10 x 5.625 in",
+      "formats": [
+        "pptx",
+        "pdf"
+      ],
+      "lint_medium": "slide"
+    }
+  }
+}
