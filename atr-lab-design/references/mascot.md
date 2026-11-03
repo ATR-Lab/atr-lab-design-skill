@@ -25,25 +25,31 @@ is **not a logo**: the ATR mark, lockups and roundel stay the lab's identity (re
 
 ## 2. Anatomy and colors
 
+Teo's current look is **design 2** (Nov. 2026): a monitor-headed robot redrawn from a lab lead's reference art
+(`assets/mascot/references/lead-ref-*.png`) and mapped onto the brand palette. The first design (a round white head
+with an antenna) is retired; don't use it.
+
 | Part | Look | Color |
 |---|---|---|
-| Head (shell) | Rounded, helmet-like, slightly wider than tall | White `#FFFFFF` |
-| Screen face | Rounded rectangle filling most of the front | Navy `#003976` |
-| Eyes | Two vertical ovals; the expression lives here and in the mouth | Sky `#2C8ECD` |
-| Mouth | A small curve or shape | Gold `#EFAB00` |
-| Ear pods | One rounded pod on each side | Sky `#2C8ECD` |
-| Antenna | Short white stem with a triangle tip (echoes the ATR mark's roof) | White stem, gold `#EFAB00` tip |
-| Hands | Small white gloves with sky cuffs, floating beside the head | White, sky cuffs |
-| Outline | Thick, even, always navy; 5-8% of the head width | Navy `#003976` |
-| Full body (optional) | Navy suit, white limbs and boots | Navy, white |
+| Head (shell) | A boxy, slightly rounded monitor or camera body, a little wider than tall, with small panel lines and bolts | Off-white `#F4F5F8`, cool gray-blue cel shading |
+| Fins | Two pointed cat-ear fins on top, each with a small inner panel | Off-white, sky `#2C8ECD` panels |
+| Screen face | A large dark screen filling most of the front, with one soft diagonal reflection | Navy `#003976` deepening to midnight `#00295F` at the edges |
+| Face | Drawn on the screen as glowing lines: two round dot eyes and a small cat-like "ω" mouth by default; the expression lives here | Gold `#EFAB00`, tiny orange `#DC7533` blush dashes |
+| Lens pods | A cylindrical camera-lens pod on each side of the head | Gray housing, glowing sky `#2C8ECD` lens |
+| Hands | Small white gloves with sky cuffs, floating below or beside the head | Off-white, sky cuffs |
+| Full body (optional) | A short gimbal neck joint and a compact rounded lens-barrel body with a dark lens on one end | Off-white, sky accents |
+| Line art and shading | Crisp dark navy outlines, two-tone anime cel shading, no gradients except the screen | Navy `#003976` |
 
-- **Two forms.** The **head form** (floating head and hands) is the default: emoji, stickers, avatars, chat, small
-  art. The **full body** is for full-figure scenes only: event signs, K-12 material, illustrations where Teo
-  stands or points at something.
-- **Expressions** change only the screen face (and add hands, a "z" or confetti). The shell, ear pods, antenna and
-  colors never change. Nine are ready: happy, thinking, surprised, sorry, determined, laughing, confused, sleeping,
-  excited.
-- **Both themes.** Teo always keeps its navy outline so the white shell survives light backgrounds.
+- **Two forms.** The **head form** (floating head and gloved hands) is the default: emoji, stickers, avatars, chat,
+  small art. The **full body** (gimbal neck and lens-barrel body) is for full-figure scenes only: event signs, K-12
+  material, hero illustrations.
+- **Expressions** change only the face on the screen (and add hands, a "?", a "z", a sweat drop or confetti). The
+  shell, fins, lens pods and colors never change. Nine are ready: happy, thinking, surprised, sorry, determined,
+  laughing, confused, sleeping, excited.
+- **The face is always gold on navy.** The lead's sketches tried green and white faces; the brand version uses Kent
+  State gold so Teo reads as the lab's at a glance. Never put words, numbers or logos on the screen.
+- **Both themes.** The navy line art keeps the off-white shell visible on light backgrounds; stickers add a white
+  die-cut border.
 
 ## 3. Where Teo may appear
 
@@ -52,8 +58,8 @@ is **not a logo**: the ATR mark, lockups and roundel stay the lab's identity (re
 | The Discord server and Slack: avatar, emoji, stickers, banners, bot replies | Letterhead, business cards, certificates, name badges, press releases, grant documents, the website header |
 | K-12 programs, camps, workshops and their handouts, slides and signs | Inside, on top of or instead of the ATR mark, a lockup or the roundel; merged with the Kent State wordmark |
 | Event signage, demo-day fun, lab stickers (UCM approval still applies to printed merch) | As a photo of a real lab robot, or next to real results as if it were evidence |
-| Help and how-to material, error and empty states in lab tools | With text, numbers or logos on its screen face |
-| GitHub README headers for Teo itself (a gold ring on the lab header) | Recolored, restyled (3D, realistic, anime), stretched or redrawn by hand |
+| Help and how-to material, error and empty states in lab tools | With words, numbers or logos on its screen, or with a face that isn't gold |
+| GitHub README headers for Teo itself (a gold ring on the lab header) | Recolored, restyled (3D, photoreal, a different cartoon style), stretched, redrawn by hand, or mixed with the retired first design |
 
 - Teo appears **with** the lab's identity, never instead of it: a piece with Teo still carries the ATR logo (and
   the Kent State wordmark where references/logo-system.md asks for it) as separate elements.
@@ -72,22 +78,33 @@ persona lives in the Teo-Discord-Bot repository (`teo/prompt.md`).
 
 ## 5. Making a new pose
 
-New poses come from the same generator with the same style lock and references, so they match the sheet:
+New poses come from the same generator, style lock and references, so they match the sheet. The settings and the job
+ids of every shipped file are in `assets/mascot/prompts.json`.
+
+**With Higgsfield** (the generator behind design 2): model `gpt_image_2_5`, quality `high`, resolution `2k`,
+background `transparent`, aspect `1:1` for a single pose. Upload `assets/mascot/references/ref-turnaround-head.png`
+and `lead-ref-stickers.png` as image references (`ref-turnaround-body.png` and `lead-ref-hero.png` for full-body
+poses), and write the prompt as: "Emoji of the robot mascot Teo exactly as in the first attached turnaround image
+... One single character, head form, filling about 85 percent of a square frame, readable at 32 pixels. Pose: <the
+pose>. Transparent background, no text, no letters, no numbers, no logos." A pose costs about 3 credits; check the
+cost first (`get_cost`) and the user's go-ahead before a batch.
+
+**Without Higgsfield**, use the Codex CLI on chroma green and key it:
 
 ```bash
 python3 scripts/atr_design.py doctor --group ai-images        # Codex CLI installed and logged in
-STYLE="$(python3 -c "import json;print(json.load(open('assets/mascot/prompts.json'))['style_lock'])")"
+STYLE="$(python3 -c "import json;print(json.load(open('assets/mascot/prompts.json'))['style_lock'].replace('transparent background', 'flat chroma green #00FF00 background'))")"
 scripts/codex_image.sh /tmp/teo-new.png "Emoji of Teo. $STYLE The character fills about 85 percent of the frame and stays readable at 32 pixels. Pose: <describe the pose>." \
-  assets/mascot/teo-avatar.png assets/mascot/references/ref-turnaround-head.png
-python3 scripts/icons/chroma_key.py /tmp/teo-new.png /tmp/teo-new-keyed.png --keep-color --outline 003976
+  assets/mascot/references/ref-turnaround-head.png assets/mascot/references/lead-ref-stickers.png
+python3 scripts/icons/chroma_key.py /tmp/teo-new.png /tmp/teo-new-keyed.png --keep-color
 ```
 
-- Use `references/ref-turnaround-body.png` instead for full-body poses.
 - Describe the pose and expression only; never ask for text, logos or real robots.
-- Keying: `--outline 003976` for emoji and art, `--die-cut` for stickers. Export 512 px masters, 256 px emoji and
-  320 px stickers (under 512 KB).
-- Check against the character sheet side by side: same proportions, same five colors, navy outline, no text.
-  Discard and regenerate anything that drifts (extra limbs, new colors, a mouth on the shell, letters).
+- Trim to a square with even padding; export 512 px masters, 256 px emoji (under 256 KB) and 320 px stickers with a
+  die-cut border (`chroma_key.py --die-cut`, under 512 KB).
+- Check against the character sheet side by side: the boxy head, two cat-ear fins, two lens pods, a gold face on a
+  navy screen, crisp navy line art. Discard and regenerate anything that drifts (an antenna, a round head, extra
+  limbs, a green or white face, letters, a barcode).
 - Record the prompt in your project's manifest (not in the skill), and keep generated poses out of the skill unless
   the lab adopts them.
 

@@ -119,8 +119,10 @@ Run every command from the skill root (the folder that holds this file). All pat
 
 ### Mascot
 
-**Teo** ("teleoperator") is the lab's illustrated mascot and the face of its Discord bot: a white robot head with a
-navy screen face, sky eyes, a gold smile and floating gloved hands (`assets/mascot/`, character sheet included).
+**Teo** ("teleoperator") is the lab's illustrated mascot and the face of its Discord bot. Design 2 (Nov. 2026): a
+boxy monitor head with two cat-ear fins and camera-lens pods, a gold face on a navy screen, floating gloved hands and
+an optional gimbal body, in anime cel shading (`assets/mascot/`, character sheet included; the first design with a
+round head and antenna is retired).
 Use it for Discord, Slack, K-12, workshops, events and stickers, always beside the lab's logo, never on formal
 pieces or in place of the mark (references/mascot.md).
 
@@ -183,7 +185,7 @@ lab's facts: references/brand-foundation.md. Each row's last column is the check
 | Social post image, carousel card, story, caption, hashtags, alt text | `scripts/social_card.py` + `scripts/examples/social/` | social-media.md §4, §5, §7; voice-and-copy.md | look at the PNG at 390 px; lint the caption |
 | **Banner or header at any size**: GitHub README header or social preview, Discord banner, invite splash or profile banner, X header, YouTube banner, OG image, 16:9 title card, square thumbnail | `scripts/atr_design.py banner --preset <name>` (`--list-presets`, `--size WxH`, `--safe-zones`) | community-platforms.md §2, §7 | open the PNG and the `--safe-zones` copy |
 | **Discord or Slack**: server structure, rules, onboarding, emoji, stickers, role colors, bots | `assets/mascot/emoji/`, `assets/mascot/stickers/`, `assets/icons/badges/` (128 px emoji); `banner.py` for art | community-platforms.md | preview on dark `#313338` and white; `contrast.py` for role colors |
-| **The mascot Teo**: avatar, emoji, stickers, a new pose | `assets/mascot/` (character sheet, views, expressions); new poses with `scripts/codex_image.sh` + `icons/chroma_key.py --outline 003976` | mascot.md | side by side with the character sheet |
+| **The mascot Teo**: avatar, emoji, stickers, a new pose | `assets/mascot/` (character sheet, views, expressions); new poses from the style lock and references in `assets/mascot/prompts.json` (Higgsfield GPT Image 2.5 with a transparent background, or `scripts/codex_image.sh` + `icons/chroma_key.py`) | mascot.md §2, §5 | side by side with the character sheet |
 | YouTube thumbnail, video cards, lower thirds, captions | `social_card.py --size youtube-thumb`; `assets/templates/social/ATR-YouTube-Thumbnail-1280x720.pptx` | web-and-digital.md §7-§8; imagery.md §10 | |
 | Press release, news post, award or paper announcement, media kit | brand-foundation.md §9 (proof bank) and §10 (boilerplates) | pr-events-outreach.md §1-§5; voice-and-copy.md §6.7 | `brand_check.py copy.md` |
 | Newsletter, outreach email, parent or teacher email | 600 px layout, web-safe fonts, PNG logos | pr-events-outreach.md §13, §17; web-and-digital.md §4 | |
