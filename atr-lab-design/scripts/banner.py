@@ -5,7 +5,7 @@ banner.py: on-brand banners, headers and thumbnails at any size for the ATR Lab
 
 One command for the pieces agents used to hand-write in PIL: a GitHub repo header, a Discord server
 banner or invite splash, a bot profile banner, an X header, a YouTube channel banner, a 512 px
-thumbnail that reads at 72 px, a 16:9 title card. The look is the lab's GitHub header style: a navy
+thumbnail that reads at 72 px, a 16:9 title card, a hallway TV slide. The look is the lab's GitHub header style: a navy
 (or midnight or white) ground, the ATR lockup top-left with its clear space, a big title with a gold
 subtitle, the 60-degree triangle lattice on the right, and optionally the gold hazard band on any edge
 and an icon, badge or any image (a mascot) in a gold ring.
@@ -23,6 +23,10 @@ Usage
     python3 scripts/banner.py --size 1500x500 --title "Physical AI" --hazard bottom -o x.png
     python3 scripts/banner.py spec.json -o out.png            # flags override the spec
     python3 scripts/banner.py --preset discord-invite-splash --image teo.png --safe-zones -o splash.png
+    python3 scripts/banner.py --preset signage-16x9 --eyebrow "Workshop" --title "Agentic robotics" \\
+        --details "Sat., Nov. 22, 10 a.m.-2 p.m." --details "Mathematical Sciences Building" \\
+        --qr "https://example.org/register" --qr-label "Scan to register" -o tv-slide.jpg
+    python3 scripts/banner.py spec.json -o header.png --also signage-16x9   # + header-signage-16x9.jpg
     python3 scripts/banner.py --list-presets [--json]
 
 Spec (JSON; every key is optional and mirrors a flag, with - written as _):
@@ -33,13 +37,16 @@ Spec (JSON; every key is optional and mirrors a flag, with - written as _):
      "art": "lattice", "art_side": "right", "hazard": ["bottom"],
      "icon": "code", "badge": "code", "image": "mascot.png", "ring": true, "image_pos": "right",
      "image_fit": "contain", "title_font": "sans-bold", "seed": 7, "display_width": 1000,
-     "text_box": [64, 200, 800, 160], "output": "header.png"}
+     "text_box": [64, 200, 800, 160], "output": "header.png",
+     "details": ["Thu., Nov. 13, 4-6 p.m.", "Mathematical Sciences Building"],
+     "qr": "https://example.org/register", "qr_label": "Scan to register", "ksu": true}
 
 Options
 -------
 --preset NAME | --size WxH   canvas (a preset with --size keeps its zones, scaled)
 --ground navy|midnight|white field color (tokens)
 --eyebrow/--title/--subtitle copy; [brackets] are refused unless --allow-placeholders
+--details LINE  a details line under the subtitle (date and time, place); repeat for up to 3 lines
 --lockup horizontal|horizontal-short|stacked|mark|badge|seal|roundel|none; --lockup-variant;
         --lockup-height PX. Its clear space (logos.json) is kept from the edges and from text, and it
         is never set below its screen minimum at the display width (raised, or refused).
@@ -49,24 +56,36 @@ Options
 --icon NAME (an ATR glyph, gold on dark grounds, navy on white), --badge NAME, --image PATH (any
         image, e.g. a mascot), --ring/--no-ring, --image-pos right|left|center|bottom-right,
         --image-fit contain|cover
+--qr URL [--qr-label TEXT]   a QR code in the image slot (wide presets), navy on white with its quiet zone,
+        at least 20 % of the height, with the call to action and the printed address under it; the URL is encoded
+        exactly and the finished image (and a written JPEG) is decoded to check it (needs zxing-cpp)
+--ksu / --no-ksu   the Kent State Stacked wordmark bottom-right as a separate signature on a plain area
+        (default on signage presets): the official file when scripts/official_assets.py has fetched it, else the
+        working copy with a warning
 --title-font sans-bold|sans-black|slab-bold, --display-width PX (legibility floors are computed at the
         width people see the banner: 11 px for small text, 15 px for the title)
 --text-box X,Y,W,H  put the text block there yourself (refused if it touches a band, a keep-out zone
         or the lockup's clear space)
 --safe-zones   also write <out>-zones.png: margins, safe area, keep-out zones, band clear zones,
         lockup clear space, text and image boxes
---report       print the layout as JSON; -o/--out PATH (default banner.png)
+--report       print the layout as JSON; -o/--out PATH (default banner.png; .jpg writes a JPEG at quality 92
+        without chroma subsampling, which TV slideshow modes read)
+--also P1,P2   also write the same banner at other presets as <out>-<preset> (signage presets as .jpg),
+        dropping pixel-specific keys (size, text box, lockup height): 16:9 TV versions of any banner
 
 Presets (python3 scripts/banner.py --list-presets): github-header 1600x400, github-social 1280x640,
 discord-banner 960x540, discord-invite-splash 1920x1080 (calm center keep-out for the invite card),
 profile-banner 1200x480 (calm bottom-left for the avatar), x-header 1500x500 (avatar keep-out),
 youtube-banner 2560x1440 (text and logo inside the 1546x423 safe area), og-image 1200x630,
 thumbnail-square 512x512 (reads at 72 px: icon only, text only if it stays legible), slide-16x9
-1920x1080.
+1920x1080, signage-16x9 1920x1080 and signage-4k 3840x2160 (hallway TVs: text at least 48 px and titles 80 px
+at 1080p, everything inside the overscan-safe 5 % margin, the Kent State wordmark bottom-right, a note above
+20 words).
 
 Exit codes: 0 rendered; 1 usage or spec error (unknown preset, icon, file); 2 refused (copy does not
 fit at the legibility floor, text or logo on the hazard band or a keep-out zone, contrast, lockup below
-its minimum, a retired fact in the copy); 3 [bracketed] placeholder refused.
+its minimum, a retired fact in the copy, a QR code that is too small or does not decode); 3 [bracketed]
+placeholder refused.
 
 Programmatic use:
     from banner import render, PRESETS
@@ -95,7 +114,7 @@ import atr_brand as B  # noqa: E402
 from social_card import (LayoutError, PLACEHOLDER_RE, Style, Typesetter, check_copy,  # noqa: E402
                          resolve_spec_path, set_text)
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 SS = 4                     # supersampling for vector shapes
 MIN_READ_PX = 11           # smallest readable text at the display size
 MIN_TITLE_PX = 15          # smallest title at the display size
@@ -134,6 +153,10 @@ class Preset:
     safe: Optional[tuple] = None         # text and logos stay inside
     calm: tuple = ()                     # keep-out: no text, logos or art
     notes: str = ""
+    floors_px: tuple = ()                # (small text, title) canvas px at this size, for screens read at a distance
+    title_max: float = 0.0               # largest title as a share of the safe height (0: the header default)
+    max_words: int = 0                   # warn above this many words (signage: one glance while walking)
+    ksu: bool = False                    # Kent State wordmark bottom-right by default
 
 
 PRESETS = {p.name: p for p in [
@@ -164,6 +187,14 @@ PRESETS = {p.name: p for p in [
            notes="At 72 px only a glyph reads: text must be one or two short words"),
     Preset("slide-16x9", 1920, 1080, "16:9 title card or video title (1920x1080)", 1280, lockup_h=0.13,
            hazard=("bottom",)),
+    Preset("signage-16x9", 1920, 1080, "Hallway TV slide (slideshow mode, USB stick or signage player), 1080p",
+           1920, lockup_h=0.12, hazard=("bottom",), safe=(0.05, 0.05, 0.95, 0.95), floors_px=(48, 80),
+           title_max=0.13, max_words=20, ksu=True,
+           notes="Read from 2-5 m: text at least 48 px, title 80 px, inside x 96-1824, y 54-1026 (overscan); "
+                 "Kent State wordmark bottom-right; save as .jpg for TV slideshows"),
+    Preset("signage-4k", 3840, 2160, "Hallway TV slide on a 4K panel (3840x2160)", 3840, lockup_h=0.12,
+           hazard=("bottom",), safe=(0.05, 0.05, 0.95, 0.95), floors_px=(96, 160), title_max=0.13, max_words=20,
+           ksu=True, notes="signage-16x9 at twice the pixels; use it only when the panel plays 4K natively"),
 ]}
 
 
@@ -513,13 +544,14 @@ class TextPlan:
 
 def plan_text(copy: dict, col_w: float, avail_h: float, maxes: dict, floors: dict, colors: dict,
               title_face: str, align: str) -> TextPlan:
-    """Fit eyebrow (1 line, tracked caps), title (2 lines) and subtitle (2 lines) into col_w x avail_h,
+    """Fit eyebrow (1 line, tracked caps), title (2 lines), subtitle (2 lines) and details (3 lines: date, time,
+    place) into col_w x avail_h,
     stepping every role down together from its maximum to its floor. Raises RefusedError with what to
     shorten when nothing fits."""
-    roles = [r for r in ("eyebrow", "title", "subtitle") if copy.get(r)]
+    roles = [r for r in ("eyebrow", "title", "subtitle", "details") if copy.get(r)]
     if not roles:
         return TextPlan()
-    max_lines = {"eyebrow": 1, "title": 2, "subtitle": 2}
+    max_lines = {"eyebrow": 1, "title": 2, "subtitle": 2, "details": 3}
     last_err = None
     for step in range(0, 60):
         k = 1.0 - step * 0.025
@@ -528,6 +560,7 @@ def plan_text(copy: dict, col_w: float, avail_h: float, maxes: dict, floors: dic
             "eyebrow": Style("sans-semibold", sizes.get("eyebrow", 10), colors["eyebrow"], 1.2, 0.08, True, align),
             "title": Style(title_face, sizes.get("title", 10), colors["title"], 1.04, -0.005, False, align),
             "subtitle": Style("sans-semibold", sizes.get("subtitle", 10), colors["subtitle"], 1.18, 0.0, False, align),
+            "details": Style("sans", sizes.get("details", 10), colors["details"], 1.22, 0.0, False, align),
         }
         plan = TextPlan(sizes=sizes)
         try:
@@ -536,14 +569,14 @@ def plan_text(copy: dict, col_w: float, avail_h: float, maxes: dict, floors: dic
             prev = None
             for r in roles:
                 st = styles[r]
-                lines = set_text(st, copy[r], col_w, balance=(r != "subtitle"))
+                lines = set_text(st, copy[r], col_w, balance=(r not in ("subtitle", "details")))
                 if len(lines) > max_lines[r]:
                     ok = False
                     last_err = f"the {r} needs {len(lines)} lines at {st.px} px (at most {max_lines[r]})"
                     break
                 m = st.metrics
                 if prev is not None:
-                    gap = {"eyebrow": 0.0, "title": 0.42, "subtitle": 0.34}[r] * styles["title"].px \
+                    gap = {"eyebrow": 0.0, "title": 0.42, "subtitle": 0.34, "details": 0.36}[r] * styles["title"].px \
                         if "title" in roles else 0.5 * st.px
                     if prev == "eyebrow":
                         gap = 0.62 * sizes["eyebrow"] + (0.15 * st.px if r == "title" else 0)
@@ -586,7 +619,121 @@ def draw_text(canvas: Image.Image, plan: TextPlan, x: float, y_top: float, col_w
 DEFAULTS = dict(preset=None, size=None, ground=None, eyebrow=None, title=None, subtitle=None, lockup=None,
                 lockup_variant=None, lockup_height=None, art=None, art_side=None, hazard=None, icon=None,
                 badge=None, image=None, ring=None, image_pos=None, image_fit="contain", title_font="sans-bold",
-                seed=None, display_width=None, text_box=None, output=None)
+                seed=None, display_width=None, text_box=None, output=None, details=None, qr=None, qr_label=None,
+                ksu=None)
+SIGNAGE_JPEG_QUALITY = 92
+
+
+def ksu_wordmark(variant: str) -> tuple:
+    """(path, source, asset id) of the Kent State Stacked wordmark for a variant (white or color): the official
+    file from the cache when it has been fetched and still verifies, else the skill's working copy."""
+    aid = f"ksu-stacked-{'white' if variant == 'white' else 'color'}-png"
+    try:
+        import official_assets as OA
+        p = OA.cached_path(aid)
+        if p.is_file() and OA.verify(p):
+            return p, "official", aid
+    except Exception:                              # no manifest or cache: fall back to the working copy
+        pass
+    return B.logo_path("ksu-wordmark", variant), "working-copy", aid
+
+
+def plan_qr(url: str, label: str, content: tuple, mx: float, ksu_info: Optional[dict], label_floor: int,
+            ref_h: float, W: int, H: int, G: dict) -> dict:
+    """Place a QR code (navy on white, quiet zone included) on the right, with the call to action and the printed
+    address under it. The code is at least 20 % of the slide height (references/web-and-digital.md section 9);
+    the URL is encoded exactly as given. Raises RefusedError when it does not fit."""
+    try:
+        import qr_code as QRC
+    except ImportError as exc:  # pragma: no cover
+        raise SpecError(f"qr needs scripts/qr_code.py: {exc}")
+    try:
+        QRC.check_url(url)
+    except QRC.QRError as exc:
+        raise RefusedError(str(exc))
+    top = content[1]
+    bottom = ksu_info["clear"][1] if ksu_info else content[3]
+    zw = round(min(0.3 * W, 0.95 * (bottom - top)))
+    lw = zw + mx
+    px = max(label_floor, round(0.045 * ref_h))
+    cta = Style("sans-semibold", px, B.rgb(G["subtitle"]), 1.2, 0.0, False, "center")
+    adr = Style("sans", px, B.rgb(G["title"]), 1.2, 0.0, False, "center")
+    lines = []
+    for st, text in ((cta, label), (adr, QRC.fallback_text(url))):
+        if not text:
+            continue
+        try:
+            wrapped = set_text(st, text, lw, balance=False) if st is cta else break_address(st, text, lw)
+        except LayoutError as exc:
+            raise RefusedError(f"the QR label does not fit under the code: {exc}")
+        for ln in wrapped:
+            w = Typesetter(st).width(ln)
+            if w > lw + 0.5:
+                raise RefusedError(f"'{ln}' is {w:.0f} px wide at {px} px, wider than the {lw:.0f} px under the QR "
+                                   "code; use a shorter page address (not a link shortener) or a shorter label")
+            lines.append((st, ln, w))
+    if len(lines) > 3:
+        raise RefusedError("the QR label and address need more than 3 lines under the code; shorten the label")
+    pitch = round(px * 1.2)
+    gap = round(0.5 * px) if lines else 0
+    label_h = len(lines) * pitch
+    Q = int(min(zw, bottom - top - gap - label_h))
+    if Q < 0.2 * H:
+        raise RefusedError(f"the QR code would be {Q} px, under 20 % of the slide height ({0.2 * H:.0f} px), too "
+                           "small to scan from across a hallway; shorten the label or use --no-ksu")
+    cx = content[2] - mx - zw / 2
+    y0 = top + (bottom - top - (Q + gap + label_h)) / 2
+    half = max([Q / 2] + [w / 2 for _, _, w in lines])
+    return {"url": url, "side_px": Q, "box": (cx - Q / 2, y0, cx + Q / 2, y0 + Q),
+            "zone": (cx - half, y0, cx + half, y0 + Q + gap + label_h), "cx": cx, "label_top": y0 + Q + gap,
+            "lines": lines, "pitch": pitch, "label_lines": [ln for _, ln, _ in lines]}
+
+
+def break_address(st: Style, text: str, width: float) -> list:
+    """Split a printed web address into lines no wider than width, breaking only after a / (or before a ? or
+    #), never inside a host name or a path segment. A part that is still too wide stays whole (and is refused
+    by the caller)."""
+    ts = Typesetter(st)
+    parts = re.findall(r"[^/?#]+/?|[?#][^/?#]*/?|/", text)
+    lines, cur = [], ""
+    for part in parts:
+        if cur and ts.width(cur + part) > width:
+            lines.append(cur)
+            cur = part
+        else:
+            cur += part
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def draw_qr(canvas: Image.Image, info: dict) -> None:
+    """Draw a planned QR code (made by qr_code.make_qr at the exact pixel size) and its label lines."""
+    import tempfile
+    import qr_code as QRC
+    Q = int(info["side_px"])
+    with tempfile.TemporaryDirectory() as td:
+        p = QRC.make_qr(info["url"], Path(td) / "qr.png", size_in=Q / 100.0, dpi=100)
+        code = Image.open(p).convert("RGBA")
+        code.load()
+    canvas.alpha_composite(code, (int(round(info["box"][0])), int(round(info["box"][1]))))
+    d = ImageDraw.Draw(canvas)
+    for i, (st, ln, w) in enumerate(info["lines"]):
+        Typesetter(st).draw(d, info["cx"] - w / 2, info["label_top"] + st.metrics["cap"] + i * info["pitch"], ln)
+
+
+def verify_qr(image: Image.Image, url: str, warnings: list) -> Optional[bool]:
+    """Decode every QR code in the image and refuse unless one is exactly url. Returns True, or None (with a
+    warning) when zxing-cpp is not installed."""
+    import qr_code as QRC
+    try:
+        found = QRC.decode_pil(image.convert("RGB"))
+    except RuntimeError as exc:
+        warnings.append(f"the QR code was not decoded ({exc}); scan it with a phone before it goes up")
+        return None
+    if url not in found:
+        raise RefusedError(f"the QR code decodes to {found or 'nothing'}, not {url}")
+    return True
 
 
 def _norm_hazard(v) -> tuple:
@@ -623,7 +770,9 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
         pre = PRESETS[sp["preset"]]
         if sp["size"]:
             w, h = parse_size(sp["size"])
-            pre = replace(pre, w=w, h=h, display_w=int(round(pre.display_w * w / pre.w)))
+            k = min(w / pre.w, h / pre.h)
+            pre = replace(pre, w=w, h=h, display_w=int(round(pre.display_w * w / pre.w)),
+                          floors_px=tuple(max(1, int(round(f * k))) for f in pre.floors_px))
     elif sp["size"]:
         pre = custom_preset(*parse_size(sp["size"]))
     else:
@@ -653,18 +802,36 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
     if title_face not in ("sans-bold", "sans-black", "slab-bold"):
         raise SpecError("title_font: use sans-bold, sans-black or slab-bold")
 
+    ksu = pre.ksu if sp["ksu"] is None else bool(sp["ksu"])
+    if (sp["qr"] or ksu) and pre.layout != "header":
+        raise SpecError("qr and ksu need a wide preset (slide, signage or header), not a square tile")
+    if sp["qr"] and (sp["image"] or sp["icon"] or sp["badge"]):
+        raise SpecError("a QR code takes the image slot: use qr or an image, icon or badge, not both")
+
     # copy checks
     copy = {k: str(sp[k]).strip() for k in ("eyebrow", "title", "subtitle") if sp.get(k)}
+    details = sp["details"]
+    if isinstance(details, (list, tuple)):
+        details = "\n".join(str(x).strip() for x in details if str(x).strip())
+    if details and str(details).strip():
+        copy["details"] = str(details).strip()
+    qr_label = str(sp["qr_label"]).strip() if sp["qr_label"] else ""
+    checked = dict(copy, **({"qr_label": qr_label} if qr_label else {}))
     if not allow_placeholders:
-        ph = [f"{k}: {m}" for k, v in copy.items() for m in PLACEHOLDER_RE.findall(v)]
+        ph = [f"{k}: {m}" for k, v in checked.items() for m in PLACEHOLDER_RE.findall(v)]
         if ph:
             raise PlaceholderError("placeholder text: " + "; ".join(ph) + " (use --allow-placeholders for a draft)")
-    errs, notes = check_copy(copy)
+    errs, notes = check_copy(checked)
     if errs:
         raise RefusedError("; ".join(errs))
     warnings += notes
     for role in copy:
-        check_pair(G[role], ground, role)
+        check_pair(G["title" if role == "details" else role], ground, role)
+    if pre.max_words:
+        words = len(re.findall(r"[^\s·|/,–-]+", " ".join(checked.values())))
+        if words > pre.max_words:
+            warnings.append(f"{words} words: a hallway slide is read in one glance (7-10 s), so keep it to about "
+                            f"{pre.max_words} (references/web-and-digital.md section 10)")
 
     canvas = Image.new("RGBA", (W, H), ground_rgb + (255,))
     meta: dict = {"preset": pre.name, "size": [W, H], "ground": ground, "display_width": display_w,
@@ -708,13 +875,17 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
     read_floor = math.ceil(MIN_READ_PX / view)
     floors = {"eyebrow": read_floor, "subtitle": read_floor, "title": math.ceil(MIN_TITLE_PX / view)}
     floors["title"] = max(floors["title"], int(read_floor * 1.3))
+    if pre.floors_px:                                     # screens read at a distance set their own floors
+        floors = {"eyebrow": pre.floors_px[0], "subtitle": pre.floors_px[0], "title": pre.floors_px[1]}
+    floors["details"] = floors["subtitle"]
     if pre.layout == "header":
-        tmax = min(0.19 * ref_h, 0.055 * ref_w)
+        tmax = pre.title_max * ref_h if pre.title_max else min(0.19 * ref_h, 0.055 * ref_w)
     else:
         tmax = 0.16 * min(base_w, base_h)
     maxes = {"title": max(floors["title"], round(tmax)),
              "subtitle": max(floors["subtitle"], round(tmax * 0.40)),
              "eyebrow": max(floors["eyebrow"], round(tmax * 0.30))}
+    maxes["details"] = maxes["subtitle"]
     meta["floors_px"] = floors
 
     # lockup
@@ -766,7 +937,36 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
                 "box": box, "clear": clear, "clear_x": X}
         meta["lockup"] = {k: ([round(v) for v in val] if isinstance(val, tuple) else val) for k, val in lock.items()}
 
+    # Kent State wordmark: a separate signature, bottom-right on slides, on a plain area (logo-system.md section 9)
+    ksu_info = None
+    if ksu:
+        kr = B.logo_rules("ksu-wordmark")
+        kvar = B.logo_variant_for(ground, "ksu-wordmark")
+        kpath, ksrc, kid = ksu_wordmark(kvar)
+        kaspect = kr["aspect_w_over_h"]
+        kh = (lock["box"][3] - lock["box"][1]) if lock else 0.12 * ref_h     # about as tall as the ATR lockup
+        kw = max(kh * kaspect, kr["min_screen_px"] / view)
+        kh = kw / kaspect
+        K = kr["clear_x_over_height"] * kh
+        kbox = (content[2] - kw, content[3] - kh, content[2], content[3])
+        kclear = inflate(kbox, K)
+        if lock and intersects(kclear, lock["clear"]):
+            raise RefusedError("the Kent State wordmark's clear space would touch the ATR lockup's; use a larger "
+                               "canvas or --no-ksu")
+        for c in calm:
+            if intersects(kbox, c):
+                raise RefusedError(f"the Kent State wordmark would sit in a keep-out zone {list(map(round, c))}")
+        for r in band_rects_pre:
+            if intersects(kclear, r):
+                raise RefusedError("the Kent State wordmark's clear space would touch the hazard band")
+        ksu_info = {"path": kpath, "source": ksrc, "id": kid, "variant": kvar, "box": kbox, "clear": kclear}
+        meta["ksu"] = {"source": ksrc, "id": kid, "variant": kvar, "box": [round(v) for v in kbox]}
+        if ksrc != "official":
+            warnings.append(f"Kent State wordmark: the skill's working copy. Fetch the official file before this goes "
+                            f"on a screen: python3 scripts/official_assets.py fetch {kid}")
+
     # image / icon / badge
+    qr_info = None
     img = None
     glyph = False
     if sp["badge"]:
@@ -801,6 +1001,9 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
             col[2] = content[0] + 0.62 * base_w
         if img is not None:
             if image_pos == "bottom-right":
+                if ksu_info:
+                    raise RefusedError("bottom-right is the Kent State wordmark's place on a slide; use --image-pos "
+                                       "right or left, or --no-ksu")
                 D = int(round(min(0.24 * H, 0.2 * W)))
                 cx, cy = content[2] - D / 2, content[3] - D / 2
             elif image_pos == "left":
@@ -812,8 +1015,15 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
                 cx, cy = content[2] - mx - D / 2, (content[1] + content[3]) / 2
                 if pre.safe and (safe[2] - safe[0]) <= 0.8 * W:
                     cx = content[2] - D / 2
+                if ksu_info:                              # stay above the wordmark's clear space
+                    D = int(round(min(D, 0.95 * (ksu_info["clear"][1] - content[1]))))
+                    cy = (content[1] + ksu_info["clear"][1]) / 2
                 col[2] = min(col[2], cx - D / 2 - 0.75 * mx)
             image_box = (cx - D / 2, cy - D / 2, cx + D / 2, cy + D / 2)
+        elif sp["qr"]:
+            qr_info = plan_qr(str(sp["qr"]), qr_label, content, mx, ksu_info, floors["details"], ref_h, W, H, G)
+            image_box = qr_info["box"]
+            col[2] = min(col[2], qr_info["zone"][0] - 0.75 * mx)
         if lock:
             col[1] = max(col[1], lock["box"][3] + max(lock["clear_x"], 0.06 * H))
         # keep-out zones: shrink the column whichever way keeps the larger area
@@ -844,6 +1054,7 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
             raise SpecError("text_box: X,Y,W,H in px")
         col = (tb[0], tb[1], tb[0] + tb[2], tb[1] + tb[3])
     colors = {r: B.rgb(G[r]) for r in ("title", "subtitle", "eyebrow")}
+    colors["details"] = colors["title"]
 
     # plan text
     plan = TextPlan()
@@ -895,6 +1106,10 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
                 raise RefusedError(f"text would sit in a keep-out zone {list(map(round, c))}")
         if lock and intersects(tight, lock["clear"]):
             raise RefusedError("text would sit inside the lockup's clear space")
+        if ksu_info and intersects(tight, ksu_info["clear"]):
+            raise RefusedError("text would sit inside the Kent State wordmark's clear space")
+        if qr_info and intersects(tight, qr_info["zone"]):
+            raise RefusedError("text would run into the QR code or its label")
         if pre.safe and (tight[0] < safe[0] or tight[1] < safe[1] or tight[2] > safe[2] or tight[3] > safe[3]):
             raise RefusedError(f"text would leave the safe area {list(map(round, safe))}")
         if tight[0] < 0 or tight[1] < 0 or tight[2] > W or tight[3] > H:
@@ -918,6 +1133,10 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
             protect.append(inflate(text_box, 0.5 * mx))
         if lock:
             protect.append(lock["clear"])
+        if ksu_info:
+            protect.append(inflate(ksu_info["clear"], 0.25 * mx))
+        if qr_info:
+            protect.append(inflate(qr_info["zone"], 0.25 * mx))
         x0 = max(round(0.56 * W), (text_box[2] + mx) if (text_box and art_side == "right") else 0)
         if art_side == "sides":
             x0 = round(0.70 * W)
@@ -942,6 +1161,21 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
         bx = lock["box"]
         lw, lh = int(round(bx[2] - bx[0])), int(round(bx[3] - bx[1]))
         canvas.alpha_composite(lim.resize((lw, lh), Image.LANCZOS), (int(round(bx[0])), int(round(bx[1]))))
+
+    # Kent State wordmark
+    if ksu_info:
+        kb = ksu_info["box"]
+        kim = Image.open(ksu_info["path"]).convert("RGBA")
+        canvas.alpha_composite(kim.resize((int(round(kb[2] - kb[0])), int(round(kb[3] - kb[1]))), Image.LANCZOS),
+                               (int(round(kb[0])), int(round(kb[1]))))
+
+    # QR code and its label, then check that the slide decodes to the exact URL
+    if qr_info:
+        draw_qr(canvas, qr_info)
+        meta["qr"] = {k: qr_info[k] for k in ("url", "side_px", "label_lines")}
+        meta["qr"]["box"] = [round(v) for v in qr_info["box"]]
+        meta["qr"]["decoded"] = verify_qr(canvas, qr_info["url"], warnings)
+        image_box = None
 
     # image
     if image_box:
@@ -972,7 +1206,8 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
                         "lines": [ln.text for ln in plan.lines]}
     meta["bands"] = [list(map(round, r)) for r in band_rects]
     meta["_overlay"] = {"content": content, "safe": safe if pre.safe else None, "calm": calm,
-                        "band_keep": band_keep, "lock": lock, "text": text_box, "image": image_box, "col": col}
+                        "band_keep": band_keep, "lock": lock, "text": text_box, "image": image_box, "col": col,
+                        "ksu": ksu_info["clear"] if ksu_info else None, "qr": qr_info["zone"] if qr_info else None}
     return canvas.convert("RGB"), meta
 
 
@@ -997,9 +1232,39 @@ def zones_overlay(img: Image.Image, meta: dict) -> Image.Image:
     box(ov["safe"], (40, 220, 80))
     if ov["lock"]:
         box(ov["lock"]["clear"], (255, 230, 0))
+    box(ov.get("ksu"), (255, 230, 0))
+    box(ov.get("qr"), (60, 120, 255))
     box(ov["text"], (255, 0, 220))
     box(ov["image"], (60, 120, 255))
     return Image.alpha_composite(base, lay).convert("RGB")
+
+
+# --------------------------------------------------------------------------- output
+def save_image(img: Image.Image, out: Path, meta: dict) -> Path:
+    """Write a PNG, or a JPEG (quality 92, no chroma subsampling, so small text stays sharp) for .jpg/.jpeg,
+    which is what most TV slideshow modes read from a USB stick. A QR code is decoded again from the written
+    file, since JPEG compression must not break it."""
+    if out.suffix.lower() in (".jpg", ".jpeg"):
+        img.save(out, quality=SIGNAGE_JPEG_QUALITY, subsampling=0, optimize=True)
+        if meta.get("qr"):
+            with Image.open(out) as saved:
+                meta["qr"]["decoded_from_file"] = verify_qr(saved, meta["qr"]["url"], meta["warnings"])
+    else:
+        img.save(out, optimize=True)
+    return out
+
+
+def variant_spec(spec: dict, preset: str) -> dict:
+    """The same banner for another preset: pixel-specific keys (size, text box, lockup height, display width,
+    output) are dropped, and an image placed bottom-right moves to the right where the Kent State wordmark goes."""
+    if preset not in PRESETS:
+        raise SpecError(f"unknown preset '{preset}' in --also; presets: {', '.join(PRESETS)}")
+    out = {k: v for k, v in spec.items()
+           if k not in ("size", "text_box", "lockup_height", "display_width", "output", "preset")}
+    out["preset"] = preset
+    if out.get("image_pos") == "bottom-right" and PRESETS[preset].ksu and out.get("ksu") is not False:
+        out.pop("image_pos")
+    return out
 
 
 # --------------------------------------------------------------------------- CLI
@@ -1026,13 +1291,19 @@ def main(argv=None) -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter,
                                  epilog="Full guide: the module docstring (python3 -c 'import banner; help(banner)').")
     ap.add_argument("spec", nargs="?", help="optional JSON spec; flags override it")
-    ap.add_argument("-o", "--out", help="output PNG (default: the spec's output, else banner.png)")
+    ap.add_argument("-o", "--out", help="output .png or .jpg (default: the spec's output, else banner.png)")
     ap.add_argument("--preset", help="named canvas (see --list-presets)")
     ap.add_argument("--size", help="WxH in px (custom canvas, or rescale a preset)")
     ap.add_argument("--ground", help="navy (default), midnight or white")
     ap.add_argument("--eyebrow")
     ap.add_argument("--title")
     ap.add_argument("--subtitle")
+    ap.add_argument("--details", action="append", help="a details line (date and time, place); repeat for each line")
+    ap.add_argument("--qr", help="URL for a QR code in the image slot, encoded exactly (slides and signage)")
+    ap.add_argument("--qr-label", help="call to action under the QR code, e.g. 'Scan to RSVP'")
+    ap.add_argument("--ksu", dest="ksu", action="store_true", default=None,
+                    help="Kent State wordmark bottom-right (default on signage presets)")
+    ap.add_argument("--no-ksu", dest="ksu", action="store_false", help="no Kent State wordmark")
     ap.add_argument("--lockup", help="horizontal, horizontal-short, stacked, mark, badge, seal/roundel or none")
     ap.add_argument("--lockup-variant", help="navy, white, gold, twotone, twotone-reverse (default: by ground)")
     ap.add_argument("--lockup-height", type=float, help="lockup height in px")
@@ -1053,6 +1324,8 @@ def main(argv=None) -> int:
     ap.add_argument("--allow-placeholders", action="store_true", help="render [bracketed] placeholders (draft)")
     ap.add_argument("--safe-zones", action="store_true", help="also write <out>-zones.png (QA overlay)")
     ap.add_argument("--report", action="store_true", help="print the layout as JSON")
+    ap.add_argument("--also", help="comma list of presets: also write the same banner at each, as "
+                    "<out>-<preset> (signage presets as .jpg), e.g. --also signage-16x9")
     ap.add_argument("--list-presets", action="store_true")
     ap.add_argument("--json", action="store_true", help="with --list-presets: JSON")
     ap.add_argument("--quiet", action="store_true")
@@ -1093,19 +1366,44 @@ def main(argv=None) -> int:
         return 2
     out = Path(a.out or spec.get("output") or "banner.png").expanduser()
     out.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out, optimize=True)
+    try:
+        save_image(img, out, meta)
+    except RefusedError as exc:
+        print(f"refused: {exc}", file=sys.stderr)
+        return 2
     written = [str(out)]
     if a.safe_zones:
         zp = out.with_name(out.stem + "-zones.png")
         zones_overlay(img, meta).save(zp)
         written.append(str(zp))
+    status = 0
+    for name in [x.strip() for x in (a.also or "").split(",") if x.strip()]:
+        try:
+            img2, meta2 = render(variant_spec(spec, name), base_dir, a.allow_placeholders)
+            ext = ".jpg" if name.startswith("signage") else out.suffix
+            out2 = out.with_name(f"{out.stem}-{name}{ext}")
+            save_image(img2, out2, meta2)
+        except (SpecError, KeyError) as exc:
+            print(f"spec error ({name}): {str(exc).strip(chr(34))}", file=sys.stderr)
+            status = max(status, 1)
+            continue
+        except (RefusedError, LayoutError) as exc:
+            print(f"refused ({name}): {exc}", file=sys.stderr)
+            status = 2
+            continue
+        written.append(str(out2))
+        meta["warnings"] += [f"{name}: {w}" for w in meta2["warnings"]]
+        if a.safe_zones:
+            zp = out2.with_name(out2.stem + "-zones.png")
+            zones_overlay(img2, meta2).save(zp)
+            written.append(str(zp))
     for w in meta["warnings"]:
         print(f"note: {w}", file=sys.stderr)
     if a.report:
         print(json.dumps({k: v for k, v in meta.items() if not k.startswith("_")}, indent=1))
     elif not a.quiet:
         print(f"wrote {', '.join(written)} ({meta['size'][0]}x{meta['size'][1]}, {meta['preset']})")
-    return 0
+    return status
 
 
 if __name__ == "__main__":

@@ -269,6 +269,73 @@ def test_banner_cli(tmp_path):
     assert r.returncode == 1
 
 
+# --------------------------------------------------------------------------- banner: hallway TV signage
+EVENT = {"preset": "signage-16x9", "eyebrow": "Workshop", "title": "Agentic robotics workshop",
+         "details": ["Sat., Nov. 22, 10 a.m.-2 p.m.", "Mathematical Sciences Building"]}
+
+
+def test_signage_floors_safe_area_and_ksu():
+    _, meta = banner.render(dict(EVENT, image=str(SKILL / "assets/mascot/views/teo-body-three-quarter.png")))
+    sizes = meta["text"]["sizes_px"]
+    assert sizes["title"] >= 80 and sizes["details"] >= 48 and sizes["eyebrow"] >= 48
+    x0, y0, x1, y1 = meta["text"]["box"]
+    assert x0 >= 96 and y0 >= 54 and x1 <= 1824 and y1 <= 1026            # inside overscan graphics-safe
+    kx0, ky0, kx1, ky1 = meta["ksu"]["box"]
+    assert kx0 > 1440 and ky0 > 700 and kx1 <= 1824 and ky1 <= 1026       # bottom-right, inside safe
+    assert meta["ksu"]["variant"] == "white"
+    ib = meta["image_box"]
+    assert ib[3] <= ky0                                                    # image stays above the wordmark
+
+
+def test_signage_4k_scales_floors():
+    _, meta = banner.render(dict(EVENT, preset="signage-4k"))
+    assert meta["size"] == [3840, 2160]
+    assert meta["text"]["sizes_px"]["title"] >= 160 and meta["text"]["sizes_px"]["details"] >= 96
+
+
+def test_signage_qr_decodes_exactly():
+    pytest.importorskip("zxingcpp")
+    url = "https://atr-lab.github.io/workshops/agentic-robotics"
+    _, meta = banner.render(dict(EVENT, qr=url, qr_label="Scan to register"))
+    assert meta["qr"]["decoded"] is True and meta["qr"]["url"] == url
+    assert meta["qr"]["side_px"] >= 0.2 * 1080
+    assert meta["qr"]["label_lines"] == ["Scan to register", "atr-lab.github.io/workshops/", "agentic-robotics"]
+
+
+def test_signage_refusals_and_word_warning():
+    with pytest.raises(banner.SpecError):
+        banner.render(dict(EVENT, qr="https://example.org", icon="email"))
+    with pytest.raises(banner.RefusedError):
+        banner.render(dict(EVENT, qr="https://example.org/a b"))
+    with pytest.raises(banner.RefusedError):
+        banner.render(dict(EVENT, icon="email", image_pos="bottom-right"))
+    with pytest.raises(banner.SpecError):
+        banner.render({"preset": "thumbnail-square", "icon": "email", "ksu": True})
+    _, meta = banner.render(dict(EVENT, subtitle="Hands-on sessions with real robots and the lab's own stack"))
+    assert any("words" in w for w in meta["warnings"])
+    _, meta = banner.render({"preset": "slide-16x9", "title": "No wordmark by default"})
+    assert "ksu" not in meta
+
+
+def test_break_address_only_after_slashes():
+    st = banner.Style("sans", 48, (255, 255, 255))
+    lines = banner.break_address(st, "atr-lab.github.io/workshops/agentic-robotics", 700)
+    assert "".join(lines) == "atr-lab.github.io/workshops/agentic-robotics"
+    assert all(ln.endswith("/") for ln in lines[:-1])
+
+
+def test_banner_cli_also_writes_signage_jpeg(tmp_path):
+    from PIL import Image
+    out = tmp_path / "h.png"
+    assert banner.main(["--preset", "github-header", "--title", "Teo", "-o", str(out), "--also",
+                        "signage-16x9,signage-4k", "--quiet"]) == 0
+    for name, size in (("h-signage-16x9.jpg", (1920, 1080)), ("h-signage-4k.jpg", (3840, 2160))):
+        with Image.open(tmp_path / name) as im:
+            assert im.format == "JPEG" and im.size == size
+    assert banner.main(["--preset", "github-header", "--title", "Teo", "-o", str(out), "--also", "nope",
+                        "--quiet"]) == 1
+
+
 # --------------------------------------------------------------------------- chroma_key outline
 def _green_source(path):
     from PIL import Image, ImageDraw

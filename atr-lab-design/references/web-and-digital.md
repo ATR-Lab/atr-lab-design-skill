@@ -663,8 +663,30 @@ the rendered PDF and reads the PDF link. Never recolor a low-resolution PNG.
 
 ## 10. Digital signage and monitors
 
-In-lab TVs, hallway monitors and demo-day screens. Kent State publishes an Adobe "Monitor Screens" template
-(https://www.kent.edu/brand/templates); ask the department who manages hallway screens and their schedule `[verify]`.
+In-lab TVs, hallway monitors and demo-day screens. The TVs in the Mathematical Sciences Building run in slideshow
+mode, cycling event slides; ask the department who manages them, which file type and resolution they take and
+their schedule `[verify]`. Kent State also publishes an Adobe "Monitor Screens" template
+(https://www.kent.edu/brand/templates).
+
+**Make the slide with `banner.py`** (it applies the rules below: overscan-safe margins, 48 px text and 80 px
+titles, the Kent State wordmark bottom-right on a plain area, a note above 20 words):
+
+```bash
+python3 scripts/atr_design.py banner --preset signage-16x9 --eyebrow "Workshop" --title "Agentic robotics workshop" \
+  --details "Sat., Nov. 22, 10 a.m.-2 p.m." --details "Mathematical Sciences Building" \
+  --qr "https://<the organizer's page>" --qr-label "Scan to register" --safe-zones -o tv-workshop.jpg
+```
+
+- **16:9 versions of any banner:** add `--also signage-16x9` to the command (or spec) that made a GitHub header,
+  Discord banner or other banner; it writes `<name>-signage-16x9.jpg` beside it with the same copy and art.
+- **Image or QR code on the right:** `--image` (Teo from `assets/mascot/views/`, a photo) or `--qr`, not both. The QR
+  code is navy on white, at least 20% of the slide height, with the call to action and the printed address under
+  it; the script decodes the finished JPEG to check it encodes the exact URL.
+- **File:** `.jpg` (most TV slideshow modes read JPEG from a USB stick; some also read PNG). Use `signage-4k` only
+  when the panel plays 3840 × 2160 natively. Name the files so they sort in show order (`01-workshop.jpg`).
+- **Kent State wordmark:** fetch the official file once (`python3 scripts/official_assets.py fetch
+  ksu-stacked-white-png`, and `ksu-stacked-color-png` for white slides); until then the script uses the working copy
+  and warns. `--no-ksu` only when the screen's own frame already carries the university logo.
 
 - **Canvas:** 1920 × 1080 (16:9), or 3840 × 2160 on 4K panels; confirm the display's native resolution. Keep text
   inside graphics-safe (x 96-1824, y 54-1026), because many TVs overscan.

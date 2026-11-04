@@ -183,7 +183,7 @@ lab's facts: references/brand-foundation.md. Each row's last column is the check
 | Export a tagged PDF and prove what is in it | `scripts/export_office.py pdf` / `inspect` | accessibility.md | tags are evidence of the export, not of conformance |
 | QR code | `scripts/qr_code.py make` (or a `qr` field in a spec) | web-and-digital.md §9 | `qr_code.py verify <final.pdf> --url <exact url>`; printed-proof phone scan |
 | Social post image, carousel card, story, caption, hashtags, alt text | `scripts/social_card.py` + `scripts/examples/social/` | social-media.md §4, §5, §7; voice-and-copy.md | look at the PNG at 390 px; lint the caption |
-| **Banner or header at any size**: GitHub README header or social preview, Discord banner, invite splash or profile banner, X header, YouTube banner, OG image, 16:9 title card, square thumbnail | `scripts/atr_design.py banner --preset <name>` (`--list-presets`, `--size WxH`, `--safe-zones`) | community-platforms.md §2, §7 | open the PNG and the `--safe-zones` copy |
+| **Banner or header at any size**: GitHub README header or social preview, Discord banner, invite splash or profile banner, X header, YouTube banner, OG image, 16:9 title card, square thumbnail | `scripts/atr_design.py banner --preset <name>` (`--list-presets`, `--size WxH`, `--safe-zones`; `--also signage-16x9` adds a TV version) | community-platforms.md §2, §7 | open the PNG and the `--safe-zones` copy |
 | **Discord or Slack**: server structure, rules, onboarding, emoji, stickers, role colors, bots | `assets/mascot/emoji/`, `assets/mascot/stickers/`, `assets/icons/badges/` (128 px emoji); `banner.py` for art | community-platforms.md | preview on dark `#313338` and white; `contrast.py` for role colors |
 | **The mascot Teo**: avatar, emoji, stickers, a new pose | `assets/mascot/` (character sheet, views, expressions); new poses from the style lock and references in `assets/mascot/prompts.json` (Higgsfield GPT Image 2.5 with a transparent background, or `scripts/codex_image.sh` + `icons/chroma_key.py`) | mascot.md §2, §5 | side by side with the character sheet |
 | YouTube thumbnail, video cards, lower thirds, captions | `social_card.py --size youtube-thumb`; `assets/templates/social/ATR-YouTube-Thumbnail-1280x720.pptx` | web-and-digital.md §7-§8; imagery.md §10 | |
@@ -201,7 +201,8 @@ lab's facts: references/brand-foundation.md. Each row's last column is the check
 | New icon, background, texture or concept illustration | `scripts/codex_image.sh`; `scripts/icons/` | ai-image-pipeline.md; imagery.md §11 | |
 | Patterns, hazard band, layout grids, motion | `assets/patterns/`; `banner.py` draws lattice and band at any size | graphic-elements.md | |
 | Charts and figures for slides, papers, posters; tables; Gantt | `assets/tokens/atr_plot.py`, `atr.mplstyle`; native charts via `new_deck.py` | data-visualization.md | |
-| Website, GitHub org, YouTube channel art, virtual backgrounds, hallway screens | `assets/tokens/tokens.css`; `banner.py`; `assets/illustrations/` | web-and-digital.md | |
+| Website, GitHub org, YouTube channel art, virtual backgrounds | `assets/tokens/tokens.css`; `banner.py`; `assets/illustrations/` | web-and-digital.md | |
+| **Hallway TV slide** (the Mathematical Sciences Building TVs in slideshow mode, lab monitors, demo-day screens), or a 16:9 TV version of a banner | `scripts/atr_design.py banner --preset signage-16x9` (`--details`, `--qr`, `--image`; `signage-4k`; `--also signage-16x9` on any banner); save `.jpg` | web-and-digital.md §10, §9 | open the JPEG and the `--safe-zones` copy; scan the QR code from the screen |
 | Merch, stickers, apparel, robot decals, banners and tablecloths | SVG logos; `assets/patterns/` chevron and hazard files | print-and-merch.md §7-§12; kent-state-compliance.md §10 | UCM approval, licensed vendor |
 | Review or fix someone else's file | `scripts/brand_check.py <file> --all`; `scripts/render_office.sh` | qa-checklists.md | |
 | Accessibility questions, alt text, captions, tagged PDFs | `export_office.py inspect` for PDFs | accessibility.md | |
@@ -371,7 +372,9 @@ layout and type into the placeholders; free text boxes lose the styles, reading 
 
 1. Banners, headers, splashes and thumbnails: `python3 scripts/atr_design.py banner --preset <name> --title ...
    [--subtitle ...] [--image assets/mascot/views/teo-front.png | --icon <name>] -o out.png --safe-zones`. If the copy
-   does not fit, shorten it rather than forcing it below the floors. Open both PNGs.
+   does not fit, shorten it rather than forcing it below the floors. Open both PNGs. For a hallway TV slide use
+   `--preset signage-16x9` with `--details` (date and time, place) and `--qr` or `--image`, written as `.jpg`; for a
+   TV version of any banner, add `--also signage-16x9` (references/web-and-digital.md §10).
 2. Discord and Slack: follow references/community-platforms.md for sizes (§2), the server structure the lab uses
    (§3), the permission rules that trip people up (§4) and bots (§5). Preview every emoji, sticker and thumbnail on
    Discord dark `#313338` and on white at display size before uploading.
@@ -476,7 +479,7 @@ scripts/
   brand_check.py             brand and accessibility linter (.pptx, .docx, .svg, .html/.css, images,
                              and copy in .md/.txt: facts, names, placeholders, Kent State style,
                              official vs working-copy Kent State wordmark, effective PPI)
-  banner.py                  banners, headers, splashes and thumbnails at any size (10 presets)
+  banner.py                  banners, headers, splashes, thumbnails and TV slides at any size (12 presets)
   official_assets.py         fetch and verify the official Kent State wordmark files
   project.py                 one manifest per set of deliverables: scoped edits, changed-only builds and exports
   export_office.py           tagged PDF export and inspection, changed-page renders, contact sheets

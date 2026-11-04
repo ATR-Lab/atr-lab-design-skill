@@ -1,5 +1,33 @@
 # Changelog
 
+## 2.1.1 (Nov. 3, 2026)
+
+### Hallway TV slides
+
+The TVs in the Mathematical Sciences Building run event slides in slideshow mode. `banner.py` (1.1.0) now makes
+those slides, and 16:9 versions of any banner:
+
+- **Two presets:** `signage-16x9` (1920 x 1080) and `signage-4k` (3840 x 2160). They apply
+  references/web-and-digital.md §10:
+  - text and logos inside the overscan-safe 5% margin;
+  - text at least 48 px and titles 80 px (at 1080p);
+  - the Kent State Stacked wordmark bottom-right on a plain area, as a separate signature;
+  - a note when the copy runs over 20 words.
+- **`--details LINE`** (repeatable, up to 3 lines) for date, time and place.
+- **`--qr URL [--qr-label TEXT]`:**
+  - puts a navy-on-white QR code in the image slot, at least 20% of the slide height;
+  - prints the call to action and the address under it, wrapping a long address after a `/`;
+  - encodes the URL exactly, then decodes the finished image (and the written JPEG) to check it.
+- **`--ksu` / `--no-ksu`:** the official wordmark when `official_assets.py` has fetched it, else the working copy
+  with a warning.
+- **`--also PRESET,...`:** writes the same banner at other presets, e.g. `--also signage-16x9` beside a GitHub
+  header. Signage outputs are written as `.jpg`.
+- **JPEG output:** `-o slide.jpg` writes quality 92 without chroma subsampling, which TV slideshow modes read from
+  a USB stick.
+- **Docs:** web-and-digital.md §10, the SKILL.md router and §3.8, scripts/README.md, and the `/banner` and `/event`
+  commands cover TV slides.
+- **Tests:** 8 new; 130 pass.
+
 ## 2.1.0 (Nov. 3, 2026)
 
 ### Teo, design 2
