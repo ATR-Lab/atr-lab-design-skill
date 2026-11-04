@@ -684,6 +684,16 @@ python3 scripts/atr_design.py banner --preset signage-16x9 --eyebrow "Workshop" 
   it; the script decodes the finished JPEG to check it encodes the exact URL.
 - **File:** `.jpg` (most TV slideshow modes read JPEG from a USB stick; some also read PNG). Use `signage-4k` only
   when the panel plays 3840 × 2160 natively. Name the files so they sort in show order (`01-workshop.jpg`).
+- **Animated version (`--motion`):** `--motion lattice-drift` (or `grid-scan`, `chevron-flow`) also writes
+  `<name>.mp4`, a seamless 12 s loop of the same slide with the motif moving behind it (H.264, 1080p or 4K, 30 fps,
+  no audio), and makes the `.jpg` its still frame, so every slide ships as both. Load the MP4 when the slideshow
+  plays video, the JPEG when it does not; ask whoever runs the screens which they take. `--motion-seconds 24` makes a
+  longer clip of repeated loops when the player shows each file for a fixed time. The motif replaces the static
+  lattice; it stays off the text, the QR code (which is decoded again from the still) and the logos, and the
+  hazard band stays still. `--also signage-16x9` with `--motion` animates the 16:9 version too.
+- **Teo cameo (`--teo-cameo`):** on request only (outreach, K-12, workshops), Teo rises from behind the hazard band,
+  waves and ducks back down within the loop. The script finds a spot clear of the text, QR code and logos, at 24-42%
+  of the slide height, and refuses when there is none.
 - **Kent State wordmark:** fetch the official file once (`python3 scripts/official_assets.py fetch
   ksu-stacked-white-png`, and `ksu-stacked-color-png` for white slides); until then the script uses the working copy
   and warns. `--no-ksu` only when the screen's own frame already carries the university logo.
@@ -692,8 +702,8 @@ python3 scripts/atr_design.py banner --preset signage-16x9 --eyebrow "Workshop" 
   inside graphics-safe (x 96-1824, y 54-1026), because many TVs overscan.
 - **Type:** read from 2-5 m while walking. Body at least 48 px and headlines at least 80 px on a 1080 canvas;
   one message and at most about 20 words per slide.
-- **Rotation:** 7-10 s per slide; no audio; nothing that flashes more than 3 times per second; captions burned into
-  any video with speech.
+- **Rotation:** 7-10 s per slide (a 12 s motion clip covers it); no audio; nothing that flashes more than 3 times
+  per second (`motion.py` checks every clip it writes); captions burned into any video with speech.
 - **Look:** navy backgrounds (`bg-title-16x9.png`, `bg-closing-16x9.png`) with white and gold type reduce glare on
   glossy panels. Show the ATR and Kent State logos on every slide, but alternate their corner or layout between
   slides. A persistent frame (a fixed logo bar) is acceptable only on LCD panels that are dimmed or switched off

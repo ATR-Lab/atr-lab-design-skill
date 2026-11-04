@@ -16,6 +16,7 @@ the brand palette. Usage rules, anatomy and how to make new poses: `references/m
 | `emoji/teo_<pose>.png` | Upload-ready Discord/Slack emoji: wave, think, thumbsup, party, love, sweat, estop, sleep | 256 × 256 |
 | `stickers/teo-<name>.png` | Upload-ready die-cut stickers: hello, hmm, nice, party, e-stop | 320 × 320 |
 | `references/` | The lead's reference art (`lead-ref-*.png`) and the generated turnarounds and expression sheet used as references for new poses | ≤ 1024 px |
+| `rig/teo-{head,ear-left,ear-right,hand-wave,hand-rest}.png` | Puppet-rig parts for animation: each part complete where others would cover it; the head's screen is blank (the face is drawn as vector shapes). Used by `assets/motion/teo-cameo.json` | as generated |
 | `prompts.json` | The style lock, generator settings, job ids and post-processing behind every file | |
 
 All files are illustrations (Higgsfield GPT Image 2.5, finished by script); none shows a real robot. Do not edit these

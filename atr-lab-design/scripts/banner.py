@@ -27,6 +27,8 @@ Usage
         --details "Sat., Nov. 22, 10 a.m.-2 p.m." --details "Mathematical Sciences Building" \\
         --qr "https://example.org/register" --qr-label "Scan to register" -o tv-slide.jpg
     python3 scripts/banner.py spec.json -o header.png --also signage-16x9   # + header-signage-16x9.jpg
+    python3 scripts/banner.py --preset signage-16x9 --title "Open lab" --motion lattice-drift -o open-lab.jpg
+                                                             # + open-lab.mp4 (12 s loop); the .jpg is its still
     python3 scripts/banner.py --list-presets [--json]
 
 Spec (JSON; every key is optional and mirrors a flag, with - written as _):
@@ -39,7 +41,8 @@ Spec (JSON; every key is optional and mirrors a flag, with - written as _):
      "image_fit": "contain", "title_font": "sans-bold", "seed": 7, "display_width": 1000,
      "text_box": [64, 200, 800, 160], "output": "header.png",
      "details": ["Thu., Nov. 13, 4-6 p.m.", "Mathematical Sciences Building"],
-     "qr": "https://example.org/register", "qr_label": "Scan to register", "ksu": true}
+     "qr": "https://example.org/register", "qr_label": "Scan to register", "ksu": true,
+     "motion": "lattice-drift", "teo_cameo": false, "motion_seconds": 12}
 
 Options
 -------
@@ -72,6 +75,12 @@ Options
         without chroma subsampling, which TV slideshow modes read)
 --also P1,P2   also write the same banner at other presets as <out>-<preset> (signage presets as .jpg),
         dropping pixel-specific keys (size, text box, lockup height): 16:9 TV versions of any banner
+--motion lattice-drift|grid-scan|chevron-flow   also write <out>.mp4, a seamless 12 s loop with the motif moving
+        behind the banner (scripts/motion.py), and make <out> its still frame; the motif replaces the static art and
+        stays off the text, logos, QR code and band. --motion-seconds N for a longer clip (needs rlottie-python and
+        ffmpeg)
+--teo-cameo    Teo pops up from the bottom edge (or from behind a bottom band), waves and ducks away, where all of his
+        motion clears the text, logos and QR code; only when asked for (refused, exit 2, when there is no room)
 
 Presets (python3 scripts/banner.py --list-presets): github-header 1600x400, github-social 1280x640,
 discord-banner 960x540, discord-invite-splash 1920x1080 (calm center keep-out for the invite card),
@@ -114,7 +123,7 @@ import atr_brand as B  # noqa: E402
 from social_card import (LayoutError, PLACEHOLDER_RE, Style, Typesetter, check_copy,  # noqa: E402
                          resolve_spec_path, set_text)
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 SS = 4                     # supersampling for vector shapes
 MIN_READ_PX = 11           # smallest readable text at the display size
 MIN_TITLE_PX = 15          # smallest title at the display size
@@ -620,7 +629,7 @@ DEFAULTS = dict(preset=None, size=None, ground=None, eyebrow=None, title=None, s
                 lockup_variant=None, lockup_height=None, art=None, art_side=None, hazard=None, icon=None,
                 badge=None, image=None, ring=None, image_pos=None, image_fit="contain", title_font="sans-bold",
                 seed=None, display_width=None, text_box=None, output=None, details=None, qr=None, qr_label=None,
-                ksu=None)
+                ksu=None, motion=None, teo_cameo=None, motion_seconds=None)
 SIGNAGE_JPEG_QUALITY = 92
 
 
@@ -784,7 +793,7 @@ def render(spec: dict, base_dir: Optional[Path] = None, allow_placeholders: bool
     if ground not in GROUNDS:
         raise SpecError(f"ground '{ground}': use navy, midnight or white")
     G = GROUNDS[ground]
-    ground_rgb = B.rgb(ground)
+    ground_rgb = tuple(spec["_matte_ground"]) if spec.get("_matte_ground") else B.rgb(ground)
     art = str(sp["art"] or pre.art).lower()
     if art not in ("lattice", "subtle", "none"):
         raise SpecError("art: use lattice, subtle or none")
@@ -1239,6 +1248,78 @@ def zones_overlay(img: Image.Image, meta: dict) -> Image.Image:
     return Image.alpha_composite(base, lay).convert("RGB")
 
 
+# --------------------------------------------------------------------------- motion (TV slides)
+def _matte(img_a: Image.Image, img_b: Image.Image, ground_a: tuple, ground_b: tuple) -> Image.Image:
+    """The banner's foreground (text, logos, bands, QR code) with exact alpha, recovered from two renders
+    that differ only in the ground color: alpha comes from how far each pixel moved with the ground."""
+    import numpy as np
+    a = np.asarray(img_a.convert("RGB"), dtype=np.float32)
+    b = np.asarray(img_b.convert("RGB"), dtype=np.float32)
+    ga, gb = np.array(ground_a, dtype=np.float32), np.array(ground_b, dtype=np.float32)
+    d = ga - gb
+    alpha = np.clip(1.0 - ((a - b) @ d) / float(d @ d), 0.0, 1.0)[..., None]
+    color = np.where(alpha > 1e-3, (a - (1 - alpha) * ga) / np.maximum(alpha, 1e-3), 0)
+    rgba = np.concatenate([np.clip(color, 0, 255), alpha * 255], axis=2)
+    return Image.fromarray(np.round(rgba).astype(np.uint8), "RGBA")
+
+
+def motion_zones(meta: dict):
+    """Where the motif stays off (bands, keep-outs, logos with their clear space, the QR code, the image)
+    and where it is turned down (the text block), from a render's layout."""
+    import motion
+    ov = meta["_overlay"]
+    behind = [list(map(float, r)) for r in list(ov["band_keep"]) + list(meta.get("bands", []))]
+    hard = [list(map(float, r)) for r in ov["calm"]] + behind
+    if ov["lock"]:
+        hard.append(list(ov["lock"]["clear"]))
+    for k in ("ksu", "qr", "image"):
+        if ov.get(k):
+            hard.append(list(ov[k]))
+    text = [list(inflate(ov["text"], 0.01 * meta["size"][0]))] if ov["text"] else []
+    H = meta["size"][1]
+    floors = [r[1] for r in meta.get("bands", []) if r[3] >= H - 1 and r[2] - r[0] > r[3] - r[1]]
+    return motion.Zones(hard=hard, text=text, behind=behind, floor=min(floors) if floors else None)
+
+
+def render_motion(spec: dict, out_mp4: Path, base_dir: Optional[Path] = None,
+                  allow_placeholders: bool = False) -> tuple:
+    """Render a banner with an animated background (and the Teo cameo when asked for): writes the looping
+    MP4 to out_mp4 and returns (poster image, meta), the poster being the still version of the same slide.
+    The motif replaces the static lattice art; everything else is the banner exactly as render() draws it."""
+    import motion
+    name = spec.get("motion")
+    if name in ("none", ""):
+        name = None
+    cameo = bool(spec.get("teo_cameo"))
+    if not name and not cameo:
+        raise SpecError("motion: give a motif (lattice-drift, grid-scan, chevron-flow) or teo_cameo")
+    if name:
+        motion.motif(name)
+    flat = dict(spec, art="none")
+    img, meta = render(flat, base_dir, allow_placeholders)
+    ground_a = B.rgb(meta["ground"])
+    ground_b = tuple(255 - c if c < 128 else 0 for c in ground_a)
+    img_b, _ = render(dict(flat, _matte_ground=list(ground_b)), base_dir, allow_placeholders)
+    fg = _matte(img, img_b, ground_a, ground_b)
+    for r in meta.get("bands", []):                     # a band is solid: Teo rises from behind it, not through it
+        box = tuple(int(round(v)) for v in r)
+        fg.paste(img.convert("RGBA").crop(box), box[:2])
+    job = motion.MotionJob(Image.new("RGB", img.size, ground_a), name, meta["ground"], "full", motion_zones(meta),
+                           foreground=fg, cameo=cameo,
+                           seconds=float(spec.get("motion_seconds") or motion.LOOP_FRAMES / motion.FPS))
+    try:
+        poster, rep = motion.render_job(job, out_mp4)
+    except motion.MotionError as exc:
+        raise RefusedError(str(exc)) from exc
+    meta["motion"] = rep
+    meta["motion"]["mp4"] = str(out_mp4)
+    if meta.get("qr"):
+        meta["qr"]["decoded"] = verify_qr(poster, meta["qr"]["url"], meta["warnings"])
+    if spec.get("art") not in (None, "none"):
+        meta["warnings"].append("the motion motif replaces the static lattice art")
+    return poster, meta
+
+
 # --------------------------------------------------------------------------- output
 def save_image(img: Image.Image, out: Path, meta: dict) -> Path:
     """Write a PNG, or a JPEG (quality 92, no chroma subsampling, so small text stays sharp) for .jpg/.jpeg,
@@ -1326,6 +1407,11 @@ def main(argv=None) -> int:
     ap.add_argument("--report", action="store_true", help="print the layout as JSON")
     ap.add_argument("--also", help="comma list of presets: also write the same banner at each, as "
                     "<out>-<preset> (signage presets as .jpg), e.g. --also signage-16x9")
+    ap.add_argument("--motion", help="animated background: lattice-drift, grid-scan or chevron-flow; also writes "
+                    "<out>.mp4 (a 12 s loop) and makes <out> its still frame")
+    ap.add_argument("--teo-cameo", dest="teo_cameo", action="store_true", default=None,
+                    help="Teo pops up, waves and ducks away (only when asked for: outreach, K-12, workshops)")
+    ap.add_argument("--motion-seconds", type=float, help="clip length in seconds (default 12, one loop)")
     ap.add_argument("--list-presets", action="store_true")
     ap.add_argument("--json", action="store_true", help="with --list-presets: JSON")
     ap.add_argument("--quiet", action="store_true")
@@ -1353,8 +1439,14 @@ def main(argv=None) -> int:
         ap.print_usage(sys.stderr)
         print("spec error: give --preset NAME or --size WxH (see --list-presets)", file=sys.stderr)
         return 1
+    out = Path(a.out or spec.get("output") or "banner.png").expanduser()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    moving = bool(spec.get("motion") or spec.get("teo_cameo"))
     try:
-        img, meta = render(spec, base_dir, a.allow_placeholders)
+        if moving:
+            img, meta = render_motion(spec, out.with_suffix(".mp4"), base_dir, a.allow_placeholders)
+        else:
+            img, meta = render(spec, base_dir, a.allow_placeholders)
     except PlaceholderError as exc:
         print(f"refused: {exc}", file=sys.stderr)
         return 3
@@ -1364,14 +1456,12 @@ def main(argv=None) -> int:
     except (RefusedError, LayoutError) as exc:
         print(f"refused: {exc}", file=sys.stderr)
         return 2
-    out = Path(a.out or spec.get("output") or "banner.png").expanduser()
-    out.parent.mkdir(parents=True, exist_ok=True)
     try:
         save_image(img, out, meta)
     except RefusedError as exc:
         print(f"refused: {exc}", file=sys.stderr)
         return 2
-    written = [str(out)]
+    written = [str(out)] + ([meta["motion"]["mp4"]] if moving else [])
     if a.safe_zones:
         zp = out.with_name(out.stem + "-zones.png")
         zones_overlay(img, meta).save(zp)
@@ -1379,9 +1469,13 @@ def main(argv=None) -> int:
     status = 0
     for name in [x.strip() for x in (a.also or "").split(",") if x.strip()]:
         try:
-            img2, meta2 = render(variant_spec(spec, name), base_dir, a.allow_placeholders)
             ext = ".jpg" if name.startswith("signage") else out.suffix
             out2 = out.with_name(f"{out.stem}-{name}{ext}")
+            if moving:
+                img2, meta2 = render_motion(variant_spec(spec, name), out2.with_suffix(".mp4"), base_dir,
+                                            a.allow_placeholders)
+            else:
+                img2, meta2 = render(variant_spec(spec, name), base_dir, a.allow_placeholders)
             save_image(img2, out2, meta2)
         except (SpecError, KeyError) as exc:
             print(f"spec error ({name}): {str(exc).strip(chr(34))}", file=sys.stderr)
@@ -1392,6 +1486,8 @@ def main(argv=None) -> int:
             status = 2
             continue
         written.append(str(out2))
+        if moving:
+            written.append(meta2["motion"]["mp4"])
         meta["warnings"] += [f"{name}: {w}" for w in meta2["warnings"]]
         if a.safe_zones:
             zp = out2.with_name(out2.stem + "-zones.png")

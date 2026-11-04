@@ -1,5 +1,58 @@
 # Changelog
 
+## 2.2.0 (Nov. 4, 2026)
+
+### Animated backgrounds for slides and hallway TV slides
+
+Slides and the Mathematical Sciences Building TV slides can now move. The motion is built in LottieFiles Creator,
+kept as Lottie files and rendered locally to looping MP4s:
+
+- **Three motifs** in `assets/motion/`, made from the brand patterns:
+  - `lattice-drift`: the triangle lattice drifts right while single cells glow and fade;
+  - `grid-scan`: a soft band sweeps the blueprint grid and lights its nodes, for technical pieces;
+  - `chevron-flow`: rows of chevrons travel right, tone on tone.
+  Each is a seamless 12 s loop at 30 fps, recoloured for navy, midnight, gold or white grounds, at full strength
+  (bookends, TV slides) or subtle (content slides).
+- **`scripts/motion.py`** (new) recolours, renders (rlottie) and composites a motif under a still design and writes
+  an H.264 MP4 plus a poster frame:
+  - the motif is turned down under text, so the ground shifts by at most 1.15:1 and the checked contrast holds;
+    on content slides the chevrons keep out from behind text entirely and move only in the margins;
+  - it stays off logos and their clear space, QR codes, photos, charts and the hazard band;
+  - clips with more than 3 flashes in a second are refused (WCAG 2.3.1), and the loop seam is measured;
+  - `list`, `preview` and `check` commands, also as `atr_design.py motion`.
+- **TV slides:** `banner.py --motion lattice-drift` also writes `<name>.mp4` and makes the `.jpg` its still frame,
+  so the screens get whichever format they play. The banner's foreground (text, logos, band, QR code) is recovered
+  with exact alpha and laid over the motion; the QR code is decoded again from the still. `--motion-seconds` sets a
+  longer clip; `--also` animates other presets too.
+- **Decks:** `"motion": "lattice-drift"` in a `new_deck.py` spec puts a muted, autoplaying, looping video behind the
+  title, section divider, statement and closing slides, and a subtle version behind content slides (`"content":
+  "none"` keeps them still). The layout's band, lockups and header are copied in front of the video as native
+  shapes; PDF exports, Google Slides and printouts show the poster frame. Identical backgrounds are rendered once and
+  reused (`scripts/deck_motion.py`, new).
+
+### Teo, animated
+
+- **Puppet rig:** Teo's parts were generated with Higgsfield as one exploded sheet and split into
+  `assets/mascot/rig/`. Each part (head shell, ear fins, waving and resting hands) is complete where the others would
+  cover it. The face is vector shapes, so Teo can blink.
+- **Cameo** (`assets/motion/teo-cameo.json`): Teo pops up, waves, blinks, flicks his ears and ducks away, animated to
+  the 12 principles of animation:
+  - squash and stretch, anticipation, and slow in and slow out;
+  - follow-through on the ears and hand, arcs, secondary action and timing.
+  It is only added on request: `banner.py --teo-cameo`, or `"teo_cameo": true` on a deck slide. It is placed where
+  all of its motion clears the text, logos and QR code, rising from behind a bottom hazard band, and refused when
+  there is no room.
+
+### Also
+
+- **Rules:** graphic-elements.md §8 covers background motion and the mascot exception. presentations.md §4.6 and
+  §8.2, web-and-digital.md §10, accessibility.md and mascot.md §7 (new) are updated, along with the SKILL.md router,
+  §3.1 and §3.8, scripts/README.md, and the `/banner` and `/deck` commands.
+- **Setup:** new optional requirements rlottie-python and imageio-ffmpeg (or a system ffmpeg); `atr_design.py doctor`
+  has a `motion` group.
+- **Asset index:** a `motion` kind, with search aliases (animated, lottie, loop, puppet).
+- **Tests:** 14 new; 144 pass.
+
 ## 2.1.1 (Nov. 3, 2026)
 
 ### Hallway TV slides

@@ -16,9 +16,10 @@ Commands built in here:
                      templates, or the layouts of one template, or one layout's fields, budgets and an
                      example spec slide (reads assets/templates/*-layouts.json via new_deck.py)
   doctor [--group G] [--json]
-                     check the environment per feature group (core, office, qr, icons, figures, ai-images)
+                     check the environment per feature group (core, office, qr, icons, figures, motion, ai-images)
                      and print the exact fix command for each miss; exit 0 only when core passes
   banner ...         on-brand banners, headers and thumbnails (scripts/banner.py; --list-presets)
+  motion ...         animated backgrounds and the Teo cameo (scripts/motion.py: list, preview, check)
 
 Commands handed to other modules (loaded only when used, so a missing optional package breaks only
 its own command):
@@ -56,6 +57,7 @@ SKILL_ROOT = HERE.parent
 # command -> (module, argv prefix, what it is)
 DELEGATES = {
     "banner": ("banner", [], "on-brand banners, headers and thumbnails"),
+    "motion": ("motion", [], "animated backgrounds and the Teo cameo: list, preview, check"),
     "official": ("official_assets", [], "official Kent State artwork: fetch, verify, cache"),
     "qr": ("qr_code", [], "QR codes at an exact physical size, decode and verify"),
     "export": ("export_office", [], "tagged PDF export with the brand fonts, inspect, render"),
@@ -78,7 +80,7 @@ PIP_NAMES = {"PIL": "Pillow>=10.0", "numpy": "numpy>=1.24", "fontTools": "fontto
              "lxml": "lxml>=4.9", "defusedxml": "defusedxml>=0.7", "qrcode": "qrcode[pil]>=7.4",
              "zxingcpp": "zxing-cpp>=2.2", "pypdf": "pypdf>=4.0", "scipy": "scipy>=1.10",
              "skimage": "scikit-image>=0.21", "vtracer": "vtracer>=0.6", "matplotlib": "matplotlib>=3.7",
-             "yaml": "PyYAML>=6.0"}
+             "yaml": "PyYAML>=6.0", "rlottie_python": "rlottie-python>=1.3", "imageio_ffmpeg": "imageio-ffmpeg>=0.5"}
 
 
 def _pip_fix(module: str) -> str:
@@ -355,6 +357,8 @@ def _sys_fix(tool: str) -> str:
         "pdffonts": ("brew install poppler", "sudo apt-get install -y poppler-utils"),
         "rsvg-convert": ("brew install librsvg", "sudo apt-get install -y librsvg2-bin"),
         "codex": ("npm install -g @openai/codex && codex login", "npm install -g @openai/codex && codex login"),
+        "ffmpeg": ("brew install ffmpeg   (or: pip install imageio-ffmpeg)",
+                   "sudo apt-get install -y ffmpeg   (or: pip install imageio-ffmpeg)"),
     }
     m, l = fixes.get(tool, (f"install {tool}", f"install {tool}"))
     return m if mac else l
@@ -392,7 +396,7 @@ def _check_module(name: str, min_version: Optional[str] = None) -> tuple:
     return True, f"{ver}".strip() or "ok"
 
 
-GROUPS = ["core", "office", "qr", "icons", "figures", "ai-images"]
+GROUPS = ["core", "office", "qr", "icons", "figures", "motion", "ai-images"]
 
 
 def doctor_checks(groups: Optional[list] = None) -> list:
@@ -481,6 +485,14 @@ def doctor_checks(groups: Optional[list] = None) -> list:
     if "figures" in want:
         ok, det = _check_module("matplotlib", "3.7")
         add("figures", "matplotlib", ok, det, _pip_fix("matplotlib"))
+    if "motion" in want:
+        ok, det = _check_module("rlottie_python")
+        add("motion", "rlottie-python (renders the Lottie motifs)", ok, det, _pip_fix("rlottie_python"))
+        ff = shutil.which("ffmpeg")
+        if not ff:
+            ok_ff, det_ff = _check_module("imageio_ffmpeg")
+            ff = det_ff if ok_ff else None
+        add("motion", "ffmpeg (writes MP4)", ff, ff or "not found (nor imageio-ffmpeg)", _sys_fix("ffmpeg"))
     if "ai-images" in want:
         codex = os.environ.get("CODEX_BIN") or shutil.which("codex")
         add("ai-images", "Codex CLI", codex, codex or "not found", _sys_fix("codex"))

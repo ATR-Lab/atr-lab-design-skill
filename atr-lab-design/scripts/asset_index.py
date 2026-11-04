@@ -61,6 +61,7 @@ KINDS = {
     "mascot": "Teo, the lab's mascot: views, expressions, emoji, stickers, avatar (references/mascot.md)",
     "background": "finished backgrounds, banners, virtual backgrounds and the poster header band",
     "pattern": "hazard band, triangle lattice, chevron and blueprint-grid patterns and tiles",
+    "motion": "Lottie animations: moving slide and TV backgrounds and the Teo cameo (scripts/motion.py)",
     "template": "PowerPoint, Word and HTML templates",
     "layouts": "placeholder contracts (field names and budgets) for the templates",
     "font": "brand font files (Source Sans 3, Roboto Slab, Source Code Pro)",
@@ -101,6 +102,15 @@ ALIASES = {
     "teo": ["mascot", "robot-mascot", "bot"],
     "emoji": ["emote", "reaction"],
     "sticker": ["die-cut"],
+    "cameo": ["wave", "waving", "pop-up"],
+    "rig": ["puppet", "parts"],
+}
+MOTION_ALIASES = ["motion", "animation", "animated", "lottie", "moving", "loop"]
+MOTION_USE = {
+    "lattice-drift": "Moving background: the triangle lattice drifts right while single cells glow and fade (12 s loop)",
+    "grid-scan": "Moving background for technical pieces: a scan band sweeps the blueprint grid and lights its nodes",
+    "chevron-flow": "Moving background: rows of chevrons travel right, tone on tone",
+    "teo-cameo": "Teo pops up, waves, blinks and ducks away (puppet rig, 800 x 800, transparent); only on request",
 }
 
 LOGO_LOCKUPS = ["horizontal-short", "stacked-ksu", "horizontal", "stacked", "mark", "seal", "badge"]
@@ -203,7 +213,7 @@ PATTERN_FAMILY_USE = {
     "chevron": "Accent strips, dividers, merch, web section separators, icon backplates",
     "blueprint": "Technical slides: system architecture, diagrams, code or ROS-topic slides; not for marketing",
 }
-KIND_ORDER = ["logo", "badge", "icon", "icon-svg", "ksu-wordmark", "logo-icon", "pattern", "background",
+KIND_ORDER = ["logo", "badge", "icon", "icon-svg", "ksu-wordmark", "logo-icon", "pattern", "motion", "background",
               "mascot", "illustration", "template", "layouts", "font", "token", "office-theme", "icon-mask", "manifest",
               "source", "doc", "license"]
 
@@ -416,12 +426,14 @@ def classify(p: Path, ctx: dict) -> tuple:
                                 "chevron", "blueprint-grid-tile", "blueprint-grid") if stem.startswith(f)), stem)
         variant = stem[len(fam) + 1:] or None
         return f"pattern/{stem}", "pattern", fam, variant
+    if top == "motion" and ext == ".json":
+        return f"motion/{stem}", "motion", stem, None
     if top == "mascot":
         if ext == ".json":
             return f"manifest/mascot-{stem}", "manifest", f"mascot-{stem}", None
         sub = parts[1] if len(parts) > 2 else ""
         variant = {"views": "view", "expressions": "expression", "emoji": "emoji", "stickers": "sticker",
-                   "references": "reference"}.get(sub, stem.replace("teo-", ""))
+                   "references": "reference", "rig": "rig"}.get(sub, stem.replace("teo-", ""))
         name = stem.replace("teo_", "teo-")
         return f"mascot/{(sub + '-') if sub else ''}{stem.replace('teo_', '').replace('teo-', '')}", "mascot", name, variant
     if top == "templates":
@@ -500,6 +512,8 @@ def build_index() -> dict:
         out["use_for"] = use
         out.update(extra)
         al = _aliases_for(name, variant or "", Path(prim["path"]).stem)
+        if r["kind"] == "motion":
+            al = sorted(set(al) | set(MOTION_ALIASES))
         if al:
             out["aliases"] = al
         out["files"] = files
@@ -599,6 +613,10 @@ def _describe(r, files, logos, icons, uses, font_role_by_file) -> tuple:
             use = f"{stem}: {use}"
         extra["note"] = "Illustration of the lab mascot, not a real robot; rules in references/mascot.md"
         return use, extra
+    if kind == "motion":
+        extra["render"] = ("python3 scripts/motion.py preview " + name + " -o clip.mp4" if name != "teo-cameo"
+                           else "banner.py --teo-cameo, or \"teo_cameo\": true on a deck slide")
+        return MOTION_USE.get(name, "Lottie animation"), extra
     if kind == "template":
         use = TEMPLATE_USE.get(name) or TEMPLATE_USE.get(re.sub(r"\..*$", "", name)) or "ATR template"
         return use, extra

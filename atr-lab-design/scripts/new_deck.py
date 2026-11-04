@@ -43,6 +43,11 @@ paragraph, a leading Tab makes it level 2), or a list where a nested list is one
 bold and ^{1} is superscript (affiliation marks). An empty string deletes the placeholder. Run
 --list-layouts <template> for every name and budget.
 
+Animated backgrounds (presentation template): a deck-level "motion": "lattice-drift" | "grid-scan" | "chevron-flow"
+(or {"motif", "content": "subtle" | "none", "teo_cameo"}) puts a looping, muted MP4 behind the bookend slides at full
+strength and behind content slides subtly; a slide's "motion" ("none", a motif, or {"motif", "strength"}) and
+"teo_cameo": true (Teo pops up and waves; only when asked for) override it. See scripts/deck_motion.py.
+
 Slide keys: layout, fields (or put the fields at slide level), notes (speaker notes; "speaker_notes" is the
 same, and needed on ATR - Video, whose "what to watch for" placeholder is itself called notes: put that one
 in "fields"), section (1-based agenda item: fills eyebrow, divider number, title and outline), from_slide (clone showcase
@@ -50,7 +55,7 @@ slide N of the template instead of starting from the layout: posters, flyers, th
 remove (shape or field names to delete), keep (placeholders to keep as they are on a cloned slide), shapes
 ({"shape name": text} on a cloned slide), tables ({"table name": {"header", "rows"}} on a cloned slide),
 images ([{"path", "alt", "box": {"x","y","w","h"} | "replace": "shape name", "fit"}]),
-textboxes ([{"text", "box", "size", "color", "bold", "font"}]), tools (event flyers: [{"label", "image", "alt"}] placed in
+textboxes ([{"text", "box", "size", "color", "bold", "font"}]), motion, teo_cameo, tools (event flyers: [{"label", "image", "alt"}] placed in
 the layout's tools row with the artwork unmodified and plain product names, separate from the host signatures).
 
 Event flyers (templates event-flyer, event-flyer-tabloid, event-flyer-17x22; contract event-flyer-<size>-layouts.json)
@@ -164,7 +169,7 @@ TEMPLATE_ALIASES = {
     "youtube-thumbnail": "social/ATR-YouTube-Thumbnail-1280x720.pptx",
 }
 RESERVED = {"layout", "fields", "notes", "speaker_notes", "section", "from_slide", "remove", "keep", "shapes", "tables", "images",
-            "textboxes", "tools", "comment", "_comment", "hidden"}
+            "textboxes", "tools", "comment", "_comment", "hidden", "motion", "teo_cameo"}
 FIXED_SETS = [   # (layout name contains, field prefix, count, what, advice)
     ("Agenda", "item", 5, "agenda rows", "Plan the talk in five parts, or drop the Agenda slide and use "
                                           "Section Divider (Outline) slides."),
@@ -2487,6 +2492,35 @@ Full guide: references/presentations.md (layout catalog, deck recipes, writing r
 """
 
 
+def add_motion(ctx, prs, spec) -> list:
+    """Animated backgrounds (scripts/deck_motion.py) on the slides the spec asks for: the deck "motion" key
+    covers bookends at full strength and content slides subtly; a slide's own "motion" or "teo_cameo" wins."""
+    wanted = spec.get("motion") not in (None, False, "none", "") or any(
+        isinstance(s, dict) and (s.get("motion") not in (None, "none") or s.get("teo_cameo")) for s in spec["slides"])
+    if not wanted:
+        return []
+    import deck_motion
+    try:
+        deck = deck_motion.deck_config(spec.get("motion"))
+        plans = []
+        for i, (slide, sspec) in enumerate(zip(prs.slides, spec["slides"]), 1):
+            sm = deck_motion.plan(deck, sspec, slide.slide_layout.name)
+            if sm:
+                plans.append((slide, sm, f"slide {i} ({slide.slide_layout.name})"))
+        print(f"motion: rendering {len(plans)} slide background(s); each new 12 s loop takes about half a minute, "
+              "repeats are reused", file=sys.stderr)
+        reports = deck_motion.apply(prs, plans, ctx.warn)
+    except deck_motion.MotionSpecError as exc:
+        raise SpecError(str(exc)) from exc
+    if reports:
+        videos = {r["mp4"]: r["bytes"] for r in reports}
+        ctx.infos.append(f"motion: {len(reports)} slide(s) have a looping background ({len(videos)} distinct "
+                         f"video(s), {sum(videos.values()) / 1e6:.1f} MB). PowerPoint and Keynote play them by "
+                         "themselves, muted; PDF, Google Slides and printouts show the poster frame. Post the PDF, "
+                         "not the moving deck (references/accessibility.md).")
+    return reports
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(
         prog="new_deck.py", formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -2557,6 +2591,7 @@ def main(argv=None):
         now = _dt.datetime.now(_dt.timezone.utc).replace(tzinfo=None, microsecond=0)
         cp.created = now
         cp.modified = now
+        add_motion(ctx, prs, spec)
         deck_checks(ctx, prs)
         section_consistency(ctx, prs)
         if any(l.name in ("ATR - Title", "ATR - Title (Light)", "ATR - Thank You")

@@ -31,6 +31,8 @@ scripts below (`banner`, `official`, `qr`, `export`, `project`, `pptx`, `deck`, 
 | `scripts/atr_brand.py` | Brand values for code: `color`, `rgb`, `font`, `logo_path`, `logo_rules`, `icon_path`, `pattern_path`, `asset` (no hex literals or font paths in new scripts) | Pillow for `font()` |
 | `scripts/asset_index.py` | Builds `assets/index.json` (one record per asset: files, sizes, use, aliases, minimum size); `--check` fails when stale | Pillow |
 | `scripts/banner.py` | Banners, headers, thumbnails and hallway TV slides at any size or from 12 presets (GitHub header, Discord banner and invite splash, profile banner, X, YouTube, OG image, square thumbnail, 16:9 slide, 1080p and 4K signage); lattice and hazard band drawn at the target size; keep-out zones enforced. Rules: references/community-platforms.md | Pillow, numpy |
+| `scripts/motion.py` | Animated backgrounds: recolours the Lottie motifs in `assets/motion/` per ground, renders them (rlottie), lays them under a still design (turned down under text, kept off logos, QR codes, photos and bands), adds the Teo cameo when asked, writes a looping H.264 MP4 and a poster frame, and refuses clips that flash; `list`, `preview`, `check` | numpy, Pillow, rlottie-python, ffmpeg or imageio-ffmpeg |
+| `scripts/deck_motion.py` | Motion backgrounds on deck slides for `new_deck.py`: the layout background as ground, a muted autoplaying looping video at the back, the layout's decorations copied in front | python-pptx, lxml, motion.py |
 | `scripts/official_assets.py` | Fetches, verifies (SHA-256) and caches the official Kent State wordmark files listed in `assets/logos/ksu/official-sources.json` | standard library |
 | `scripts/qr_code.py` | QR codes at an exact printed size; decodes them back from the final PDF | qrcode[pil], zxing-cpp, pypdf |
 | `scripts/export_office.py` | Tagged PDF export with the brand fonts; reports tags, fonts, links and page sizes; renders only changed pages; compact contact sheets | pypdf, LibreOffice, poppler |
@@ -294,6 +296,24 @@ notes copy over 20 words. `--details LINE` (repeatable) adds date, time and plac
 puts a navy-on-white QR code with its printed address in the image slot and decodes the result to check it. Write
 `-o slide.jpg` for TV slideshow modes. `--also signage-16x9` writes a 16:9 TV version of any banner next to it.
 Rules: references/web-and-digital.md §10.
+
+Moving versions: `--motion lattice-drift|grid-scan|chevron-flow` also writes `<out>.mp4` (12 s seamless loop, 30 fps,
+H.264, no audio; `--motion-seconds N` for a longer clip) and makes `<out>` its still frame (the poster). The motif
+replaces the static lattice. The banner is rendered twice on two grounds to recover its foreground with exact alpha,
+so text, logos, the band and the QR code sit on top of the motion exactly as in the still; the QR code is decoded
+again from the poster. `--teo-cameo` adds Teo rising from the bottom edge (or from behind a bottom band) at the
+largest size, 42% down to 24% of the height, where all of his motion clears the text, logos and QR code; it is
+refused (exit 2) when nothing fits. Works with `--also`.
+
+## motion.py
+
+`python3 scripts/motion.py list` shows the motifs; `preview <motif> --ground navy|midnight|gold|white [--strength
+full|subtle] [--size WxH] [--seconds S] [--teo-cameo] -o clip.mp4 [--poster still.png]` renders one on a plain
+ground; `check clip.mp4` decodes any MP4 and reports the flash count (WCAG 2.3.1: refused above 3 in any second)
+and the loop seam. A 12 s 1080p loop takes about 35-45 s to render; `new_deck.py` reuses identical backgrounds from
+`${ATR_DESIGN_CACHE:-~/.cache/atr-lab-design}/motion`. In code: `MotionJob(ground_image, motif, ground_name,
+strength, Zones(hard, text, behind, floor), foreground, cameo)` and `render_job(job, out_mp4)` returns the poster and
+a report. Rules: references/graphic-elements.md §8; Teo: references/mascot.md §7.
 
 `icons/chroma_key.py` also takes `--outline HEX|token [--outline-px N]` (a dark outline so white art survives light
 themes) and `--die-cut [--die-cut-px N]` (stickers: white border and navy outline). Without them the output is

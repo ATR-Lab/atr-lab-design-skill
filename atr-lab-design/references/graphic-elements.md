@@ -324,13 +324,33 @@ help the audience follow, not decorate.
 | Logo bumper (video open/close) | The lockup fades in, or is revealed by a 45° mask wipe; holds, fades out | Reveal 0.5 s, hold ≥ 1.5 s, total 2-3 s |
 | Lower third | Navy plate with a top-right chamfer enters with a short 45° wipe; white text | In 8-10 frames, hold ≥ 4 s, out 6-8 frames |
 | Web UI | Opacity and small translate only | 150-250 ms, `cubic-bezier(0.2, 0, 0, 1)` on enter, ease-in on exit |
+| **Background motion** (slides, hallway TV slides) | One of the three motifs in `assets/motion/`: lattice drift, grid scan, chevron flow, recoloured for the ground. Bookend slides and TV slides at full strength, content slides subtle or still. Built by `scripts/motion.py` through `banner.py --motion` and `new_deck.py` `"motion"` | 12 s seamless loop at 30 fps; drift 16 px/s at 1080p; glows fade over 1.5 s with slow in and slow out |
+| **Teo cameo** (mascot animation) | Teo's puppet rig (`assets/motion/teo-cameo.json`) rises from the bottom edge or from behind the hazard band, waves and ducks away. Only when someone asks for it: outreach, K-12, workshops, open labs | Within the 12 s loop: up by 2 s, wave, blink and ear flicks, down by 10 s |
+
+**Background motion** sits behind content, so it stays calm and mechanical: linear drift (a loop must not
+accelerate), slow in and slow out only on fades, nothing bouncing. Under text the motif is turned down until the
+ground shifts by at most 1.15:1, and it never runs under logos, their clear space, QR codes, photos, charts or
+the hazard band, which stays solid and still. On content slides the chevrons keep out from behind text
+altogether: their thick strokes read as a moving pattern behind body copy, so they move only in the margins. Each motif keeps the static pattern's rules (references above): the
+chevrons tone on tone, the lattice as texture, the grid on technical pieces.
+
+**Teo is a character, so his animation follows the 12 principles of animation** (Thomas and Johnston; Richard
+Williams, *The Animator's Survival Kit*): squash and stretch on the pop-up and the landing, anticipation (a crouch
+before he ducks away), follow-through and overlapping action (ears and hand trail the body and settle after it),
+slow in and slow out on every key, arcs (the wave swings from the wrist), secondary action (blinks, ear flicks),
+snappy timing and a little exaggeration, on a solid, appealing pose. The "never bouncy" rule above is for type,
+slides and interface motion, not for the mascot. New Teo animations are rigged from `assets/mascot/rig/` in
+LottieFiles Creator (references/mascot.md section 7).
 
 Accessibility and limits:
 
 - Respect `prefers-reduced-motion: reduce` on the web: switch transitions to a plain fade or none.
 - Nothing flashes more than 3 times per second (WCAG 2.3.1). Robot LEDs and strobes in footage count: trim them.
 - Anything that moves for more than 5 s on a web page needs a pause control (WCAG 2.2.2); avoid auto-moving
-  backgrounds entirely.
+  backgrounds on web pages entirely. Moving slide and TV backgrounds are for live presentation and signage only:
+  post the PDF (poster frames), never the moving deck, and give a still version on request.
+- `motion.py` refuses a clip with more than 3 flashes in any second and reports the loop seam; check any other
+  video with `python3 scripts/motion.py check clip.mp4`.
 - Never animate the mark's parts (no drawing-on, rebuilding, rotating, spinning, bouncing, 3D or morphing of the
   logo; references/logo-system.md lists it as misuse). Never scroll or crawl the hazard stripes.
 - No PowerPoint Fly-in, Bounce, Spin, Zoom, Swivel or other entrance gimmicks.
