@@ -1,7 +1,7 @@
 {
   "name": "atr-lab-design",
-  "version": "2.1.1",
-  "description": "Brand, marketing and graphic-design system for the Advanced Telerobotics Research Lab at Kent State University: decks, quad charts, posters, event flyers with verified QR codes, print, social posts, banners, Discord and Slack art, the Teo mascot, copy and brand reviews, built on the lab's templates, revised and exported by script and checked by script.",
+  "version": "2.2.0",
+  "description": "Brand, marketing and graphic-design system for the Advanced Telerobotics Research Lab at Kent State University: decks, quad charts, posters, event flyers with verified QR codes, print, social posts, banners and hallway TV slides with animated backgrounds, Discord and Slack art, the Teo mascot, copy and brand reviews, built on the lab's templates, revised and exported by script and checked by script.",
   "author": {
     "name": "ATR Lab",
     "url": "https://github.com/ATR-Lab"
@@ -17,6 +17,7 @@
     "event-flyer",
     "kent-state",
     "mascot",
+    "motion",
     "poster",
     "qr-code",
     "quad-chart",

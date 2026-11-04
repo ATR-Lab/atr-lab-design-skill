@@ -1,6 +1,6 @@
 ---
 name: atr-lab-design
-description: "Brand, marketing and graphic-design system for the Advanced Telerobotics Research (ATR) Lab at Kent State University: verified lab facts, Kent State rules, logos (with the official Kent State wordmark fetch), colors, fonts, icons, the Teo mascot, templates and build, export and checking scripts. Use it for any marketing, communications or design task for the ATR Lab, the Advanced Telerobotics Research Lab or the Kent State telerobotics lab, and whenever someone in this repo says 'our lab': slides and decks, quad charts, posters, event and workshop flyers with QR codes, social posts and captions, banners and GitHub headers, Discord and Slack servers, bots, emoji and stickers, press releases, newsletters, emails and signatures, logos, colors, fonts, icons, images, merch, the website, video thumbnails, figures, revising existing files and brand reviews, even when the request never mentions the brand."
+description: "Brand, marketing and graphic-design system for the Advanced Telerobotics Research (ATR) Lab at Kent State University: verified lab facts, Kent State rules, logos (with the official Kent State wordmark fetch), colors, fonts, icons, the Teo mascot, templates and build, export and checking scripts. Use it for any marketing, communications or design task for the ATR Lab, the Advanced Telerobotics Research Lab or the Kent State telerobotics lab, and whenever someone in this repo says 'our lab': slides and decks, quad charts, posters, event and workshop flyers with QR codes, social posts and captions, banners, GitHub headers and hallway TV slides, animated slide and TV backgrounds and Teo animations, Discord and Slack servers, bots, emoji and stickers, press releases, newsletters, emails and signatures, logos, colors, fonts, icons, images, merch, the website, video thumbnails, figures, revising existing files and brand reviews, even when the request never mentions the brand."
 ---
 
 # ATR Lab design system
@@ -203,6 +203,8 @@ lab's facts: references/brand-foundation.md. Each row's last column is the check
 | Charts and figures for slides, papers, posters; tables; Gantt | `assets/tokens/atr_plot.py`, `atr.mplstyle`; native charts via `new_deck.py` | data-visualization.md | |
 | Website, GitHub org, YouTube channel art, virtual backgrounds | `assets/tokens/tokens.css`; `banner.py`; `assets/illustrations/` | web-and-digital.md | |
 | **Hallway TV slide** (the Mathematical Sciences Building TVs in slideshow mode, lab monitors, demo-day screens), or a 16:9 TV version of a banner | `scripts/atr_design.py banner --preset signage-16x9` (`--details`, `--qr`, `--image`; `signage-4k`; `--also signage-16x9` on any banner); save `.jpg` | web-and-digital.md §10, §9 | open the JPEG and the `--safe-zones` copy; scan the QR code from the screen |
+| **Animated background** on a TV slide or deck (moving lattice, grid scan or chevrons; MP4 plus still) | TV: `banner.py ... --motion lattice-drift` (also writes `<name>.mp4`); deck: `"motion": "lattice-drift"` in the `new_deck.py` spec; any motif alone: `atr_design.py motion preview` | graphic-elements.md §8; web-and-digital.md §10; presentations.md §4.6 | watch the MP4 through once; `motion.py check` passes (no flashes, clean loop) |
+| **Teo cameo** (Teo pops up, waves and ducks away), only when asked for: K-12, workshops, open labs | `banner.py --teo-cameo` (with or without `--motion`); deck slide `"teo_cameo": true`; rig parts in `assets/mascot/rig/` | mascot.md §3, §7 | Teo clears the text, QR code and logos in every frame |
 | Merch, stickers, apparel, robot decals, banners and tablecloths | SVG logos; `assets/patterns/` chevron and hazard files | print-and-merch.md §7-§12; kent-state-compliance.md §10 | UCM approval, licensed vendor |
 | Review or fix someone else's file | `scripts/brand_check.py <file> --all`; `scripts/render_office.sh` | qa-checklists.md | |
 | Accessibility questions, alt text, captions, tagged PDFs | `export_office.py inspect` for PDFs | accessibility.md | |
@@ -254,6 +256,9 @@ say which outputs changed.
    plates and anything behind text. Repeat until clean.
 6. Pass the QA gate (§4) and references/qa-checklists.md §2.1. Deliver the `.pptx` and, for sharing, a tagged PDF
    exported from PowerPoint (references/presentations.md §10).
+7. Moving backgrounds, when asked for and the deck is shown live: `"motion": "lattice-drift"` (or `grid-scan`,
+   `chevron-flow`) in the spec, `"teo_cameo": true` on a slide only on request (references/presentations.md §4.6).
+   The render shows the poster frames; watch one slide's MP4 (in the `motion:` info line) through once.
 
 By hand: open `assets/templates/ATR-Presentation-Template.potx`, add slides with Home > New Slide > an `ATR - ...`
 layout and type into the placeholders; free text boxes lose the styles, reading order and titles.
@@ -374,12 +379,19 @@ layout and type into the placeholders; free text boxes lose the styles, reading 
    [--subtitle ...] [--image assets/mascot/views/teo-front.png | --icon <name>] -o out.png --safe-zones`. If the copy
    does not fit, shorten it rather than forcing it below the floors. Open both PNGs. For a hallway TV slide use
    `--preset signage-16x9` with `--details` (date and time, place) and `--qr` or `--image`, written as `.jpg`; for a
-   TV version of any banner, add `--also signage-16x9` (references/web-and-digital.md §10).
-2. Discord and Slack: follow references/community-platforms.md for sizes (§2), the server structure the lab uses
+   TV version of any banner, add `--also signage-16x9` (references/web-and-digital.md §10). Add `--motion
+   lattice-drift` (or `grid-scan`, `chevron-flow`) for a moving version: the `.jpg` becomes its still frame and
+   `<name>.mp4` the 12 s loop, so the screens get whichever format they play. Add `--teo-cameo` only when someone asks
+   for Teo (outreach, K-12, workshops).
+2. Moving decks: put `"motion": "lattice-drift"` in a `new_deck.py` spec; bookend slides get the motif, content slides
+   a subtle version, and PDFs show the poster frames (references/presentations.md §4.6). Watch one MP4 through, and
+   post the PDF, never the moving deck.
+3. Discord and Slack: follow references/community-platforms.md for sizes (§2), the server structure the lab uses
    (§3), the permission rules that trip people up (§4) and bots (§5). Preview every emoji, sticker and thumbnail on
    Discord dark `#313338` and on white at display size before uploading.
-3. Teo: reuse `assets/mascot/` files as they are; check any new art against the character sheet
-   (references/mascot.md).
+4. Teo: reuse `assets/mascot/` files as they are; check any new art against the character sheet
+   (references/mascot.md). New Teo animation is rigged from `assets/mascot/rig/` and follows the 12 principles of
+   animation (references/mascot.md §7).
 
 ---
 
@@ -464,7 +476,9 @@ assets/
                              and README.md (the catalog)
   logos/                     svg/, png/ (-3000, -1000), icons/ (favicons, avatars), ksu/ (working copy and
                              official-sources.json, the official Kent State file manifest), logos.json
-  mascot/                    Teo: character sheet, avatar, views, expressions, emoji, stickers, prompts.json
+  mascot/                    Teo: character sheet, avatar, views, expressions, emoji, stickers, rig/ (puppet
+                             parts for animation), prompts.json
+  motion/                    Lottie motifs (lattice drift, grid scan, chevron flow) and the Teo cameo
   icons/                     43 icons: svg/, png/ (navy, gold, white, ink), badges/, masters/
   illustrations/             title, section, closing and light backgrounds; social textures; 3 concept
                              illustrations; virtual backgrounds; platform banners; poster header
@@ -479,7 +493,10 @@ scripts/
   brand_check.py             brand and accessibility linter (.pptx, .docx, .svg, .html/.css, images,
                              and copy in .md/.txt: facts, names, placeholders, Kent State style,
                              official vs working-copy Kent State wordmark, effective PPI)
-  banner.py                  banners, headers, splashes, thumbnails and TV slides at any size (12 presets)
+  banner.py                  banners, headers, splashes, thumbnails and TV slides at any size (12 presets;
+                             --motion and --teo-cameo for moving versions)
+  motion.py                  animated backgrounds: recolour, render (rlottie), composite, MP4, flash check
+  deck_motion.py             puts motion backgrounds on deck slides (used by new_deck.py)
   official_assets.py         fetch and verify the official Kent State wordmark files
   project.py                 one manifest per set of deliverables: scoped edits, changed-only builds and exports
   export_office.py           tagged PDF export and inspection, changed-page renders, contact sheets
@@ -507,12 +524,12 @@ catalog; `scripts/README.md` documents every script's options, exit codes and li
 ## 7. Environment
 
 - **Check first.** `python3 scripts/atr_design.py doctor` checks every feature group (core, office, qr, icons,
-  figures, ai-images) and prints the exact fix for each miss.
+  figures, motion, ai-images) and prints the exact fix for each miss.
 - **Python.** 3.9 or newer, in a virtual environment: `python3 -m venv .venv && .venv/bin/pip install -r
   scripts/requirements.txt` (then use `.venv/bin/python` wherever this file says `python3`). The core block
   (lxml, Pillow, numpy, defusedxml, python-pptx, fonttools) covers the linter, decks, quads and social cards;
   the `qr` group (qrcode, zxing-cpp, pypdf) is for QR codes, PDF inspection and project exports;
-  matplotlib is for figures; scipy, scikit-image and vtracer are for the icon pipeline, which needs Python 3.12 or
+  matplotlib is for figures; rlottie-python and ffmpeg (or imageio-ffmpeg) are for moving backgrounds; scipy, scikit-image and vtracer are for the icon pipeline, which needs Python 3.12 or
   3.13 (vtracer crashes on 3.14). PyYAML is optional, for YAML deck specs. `contrast.py`, `email_signature.py` and
   `render_office.sh` need no packages.
 - **Installed as the Claude Code plugin** (`/plugin install atr-lab-design@atr-lab`), the venv lives in the

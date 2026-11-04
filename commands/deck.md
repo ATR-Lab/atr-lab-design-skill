@@ -26,4 +26,7 @@ Request: $ARGUMENTS
 Follow SKILL.md §3.1 (references/presentations.md for the recipe and layouts): pick the recipe, start from the
 closest spec in `scripts/examples/decks/`, build with `scripts/new_deck.py ... --render --check`, fix every warning
 by cutting words or changing layouts, and look at every rendered slide. Use only verified facts (SKILL.md §5);
-bracket the rest. Pass the QA gate (SKILL.md §4) and end with its report, including "Still needed from you".
+bracket the rest. For a deck shown live (seminar, open lab, demo day, lobby loop) that asks for movement, add a
+deck-level `"motion"` (references/presentations.md §4.6), and `"teo_cameo": true` on a slide only when the request
+asks for Teo; leave motion out of defenses and decks that will be emailed. Pass the QA gate (SKILL.md §4) and end
+with its report, including "Still needed from you".

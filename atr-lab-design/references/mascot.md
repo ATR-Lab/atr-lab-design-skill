@@ -15,6 +15,7 @@ generate any new Teo art.
 4. [Voice](#4-voice)
 5. [Making a new pose](#5-making-a-new-pose)
 6. [Files](#6-files)
+7. [Animating Teo](#7-animating-teo)
 
 ## 1. Who Teo is
 
@@ -113,3 +114,31 @@ python3 scripts/icons/chroma_key.py /tmp/teo-new.png /tmp/teo-new-keyed.png --ke
 See `assets/mascot/README.md` for every file and size. Upload-ready sets: `assets/mascot/emoji/` (Discord and
 Slack emoji) and `assets/mascot/stickers/` (Discord stickers); platform specs are in
 references/community-platforms.md §2.
+
+## 7. Animating Teo
+
+Teo moves as a **puppet rig**: separate parts, each complete where the others would cover it, so a part can turn
+without exposing a gap. The parts are in `assets/mascot/rig/` (transparent PNGs, generated with Higgsfield
+`gpt_image_2_5` from the design 2 references as one exploded parts sheet, then split): `teo-head.png` (shell, lens
+pods and chin bracket, with a blank screen), `teo-ear-left.png`, `teo-ear-right.png`, `teo-hand-wave.png` (open
+palm) and `teo-hand-rest.png`. The face is not a picture: eyes, mouth and blush are vector shapes in gold
+(`#EFAB00`) and soft orange on the screen, so Teo can blink and change expression without new art.
+
+The shipped animation is the **cameo** (`assets/motion/teo-cameo.json`, an 800 × 800 Lottie, 12 s at 30 fps):
+
+| Frames | Action | Principle |
+|---|---|---|
+| 36-62 | Pops up from the bottom: stretched while rising, overshoots, squashes on landing, settles | Squash and stretch, slow in and slow out, exaggeration |
+| 40-63 | Ears and hand trail the body, then flip past rest and settle | Follow-through and overlapping action |
+| 66-114 | Waves from the wrist, six quick swings easing out | Arcs, timing |
+| 130-136, 236-242 | Blinks (eyes squash to 10 % height) | Secondary action |
+| 150-160, 210-220 | Left ear, then right ear, flicks | Secondary action |
+| 268-294 | Crouches (squash), springs up (stretch) and ducks away | Anticipation |
+
+Rig in LottieFiles Creator (with the Lottie skill): put the parts on a scene at 50 %, set each pivot (hand at the
+wrist, ears at their base, the whole body at its base for squash), draw the face as vector shapes, group everything
+into a nested scene and animate the body in the parent scene and the parts inside it. Teo's animation follows the 12
+principles of animation (references/graphic-elements.md §8); the restraint rules for slides do not apply to him.
+Use the cameo through `banner.py --teo-cameo` and the deck's `"teo_cameo": true`, only when asked for, and only on
+the pieces §3 allows.
+

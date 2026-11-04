@@ -27,7 +27,9 @@ Pick the preset with `scripts/atr_design.py banner --list-presets` (GitHub heade
 invite splash or profile banner, X header, YouTube banner, OG image, square thumbnail, 16:9 slide, hallway TV
 `signage-16x9` or `signage-4k`) or use `--size WxH`. For a TV slide or a TV version of a banner, follow
 references/web-and-digital.md §10: `--details` for date, time and place, `--qr` for the organizer's link,
-`--also signage-16x9` on an existing banner, and write `.jpg`. Render with `--safe-zones`, using only verified facts (SKILL.md §1) and, for the mascot, files from
+`--also signage-16x9` on an existing banner, and write `.jpg`. For a moving TV slide add `--motion lattice-drift`
+(or `grid-scan`, `chevron-flow`), which also writes the `.mp4` loop; add `--teo-cameo` only when the request asks for
+Teo. Watch the MP4 once and deliver both files. Render with `--safe-zones`, using only verified facts (SKILL.md §1) and, for the mascot, files from
 `assets/mascot/`. Open the PNG and the safe-zone copy; if the copy doesn't fit, shorten it rather than shrinking it.
 For Discord art, also preview on `#313338` and white (references/community-platforms.md). Deliver the PNG and its alt
 text.

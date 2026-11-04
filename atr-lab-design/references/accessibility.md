@@ -134,6 +134,10 @@ real title placeholders, a sensible reading order and the ATR theme.
 - [ ] **Kiosk and looping decks** (open houses, lobby screens): no autoplaying sound (1.4.2); a visible way
       to pause, or an accessible non-looping copy posted or on request (2.2.2); no auto-advance on decks
       people are meant to read (2.2.1).
+- [ ] **Moving backgrounds** (`new_deck.py` `"motion"`, `banner.py --motion`): decorative, muted, slow, no flashes
+      (`motion.py` refuses a clip above 3 flashes a second), turned down under text so contrast holds. They are for
+      live talks and signage: post the PDF (poster frames), never the moving deck, and give anyone who asks a still
+      copy (`"motion": "none"` and rebuild). On a kiosk loop the presenter's pause (or the still copy) covers 2.2.2.
 - [ ] **Language** set for any non-English text (Review > Language).
 - [ ] **Sections** have meaningful names (not "Default Section"); file has a descriptive name and a Title
       property (File > Info).

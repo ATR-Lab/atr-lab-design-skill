@@ -258,6 +258,20 @@ None or Fade between slides; Wipe from the left on section dividers only; bullet
 a time only when the talk paces them; no Fly-in, Bounce or Spin; nothing flashes more than three times a second
 (references/graphic-elements.md §8).
 
+**Animated backgrounds.** A deck may carry one motion motif (`lattice-drift`, `grid-scan` for technical talks,
+`chevron-flow`): `"motion": "lattice-drift"` in the spec moves it behind the title, section divider, statement and
+closing slides at full strength and behind content slides in a subtle version (`"motion": {"motif": ...,
+"content": "none"}` keeps content slides still). Each slide gets a muted 12 s MP4 that starts by itself and loops, with
+the layout's band, lockups and header in front of it; under text the motif is turned down, and it stays off
+pictures, charts and tables. Use it for talks given live: a seminar, an open lab, a demo day, a lobby loop. Leave it
+out of thesis defenses and paper talks where the committee reads dense slides, and of decks that will be emailed
+(they grow by about 2-3 MB per distinct background). PDF exports, Google Slides and printouts show the poster frame,
+so the still version is always correct. A slide can opt out with `"motion": "none"`.
+
+**Teo cameo.** `"teo_cameo": true` on a slide (or in the deck's motion block, for every bookend) makes Teo pop up
+from the bottom edge, wave and duck away inside that slide's background. Only when someone asks for it: K-12 visits,
+summer camps, workshops, open labs. It is refused, with a warning, where it would touch text or a logo.
+
 ### 4.7 Fill the frame: choose the layout by how much you have to say
 
 A content layout is sized for its budget (§2): Title + Content holds about seven one-line bullets, each Two Content
@@ -436,6 +450,10 @@ Slide 4 keeps `[placeholders]` on purpose, so this spec is refused until they ar
   `{"status": "complete" | "on-track" | "at-risk" | "late" | "not-started", "label"}`. Columns are sized from their
   measured text unless you give `widths`.
 - **Video:** `{"video": "demo.mp4", "poster": "frame.png", "alt"}`, or a poster picture alone.
+- **Motion (deck level):** `"motion": "lattice-drift" | "grid-scan" | "chevron-flow"`, or `{"motif", "content":
+  "subtle" | "none", "teo_cameo": false}`. Slide level: `"motion": "none" | "<motif>" | {"motif", "strength": "full" |
+  "subtle"}` and `"teo_cameo": true` (§4.6). Rendering needs rlottie-python and ffmpeg (`atr_design.py doctor`);
+  each new 12 s loop takes about half a minute and repeats are reused from `~/.cache/atr-lab-design/motion`.
 - **Slide keys:** `layout`; `notes` or `speaker_notes` (the `ATR - Video` layout's own "what to watch for"
   placeholder is also called `notes`, so put that one in `"fields"`); `section` (1-based agenda item);
   `from_slide`, `remove`, `keep`, `shapes`, `tables`, `images` and `textboxes` (§8.5).
