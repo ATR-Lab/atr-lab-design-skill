@@ -33,7 +33,7 @@ Navy tiles: white and gold text, gold/navy hazard band on the bottom edge (left 
 bottom-left and the Kent State wordmark bottom-right at equal height (130 px on 1080-wide tiles, 110 px on
 16:9), both 44 px above the band (the mark's clear space X = 43 px; the wordmark's K height = 40 px). Gold
 tiles: navy and ink text only, gold/white band on the top edge (left edge on 16:9), navy mark bottom-left with
-a two-line text credit ("Advanced Telerobotics Research Lab / Kent State University"), because there is no
+a three-line text credit ("Advanced Telerobotics / Research Laboratory / Kent State University"), because there is no
 approved Kent State wordmark for gold fields. A small seeded constellation cluster (gold + one sky trace on
 navy, navy on gold; drawn by the source repository's `prepare_art.py`, see Regenerating below) sits in one corner where text never
 goes: top-right on navy tiles (the eyebrow box stops 16 px before it), bottom-right on gold tiles, the top and

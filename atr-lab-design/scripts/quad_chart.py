@@ -136,7 +136,7 @@ STATUS_ALIASES = {"complete": "complete", "completed": "complete", "done": "comp
 # strings that brand_check.py treats as errors: refuse them before building (see references/voice-and-copy.md)
 BANNED = [(re.compile(r"@atr_kent\b", re.I), "@atr_kent does not exist; use @atrlab_kent (X) or @atr_lab (Instagram)"),
           (re.compile(r"College of Arts (and|&) Sciences", re.I), "Computer Science is in the College of Sciences and Humanities"),
-          (re.compile(r"Advanced Tele-Robotics", re.I), "the name is Advanced Telerobotics Research Lab")]
+          (re.compile(r"Advanced Tele-Robotics", re.I), "the name is Advanced Telerobotics Research Laboratory")]
 PLACEHOLDER_RE = re.compile(r"\[(?!\d+\])[^\[\]\n]{1,80}\]")  # [bracketed text]; citations like [3] are ignored
 MAX_CHARS_FAIL = 1.15  # over 115 % of a character budget fails; over 100 % warns
 

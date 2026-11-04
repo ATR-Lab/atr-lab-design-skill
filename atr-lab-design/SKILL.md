@@ -1,15 +1,15 @@
 ---
 name: atr-lab-design
-description: "Brand, marketing and graphic-design system for the Advanced Telerobotics Research (ATR) Lab at Kent State University: verified lab facts, Kent State rules, logos (with the official Kent State wordmark fetch), colors, fonts, icons, the Teo mascot, templates and build, export and checking scripts. Use it for any marketing, communications or design task for the ATR Lab, the Advanced Telerobotics Research Lab or the Kent State telerobotics lab, and whenever someone in this repo says 'our lab': slides and decks, quad charts, posters, event and workshop flyers with QR codes, social posts and captions, banners, GitHub headers and hallway TV slides, animated slide and TV backgrounds and Teo animations, Discord and Slack servers, bots, emoji and stickers, press releases, newsletters, emails and signatures, logos, colors, fonts, icons, images, merch, the website, video thumbnails, figures, revising existing files and brand reviews, even when the request never mentions the brand."
+description: "Brand, marketing and graphic-design system for the Advanced Telerobotics Research (ATR) Lab at Kent State University: verified lab facts, Kent State rules, logos (with the official Kent State wordmark fetch), colors, fonts, icons, the Teo mascot, templates and build, export and checking scripts. Use it for any marketing, communications or design task for the ATR Lab, the Advanced Telerobotics Research Laboratory (or Lab) or the Kent State telerobotics lab, and whenever someone in this repo says 'our lab': slides and decks, quad charts, posters, event and workshop flyers with QR codes, social posts and captions, banners, GitHub headers and hallway TV slides, animated slide and TV backgrounds and Teo animations, Discord and Slack servers, bots, emoji and stickers, press releases, newsletters, emails and signatures, logos, colors, fonts, icons, images, merch, the website, video thumbnails, figures, revising existing files and brand reviews, even when the request never mentions the brand."
 ---
 
 # ATR Lab design system
 
-Everything needed to make, write and check marketing and design work for the **Advanced Telerobotics Research Lab**
-(ATR Lab), Department of Computer Science, Kent State University: the verified facts, Kent State's brand and
-editorial rules, the logo library, color and type tokens, 43 icons, patterns and backgrounds, the lab mascot Teo,
-19 ready templates (decks, quad charts, posters, event flyers, print, social, letterhead, email signature) and
-scripts that build, revise, export and lint files.
+Everything needed to make, write and check marketing and design work for the **Advanced Telerobotics Research
+Laboratory** (ATR Lab), Department of Computer Science, Kent State University: the verified facts, Kent State's
+brand and editorial rules, the logo library, color and type tokens, 43 icons, patterns and backgrounds, the lab
+mascot Teo, 19 ready templates (decks, quad charts, posters, event flyers, print, social, letterhead, email
+signature) and scripts that build, revise, export and lint files.
 All templates share one look, which the lab calls **Hazard Gold**: white or navy fields, gold label plates with the
 navy mark, Roboto Slab numerals and the gold hazard-stripe band on bookend edges only.
 
@@ -44,21 +44,25 @@ Run every command from the skill root (the folder that holds this file). All pat
 
 ## 1. The 60-second brand card
 
-### Names and contacts (verified 2026-09-28; details and sources in references/brand-foundation.md §1-§2, §11)
+### Names and contacts (verified 2026-11-04; details and sources in references/brand-foundation.md §1-§2, §11)
 
-- **First reference in running copy:** "Advanced Telerobotics Research Lab" (formal and ceremonial: "Advanced
-  Telerobotics Research Laboratory"; pick one per piece, default "Lab"), then **"the lab"**. "ATR Lab" only in
-  display type and tight space (logos, headlines, footers, handles), and always on a piece that also names Kent
-  State, because "ATR" alone also names a large robotics institute in Kyoto.
+- **First reference in running copy:** "Advanced Telerobotics Research Laboratory" (the official long form, confirmed
+  by the lab in Nov. 2026; not "…Research Lab"), then **"the lab"**. "ATR Lab" only in display type and tight
+  space (logos, headlines, footers, handles), and always on a piece that also names Kent State, because "ATR"
+  alone also names a large robotics institute in Kyoto.
 - **Home:** Department of Computer Science, College of Sciences and Humanities, Kent State University, Kent, Ohio.
   Affiliation line: "Department of Computer Science, Kent State University".
 - **Director:** Jong-Hoon Kim, associate professor of computer science, jkim72@kent.edu (re-check the title for
   anything public).
 - **Mailing address:** Department of Computer Science, 241 Mathematical Sciences Building, 1300 Lefton Esplanade,
   Kent, OH 44242-0001. Department phone 330-672-9980 (label it as the department's).
+- **Lab room:** Room 236, Mathematical Sciences Building (second floor; visits by appointment). **Director's office
+  phone:** 330-672-9060, printed only labeled as the director's office ("Director's office: 330-672-9060"), never as
+  a lab line; no direct lab line is published.
 - **Online:** www.atr.cs.kent.edu · X **@atrlab_kent** · Instagram **@atr_lab** · GitHub **ATR-Lab** · YouTube
-  "Advanced Telerobotics Research Laboratory" · atrlab.kent@gmail.com (prefer a kent.edu address on K-12, recruiting
-  and sponsor pieces). Name the platform next to each handle; they differ.
+  "Advanced Telerobotics Research Laboratory" · LinkedIn
+  https://www.linkedin.com/company/advanced-telerobotics-research-laboratory · atrlab.kent@gmail.com (prefer a
+  kent.edu address on K-12, recruiting and sponsor pieces). Name the platform next to each handle; they differ.
 - **Positioning:** from telepresence and tele-embodiment toward **Physical AI** (AI that senses and acts in the real
   world through a robot). Keep the telepresence heritage; it explains the name.
 - **The round emblem is the "roundel"**, never a "seal" (files are named `atr-seal-*`). ATR_Kent is the competition
@@ -128,12 +132,12 @@ pieces or in place of the mark (references/mascot.md).
 
 ### Short-form voice (channel topics, captions, bot replies, cards)
 
-- First mention: "Advanced Telerobotics Research Lab"; then "the lab". "ATR Lab" only in display type and only on a
-  piece that also names Kent State. Never "ATR" alone or "KSU" in running copy.
+- First mention: "Advanced Telerobotics Research Laboratory"; then "the lab". "ATR Lab" only in display type and
+  only on a piece that also names Kent State. Never "ATR" alone or "KSU" in running copy.
 - Kent State/AP style: no Oxford comma; "and", not "&"; "Nov. 7"; "11 a.m.-3 p.m."; "Ph.D."; sentence case.
-- The safe one-liner: "The Advanced Telerobotics Research Lab at Kent State University is an innovation research
-  laboratory focused on exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and artificial
-  intelligence."
+- The safe one-liner: "The Advanced Telerobotics Research Laboratory at Kent State University is an innovation
+  research laboratory focused on exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and
+  artificial intelligence."
 - Handles: X @atrlab_kent, Instagram @atr_lab, GitHub ATR-Lab (never @atr_kent).
 - A finalist is not a winner; past projects carry their years; unconfirmed facts stay `[bracketed]`.
 - Plain, warm, specific; one call to action that points to a page the lab owns.
@@ -149,8 +153,8 @@ pieces or in place of the mark (references/mascot.md).
    grounds and navy or ink on gold.
 6. Never **invent facts**: people, titles, results, awards, grant numbers, sponsors, quotes or statistics. Use
    `[bracketed placeholders]`. Never claim a RoboCup placement, and never upgrade a result (a finalist is not a winner).
-7. Never print "College of Arts and Sciences", Room 236 or 330-672-9060 as the lab's room or line, or
-   "Mathematics and Computer Science Building" (it is the Mathematical Sciences Building).
+7. Never print "College of Arts and Sciences", 330-672-9060 as a lab line or without the director's-office label,
+   or "Mathematics and Computer Science Building" (it is the Mathematical Sciences Building; the lab is in Room 236).
 8. Never write "ATR" alone or "KSU" in running copy. Kent State style: no Oxford comma, "and" not "&" in unit names,
    "Sept. 23", "9 a.m.-noon", "Ph.D.", titles lowercase after names.
 9. Never present **AI-generated images** as real lab photos, robots, people, experiments or results, and never put
@@ -426,29 +430,30 @@ per-deliverable lists.
 ## 5. Facts policy
 
 The lab's public footprint contradicts itself (old handles, a wrong college, stale titles, a retired logo), so the
-skill keeps one verified fact base: references/brand-foundation.md (checked 2026-09-28). Its §9 proof bank lists
+skill keeps one verified fact base: references/brand-foundation.md (checked 2026-09-28; lab-confirmed facts added
+2026-11-04). Its §9 proof bank lists
 the claims you may make and the exact wording; §11 lists the contact details and a "Never print" list; §12 lists the
 known inconsistencies. Use only those facts, facts the user gives you, or facts you verify with a cited source.
 
 The lab's public profile repository, https://github.com/ATR-Lab/about, carries the same facts (brand-foundation.md,
 "Upstream"). If the two disagree, use the one with the later review date and tell the user.
 
-When the user supplies a fact that contradicts the fact base (an @atr_kent handle, Room 236, "College of Arts and
-Sciences"), do not use it: explain the conflict and use the verified value.
+When the user supplies a fact that contradicts the fact base (an @atr_kent handle, 330-672-9060 as the lab's
+phone, "College of Arts and Sciences"), do not use it: explain the conflict and use the verified value.
 
 **Always placeholders until someone confirms them:**
 
 | Unknown | Placeholder |
 |---|---|
-| The lab's own room and phone line | `[Room ###]`, `[Lab phone]` |
-| The canonical LinkedIn page; the Facebook page (unverified, so omit) | `[canonical LinkedIn URL]` |
+| A direct lab phone line (none is published; Room 236, the director's office line and the LinkedIn page are confirmed, §1) | the department's 330-672-9980, or the director's office line labeled as the director's |
+| The Facebook page (unverified, so omit) | leave it out |
 | A lab gift designation (the known link goes to the Computer Science General Fund) | `[Giving URL: confirm designation]` |
 | Grant and award numbers, and which award funded which work | `[Grant No.]`, `[Sponsor]` |
 | People: members, students, co-authors, roles, headcounts (the Team page is stale) | `[Name Surname]`, `[N] student researchers` |
 | Results, statistics, dates, costs, grades and schedules not in the proof bank | `[44%]`, `[dates]`, `[cost]`, `[grades]` |
 | Quotes (approved words only) and sponsor names, tiers or amounts | `[Quote approved by ...]`, `[Tier]`, `[Amount]` |
 | A tagline (none is official), and the draft boilerplates and bio (awaiting the director's approval) | mark them "draft" |
-| Details marked `[confirm]` in the proof bank (the WRS paper award, the NSF PRIDe role, whether a team attended an event) | keep the bracket |
+| Details marked `[confirm]` in the proof bank (the title of the WRS award paper, the NSF PRIDe role, whether a team attended an event) | keep the bracket |
 
 Deliver drafts with placeholders only when the user asks for a draft or the facts are missing, and list every
 placeholder at the end so a person can clear it.

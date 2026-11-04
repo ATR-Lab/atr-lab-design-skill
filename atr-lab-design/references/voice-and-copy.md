@@ -1,6 +1,6 @@
 # Voice and copy
 
-How the Advanced Telerobotics Research Lab sounds, and the rules and templates for writing anything it publishes: headlines, slides, posters, captions, web pages, emails, recruiting posts, K-12 program copy, sponsor asks, award news and invitations. Kent State University's editorial style (AP plus university exceptions) governs, with a lab word list on top.
+How the Advanced Telerobotics Research Laboratory sounds, and the rules and templates for writing anything it publishes: headlines, slides, posters, captions, web pages, emails, recruiting posts, K-12 program copy, sponsor asks, award news and invitations. Kent State University's editorial style (AP plus university exceptions) governs, with a lab word list on top.
 
 **Read this when** you are writing or editing any words the lab will show to someone: a headline, a paragraph, a caption, alt text, a call to action, an email or a whole page. Names, facts, proof points and boilerplates live in references/brand-foundation.md; read that first if the copy makes any claim about the lab.
 
@@ -76,12 +76,12 @@ Kent State "closely follows the Associated Press Stylebook", with university exc
 |---|---|---|---|
 | The university | "Kent State University" on first reference, then "Kent State" or "the university" (lowercase) | "Kent State University … Kent State … the university" | "KSU" in running copy; "Kent State campus" |
 | KSU | Avoid in copy. Acceptable only in tightly spaced, tabulated copy or for Northeast Ohio audiences (kent.edu/ucm/n; the web guide says "avoid KSU"). University-issued hashtags such as #UndeniablyKSU are fine | "Kent State" | "KSU robotics lab" |
-| The lab | "Advanced Telerobotics Research Lab" first, then "the lab"; "ATR Lab" only in display and tight space (references/brand-foundation.md §2) | "the Advanced Telerobotics Research Lab … the lab" | "the ATR", "ATR" alone as a second reference |
+| The lab | "Advanced Telerobotics Research Laboratory" first, then "the lab"; "ATR Lab" only in display and tight space (references/brand-foundation.md §2) | "the Advanced Telerobotics Research Laboratory … the lab" | "the ATR", "ATR" alone as a second reference |
 | Department | Official name capitalized first, lowercase after | "Department of Computer Science … the computer science department … the department" | "CS Dept.", "Computer Science Department" |
 | College | "College of Sciences and Humanities", then "the college" | | "College of Arts and Sciences" (out of date) |
 | Unit acronyms | Kent State does not use acronyms for units, even research centers ("Do not use RCET"). On a webpage only, after the full name, an acronym may appear in a headline or link where space is tight | | |
 | Kent Campus | Always capitalized | "on the Kent Campus" | "on the Kent State campus" |
-| People, first reference | Full name, then title after the name, lowercase | "Jong-Hoon Kim, associate professor of computer science and director of the Advanced Telerobotics Research Lab" | "Dr. Kim, Director of ATR" |
+| People, first reference | Full name, then title after the name, lowercase | "Jong-Hoon Kim, associate professor of computer science and director of the Advanced Telerobotics Research Laboratory" | "Dr. Kim, Director of ATR" |
 | People, later references | Last name only | "Kim said" | "Dr. Kim said", "Jong-Hoon said" |
 | Academic title before a name | Avoid. Put the title after the name, lowercase. Capitalize only named or emeritus titles, as Kent State does ("Professor Emeritus of Physics"). Check titles in the catalog faculty directory (catalog.kent.edu/faculty-administrators/faculty/) | "Jong-Hoon Kim, associate professor of computer science" | "Associate Professor Jong-Hoon Kim" |
 | "Dr." | Avoid in news-style copy (AP). On slides, posters and cards, the lab's display convention is "Ph.D." after the full name | "Jong-Hoon Kim, Ph.D." | "Dr. Jong-Hoon Kim, Ph.D." |
@@ -168,7 +168,7 @@ Kent State "closely follows the Associated Press Stylebook", with university exc
 | non-paid research experience (for the internship) | job, paid position, "free internship" | The 2026 posting says "Non-Paid Position for Research Experience" |
 | robotics camp, summer workshop (to parents) | K-12 STEM outreach program | Use the parents' words |
 | Golden Flash (one student), Golden Flashes community | #GoFlashes, #GoldenFlashes on lab posts; athletics logos | Kent State allows the words in nonsporting copy; the hashtags are for athletics events |
-| Kent State's Advanced Telerobotics Research Lab | "KSU's ATR", "the ATR" | |
+| Kent State's Advanced Telerobotics Research Laboratory | "KSU's ATR", "the ATR" | |
 | ATR_Kent (competition team) | @ATR_Kent, @atr_kent, "ATR Kent" | Team name, never a handle |
 | @atrlab_kent (X), @atr_lab (Instagram), ATR-Lab (GitHub) | one "universal" handle | Handles differ by platform (references/brand-foundation.md §11) |
 | advisor | adviser | Kent State spelling exception (kent.edu/ucm style guide) |
@@ -312,7 +312,7 @@ A method for turning a paper, poster or grant abstract into public copy.
 
 **Worked example (VendoBot, structure only; results stay bracketed until the authors supply them):**
 
-> Service robots are starting to share hallways and shops with people, and people need to know what a robot will do next. But a robot's plans are hard to read from its movement alone. So researchers in Kent State's Advanced Telerobotics Research Lab built VendoBot, a delivery robot that uses projection to show its intentions, and tested [how: study design, N participants]. [Finding, with the paper's own hedge.] Next, the team plans to [next step].
+> Service robots are starting to share hallways and shops with people, and people need to know what a robot will do next. But a robot's plans are hard to read from its movement alone. So researchers in Kent State's Advanced Telerobotics Research Laboratory built VendoBot, a delivery robot that uses projection to show its intentions, and tested [how: study design, N participants]. [Finding, with the paper's own hedge.] Next, the team plans to [next step].
 
 Translation notes: "projection-augmented" became "uses projection to show its intentions"; "intent transparency" became "know what a robot will do next"; "motion legibility" became "hard to read from its movement".
 
@@ -332,7 +332,7 @@ Rules for every recruiting piece:
 ```
 [Hook: the research question in plain words, 210 characters or fewer.]
 
-The Advanced Telerobotics Research Lab at Kent State University is looking for
+The Advanced Telerobotics Research Laboratory at Kent State University is looking for
 [Ph.D. / M.S.] students to start in [term, year].
 
 What you could work on:
@@ -370,7 +370,7 @@ Paid positions: search "[listing title]" on Handshake.
 
 ```
 High school students: spend your summer on a real robotics research team.
-The [year] Summer Internship at Kent State University's Advanced Telerobotics Research Lab
+The [year] Summer Internship at Kent State University's Advanced Telerobotics Research Laboratory
 runs [dates].
 Work with lab members on one of [N] projects: [project areas].
 This is a non-paid position for research experience.
@@ -381,7 +381,7 @@ Parents and guardians: questions go to [program kent.edu address].
 
 **Worked example (the 2026 cycle, from the lab's internship page; replace every date for the current year):**
 
-> High school students: spend your summer on a real robotics research team. The 2026 Summer Internship at Kent State University's Advanced Telerobotics Research Lab gives you hands-on experience in AI, robotics and Physical AI systems. You'll work with lab members on one of four project areas (Medical AI, Physical AI Coworker, Educational Robotics or an AI Animal Care System) and learn how research ideas are developed, tested and presented. This is a non-paid position for research experience.
+> High school students: spend your summer on a real robotics research team. The 2026 Summer Internship at Kent State University's Advanced Telerobotics Research Laboratory gives you hands-on experience in AI, robotics and Physical AI systems. You'll work with lab members on one of four project areas (Medical AI, Physical AI Coworker, Educational Robotics or an AI Animal Care System) and learn how research ideas are developed, tested and presented. This is a non-paid position for research experience.
 >
 > Apply May 11-15 by emailing Jong-Hoon Kim at jkim72@kent.edu (subject "Summer Internship") with a parent or guardian copied. Send a letter of intent; a written non-paid acknowledgment; your ranking of the four project areas, with reasons; and your résumé as a PDF. Decisions go out May 18; orientation is May 23, 9 a.m.-noon; the internship runs June through Aug. 14.
 
@@ -414,7 +414,7 @@ Photos:     [One sentence on the optional photo release, linking to the full exp
 
 > **A summer robotics workshop for middle school students at Kent State**
 >
-> This summer, students explore Physical AI: robots that sense the world around them and decide what to do. Working with researchers from Kent State's Advanced Telerobotics Research Lab, your child will get hands-on time with real robotics systems and [build and program a robot to do task]. On the last day, [families are invited to a showcase].
+> This summer, students explore Physical AI: robots that sense the world around them and decide what to do. Working with researchers from Kent State's Advanced Telerobotics Research Laboratory, your child will get hands-on time with real robotics systems and [build and program a robot to do task]. On the last day, [families are invited to a showcase].
 >
 > For students entering grades [X-Y]. [Dates], [times]. [Cost]. Registration opens [date]: [link].
 
@@ -455,13 +455,13 @@ Hi [Name],
 [Specific, true observation about the company: a product, a hiring push, a regional investment.]
 That usually means [the problem it creates for them].
 
-At Kent State's Advanced Telerobotics Research Lab, students build [relevant systems] on
+At Kent State's Advanced Telerobotics Research Laboratory, students build [relevant systems] on
 [real platforms]. [One proof point from references/brand-foundation.md §9.]
 
 Would a 30-minute lab visit on [date option 1] or [date option 2] help you see whether
 there's a fit?
 
-[Name], [title], Advanced Telerobotics Research Lab, Kent State University
+[Name], [title], Advanced Telerobotics Research Laboratory, Kent State University
 [kent.edu email] · [phone]
 ```
 
@@ -473,7 +473,7 @@ there's a fit?
 >
 > [Company] recently [announced a service-robot pilot in Ohio]. That usually means [finding engineers who already know how people react to robots in public spaces].
 >
-> At Kent State's Advanced Telerobotics Research Lab, students build service robots and other Physical AI systems, working with platforms such as Pepper, Unitree Go2 and Booster K1. The lab's work on VendoBot, a delivery robot, was published in the HRI 2026 Companion proceedings.
+> At Kent State's Advanced Telerobotics Research Laboratory, students build service robots and other Physical AI systems, working with platforms such as Pepper, Unitree Go2 and Booster K1. The lab's work on VendoBot, a delivery robot, was published in the HRI 2026 Companion proceedings.
 >
 > Would a 30-minute lab visit on [date option 1] or [date option 2] help you see whether there's a fit?
 
@@ -537,7 +537,7 @@ Details: [link to the lab news post or the body's announcement]
 
 **Worked example (historical proof, correctly worded):**
 
-> A team from Kent State's Advanced Telerobotics Research Lab was selected as one of 11 finalists in the World Robot Summit's Plant Disaster Prevention Challenge and was the only team from the United States, The Kent Stater reported in March 2021.
+> A team from Kent State's Advanced Telerobotics Research Laboratory was selected as one of 11 finalists in the World Robot Summit's Plant Disaster Prevention Challenge and was the only team from the United States, The Kent Stater reported in March 2021.
 
 Wrong: "The award-winning ATR team placed at the World Robot Summit."
 
@@ -545,11 +545,11 @@ Wrong: "The award-winning ATR team placed at the World Robot Summit."
 
 ```
 Subject: See robots you can [drive from a VR headset / talk to], [Day, Month DD]
-Preview: Open lab at Kent State's Advanced Telerobotics Research Lab. Try a demo, meet the students.
+Preview: Open lab at Kent State's Advanced Telerobotics Research Laboratory. Try a demo, meet the students.
 
 Hi [First name],
 
-On [Day, Month DD], from [time] to [time], the Advanced Telerobotics Research Lab at
+On [Day, Month DD], from [time] to [time], the Advanced Telerobotics Research Laboratory at
 Kent State University opens its doors for a demo day.
 
 You'll be able to:
@@ -563,7 +563,7 @@ Parking: [instructions]. Accessibility: [step-free route]; for accommodations, e
 [Save my spot]   (button; links to registration with a calendar file)
 
 Questions? Reply to this email.
-[Name], [role], Advanced Telerobotics Research Lab
+[Name], [role], Advanced Telerobotics Research Laboratory
 ```
 
 **Worked example (demo lines use real platforms; confirm what will run that day, and the VendoBot wording with the project lead):**
@@ -668,8 +668,8 @@ The visual and document rules are in references/accessibility.md; these are the 
 
 | Image | Alt text |
 |---|---|
-| Photo (describe the real one) | "Two students adjust the arm of a humanoid robot on a workbench in the Advanced Telerobotics Research Lab." |
-| ATR logo | "Advanced Telerobotics Research Lab logo" (name it; don't describe the artwork) |
+| Photo (describe the real one) | "Two students adjust the arm of a humanoid robot on a workbench in the Advanced Telerobotics Research Laboratory." |
+| ATR logo | "Advanced Telerobotics Research Laboratory logo" (name it; don't describe the artwork) |
 | Kent State wordmark | "Kent State University" |
 | AI illustration `assets/illustrations/illus-telepresence.png` | "Illustration: an operator wearing a VR headset controls a distant robot arm over a network." (always start with "Illustration") |
 | Chart | The takeaway, not the geometry: "Bar chart: [finding in one sentence]." Put the data in a table nearby (references/data-visualization.md) |

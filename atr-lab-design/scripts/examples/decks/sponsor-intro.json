@@ -2,8 +2,8 @@
   "_comment": "12-slide sponsor and industry-partner introduction (references/pr-events-outreach.md 15.3; recipe in references/presentations.md). Every fact comes from references/brand-foundation.md (sections 1, 4, 8, 9 and 11) or the partner routes in references/pr-events-outreach.md 15.1-15.2; nothing is invented, so it builds without --allow-placeholders. Before a real meeting: clear the company with Philanthropy and Alumni Engagement or Sponsored Programs, tailor slide 1's eyebrow and the notes, recount the GitHub repositories, and replace the Kent State wordmark working copy with the official file. Build: python3 scripts/new_deck.py scripts/examples/decks/sponsor-intro.json -o out/sponsor-intro.pptx --render --check",
   "template": "presentation",
   "output": "sponsor-intro.pptx",
-  "title": "Partner with Kent State's Advanced Telerobotics Research Lab",
-  "author": "Advanced Telerobotics Research Lab",
+  "title": "Partner with Kent State's Advanced Telerobotics Research Laboratory",
+  "author": "Advanced Telerobotics Research Laboratory",
   "subject": "Sponsor and industry partner introduction",
   "slides": [
     {
@@ -13,7 +13,7 @@
       "subtitle": "Telepresence robotics and Physical AI research",
       "presenter": "Jong-Hoon Kim, lab director",
       "notes": [
-        "Introduce the lab by its full name first: the Advanced Telerobotics Research Lab at Kent State University, in the Department of Computer Science.",
+        "Introduce the lab by its full name first: the Advanced Telerobotics Research Laboratory at Kent State University, in the Department of Computer Science.",
         "For a specific meeting, put the partner's name and the date in the eyebrow (AP style: SEPT. 23, 2026) and open with the partnership idea in their words.",
         "Before the meeting: clear the company with Philanthropy and Alumni Engagement (gifts) or the Office of Sponsored Programs (research agreements)."
       ]

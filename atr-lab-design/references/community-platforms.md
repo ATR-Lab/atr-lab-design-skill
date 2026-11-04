@@ -139,7 +139,7 @@ repo README uses the same pattern:
 1. **Header image** `.github/assets/header.png`, 1600 × 400: navy ground, horizontal ATR lockup top-left, the repo
    name as a big white title, a gold subtitle, triangle lattice on the right (and an optional mascot or icon in a
    gold ring). `python3 scripts/atr_design.py banner --preset github-header --title "Repo name" --subtitle "..."`.
-2. **A bold one-sentence summary** and the affiliation line in `<sub>`: "Advanced Telerobotics Research Lab ·
+2. **A bold one-sentence summary** and the affiliation line in `<sub>`: "Advanced Telerobotics Research Laboratory ·
    Department of Computer Science · Kent State University".
 3. **Badges** in flat-square style, navy `003976`, slate `4A5868` for neutral facts:
    `https://img.shields.io/badge/ATR_Lab-Kent_State-003976?style=flat-square`.

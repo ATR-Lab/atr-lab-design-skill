@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ATR Lab brand-compliance linter.
 
-Checks a deliverable against the ATR Lab (Advanced Telerobotics Research Lab, Kent State
+Checks a deliverable against the ATR Lab (Advanced Telerobotics Research Laboratory, Kent State
 University) brand and prints findings with severity, location and a suggested fix.
 
 Inputs: .pptx/.potx/.pptm, .docx/.dotx/.docm, .svg, .html/.htm, .css/.scss, .png/.jpg/.jpeg/.gif/.webp,
@@ -20,10 +20,11 @@ Checks:
   alt-text     pictures/charts without alt text (descr), <img> without alt, SVG without <title>
   placeholder  leftover template text: [brackets], lorem ipsum, "Click to add", TODO, generic labels
   wording      forbidden strings (@atr_kent, College of Arts and Sciences, Advanced Tele-Robotics...),
-               unverified facts (Room 236, Mathematics and Computer Science Building...), retired name
-               variants and editorial style (KSU in running copy, "&" in unit names); in .md/.txt copy also
-               a serial-comma heuristic, "Dr." and "(ATR) Lab", with line numbers (fenced code, inline code
-               and URLs are skipped; style rules skip quotations)
+               unverified or mislabeled facts (the director's phone without a director label, Mathematics and
+               Computer Science Building...), retired name variants and editorial style (KSU in running
+               copy, "&" in unit names); in .md/.txt copy also a serial-comma heuristic, "Dr." and
+               "(ATR) Lab", with line numbers (fenced code, inline code and URLs are skipped; style rules
+               skip quotations)
   logo         embedded retired block-letter ATR logo or Kent State athletic (Flash) logo, by dHash.
                The Kent State wordmark is recognized by dHash too, but its provenance comes only from exact
                matches: official (SHA-256 or identical pixels of a file in assets/logos/ksu/
@@ -87,7 +88,7 @@ try:
 except ImportError:  # pragma: no cover
     _DXET = None
 
-VERSION = "1.3"  # 1.3: Kent State wordmark provenance (official / working copy / unverified) and effective PPI; 1.2: .md/.markdown/.txt copy with line numbers; 1.1: two-tier text-size floors
+VERSION = "1.4"  # 1.4: Room 236 confirmed, director's phone allowed when labeled, "Laboratory" in name fixes; 1.3: Kent State wordmark provenance (official / working copy / unverified) and effective PPI; 1.2: .md/.markdown/.txt copy with line numbers; 1.1: two-tier text-size floors
 SKILL_ROOT = C.SKILL_ROOT
 ATR_THEME = os.path.join(SKILL_ROOT, "assets", "tokens", "office-theme", "theme1.xml")
 
@@ -156,34 +157,33 @@ WORDING = [
      'Write "Department of Computer Science, Kent State University" (references/kent-state-compliance.md).'),
     ("lab-name", r"Advanced\s+Tele[\s\-‐-—]+[Rr]obotics", re.I, "error",
      'The lab name is spelled "Telerobotics", one word.',
-     '"Advanced Telerobotics Research Lab" on first reference, then "the lab" or "ATR Lab".'),
+     '"Advanced Telerobotics Research Laboratory" on first reference, then "the lab" or "ATR Lab".'),
     ("lab-name", r"Advanced\s+Telerobotic\s+Research", re.I, "warning",
-     'Lab name misspelled ("Telerobotic").', 'Write "Advanced Telerobotics Research Lab".'),
+     'Lab name misspelled ("Telerobotic").', 'Write "Advanced Telerobotics Research Laboratory".'),
     # retired and coined name variants (references/brand-foundation.md §2.3-§2.4)
     ("lab-name", r"\bAdvanced\s+Telerobotics\s+Lab(?:oratory)?\b", re.I, "warning",
-     'Lab name without "Research" (the 2017 name).', 'Write "Advanced Telerobotics Research Lab".'),
+     'Lab name without "Research" (the 2017 name).', 'Write "Advanced Telerobotics Research Laboratory".'),
     ("lab-name", r"\bKSU(?:['’]s)?\s+ATR\b", 0, "warning",
      '"KSU ATR" is a coined name: "KSU" is avoided in copy and "ATR" alone is ambiguous.',
-     "Write \"Kent State's Advanced Telerobotics Research Lab\" (references/brand-foundation.md §2.3)."),
+     "Write \"Kent State's Advanced Telerobotics Research Laboratory\" (references/brand-foundation.md §2.3)."),
     ("lab-name", r"\bATR\s*\(\s*Advanced\s+Telerobotics\s*\)", re.I, "warning",
-     '"ATR (Advanced Telerobotics) Lab" is an old link-text variant.', 'Write "Advanced Telerobotics Research Lab".'),
+     '"ATR (Advanced Telerobotics) Lab" is an old link-text variant.',
+     'Write "Advanced Telerobotics Research Laboratory".'),
     ("lab-name", r"\bATR\s+Lab(?:oratory)?\s+Lab(?:oratory)?\b", re.I, "warning",
      'Doubled noun ("ATR Lab Lab").', 'Write "ATR Lab".'),
     ("lab-name", r"\bATR\s+Lab\s*@\s*Kent\s+State|\bKent\s+State\s+University\s+ATR\s+Lab\b", re.I, "warning",
      "A name variant from old profiles and metadata.",
-     'Write "Advanced Telerobotics Research Lab at Kent State University" ("Kent State\'s ATR Lab" in display '
-     "type)."),
+     'Write "Advanced Telerobotics Research Laboratory at Kent State University" ("Kent State\'s ATR Lab" in '
+     "display type)."),
     ("team-name", r"\bART_Kent\b|\bATR[ \-]Kent\b(?!\s+State)", 0, "warning",
      'The competition team is written "ATR_Kent", underscore included (not "ATR Kent", "ATR-Kent" or "ART_Kent").',
-     'e.g. "the ATR_Kent team of the Advanced Telerobotics Research Lab"; never as a handle '
+     'e.g. "the ATR_Kent team of the Advanced Telerobotics Research Laboratory"; never as a handle '
      "(references/brand-foundation.md §2.4)."),
-    ("contact", r"330[\s.)\-]*672[\s.\-]*9060", 0, "warning",
-     "330-672-9060 is not a verified lab phone number.",
-     "Use the department main line 330-672-9980 or a [Lab phone] placeholder."),
-    ("contact", r"\bRoom\s+236\b", re.I, "warning",
-     "Room 236 is not verified as the lab's room.",
-     "Use the department address (241 Mathematical Sciences Building, 1300 Lefton Esplanade, Kent, OH "
-     "44242-0001) or a [Lab room] placeholder."),
+    # the director's office line; fine where a director label sits next to it (DIRECTOR_LABEL)
+    ("director-phone", r"330[\s.)\-]*672[\s.\-]*9060", 0, "warning",
+     "330-672-9060 is the director's office line, not a lab line, and is not labeled as the director's.",
+     'Label it as the director\'s office ("Director\'s office: 330-672-9060") or use the department main line '
+     "330-672-9980 (references/brand-foundation.md §11)."),
     ("building", r"\bMath(?:ematics)?\s+(?:and|&)\s+Computer\s+Science\s+Building\b", re.I, "warning",
      '"Mathematics and Computer Science Building" is an older name for the building.',
      'Write "Mathematical Sciences Building", as the department footer and the campus building list do '
@@ -435,6 +435,8 @@ _NEG_BEFORE = re.compile(r"\b(?:never|don'?t|do not|avoid|not|instead of|rather 
 _NEG_AFTER = re.compile(r"^[\"'”’]?\s*[(,\-–—]?\s*(?:it\s+|which\s+|that\s+)?(?:does not exist|doesn'?t exist|"
                         r"is incorrect|is wrong|is retired|is not (?:a|the|our) (?:lab|real|valid|correct))\b", re.I)
 _WORDING_RX = [(i, re.compile(rx, fl), sev, msg, fix) for i, rx, fl, sev, msg, fix in WORDING]
+# Rules whose match is fine when this label sits within 80 characters of it ("Director's office: 330-672-9060").
+_LABELED_OK = {"director-phone": re.compile(r"\bdirector\b|\bJong-Hoon\s+Kim\b|\bKim['’]s\b", re.I)}
 _PH_RX = [(re.compile(rx, fl), label) for rx, fl, label in PLACEHOLDERS]
 _DOWN = {"error": "warning", "warning": "info", "info": "info"}
 
@@ -442,6 +444,11 @@ _DOWN = {"error": "warning", "warning": "info", "info": "info"}
 def negated(text: str, m) -> bool:
     return bool(_NEG_BEFORE.search(text[max(0, m.start() - 60):m.start()]) or
                 _NEG_AFTER.search(text[m.end():m.end() + 40]))
+
+
+def labeled(cid: str, text: str, m) -> bool:
+    label = _LABELED_OK.get(cid)
+    return bool(label and label.search(text[max(0, m.start() - 80):m.end() + 80]))
 
 
 def check_text(rep: Report, text: str, location: str, *, notes=False, placeholder_ok=None, generic_ok=False,
@@ -457,6 +464,8 @@ def check_text(rep: Report, text: str, location: str, *, notes=False, placeholde
     guidance = getattr(rep.opts, "guidance", False)
     for cid, rx, sev, msg, fix in _WORDING_RX:
         for m in rx.finditer(text):
+            if labeled(cid, text, m):
+                continue
             s, ctx_note = sev, "."
             neg = sev != "info" and (notes or guidance) and negated(text, m)
             if notes:
@@ -3020,8 +3029,8 @@ PROSE_WORDING = [
                   r"|\bAdvanced\s+Telerobotics\s+Research\s+Lab(?:oratory)?\s*\(\s*ATR(?:\s+Lab(?:oratory)?)?\s*\)",
      re.I, "info",
      'No "(ATR)" or "(ATR Lab)" with the full name in running copy.',
-     '"Advanced Telerobotics Research Lab" on first reference, then "the lab"; "ATR Lab" only in display type '
-     "(references/brand-foundation.md §2.2). Quoting the mission verbatim is the one exception."),
+     '"Advanced Telerobotics Research Laboratory" on first reference, then "the lab"; "ATR Lab" only in display '
+     "type (references/brand-foundation.md §2.2). Quoting the mission verbatim is the one exception."),
 ]
 _PROSE_RX = [(i, re.compile(rx, fl), sev, msg, fix) for i, rx, fl, sev, msg, fix in PROSE_WORDING]
 # Style rules (as opposed to facts): skipped inside quotation marks and block quotes, where the source's own
@@ -3287,6 +3296,8 @@ def check_prose_block(rep, kind, segs):
         if cid in STYLE_RULES:
             continue
         for m in rx.finditer(raw):
+            if labeled(cid, raw, m):
+                continue
             s, note = sev, "."
             if guidance and sev != "info" and negated(raw, m):
                 s, note = _DOWN[sev], " as guidance ('never print ...'; --guidance)."

@@ -1,17 +1,17 @@
 # Brand foundation
 
-Who the Advanced Telerobotics Research Lab is, what it stands for and how it relates to Kent State University. It is the fact base behind every other reference: names, architecture, positioning, mission, personality, audiences, message pillars, proof points, boilerplates and verified contact details.
+Who the Advanced Telerobotics Research Laboratory is, what it stands for and how it relates to Kent State University. It is the fact base behind every other reference: names, architecture, positioning, mission, personality, audiences, message pillars, proof points, boilerplates and verified contact details.
 
 **Read this when** you need to name the lab, describe it, choose what to say to a given audience, write an "About" paragraph, check whether a claim is allowed, or put contact details and handles on anything.
 
-Facts here were verified on 2026-09-28 against sourced research notes that are not shipped with the skill (`research/atr-lab-profile.md` and `research/ksu-brand-standards.md`, preserved in the skill repository's git history at tag `build-sources-2026-09-29`). Anything in `[brackets]` is a placeholder that only the lab can fill. Re-verify titles, programs, handles and contact details every semester.
+Facts here were verified on 2026-09-28 against sourced research notes that are not shipped with the skill (`research/atr-lab-profile.md` and `research/ksu-brand-standards.md`, preserved in the skill repository's git history at tag `build-sources-2026-09-29`). The long form of the name, the lab's room, the director's office phone, the canonical LinkedIn page, the World Robot Summit paper award and the RoboCup 2023 team description paper were updated on 2026-11-04 from facts the lab confirmed that day (published in the upstream repository below). Anything in `[brackets]` is a placeholder that only the lab can fill. Re-verify titles, programs, handles and contact details every semester.
 
 **Upstream.** The lab publishes the same facts in its public profile repository, https://github.com/ATR-Lab/about
 (`README.md`, `research.md`, `achievements.md`, `press-kit/`; the revised pages were on the `docs/revamp` branch in
-November 2026). Both were checked against each other on 2026-11-03 and agreed. If they ever disagree, use the one
-with the later "last reviewed" date, tell the user about the conflict and suggest fixing the other. Neither source
-may fill a `[bracket]` the other leaves open: the lab's room number, lab phone, LinkedIn page, giving URL and the
-items in §9 marked `[confirm]` stay placeholders until the lab confirms them.
+November 2026). Both were checked against each other on 2026-11-04 (upstream "Last reviewed: Nov. 4, 2026") and
+agreed. If they ever disagree, use the one with the later "last reviewed" date, tell the user about the conflict and
+suggest fixing the other. Neither source may fill a `[bracket]` the other leaves open: the giving URL, the World Robot
+Summit paper title and the other items in §9 marked `[confirm]` stay placeholders until the lab confirms them.
 
 ## Contents
 
@@ -34,7 +34,7 @@ items in §9 marked `[confirm]` stay placeholders until the lab confirms them.
 
 | Item | Verified value |
 |---|---|
-| Name | Advanced Telerobotics Research Lab (formal: Advanced Telerobotics Research Laboratory). Short form in display only: ATR Lab |
+| Name | Advanced Telerobotics Research Laboratory, the official long form (confirmed by the lab, Nov. 2026); then "the lab". Short form in display only: ATR Lab |
 | Home | Department of Computer Science, College of Sciences and Humanities, Kent State University, Kent, Ohio |
 | Founded | 2017 (the lab "officially open[ed] its doors" in spring 2017) |
 | Director | Jong-Hoon Kim, associate professor of computer science (associate professor since August 2023; Ph.D., Louisiana State University) |
@@ -43,6 +43,7 @@ items in §9 marked `[confirm]` stay placeholders until the lab confirms them.
 | Current platforms | SoftBank Pepper, Unitree Go2, Booster K1 humanoid, a Yahboom ROS 2 robot, a robot mower; recent TeleBot generations TeleBot-3R and TeleBot-4R (with an XR interface for Meta Quest) |
 | Current projects | VendoBot (HRI 2026), Coffee Buddy, PepperKit (Pepper with a realtime LLM voice agent), Expressive Motion (Booster K1) |
 | Programs | Undergraduate and graduate courses (including Human-Robot Interaction and Physical AI Agent); summer research internship for high school students; summer workshop for middle school students |
+| Location | Room 236, Mathematical Sciences Building (second floor); visits by appointment |
 | Website | https://www.atr.cs.kent.edu/ |
 | Not in the directory of centers and institutes | It is a faculty research lab inside the department, not a Provost-chartered center or institute. Never call it a "center" or "institute". |
 
@@ -52,7 +53,7 @@ items in §9 marked `[confirm]` stay placeholders until the lab confirms them.
 
 ### 2.1 The rule in one line
 
-Write **Advanced Telerobotics Research Lab** on first reference in running copy, then **the lab**. Use **ATR Lab** only where space is tight or the text is display (logos, handles, headlines, slide footers, poster mastheads, a social post that a hard character limit squeezes (such as an X post), buttons, tables, merch), and only on a piece that also names Kent State.
+Write **Advanced Telerobotics Research Laboratory** on first reference in running copy, then **the lab**. Use **ATR Lab** only where space is tight or the text is display (logos, handles, headlines, slide footers, poster mastheads, a social post that a hard character limit squeezes (such as an X post), buttons, tables, merch), and only on a piece that also names Kent State.
 
 Why: Kent State style refuses acronyms for units even on second reference ("Do not use RCET", "do not use AMLCI"; kent.edu/ucm/o-z, kent.edu/ucm/b), and "ATR" alone collides with a much larger robotics institute (see 2.5).
 
@@ -60,17 +61,17 @@ Why: Kent State style refuses acronyms for units even on second reference ("Do n
 
 | Context | Use | Example |
 |---|---|---|
-| First reference in running copy (news posts, releases, web body, reports, grant text, email body) | Advanced Telerobotics Research Lab, plus "at Kent State University" if the university is not already named | "The Advanced Telerobotics Research Lab at Kent State University opened in 2017." |
+| First reference in running copy (news posts, releases, web body, reports, grant text, email body) | Advanced Telerobotics Research Laboratory, plus "at Kent State University" if the university is not already named | "The Advanced Telerobotics Research Laboratory at Kent State University opened in 2017." |
 | Later references in running copy | the lab | "The lab's students built the robot's control software." |
-| Formal and ceremonial (certificates, website `<title>`, plaques, verbatim mission quotes) | Advanced Telerobotics Research Laboratory | Certificate: "Advanced Telerobotics Research Laboratory, Kent State University" |
+| Formal and ceremonial (certificates, website `<title>`, plaques) | Advanced Telerobotics Research Laboratory, the same long form | Certificate: "Advanced Telerobotics Research Laboratory, Kent State University" |
 | Display and tight space | ATR Lab | Headline "ATR Lab students demo Pepper at open lab"; slide footer; an X post when the 280-character limit forces it |
-| Possessive with the university | Kent State's Advanced Telerobotics Research Lab (copy); Kent State's ATR Lab (display) | "Kent State's ATR Lab recruits Ph.D. students" (headline) |
-| Paper and poster affiliation line | Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA (follow the venue's affiliation format) | IEEE author block |
-| Spoken (video narration, talks) | "the Advanced Telerobotics Research Lab at Kent State", then "the lab"; say "A-T-R Lab" only after the full name | |
+| Possessive with the university | Kent State's Advanced Telerobotics Research Laboratory (copy); Kent State's ATR Lab (display) | "Kent State's ATR Lab recruits Ph.D. students" (headline) |
+| Paper and poster affiliation line | Advanced Telerobotics Research Laboratory, Department of Computer Science, Kent State University, Kent, OH, USA (follow the venue's affiliation format) | IEEE author block |
+| Spoken (video narration, talks) | "the Advanced Telerobotics Research Laboratory at Kent State", then "the lab"; say "A-T-R Lab" only after the full name | |
 
 Social captions are running copy (an Instagram caption allows up to 2,200 characters), so the running-copy rule applies there too. On lab-owned social, the first mention is the full name, or the handle (@atrlab_kent on X, @atr_lab on Instagram) plus Kent State; after that, "we" or "the lab".
 
-Pick **Lab or Laboratory once per piece** and do not mix them. Default to "Lab"; the director has not published a preference (open question, §12.6).
+**Laboratory, not Lab, in the long form.** The lab confirmed "Advanced Telerobotics Research Laboratory" as its official long form in November 2026. Do not write "Advanced Telerobotics Research Lab" as the full name in new work; "the lab" (lowercase) stays the later reference and "ATR Lab" the display short form. When revising an older piece that uses "…Research Lab", change it to "…Research Laboratory" throughout.
 
 Do not add "(ATR Lab)" after the full name in body copy. The logo and headline already carry the short form, and Kent State style does not sanction the acronym as a second reference. The one exception is quoting the mission verbatim, which says "Advanced Telerobotics Research (ATR) Laboratory".
 
@@ -79,12 +80,12 @@ Do not add "(ATR Lab)" after the full name in body copy. The logo and headline a
 | Never write | Why | Write instead |
 |---|---|---|
 | ATR (alone), the ATR | Ambiguous; reads as the Kyoto institute | ATR Lab (display) or the full name |
-| Advanced Tele-Robotics Lab, Advanced Tele-Robotics (ATR) Laboratory | Old hyphenated spelling (kent.edu/cs research-labs list, 2017 post) | Advanced Telerobotics Research Lab |
+| Advanced Tele-Robotics Lab, Advanced Tele-Robotics (ATR) Laboratory | Old hyphenated spelling (kent.edu/cs research-labs list, 2017 post) | Advanced Telerobotics Research Laboratory |
 | Advanced Telerobotic Research Laboratory (no "s") | GitHub org display name typo | Advanced Telerobotics Research Laboratory |
-| Advanced Telerobotics Laboratory (no "Research") | 2017 name | Advanced Telerobotics Research Lab |
-| Kent State University ATR Lab, ATR Lab @ Kent State University | Name variants in the website's JSON-LD, the Instagram display name and the NASA SUITS 2023 page | Advanced Telerobotics Research Lab at Kent State University |
-| KSU ATR, KSU's ATR | Never coin it: "KSU" is avoided in copy and "ATR" alone is ambiguous | Kent State's Advanced Telerobotics Research Lab |
-| ATR (Advanced Telerobotics) Lab | Faculty-profile link text | Advanced Telerobotics Research Lab |
+| Advanced Telerobotics Laboratory (no "Research") | 2017 name | Advanced Telerobotics Research Laboratory |
+| Kent State University ATR Lab, ATR Lab @ Kent State University | Name variants in the website's JSON-LD, the Instagram display name and the NASA SUITS 2023 page | Advanced Telerobotics Research Laboratory at Kent State University |
+| KSU ATR, KSU's ATR | Never coin it: "KSU" is avoided in copy and "ATR" alone is ambiguous | Kent State's Advanced Telerobotics Research Laboratory |
+| ATR (Advanced Telerobotics) Lab | Faculty-profile link text | Advanced Telerobotics Research Laboratory |
 | Advanced Telerobotic Research Team | Press variant (The Kent Stater, 2021) | the lab's ATR_Kent team |
 | ATR Laboratory Lab, ATR Lab Lab | Doubled noun | ATR Lab |
 
@@ -94,7 +95,7 @@ Team names identify competition entries. They are not handles and not logos.
 
 | Name | What it is | Status | Use it for | Never |
 |---|---|---|---|---|
-| **ATR_Kent** | The lab's competition team name (World Robot Summit, RoboCup). The roundel text reads ATR_KENT | In use through 2023 (the RoboCup 2024 page is a placeholder); confirm with the director | Team registrations, team shirts, team intro videos, competition posters and slides: "the ATR_Kent team of the Advanced Telerobotics Research Lab, Kent State University" | As a social handle or with an @; the variants "ATR Kent", "ATR-Kent" or the typo "ART_Kent" |
+| **ATR_Kent** | The lab's competition team name (World Robot Summit, RoboCup). The roundel text reads ATR_KENT | In use through 2023 (the RoboCup 2024 page is a placeholder); confirm with the director | Team registrations, team shirts, team intro videos, competition posters and slides: "the ATR_Kent team of the Advanced Telerobotics Research Laboratory, Kent State University" | As a social handle or with an @; the variants "ATR Kent", "ATR-Kent" or the typo "ART_Kent" |
 | **ATR_FLUX** | NASA SUITS 2023 team that built the second-generation AARON AR system | Historical (last seen 2023) | Describing that entry: "the lab's ATR_FLUX team (NASA SUITS 2023)" | Reusing it for new teams without the director's sign-off; "ATR Flux" |
 | **ATR Pepper Team** | Team formed for the RoboCup@Home Social Standard Platform League with Pepper (2023; attendance unconfirmed, see §9) | Historical | Archive and video titles | |
 | **ATR_ENT** | Label of the dormant Entrepreneurship section's team page | Dormant | Historical references only | Current marketing |
@@ -110,7 +111,7 @@ Rules:
 
 - Every piece names Kent State alongside ATR: in the logo lockup, the footer, the byline or the first sentence.
 - In papers, posters and talks, spell out the full lab name and Kent State University in the affiliation.
-- Do not use a bare #ATR hashtag. For search and AI answers, the phrase to repeat is "Advanced Telerobotics Research Lab at Kent State University".
+- Do not use a bare #ATR hashtag. For search and AI answers, the phrase to repeat is "Advanced Telerobotics Research Laboratory at Kent State University".
 - When citing Kyoto ATR work in a lab paper or talk, name it in full ("ATR, Kyoto") so readers can tell the two apart.
 
 ## 3. Brand architecture: the lab inside Kent State
@@ -119,7 +120,7 @@ Rules:
 Kent State University                      master brand; its logo appears on every lab piece
 └─ College of Sciences and Humanities      named in formal "About" copy; college logo from UCM if one exists
    └─ Department of Computer Science       named in text: logo lockup line, footers, bios
-      └─ Advanced Telerobotics Research Lab   lab identity (ATR mark + name), used BESIDE Kent State marks
+      └─ Advanced Telerobotics Research Laboratory   lab identity (ATR mark + name), used BESIDE Kent State marks
          ├─ Programs (summer internship, summer workshop, courses)   named in text, no logos of their own
          └─ Competition teams (ATR_Kent ...)                        names only, no logos of their own
 ```
@@ -156,7 +157,7 @@ Retired lab marks: the old block-letter "ATR" logo (navy A and R, gold T) and th
 
 **Positioning statement (draft; the director approves before use):**
 
-> For students, partners and funders who want robotics research that reaches the real world, the Advanced Telerobotics Research Lab at Kent State University builds robots that people operate from a distance and Physical AI that works alongside them. Unlike [alternative, e.g. simulation-only coursework], the lab's work runs on real hardware, from humanoid and quadruped robots to immersive teleoperation interfaces, and has been selected for international competitions such as the World Robot Summit.
+> For students, partners and funders who want robotics research that reaches the real world, the Advanced Telerobotics Research Laboratory at Kent State University builds robots that people operate from a distance and Physical AI that works alongside them. Unlike [alternative, e.g. simulation-only coursework], the lab's work runs on real hardware, from humanoid and quadruped robots to immersive teleoperation interfaces, and has been selected for international competitions such as the World Robot Summit.
 
 How to talk about the shift:
 - Say "from telepresence to Physical AI" or "telepresence and Physical AI". Do not drop telepresence; it explains the name.
@@ -200,7 +201,7 @@ Five attributes, each tied to Kent State's published tone words (kent.edu/brand/
 | **Grounded**: human-centered; robots extend and help people | Sci-fi, fear or "robots will take your job" framing | "Robots that help people rather than replace them" | Caring |
 
 Two standing notes shape how the five attributes show up:
-- **Always part of Kent State:** proud, specific and local (Northeast Ohio), never a stand-in for the university and never borrowing its brand lines or athletics marks. Write "Kent State's Advanced Telerobotics Research Lab", not a free-floating "ATR".
+- **Always part of Kent State:** proud, specific and local (Northeast Ohio), never a stand-in for the university and never borrowing its brand lines or athletics marks. Write "Kent State's Advanced Telerobotics Research Laboratory", not a free-floating "ATR".
 - **After competitions, persistent rather than boastful:** we compete, learn and try again, and report results at the level the source gives (§9). The lab's own line after a competition: "In the end, experience matters a lot. Not the winning."
 
 Voice rules and tone by audience are in references/voice-and-copy.md.
@@ -234,7 +235,7 @@ Four pillars. Every headline, deck and post should serve one of them. Proof poin
 |---|---|---|---|---|
 | **1. Extending human presence** | Robots people operate and inhabit at a distance: telepresence, tele-embodiment, immersive VR/AR teleoperation | TeleBot-2 (World Robot Summit 2018), TeleBot-3R (the lab's World Robot Summit 2021 robot), TeleBot-4R and its Meta Quest XR interface (2023 to 2024); AARON AR system for NASA SUITS (top-10 onsite team 2020; second generation by ATR_FLUX 2023); Telesuit (2019) | Peers, funders, media | "Be somewhere else, through a robot." |
 | **2. Physical AI that works with people** | Robots that sense, decide and act in real settings alongside people: service robots, social robots, humanoids | VendoBot (HRI 2026 Companion, Edinburgh, March 2026); Coffee Buddy; PepperKit (Pepper with a realtime LLM voice agent); Expressive Motion on a Booster K1 (2026); Physical AI Agent courses; the "Physical AI Coworker" internship project | Graduate students, industry, funders | "Robots that help people rather than replace them." (adapted from the lab's 2021 wording) |
-| **3. Learning by building** | Students at every level do real research on real hardware, and test it in competition | Undergraduate and graduate robotics course sequence; WRS finalist (2021); NASA SUITS top-10 (2020); paper awards (IHCI 2020, IEMTRONICS 2020, IHCI 2023); hackathon results (2019); disciplines from computer science to biomedical engineering and philosophy | Undergraduates, graduate applicants, sponsors | "Build real robots before you graduate." |
+| **3. Learning by building** | Students at every level do real research on real hardware, and test it in competition | Undergraduate and graduate robotics course sequence; WRS finalist (2021); NASA SUITS top-10 (2020); paper awards (World Robot Summit 2021, IHCI 2020, IEMTRONICS 2020, IHCI 2023); hackathon results (2019); disciplines from computer science to biomedical engineering and philosophy | Undergraduates, graduate applicants, sponsors | "Build real robots before you graduate." |
 | **4. The next generation of innovators** | Hands-on robotics and Physical AI for middle and high school students and their teachers | 2025 and 2026 summer research internships; 2026 Summer Workshop; K-12 school workshops (2021, 2022); National Robotics Week open house (2019); partner lab in the NSF PRIDe K-12 computer science project; research on outreach (Cascade Mentoring, IHCI 2023) | Parents, teachers, high school students, funders (broader impacts), Kent State leadership | "Empowering the Next Generation of Innovators" (the lab's 2025 line) |
 
 ## 9. Proof bank: claims you may make, and how to word them
@@ -246,13 +247,13 @@ Use the **allowed wording** exactly. Never upgrade a result (a finalist is not a
 | Founding | "founded in 2017"; "est. 2017" | 2017 | atr.cs.kent.edu/atr-lab-inguration/ |
 | World Robot Summit, Tokyo | "demonstrated TeleBot-2 at the World Robot Summit in Tokyo" (Plant Disaster Prevention Challenge) | 2018 | atr.cs.kent.edu/atr-lab-presents-tbot2-v0-5/ |
 | World Robot Summit finalist | "selected as one of 11 finalists in the World Robot Summit Plant Disaster Prevention Challenge"; "the only team from the United States, The Kent Stater reported" (attribute it) | 2021 (postponed from 2020) | kentstater.com, March 17, 2021 |
-| WRS paper award | "received a Distinguished Paper Award from the World Robot Summit" `[confirm exact award name, paper and recipients]` | 2021 | cs.kent.edu/~jkim/ |
+| WRS paper award | "the ATR_Kent team received the Distinguished Paper Award in the World Robot Summit Plant Disaster Prevention Challenge (remote participation)". The award went to the team; name the paper only as `[paper title: confirm with the director]` | 2021 (announced Dec. 24, 2021) | WRS results release, https://wrs.nedo.go.jp/en/news/pdf/20211224release-en.pdf; cs.kent.edu/~jkim/ |
 | NASA SUITS | "selected as one of the top 10 teams for the onsite NASA SUITS challenge" (write "competed at Johnson Space Center" only if the lab confirms the team traveled) | 2020 | atr.cs.kent.edu/atr-accepted-for-nasa-suits-challenge/ |
 | NASA SUITS | "the lab's ATR_FLUX team built the second generation of AARON, an AR system for spacesuit operations" | 2023 | atr.cs.kent.edu/projects/nasa-suits-challenge-2023/ |
 | Paper awards | "Best Conference Paper Award, IHCI 2020" (AARON); "Best Paper, Robotics Track, IEMTRONICS 2020"; "Special Session Best Award, IHCI 2023" (not "Best Paper at IHCI") | 2020, 2023 | atr.cs.kent.edu/research/publications/ |
 | HRI 2026 | "VendoBot, published in the HRI 2026 Companion proceedings (Edinburgh, March 2026)" | 2026 | dl.acm.org/doi/10.1145/3776734.3794461 |
 | Hackathons and student contests | "first place, Major League Hacking hackathon at Kent"; "two sponsor prizes at EthBoston"; "second place, Kent State line-following robot competition" (lab member teams; credit the team the way the lab's post does). "1st" and "2nd" (no superscript) only in tables, badges and display type | 2019 | lab news posts |
-| RoboCup | "formed teams for RoboCup 2023 (RoboCup Rescue; RoboCup@Home Social Standard Platform League with Pepper)". Earlier years only with the word "planned": "planned entries for RoboCup 2019 (Sydney) and 2022 (Thailand)". Write "competed at RoboCup 2023 in Bordeaux" only if the lab confirms the team attended. Never "fielded", "competed" or any result without that confirmation | 2023 (plans 2019, 2022) | project pages |
+| RoboCup | "formed teams for RoboCup 2023 (RoboCup Rescue; RoboCup@Home Social Standard Platform League with Pepper)". Earlier years only with the word "planned": "planned entries for RoboCup 2019 (Sydney) and 2022 (Thailand)". Also allowed: "the ATR_Kent team submitted a team description paper for the RoboCupRescue Robot League in 2023" (TeleBot-3R). A team description paper is part of a league's qualification, not proof of attendance or of a result. Write "competed at RoboCup 2023 in Bordeaux" only if the lab confirms the team attended. Never "fielded", "competed" or any result without that confirmation | 2023 (plans 2019, 2022) | project pages; RoboCup TDP archive, https://tdp.robocup.org/tdp/2023-tdp-atr_kent-robocuprescue-robot/ |
 | NSF PRIDe | "partner lab in PRIDe, an NSF-funded K-12 computer science education project" (the NSF abstract names the lab as partner lab; Kim is listed as a former co-PI) `[confirm current role before use]` | 2023 to 2027 | nsf.gov award 2300865 |
 | Design Innovation Hub | "a node of Kent State's Design Innovation Hub" | current listing | kent.edu/designinnovation |
 | Fashion School and TechStyle Lab collaborations | "worked with Kent State's Fashion School and its TechStyle Lab" on the Telesuit (2019 papers) and on NASA SUITS (the 2023 team's faculty advisors included a Fashion School associate professor). Past tense, with years; nothing later is recorded, and a 2020 SUITS role is unconfirmed | 2019, 2023 | lab publications; NASA SUITS 2023 page |
@@ -272,40 +273,40 @@ Use the **allowed wording** exactly. Never upgrade a result (a finalist is not a
 
 **One-liner (22 words; draft until the director approves)**
 
-> The Advanced Telerobotics Research Lab at Kent State University builds robots that extend human presence and Physical AI that works alongside people.
+> The Advanced Telerobotics Research Laboratory at Kent State University builds robots that extend human presence and Physical AI that works alongside people.
 
 **One-liner, formal (the self-description as published on the lab's homepage, verbatim after "is")**
 
-> The Advanced Telerobotics Research Lab at Kent State University is an innovation research laboratory focused on exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and artificial intelligence.
+> The Advanced Telerobotics Research Laboratory at Kent State University is an innovation research laboratory focused on exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and artificial intelligence.
 
 **25 words (event listings, speaker bios, short web cards; draft until the director approves)**
 
-> The Advanced Telerobotics Research Lab at Kent State University researches telepresence robotics, tele-embodiment and Physical AI, training student researchers from high school through doctoral study.
+> The Advanced Telerobotics Research Laboratory at Kent State University researches telepresence robotics, tele-embodiment and Physical AI, training student researchers from high school through doctoral study.
 
 **50 words (programs, conference booklets, partner pages; draft until the director approves)**
 
-> The Advanced Telerobotics Research Lab at Kent State University builds robots that extend human presence and Physical AI systems that work alongside people. Founded in 2017 in the Department of Computer Science, the lab explores telepresence robotics, tele-embodiment, autonomy and artificial intelligence with researchers from high school through doctoral study.
+> The Advanced Telerobotics Research Laboratory at Kent State University builds robots that extend human presence and Physical AI systems that work alongside people. Founded in 2017 in the Department of Computer Science, the lab explores telepresence robotics, tele-embodiment, autonomy and artificial intelligence with researchers from high school through doctoral study.
 
 **100 words (press releases' "About" section, grant broader-impacts summaries, sponsor one-pagers; draft until the director approves)**
 
-> The Advanced Telerobotics Research Lab at Kent State University builds robots that extend human presence and Physical AI systems that work alongside people. Founded in 2017 in the Department of Computer Science, the lab explores telepresence robotics, tele-embodiment, autonomy and artificial intelligence. Students work on real hardware, from humanoid and quadruped robots to immersive teleoperation interfaces. Lab teams were selected as a World Robot Summit finalist (2021) and a top-10 team for NASA's onsite SUITS spacesuit-interface challenge (2020). The lab also runs summer programs for middle and high school students. Its director is Jong-Hoon Kim, associate professor of computer science.
+> The Advanced Telerobotics Research Laboratory at Kent State University builds robots that extend human presence and Physical AI systems that work alongside people. Founded in 2017 in the Department of Computer Science, the lab explores telepresence robotics, tele-embodiment, autonomy and artificial intelligence. Students work on real hardware, from humanoid and quadruped robots to immersive teleoperation interfaces. Lab teams were selected as a World Robot Summit finalist (2021) and a top-10 team for NASA's onsite SUITS spacesuit-interface challenge (2020). The lab also runs summer programs for middle and high school students. Its director is Jong-Hoon Kim, associate professor of computer science.
 
 Boilerplates sit at the end of a piece, so they do not define terms. In general-audience pieces (press releases, parent pages, sponsor one-pagers), define Physical AI in the body copy before the boilerplate: "Physical AI (AI that senses and acts in the real world through a robot)".
 
 Variations:
 - To name the college, write "in the Department of Computer Science in the College of Sciences and Humanities" (adds seven words). Never "College of Arts and Sciences".
-- To end with a link, add "Learn more at www.atr.cs.kent.edu." Use a descriptive link on the web ("Visit the Advanced Telerobotics Research Lab website"), not "click here".
+- To end with a link, add "Learn more at www.atr.cs.kent.edu." Use a descriptive link on the web ("Visit the Advanced Telerobotics Research Laboratory website"), not "click here".
 - Section heading above a boilerplate may use the short form: "About the ATR Lab".
 - **Kent State boilerplate:** never write one; request UCM's current approved paragraph. If a piece cites R1 status, use UCM's Carnegie sentence verbatim from kent.edu/ucm/c-d and re-check it before release (Carnegie revised its classifications in 2025).
 - **Social bio** (canonical; draft until the director approves; 129 characters). It carries the "official account" wording that UCM's 10 Required Elements ask for (element 5):
-  - Bio: "Official account of the Advanced Telerobotics Research Lab at @KentState: telepresence robotics, tele-embodiment and Physical AI."
+  - Bio: "Official account of the Advanced Telerobotics Research Laboratory at @KentState: telepresence robotics, tele-embodiment and Physical AI."
   - Link field: www.kent.edu, or a lab link page that lists both www.kent.edu and social.kent.edu (element 5 asks the bio to link to both).
   - Other references (references/social-media.md, references/kent-state-compliance.md) quote this bio verbatim or point here. Account setup rules: references/social-media.md.
-- **Director bio (50-word template):** "Jong-Hoon Kim is an associate professor of computer science at Kent State University and directs the Advanced Telerobotics Research Lab. Kim's research focuses on [areas from the approved CV]. [One verified recognition.] Kim holds a Ph.D. in computer science from Louisiana State University." Fill the brackets only from the director's approved CV (AP style: last name on second reference).
+- **Director bio (50-word template):** "Jong-Hoon Kim is an associate professor of computer science at Kent State University and directs the Advanced Telerobotics Research Laboratory. Kim's research focuses on [areas from the approved CV]. [One verified recognition.] Kim holds a Ph.D. in computer science from Louisiana State University." Fill the brackets only from the director's approved CV (AP style: last name on second reference).
 
 ## 11. Verified contact and handle block
 
-Copy these exactly. Items in brackets are unknown until the lab confirms them.
+Copy these exactly. Items in brackets are unknown until the lab confirms them. Room, director's office phone and LinkedIn were confirmed by the lab on 2026-11-04.
 
 | Item | Print this | Notes |
 |---|---|---|
@@ -313,8 +314,8 @@ Copy these exactly. Items in brackets are unknown until the lab confirms them.
 | Mailing address | Department of Computer Science, 241 Mathematical Sciences Building, 1300 Lefton Esplanade, Kent, OH 44242-0001 | The department's main office address, which the lab's Contact page also uses |
 | Department main phone | 330-672-9980 | Department office, not a lab line. Label it "Department of Computer Science" |
 | Department email | office@cs.kent.edu | |
-| Lab location | Mathematical Sciences Building, Room [###] | The lab is on the second floor; its own room is unconfirmed |
-| Lab phone | [Lab phone] | No direct lab line is published |
+| Lab location | Mathematical Sciences Building, Room 236 | Second floor. Confirmed by the lab (Nov. 2026). Visits by appointment |
+| Director's office phone | 330-672-9060 | Jong-Hoon Kim's office line, confirmed by the lab (Nov. 2026). Print it only labeled as the director's office ("Director's office: 330-672-9060"), never as a lab line. No direct lab line is published; for a general number use the department main phone |
 | Director | Jong-Hoon Kim, associate professor of computer science; jkim72@kent.edu | Published on the lab Contact page and the internship page |
 | Director profile | https://www.kent.edu/cs/jong-hoon-kim | |
 | Lab general email | atrlab.kent@gmail.com | Published on the K-12 page. For recruiting, K-12 and sponsor pieces, prefer a kent.edu address: `[program kent.edu address]` |
@@ -323,19 +324,20 @@ Copy these exactly. Items in brackets are unknown until the lab confirms them.
 | Instagram | @atr_lab (https://www.instagram.com/atr_lab/) | Verified but dormant (one visible post): a channel to relaunch |
 | GitHub | ATR-Lab (https://github.com/ATR-Lab) | Active |
 | YouTube | "Advanced Telerobotics Research Laboratory" channel: https://www.youtube.com/@advancedteleroboticsresear8565 | Auto-generated handle. In print, write the channel name and a descriptive link, not the handle |
-| LinkedIn | [canonical LinkedIn URL] | Two company pages exist; print neither until the lab picks one |
+| LinkedIn | "Advanced Telerobotics Research Laboratory" page: https://www.linkedin.com/company/advanced-telerobotics-research-laboratory | Canonical, confirmed by the lab (Nov. 2026). Never link the duplicate "…Research Lab" page (§12.1) |
 | Facebook | none | facebook.com/ATRLabatKSU is not linked from the lab site and is unverified; do not print it until the lab confirms ownership |
 | Giving | `[Giving URL: confirm designation]` | The only verified route is Kent State's giving platform, linked from the lab's RoboCup 2023 fundraising page: https://flashes.givetokent.org/give/483657/ (designation 235328). That designation is the **Computer Science General Fund**, not a lab fund, and the campaign page still carries the old college name. Before printing, ask the Division of Philanthropy and Alumni Engagement whether a lab designation exists. If you use this link before then, say the gift supports the Department of Computer Science; never call it the lab's fund. Never an informal payment route (personal PayPal, Venmo or Zelle) |
 
 **Never print:**
 - **@atr_kent**, on any platform. It does not appear to exist (X, YouTube and TikTok return the same response as a made-up control handle). It came from the old template footer. "ATR_Kent" is a team name only.
-- **Room 236** as the lab's room, or **330-672-9060** as the lab's phone. Both are the director's office (his room is listed as 236, 236A and 208 on different pages).
+- **330-672-9060** as the lab's phone or without a label. It is the director's office line: print it only as "Director's office: 330-672-9060" (or "Jong-Hoon Kim's office"). Room 236 is the lab's room (confirmed Nov. 2026); do not print 236A or 208, which older pages give for the director's office.
+- The duplicate LinkedIn "Advanced Telerobotics Research Lab" page; link only the canonical "…Laboratory" page (§11).
 - **College of Arts and Sciences.**
 - "KSU" in running copy (acceptable only in tight tabular copy; see references/voice-and-copy.md).
 - One "universal" handle that does not exist. Handles differ by platform; write each exactly as the platform shows it.
 
 Display footers (for slides, posters and flyers; the visual treatment is in references/presentations.md and references/posters.md):
-- Standard: "Advanced Telerobotics Research Lab · Department of Computer Science · Kent State University"
+- Standard: "Advanced Telerobotics Research Laboratory · Department of Computer Science · Kent State University"
 - Tight: "ATR Lab · Kent State University"
 - International venues: add "Kent, Ohio, USA". In running text write "Kent, Ohio"; "OH" only in a full address with a ZIP code.
 
@@ -348,7 +350,7 @@ The lab's public footprint disagrees with itself. Do not copy from existing page
 | Where | Problem | Fix |
 |---|---|---|
 | Website header and JSON-LD logo | The **retired** block-letter "ATR" logo (`uploads/2018/03/ATR-254x97-static.gif`, `uploads/2022/02/atr.png`); an older black triangle monogram (`uploads/2016/12/graphic-2.png`) also appears. The current mark is absent from the web | Replace with `assets/logos/svg/atr-horizontal-navy.svg` (or `assets/logos/png/atr-horizontal-navy-1000.png`); add favicons from `assets/logos/icons/` |
-| LinkedIn "Advanced Telerobotics Research Lab" page | Retired logo; duplicate of the "…Laboratory" page (Kent State forbids duplicate accounts) | Pick one canonical page, merge or close the other, use `assets/logos/icons/atr-avatar-mark-navy.png` |
+| LinkedIn "Advanced Telerobotics Research Lab" page | Retired logo; duplicate of the canonical "…Laboratory" page (Kent State forbids duplicate accounts) | Keep https://www.linkedin.com/company/advanced-telerobotics-research-laboratory (canonical, confirmed Nov. 2026); merge or close the "…Lab" page; use `assets/logos/icons/atr-avatar-mark-navy.png` |
 | Old presentation template | Kent State athletics Flash K/eagle; the nonexistent handle; white text on gold (2.0:1); "Kent, OH, USA" used outside an address | Use the new templates (references/presentations.md) |
 | Old quad chart template | Retired logo; third-party robot photos (Atlas, Spot) without credit or license | Use the new quad chart (references/quad-charts.md) |
 | Website palette and fonts | Stock "Aton" theme: yellows #FEEA0E / #F5E103 / #EEEE22 (none is Kent State Gold), body gray #7A7A7A at 4.29:1 (fails AA), 7+ display fonts | Restate in the brand tokens (references/color.md, references/typography.md, references/web-and-digital.md) |
@@ -359,7 +361,7 @@ The lab's public footprint disagrees with itself. Do not copy from existing page
 | Where | Problem | Fix |
 |---|---|---|
 | Old template footer and older lab documents | A handle that does not exist (see "Never print") | Use the verified handle per platform (§11) |
-| Lab website social icons | Instagram, Facebook and LinkedIn icons point to the bare platform roots; the "Follow us on Instagram" widget is empty | Point to instagram.com/atr_lab and the canonical LinkedIn page; add YouTube and GitHub; drop Facebook unless ownership is confirmed |
+| Lab website social icons | Instagram, Facebook and LinkedIn icons point to the bare platform roots; the "Follow us on Instagram" widget is empty | Point to instagram.com/atr_lab and linkedin.com/company/advanced-telerobotics-research-laboratory; add YouTube and GitHub; drop Facebook unless ownership is confirmed |
 | Handles across platforms | atrlab_kent (X), atr_lab (Instagram), ATR-Lab (GitHub), auto-generated YouTube handle | Keep them (renames break links and mentions). Never create new accounts just to reserve a name; decide any future unification with UCM |
 | Kent State social directory | The lab is not listed | Register per UCM's 10 Required Elements (references/social-media.md) |
 
@@ -368,16 +370,16 @@ The lab's public footprint disagrees with itself. Do not copy from existing page
 | Where | Problem | Fix |
 |---|---|---|
 | Across pages | Eight or more name variants (§2.3) | Use §2.2 |
-| kent.edu/cs Research Labs list | "Advanced Tele-Robotics Lab (ATR )" | Ask the department web editor to change it to "Advanced Telerobotics Research Lab" |
+| kent.edu/cs Research Labs list | "Advanced Tele-Robotics Lab (ATR )" | Ask the department web editor to change it to "Advanced Telerobotics Research Laboratory" |
 | GitHub org display name | "Advanced Telerobotic Research Laboratory" | "Advanced Telerobotics Research Laboratory" |
-| Yoast Organization / JSON-LD | Named "Kent State University ATR Lab"; no `sameAs` | "Advanced Telerobotics Research Lab" with verified `sameAs` links (references/web-and-digital.md) |
+| Yoast Organization / JSON-LD | Named "Kent State University ATR Lab"; no `sameAs` | "Advanced Telerobotics Research Laboratory" with verified `sameAs` links (references/web-and-digital.md) |
 | Design Innovation node page, The Kent Stater (2021) | Director listed as "Assistant Professor" | Associate professor (since August 2023) |
 | Design Innovation node page | Director email typo "kim72@kent.edu" | jkim72@kent.edu |
 | Older pages and press | "College of Arts and Sciences" | College of Sciences and Humanities |
 | Building name | "Mathematics and Computer Science Building" (lab Contact page, Design Innovation page, Kent State style guide's Science Mall entry) vs "Mathematical Sciences Building" (campus building list, CS department footer) | Use "Mathematical Sciences Building", as the department footer does; confirm with UCM, since the style guide still shows the older name |
-| Director's office room | Listed as 236, 236A and 208 on three pages; the Design Innovation page lists the lab at 236 | Leave the lab room as `[Room ###]` until the lab confirms it |
+| Lab room and director's office | The director's office is listed as 236, 236A and 208 on three pages; the Design Innovation page lists the lab at 236 | The lab confirmed Room 236, Mathematical Sciences Building, as the lab's room (Nov. 2026). Correct pages that give 236A or 208 for the lab |
 | Homepage | "North East Ohio" | Northeast Ohio |
-| LinkedIn "…Lab" page | Address is the generic Kent State address (800 E Summit St) | Use the department mailing address |
+| LinkedIn "…Lab" page (duplicate) | Address is the generic Kent State address (800 E Summit St) | Merge or close it (§12.1); the canonical "…Laboratory" page uses the department mailing address |
 
 ### 12.4 Typos on official pages
 
@@ -396,12 +398,12 @@ The lab's public footprint disagrees with itself. Do not copy from existing page
 
 ### 12.6 Open questions for the director and UCM
 
-1. Lab or Laboratory as the default long form?
-2. Which LinkedIn page is canonical, and is the Facebook page the lab's?
-3. The lab's own room and phone line.
+1. Is the Facebook page the lab's? (Settled Nov. 2026: "Laboratory" is the long form; the "…Laboratory" LinkedIn page is canonical.)
+2. A direct lab phone line, if one exists. (Settled Nov. 2026: the lab is in Room 236; 330-672-9060 is the director's office line.)
+3. The title of the paper behind the 2021 World Robot Summit Distinguished Paper Award (§9).
 4. Whether UCM approves the ATR mark beside Kent State marks, and whether a College of Sciences and Humanities logo exists.
 5. Which tagline, if any, to adopt (§4).
-6. Whether ATR_Kent, ATR_FLUX, ATR Pepper Team and ATR_ENT are still active, and whether the ATR_Kent team attended RoboCup 2023 in Bordeaux.
+6. Whether ATR_Kent, ATR_FLUX, ATR Pepper Team and ATR_ENT are still active, and whether the ATR_Kent team attended RoboCup 2023 in Bordeaux (a 2023 team description paper exists; attendance does not follow from it).
 7. The current sponsor tier table.
 8. Whether UCM accepts "ATR Lab" as a second reference in its own publications (until it does, use "the lab").
 9. Is there an ATR Lab gift designation? (Ask the Division of Philanthropy and Alumni Engagement; until then, see the Giving row in §11.)

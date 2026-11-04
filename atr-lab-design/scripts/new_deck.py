@@ -75,7 +75,7 @@ content (Statement, Key Numbers, Content + Image, Three Icon Columns) or asking 
 statement, closing and picture-led layouts never get it. [Bracketed] placeholders, lorem ipsum, TODO and
 "Click to add" anywhere on the slides (and brackets in the speaker notes) are REFUSED unless
 --allow-placeholders; the facts brand_check.py's wording check treats as errors or unverified (@atr_kent,
-College of Arts and Sciences, Room 236, 330-672-9060, the old building name, RoboCup placements) are refused
+College of Arts and Sciences, 330-672-9060 without a director label, the old building name, RoboCup placements) are refused
 on slides and warned in notes; every picture, chart and video needs alt text; the package is re-read after
 saving to prove there are no orphan parts. Pictures below 100 ppi and heavy crops are warnings.
 
@@ -218,15 +218,20 @@ def contrast(a, b):
 
 # --------------------------------------------------------------------------- brand rules (from brand_check)
 
+def _director_labeled(cid, text, m):
+    return cid == "director-phone" and bool(re.search(r"\bdirector\b|\bJong-Hoon\s+Kim\b|\bKim['’]s\b",
+                                                      text[max(0, m.start() - 80):m.end() + 80], re.I))
+
+
 def _load_rules():
-    """Placeholder patterns and wording rules. Reuses brand_check.py (same folder) so both tools agree;
-    falls back to a minimal copy if it cannot be imported."""
+    """Placeholder patterns, wording rules and the labeled-match exemption. Reuses brand_check.py (same
+    folder) so both tools agree; falls back to a minimal copy if it cannot be imported."""
     try:
         sys.path.insert(0, str(HERE))
         import brand_check as bc  # noqa: WPS433
         ph = [(re.compile(rx, fl), label) for rx, fl, label in bc.PLACEHOLDERS]
         wording = [(cid, re.compile(rx, fl), sev, msg, fix) for cid, rx, fl, sev, msg, fix in bc.WORDING]
-        return ph, wording
+        return ph, wording, bc.labeled
     except Exception:  # pragma: no cover - fallback
         ph = [(re.compile(r"\[(?!\d+(?:\s*[,–\-]\s*\d+)*\])[^\[\]\n]{1,80}\]"), "bracketed placeholder"),
               (re.compile(r"\blorem ipsum\b", re.I), "lorem ipsum filler"),
@@ -236,18 +241,18 @@ def _load_rules():
                     '"@atr_kent" does not exist.', "Use X @atrlab_kent."),
                    ("college", re.compile(r"College\s+of\s+Arts\s+(?:and|&)\s+Sciences", re.I), "error",
                     "Computer Science is in the College of Sciences and Humanities.", ""),
-                   ("contact", re.compile(r"330[\s.)\-]*672[\s.\-]*9060"), "warning",
-                    "330-672-9060 is not a verified lab number.", "Use 330-672-9980 (department)."),
-                   ("contact", re.compile(r"\bRoom\s+236\b", re.I), "warning", "Room 236 is not verified.", ""),
+                   ("director-phone", re.compile(r"330[\s.)\-]*672[\s.\-]*9060"), "warning",
+                    "330-672-9060 is the director's office line and is not labeled as the director's.",
+                    'Label it "Director\'s office" or use 330-672-9980 (department).'),
                    ("building", re.compile(r"\bMath(?:ematics)?\s+(?:and|&)\s+Computer\s+Science\s+Building\b",
                                            re.I), "warning", "Older building name.",
                     'Write "Mathematical Sciences Building".')]
-        return ph, wording
+        return ph, wording, _director_labeled
 
 
-PH_RULES, WORDING_RULES = _load_rules()
+PH_RULES, WORDING_RULES, LABELED_OK = _load_rules()
 # Wording rules that new_deck refuses outright (as social_card.py does): brand_check errors plus unverified facts.
-REFUSE_IDS = {"contact", "building", "claim"}
+REFUSE_IDS = {"director-phone", "building", "claim"}
 
 
 # --------------------------------------------------------------------------- template catalog
@@ -2216,6 +2221,8 @@ def deck_checks(ctx, prs):
                     (ctx.warn if ctx.allow_placeholders else ctx.refuse)(loc, msg)
             for cid, rx, sev, msg, fix in WORDING_RULES:
                 m = rx.search(text)
+                if m and LABELED_OK(cid, text, m):
+                    continue
                 if m and (sev == "error" or cid in REFUSE_IDS):
                     ctx.refuse(loc, f"{msg} Found {m.group(0)!r} in {where}. {fix}")
                 elif m and sev == "warning":
@@ -2229,7 +2236,7 @@ def deck_checks(ctx, prs):
                         f"{loc} notes", f"leftover {label} {m.group(0)!r}")
             for cid, rx, sev, msg, fix in WORDING_RULES:
                 m = rx.search(nt)
-                if m and sev in ("error", "warning"):
+                if m and sev in ("error", "warning") and not LABELED_OK(cid, nt, m):
                     ctx.warn(f"{loc} notes", f"{msg} Found {m.group(0)!r}.")
         # alt text on pictures, charts, media
         for shp in _walk(slide.shapes):

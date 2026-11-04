@@ -2,7 +2,7 @@
   "_comment": "Three-slide workshop deck for project.py. It uses the date, time and durations but not the registration URL, so changing that URL does not rebuild the deck.",
   "template": "presentation",
   "title": "{{facts.event_title_plain}}",
-  "author": "Advanced Telerobotics Research Lab",
+  "author": "Advanced Telerobotics Research Laboratory",
   "slides": [
     {
       "layout": "ATR - Title",

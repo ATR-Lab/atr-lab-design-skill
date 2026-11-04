@@ -2,7 +2,7 @@
 
 A quad chart is one slide split into four panels, with a header naming the work and the people behind it. Funders and
 program offices use quad charts to scan many projects fast, so each panel answers one question and nothing else. The ATR
-Lab (Advanced Telerobotics Research Lab, Kent State University) has three quad types in one template: the NASA GSFC
+Lab (Advanced Telerobotics Research Laboratory, Kent State University) has three quad types in one template: the NASA GSFC
 research quad (a publication funded by NASA), the project-status quad (a program review) and the weekly summary (internal
 progress). This file covers which one to use, NASA's rules, how to write each field, figures, the acknowledgement
 sentence, notes, milestone symbols, logos, the `scripts/quad_chart.py` generator, editing by hand and QA.
@@ -134,9 +134,9 @@ font and measured budget; `python3 scripts/quad_chart.py --list-fields` prints t
 
 Shared frame: 0.5 in side margins; a gold label plate (0.62 in) with the navy ATR mark at top left; title to its right;
 a `#D6DEE8` hairline at y 1.00 in; numbered navy label plates on each panel. The brand quads add a footer (hairline at
-y 5.10 in, "Advanced Telerobotics Research Lab · Kent State University", a marking and date, the slide number). The NASA
-quad has no footer or slide number (it is uploaded as a single slide) and carries the lab signature "ATR Lab · Kent State
-University" at top right instead.
+y 5.10 in, "Advanced Telerobotics Research Laboratory · Kent State University" on one line, a marking and date, the
+slide number). The NASA quad has no footer or slide number (it is uploaded as a single slide) and carries the lab
+signature "ATR Lab · Kent State University" at top right instead.
 
 **Budgets** (characters / lines; measured with the Arial fallback, so they hold in Google Slides and on machines
 without the brand fonts):

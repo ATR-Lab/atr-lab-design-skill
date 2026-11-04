@@ -2,7 +2,7 @@
 """ATR Lab email signature generator (HTML + plain text).
 
 Builds an Outlook-safe, table-based HTML signature and a matching plain-text
-signature for members of the Advanced Telerobotics Research Lab, Department of
+signature for members of the Advanced Telerobotics Research Laboratory, Department of
 Computer Science, Kent State University. It follows the field order of Kent
 State's current UCM template (Kent_email_Signature_mstr1.docx): name, pronouns,
 title, department, Kent State University, direct and cell phone, one logo image.
@@ -108,7 +108,7 @@ LOGO_PRESETS = {
     # (tile 240 px wide, lockup 192 px, padding = 1 X on every side). The
     # lockup's screen minimum is 180 px wide, so the tile cannot be smaller.
     "atr": {
-        "alt": "Advanced Telerobotics Research Lab, Kent State University",
+        "alt": "Advanced Telerobotics Research Laboratory, Kent State University",
         "link": None,  # defaults to the website
         "width": 240,
         "aspect": 240 / 121,
@@ -116,7 +116,7 @@ LOGO_PRESETS = {
     # Compact: the gold mark alone on a navy tile (72 px, mark about 43 px).
     # Allowed because the lab name is live text in the signature.
     "atr-mark": {
-        "alt": "Advanced Telerobotics Research Lab",
+        "alt": "Advanced Telerobotics Research Laboratory",
         "link": None,
         "width": 72,
         "aspect": 72 / 74,
@@ -136,7 +136,7 @@ class Signature:
     email: str
     pronouns: str = ""
     department: str = "Department of Computer Science"
-    lab: str = "Advanced Telerobotics Research Lab"
+    lab: str = "Advanced Telerobotics Research Laboratory"
     university: str = "Kent State University"
     phone: str = ""          # direct line, 330-672-xxxx
     cell: str = ""           # optional
@@ -334,8 +334,8 @@ FORBIDDEN_IN_SIGNATURE = {"svg", "video", "audio", "iframe", "form", "input",
                           "button", "picture", "object", "embed"}
 # Never correct in an ATR Lab signature (references/brand-foundation.md
 # sections 11-12, kent-state-compliance.md section 15: handle does not exist,
-# wrong college name, older building name, retired logo files, the director's
-# office room). brand_check.py's `wording` check applies the same rules.
+# wrong college name, older building name, retired logo files).
+# brand_check.py's `wording` check applies the same rules.
 DENY_LIST = [
     (r"(@|x\.com/|twitter\.com/)atr_kent\b",
      "@atr_kent does not exist; the lab's X handle is @atrlab_kent"),
@@ -345,9 +345,6 @@ DENY_LIST = [
      "older building name: write 'Mathematical Sciences Building'"),
     (r"COLOR_REFERENCE_DELETE_ME|ATR-254x97-static",
      "retired block-letter ATR logo file; never use it"),
-    (r"\bRoom\s+236\b",
-     "that room is the director's office, not the lab's; use the department address "
-     "until the lab's own room is confirmed"),
 ]
 # Common CSS color names mapped to hex, for the contrast check. Anything else
 # that is not hex/rgb() is reported so it can be replaced by a hex token.

@@ -391,7 +391,7 @@
         "Quadrant 2 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"TECHNICAL APPROACH\"",
         "Quadrant 3 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"MILESTONES AND SCHEDULE\"",
         "Quadrant 4 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"IMPACT AND DELIVERABLES\"",
-        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Lab  \u00b7  Kent State University\" Source Sans 3 14 slate at x 0.50..5.90",
+        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Laboratory \u00b7 Kent State University\" Source Sans 3 14 slate, one line (no wrap), at x 0.50..6.00",
         "Native slide-number field (Source Code Pro 14 navy) at x 9.00..9.50"
       ],
       "slide_number_field": true,
@@ -631,7 +631,7 @@
         "Quadrant 4 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"NOTES\"",
         "Mist media panel 3.50 x 1.18 in at (6.00, 3.78) with the plate 5 on its corner",
         "Quadrant 5 label plate (navy 0.36 in, Roboto Slab bold 16 gold numeral) + \"MEDIA OF THE WEEK\"",
-        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Lab  \u00b7  Kent State University\" Source Sans 3 14 slate at x 0.50..5.90",
+        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Laboratory \u00b7 Kent State University\" Source Sans 3 14 slate, one line (no wrap), at x 0.50..6.00",
         "Native slide-number field (Source Code Pro 14 navy) at x 9.00..9.50"
       ],
       "slide_number_field": true,
@@ -856,7 +856,7 @@
       "fixed_elements": [
         "Gold label plate 0.62 in at (0.50, 0.14) with the navy ATR mark (h 0.375 in, 1 X clear space inside the plate)",
         "Header hairline D6DEE8 0.75 pt at y 1.00 from x 0.50 to 9.50",
-        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Lab  \u00b7  Kent State University\" Source Sans 3 14 slate at x 0.50..5.90",
+        "Footer hairline D6DEE8 at y 5.10; footer text \"Advanced Telerobotics Research Laboratory \u00b7 Kent State University\" Source Sans 3 14 slate, one line (no wrap), at x 0.50..6.00",
         "Native slide-number field (Source Code Pro 14 navy) at x 9.00..9.50"
       ],
       "slide_number_field": true,

@@ -232,7 +232,7 @@ references/pr-events-outreach.md §3.4) and never invent a number: leave `[N%]` 
 - **Eyebrow:** the venue's short name, city and date in AP style (`[IEEE RO-MAN 2026]  ·  [CITY]  ·  [SEPT. 23, 2026]`).
 - **Authors:** full names with superscript affiliation marks, the faculty mentor last. Students are named only with
   their permission (references/kent-state-compliance.md §16).
-- **Affiliation line 1:** "Advanced Telerobotics Research Lab, Department of Computer Science, Kent State
+- **Affiliation line 1:** "Advanced Telerobotics Research Laboratory, Department of Computer Science, Kent State
   University, Kent, OH, USA". Pair "ATR" with Kent State everywhere (references/voice-and-copy.md §3.1).
 - **01 Motivation:** the lead is one bold sentence on the problem and why it matters; the paragraph gives the gap,
   the setting and the research question.
@@ -402,7 +402,7 @@ A poster spec clones a showcase slide with `from_slide` (1 standard, 2 long titl
        "eyebrow": "[VENUE SHORT NAME]  ·  [CITY]  ·  [MON. DD, YYYY]",
        "title": "[The finding in one or two lines]",
        "authors": "[First Author]^{1}, [Second Author]^{1} and [Faculty Mentor]^{1}",
-       "affiliations": "^{1} Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University, Kent, OH, USA",
+       "affiliations": "^{1} Advanced Telerobotics Research Laboratory, Department of Computer Science, Kent State University, Kent, OH, USA",
        "lead": "[One sentence on the problem and why it matters.]",
        "paragraph": "[Gap, setting and research question, up to 260 characters.]",
        "approach": ["[System]", "[Study design]", "[Analysis]"],
@@ -415,7 +415,7 @@ A poster spec clones a showcase slide with `from_slide` (1 standard, 2 long titl
        "future": ["[Next step 1]", "[Next step 2]"],
        "references": ["[1] [A. Author and B. Author], \"[Title],\" in [Proc. Conference], [Year], pp. [1-8]."],
        "acknowledgments": "[Thanks.] [The funder's required sentences, verbatim.]",
-       "contact": "[Presenter Name]  ·  [presenter@kent.edu]  ·  Advanced Telerobotics Research Lab, Kent State University\nwww.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
+       "contact": "[Presenter Name]  ·  [presenter@kent.edu]  ·  Advanced Telerobotics Research Laboratory, Kent State University\nwww.atr.cs.kent.edu  ·  atrlab.kent@gmail.com  ·  github.com/ATR-Lab  ·  @atrlab_kent on X",
        "stamp": "ATR LAB  //  [VENUE]  //  [YYYY-MM-DD]"
      },
      "shapes": {"Key result callout": ["KEY RESULT", "[N%]", "[What the number means: metric, comparison, n, test]"],
@@ -445,8 +445,9 @@ How it maps:
 - **`remove`** deletes named objects: `Sponsor logo slot` when there is no sponsor logo, a figure panel you do not
   use, or the whole `QR code` group.
 - Budgets are checked (a warning, or a failure with `--strict`), every text block is measured with the brand fonts,
-  `[placeholders]` are refused unless `--allow-placeholders`, forbidden facts (`@atr_kent`, Room 236, 330-672-9060,
-  "College of Arts and Sciences", RoboCup placements) are refused, and every picture needs alt text. Exit 0 built;
+  `[placeholders]` are refused unless `--allow-placeholders`, forbidden facts (`@atr_kent`, 330-672-9060 without a
+  director's-office label, "College of Arts and Sciences", RoboCup placements) are refused, and every picture needs
+  alt text. Exit 0 built;
   1 spec error; 2 refused; 3 built but a check failed.
 
 After building, open the result in PowerPoint once: `new_deck.py` sets text but PowerPoint recomputes
