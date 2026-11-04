@@ -32,7 +32,7 @@ put content on a screen. Social post specs are in references/social-media.md; sl
 | Type | Web pages: Source Sans 3 (+ Roboto Slab accents, Source Code Pro for code), loaded by `tokens.css`. Email: web-safe fonts only (Arial, Helvetica, Calibri, Georgia, Verdana). | references/typography.md |
 | Logos | SVG on the web (`assets/logos/svg/`), PNG in email (no SVG or WebP in Outlook). ATR and Kent State are separate signatures. | references/logo-system.md |
 | Accessibility | Legal floor WCAG 2.1 AA (ADA Title II, Kent State deadline April 26, 2027); lab floor WCAG 2.2 AA. Alt text on every image, captions on every video, no meaning by color alone. | references/accessibility.md |
-| Names and handles | "Advanced Telerobotics Research Lab" first, then "the lab"; always pair ATR with Kent State. X **@atrlab_kent**, Instagram **@atr_lab**, GitHub **ATR-Lab**, YouTube "Advanced Telerobotics Research Laboratory". Never @atr_kent. | references/voice-and-copy.md |
+| Names and handles | "Advanced Telerobotics Research Laboratory" first, then "the lab"; always pair ATR with Kent State. X **@atrlab_kent**, Instagram **@atr_lab**, GitHub **ATR-Lab**, YouTube "Advanced Telerobotics Research Laboratory". Never @atr_kent. | references/voice-and-copy.md |
 | AI imagery | Abstract backgrounds, icons and labeled concept illustrations only; never presented as the lab's robots, people or results. | references/ai-image-pipeline.md |
 | Banners and share images | Ready-made in `assets/illustrations/` (each with a `-plain` twin without the mark): default link preview `banner-og-image-1200x630.png` (§2.6), LinkedIn company-page cover `banner-linkedin-cover-1512x256.png`, Facebook Page cover `banner-facebook-cover-1640x624.png` (only once the lab confirms it owns the page), X header `banner-x-header-1500x500.png`, YouTube `banner-youtube-2560x1440.png` (§7), GitHub `banner-github-social-1280x640.png` (§6). Screen files only: never print them. | `assets/illustrations/README.md` (safe zones), references/social-media.md §3.1 |
 
@@ -62,7 +62,7 @@ Do it in phases so the site improves this week without waiting for a redesign.
 
 | Phase | Work | Effort |
 |---|---|---|
-| **0. Stop the bleeding** (a day) | Replace the header logo and the Yoast organization logo; add favicons and a default `og:image`; fix the social links; set Yoast's organization name to "Advanced Telerobotics Research Lab"; remove lorem ipsum and placeholder alt text; rename "Sponorship" with a 301 redirect | Settings and media only |
+| **0. Stop the bleeding** (a day) | Replace the header logo and the Yoast organization logo; add favicons and a default `og:image`; fix the social links; set Yoast's organization name to "Advanced Telerobotics Research Laboratory"; remove lorem ipsum and placeholder alt text; rename "Sponorship" with a 301 redirect | Settings and media only |
 | **1. Re-skin with tokens** (a week) | Child theme that loads `tokens.css` and maps the theme's colors and fonts to tokens (2.3); fix contrast, link underlines and focus styles; restate the internship page in tokens | CSS |
 | **2. Content and structure** | Accessible page templates (project, person, publication, program), JSON-LD (2.7), current projects and people, working newsletter sign-up, accessibility statement page | Content + light dev |
 | **3. Decide the platform** | Ask the Web Team whether the site must move into Kent State's Drupal or needs microsite approval (2.10). A rebuild on a lighter theme or in Drupal ends the Aton dependency. | Policy + rebuild |
@@ -147,7 +147,7 @@ do, remove the `@import` line.
 - On a navy header or hero: `atr-horizontal-short-twotone-reverse.svg`.
 - Phones: `horizontal-short` at 180 px minimum, or the mark alone (`atr-mark-navy.svg`, 32-40 px) next to the
   site title set as text "ATR Lab" (the mark alone is allowed when the name appears nearby).
-- `alt` text for a linked logo names the destination: `alt="Advanced Telerobotics Research Lab home"`.
+- `alt` text for a linked logo names the destination: `alt="Advanced Telerobotics Research Laboratory home"`.
 
 **Kent State logo (required).** Kent State's requirements for sites outside its Drupal include a "Kent State logo -
 linked to the www.kent.edu homepage" (https://www.kent.edu/ucm/web-team/external-site-requirements). Put the KSU
@@ -164,12 +164,14 @@ deck: their colors are now exact navy and gold, but they are still rasters, fine
   (references/logo-system.md).
 - Lab name, then "Department of Computer Science, Kent State University".
 - Verified mailing address: 241 Mathematical Sciences Building, 1300 Lefton Esplanade, Kent, OH 44242-0001;
-  department main office 330-672-9980. The lab's own room, phone and a kent.edu lab address stay placeholders
-  (`[Room ###]`, `[Lab phone]`, `[lab email]@kent.edu`) until confirmed. The currently published general lab
+  department main office 330-672-9980. The lab is in Room 236, Mathematical Sciences Building. No direct lab
+  line is published (330-672-9060 is the director's office line; label it as such), and a kent.edu lab address
+  stays a placeholder (`[lab email]@kent.edu`) until confirmed. The currently published general lab
   address is atrlab.kent@gmail.com; a kent.edu address is better for parents and sponsors.
 - Social links, verified: X https://x.com/atrlab_kent · Instagram https://www.instagram.com/atr_lab/ ·
-  YouTube https://www.youtube.com/@advancedteleroboticsresear8565 · GitHub https://github.com/ATR-Lab · one LinkedIn
-  page once the lab chooses the canonical one. Do not link the unverified Facebook page or the unrelated @ATRLab YouTube channel.
+  YouTube https://www.youtube.com/@advancedteleroboticsresear8565 · GitHub https://github.com/ATR-Lab · LinkedIn
+  https://www.linkedin.com/company/advanced-telerobotics-research-laboratory (canonical). Do not link the
+  unverified Facebook page or the unrelated @ATRLab YouTube channel.
   Icon links need accessible names (`aria-label="ATR Lab on X"`).
 - Links to the department (https://www.kent.edu/cs), an accessibility statement page and a privacy page.
 - Sponsor acknowledgments belong **only in the footer** and must not exceed 15% of the page (Kent State rule for
@@ -192,7 +194,7 @@ Copy these from `assets/logos/icons/` to the site root: `favicon.ico`, `favicon.
 
 ```json
 {
-  "name": "Advanced Telerobotics Research Lab",
+  "name": "Advanced Telerobotics Research Laboratory",
   "short_name": "ATR Lab",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
@@ -226,7 +228,7 @@ and WordPress writes the icon tags. Use one route, not both, or the browser gets
 
 ```html
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Advanced Telerobotics Research Lab">
+<meta property="og:site_name" content="Advanced Telerobotics Research Laboratory">
 <meta property="og:title" content="[Page title]">
 <meta property="og:description" content="[150-160 character summary]">
 <meta property="og:image" content="https://www.atr.cs.kent.edu/[path]/[share-image].png">
@@ -251,7 +253,7 @@ parent organization and address with Yoast's schema filters (such as `wpseo_sche
       "@type": "WebSite",
       "@id": "https://www.atr.cs.kent.edu/#website",
       "url": "https://www.atr.cs.kent.edu/",
-      "name": "Advanced Telerobotics Research Lab",
+      "name": "Advanced Telerobotics Research Laboratory",
       "alternateName": ["ATR Lab", "Advanced Telerobotics Research Laboratory"],
       "inLanguage": "en-US",
       "publisher": { "@id": "https://www.atr.cs.kent.edu/#organization" }
@@ -259,7 +261,7 @@ parent organization and address with Yoast's schema filters (such as `wpseo_sche
     {
       "@type": ["ResearchOrganization", "EducationalOrganization"],
       "@id": "https://www.atr.cs.kent.edu/#organization",
-      "name": "Advanced Telerobotics Research Lab",
+      "name": "Advanced Telerobotics Research Laboratory",
       "alternateName": ["ATR Lab", "Advanced Telerobotics Research Laboratory", "ATR_Kent"],
       "description": "An innovation research laboratory focused on exploring the frontiers of telepresence robotics, tele-embodiment, autonomy and artificial intelligence.",
       "url": "https://www.atr.cs.kent.edu/",
@@ -288,7 +290,7 @@ parent organization and address with Yoast's schema filters (such as `wpseo_sche
         "https://www.instagram.com/atr_lab/",
         "https://www.youtube.com/@advancedteleroboticsresear8565",
         "https://github.com/ATR-Lab",
-        "[canonical LinkedIn page URL]"
+        "https://www.linkedin.com/company/advanced-telerobotics-research-laboratory"
       ]
     },
     {
@@ -318,7 +320,7 @@ Notes:
 - The description is the lab's own published sentence. The lab → department → university chain (with Kent State's
   verified ROR and Wikidata IDs) ties the lab to Kent State for search engines and AI assistants, and keeps it
   apart from the unrelated ATR institute in Kyoto (atr.jp).
-- List only one LinkedIn page, and add Facebook only after the lab confirms it owns the page.
+- List only the canonical LinkedIn page (".../advanced-telerobotics-research-laboratory"), and add Facebook only after the lab confirms it owns the page.
 - `ResearchOrganization` is newer in schema.org; if a validator rejects it, fall back to `Organization`.
 - Other page types: `ProfilePage` + `Person` for people, `ResearchProject` for projects, `VideoObject` for demo
   videos, `EducationEvent` for K-12 programs (every age, date and price a placeholder until confirmed),
@@ -331,19 +333,19 @@ Notes:
 | Element | Rule | Example |
 |---|---|---|
 | Title tag | 50-60 characters, unique, topic first, lab name last | "Robotics Summer Workshop for Middle Schoolers \| ATR Lab" |
-| Meta description | 150-160 characters, unique, a reason to click | "The Advanced Telerobotics Research Lab at Kent State University explores telepresence robotics, tele-embodiment, autonomy and AI and trains student researchers." |
+| Meta description | 150-160 characters, unique, a reason to click | "The Advanced Telerobotics Research Laboratory at Kent State University explores telepresence robotics, tele-embodiment, autonomy and AI and trains student researchers." |
 | Headings | One H1 per page; headings in order; phrase them the way people ask ("What students do at the summer workshop") | |
 | URLs | Lowercase, hyphenated, short, no dates; 301-redirect every URL you change | `/k-12/summer-workshop/` |
 | Images | Descriptive file names, alt text, WebP or AVIF with a fallback, explicit width and height, lazy-load below the fold | `telebot-demo-open-house.webp` |
 | Speed | Core Web Vitals: LCP < 2.5 s, INP < 200 ms, CLS < 0.1. Revolution Slider heroes are the usual LCP problem: prefer one static image | |
 
 To be cited correctly by search engines and AI assistants:
-- **Name the entity the same way everywhere:** "Advanced Telerobotics Research Lab (ATR Lab), Kent State
+- **Name the entity the same way everywhere:** "Advanced Telerobotics Research Laboratory (ATR Lab), Kent State
   University". Never "ATR" alone. On a webpage, after the full name, "ATR" may appear in a headline or link where
   space is tight (the only acronym exception in Kent State style).
 - Start each section with a direct 40-60 word answer; add FAQ blocks on program and "Join" pages written as real
   questions; put program facts (grades, dates, cost) in tables; add "Last updated" dates and named authors.
-- Add `/llms.txt` at the site root: a title line ("# Advanced Telerobotics Research Lab (ATR Lab), Kent State
+- Add `/llms.txt` at the site root: a title line ("# Advanced Telerobotics Research Laboratory (ATR Lab), Kent State
   University"), a one-paragraph summary, then link lists for Research, People, Programs and Contact. It is cheap;
   Google says it does not need it, other assistants may read it.
 - Keep robots.txt open to search and AI crawlers. Do not create or edit a Wikipedia article about the lab
@@ -406,7 +408,7 @@ https://www.kent.edu/brand/templates) is one block, offered in Calibri, Arial or
 7. The two-color Horizontal Kent State logo image
 
 It has no street address, fax or www.kent.edu line (the older 2020 field list is superseded). The ATR adaptation
-adds **one text line, "Advanced Telerobotics Research Lab", under the department**, plus optional email,
+adds **one text line, "Advanced Telerobotics Research Laboratory", under the department**, plus optional email,
 website and social links. No second logo, banners, taglines, quotes or animated GIFs.
 
 ### 3.2 Generate it with `scripts/email_signature.py`
@@ -553,7 +555,7 @@ The organization is **ATR-Lab** (https://github.com/ATR-Lab; 53 public repositor
 | Item | Spec | Use |
 |---|---|---|
 | Organization avatar | About 500 × 500 recommended, under 1 MB | `assets/logos/icons/atr-avatar-mark-navy.png` (1080 px, 23 KB; circle-crop safe) |
-| Display name | Currently "Advanced Telerobotic Research Laboratory" (missing the s) | "Advanced Telerobotics Research Lab" (or "Laboratory"; match the website) |
+| Display name | Currently "Advanced Telerobotic Research Laboratory" (missing the s) | "Advanced Telerobotics Research Laboratory" |
 | Description | One sentence, no unsourced numbers | The lab's own line, e.g. "An innovation research laboratory at Kent State University exploring telepresence robotics, tele-embodiment, autonomy and artificial intelligence." Drop "+400 media outlets" unless it carries a date and source |
 | Profile fields | Website, location, email | https://www.atr.cs.kent.edu/ · Kent, Ohio · a kent.edu lab address |
 | Repo social preview | 1280 × 640 (min 640 × 320), PNG/JPG under 1 MB, solid background | `assets/illustrations/banner-github-social-1280x640.png` (107 KB) as is. **Short repo names** (up to about 20-25 characters): start from the same file and set the name in Source Sans 3 Bold, white, 40 px, one line within x 410-906 (between the mark and the line-work). **Longer names:** start from `banner-github-social-1280x640-plain.png` (no mark), place `atr-horizontal-short-twotone-reverse` at the left and the name beside it, all inside 60 px margins |
@@ -563,9 +565,9 @@ the org page. Keep it short:
 
 ```markdown
 <img src="https://raw.githubusercontent.com/ATR-Lab/.github/main/profile/atr-banner.png"
-     alt="Advanced Telerobotics Research Lab, Kent State University" width="100%">
+     alt="Advanced Telerobotics Research Laboratory, Kent State University" width="100%">
 
-**Advanced Telerobotics Research Lab** · Department of Computer Science, Kent State University
+**Advanced Telerobotics Research Laboratory** · Department of Computer Science, Kent State University
 
 [One or two sentences on current research, in plain language.]
 
@@ -724,7 +726,7 @@ python3 scripts/atr_design.py banner --preset signage-16x9 --eyebrow "Workshop" 
 - [ ] Tokens, not hand-picked colors; links underlined; no gold text on white; body text ink.
 - [ ] Alt text on every image; captions on every video; descriptive links; nothing conveyed by color alone.
 - [ ] WCAG 2.2 AA checks: contrast, focus visible and unobscured, 24 px targets, keyboard access, reduced motion.
-- [ ] Names and handles as verified; "Advanced Telerobotics Research Lab" on first reference; no @atr_kent.
+- [ ] Names and handles as verified; "Advanced Telerobotics Research Laboratory" on first reference; no @atr_kent.
 - [ ] Only verified contact details (department address, 330-672-9980); lab room and line as placeholders until confirmed.
 - [ ] Videos state the control mode (teleoperated, autonomous, scripted or simulated) and playback speed; AI images labeled "Illustration".
 - [ ] QR codes decoded from the final PDF (`scripts/qr_code.py verify`) and scanned from a printed proof; the destination is the one the organizer approved; no shorteners unless the organizer chose one after you recommended the full URL.

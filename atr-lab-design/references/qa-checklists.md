@@ -33,15 +33,16 @@ Every item applies to every deliverable. A draft may go to the user with open it
 
 - [ ] Every name, title, date, number, venue, award, quote, grant number and contact detail traces to
       `references/brand-foundation.md` (§9 proof bank, §11 contact block) or to a source named in the handoff.
-      Anything else is a visible placeholder: `[PI Name]`, `[Grant No.]`, `[Room ###]`. Never invent.
+      Anything else is a visible placeholder: `[PI Name]`, `[Grant No.]`, `[N] student researchers`. Never invent.
 - [ ] Nothing left over: search for `[`, `TBD`, `TODO`, `lorem`, "Click to add". brand_check's `placeholder` check
       covers Office, HTML and SVG files and copy in `.md`/`.txt` (each one with its line number); `social_card.py`
       refuses placeholders; `email_signature.py --check` fails on them.
-- [ ] Never print: `@atr_kent`; Room 236 or 330-672-9060 as the lab's room or line; "College of Arts and Sciences";
+- [ ] Never print: `@atr_kent`; 330-672-9060 as a lab line or without the director's-office label; "College of
+      Arts and Sciences";
       any RoboCup placement; "Mathematics and Computer Science Building" (it is the **Mathematical Sciences
       Building**); the giving link called a lab fund (it goes to the Computer Science General Fund). Handles: X
       @atrlab_kent, Instagram @atr_lab, GitHub ATR-Lab (brand-foundation.md §11).
-- [ ] Kent State style (voice-and-copy.md §3): "Advanced Telerobotics Research Lab" first, then "the lab" ("ATR Lab"
+- [ ] Kent State style (voice-and-copy.md §3): "Advanced Telerobotics Research Laboratory" first, then "the lab" ("ATR Lab"
       in headlines and tight spaces, always paired with Kent State, never "ATR" alone); "Kent State University"
       first, then "Kent State"; no "KSU" in running copy; no Oxford comma; "and", not "&", in unit names; "Sept. 23",
       "9 a.m.-noon"; "Ph.D.", "M.S."; the round emblem is the **roundel**, never "seal".
@@ -421,7 +422,7 @@ Rules: web-and-digital.md §3, kent-state-compliance.md §15.
       fails on placeholders, missing alt text or image sizes, non-https or SVG logos, text under 13 px, low contrast
       and known-wrong facts.
 - [ ] UCM's order: name, pronouns (optional), title, department, the one lab line "Advanced Telerobotics Research
-      Lab", "Kent State University", direct and cell numbers, the Kent State logo.
+      Laboratory", "Kent State University", direct and cell numbers, the Kent State logo.
 - [ ] One image only: the Kent State logo tile (`--make-tile`), hosted at a stable https URL, under 100 KB. An ATR image
       only if UCM approves one, and then instead of the Kent State logo, never beside it.
 - [ ] No banners, quotes, taglines, GIFs, second logos or sponsor logos (NSF bars its logo from email signatures).
@@ -577,11 +578,11 @@ Start: `assets/illustrations/virtual-bg-{navy,light,gold}-1920x1080.png`. Rules:
 | `logo-retired` or `logo-athletic` error | Replace the block-letter "ATR" with a file from `assets/logos/`, and the Flash K/eagle with the academic Kent State wordmark |
 | The draft Kent State wordmark raster (`assets/logos/ksu/`) on a print or public piece | The official file from kent.edu/brand/logos; never recolor the raster |
 | ATR and Kent State merged into one lockup or sharing a divider | Two separate signatures at least X + K apart: ATR left, Kent State right (logo-system.md §9) |
-| `wording` error: `"@atr_kent" is not a lab account; that handle does not exist.`; `Link to a non-existent account (atr_kent).`; `Computer Science is in the College of Sciences and Humanities; Kent State lists "College of Arts and Sciences" as incorrect.`; `The lab name is spelled "Telerobotics", one word.` | X @atrlab_kent, Instagram @atr_lab, GitHub ATR-Lab; "Department of Computer Science, Kent State University"; "Advanced Telerobotics Research Lab" (brand-foundation.md §11, voice-and-copy.md §3) |
-| `wording` warning: `330-672-9060 is not a verified lab phone number.`; `Room 236 is not verified as the lab's room.`; `"Mathematics and Computer Science Building" is an older name for the building.`; `Lab name misspelled ("Telerobotic").`; `No RoboCup placement is published for the lab.`; `"Excellence in Action" is a retired Kent State slogan.`; `Athletics hashtags are not for lab or academic content.`; `Kent State style writes "and", never "&", in unit names.` | The department's address (241 Mathematical Sciences Building) and main line 330-672-9980, or a `[Lab room]` / `[Lab phone]` placeholder; drop the claim, the slogan or the hashtag (#KentState instead); "and" in unit names |
-| `wording` warning on a retired or coined name: `Lab name without "Research" (the 2017 name).`; `"KSU ATR" is a coined name ...`; `"ATR (Advanced Telerobotics) Lab" is an old link-text variant.`; `Doubled noun ("ATR Lab Lab").`; `A name variant from old profiles and metadata.`; `The competition team is written "ATR_Kent" ...` | "Advanced Telerobotics Research Lab" (at Kent State University), then "the lab"; the team as "ATR_Kent", never as a handle (brand-foundation.md §2.3-§2.4) |
+| `wording` error: `"@atr_kent" is not a lab account; that handle does not exist.`; `Link to a non-existent account (atr_kent).`; `Computer Science is in the College of Sciences and Humanities; Kent State lists "College of Arts and Sciences" as incorrect.`; `The lab name is spelled "Telerobotics", one word.` | X @atrlab_kent, Instagram @atr_lab, GitHub ATR-Lab; "Department of Computer Science, Kent State University"; "Advanced Telerobotics Research Laboratory" (brand-foundation.md §11, voice-and-copy.md §3) |
+| `wording` warning: `330-672-9060 is the director's office line, not a lab line, and is not labeled as the director's.`; `"Mathematics and Computer Science Building" is an older name for the building.`; `Lab name misspelled ("Telerobotic").`; `No RoboCup placement is published for the lab.`; `"Excellence in Action" is a retired Kent State slogan.`; `Athletics hashtags are not for lab or academic content.`; `Kent State style writes "and", never "&", in unit names.` | Label the number "Director's office: 330-672-9060" or use the department's main line 330-672-9980; drop the claim, the slogan or the hashtag (#KentState instead); "and" in unit names |
+| `wording` warning on a retired or coined name: `Lab name without "Research" (the 2017 name).`; `"KSU ATR" is a coined name ...`; `"ATR (Advanced Telerobotics) Lab" is an old link-text variant.`; `Doubled noun ("ATR Lab Lab").`; `A name variant from old profiles and metadata.`; `The competition team is written "ATR_Kent" ...` | "Advanced Telerobotics Research Laboratory" (at Kent State University), then "the lab"; the team as "ATR_Kent", never as a handle (brand-foundation.md §2.3-§2.4) |
 | `wording` warning in `.md`/`.txt` copy: `Possible serial (Oxford) comma: Kent State style has none in a simple series.` | "telepresence, autonomy and AI". Keep the comma only where the series needs it for clarity or inside a verbatim quote, and say so in the §4 summary; the heuristic can mistake an appositive or a clause for a series |
-| `wording` info in `.md`/`.txt` copy: `Kent State (AP) style drops "Dr." in news-style copy.`; `No "(ATR)" or "(ATR Lab)" with the full name in running copy.`; anywhere: `"the ATR" alone is ambiguous ...` | "Jong-Hoon Kim, associate professor of computer science", then "Kim"; "Advanced Telerobotics Research Lab", then "the lab" (voice-and-copy.md §3.1, brand-foundation.md §2.2) |
+| `wording` info in `.md`/`.txt` copy: `Kent State (AP) style drops "Dr." in news-style copy.`; `No "(ATR)" or "(ATR Lab)" with the full name in running copy.`; anywhere: `"the ATR" alone is ambiguous ...` | "Jong-Hoon Kim, associate professor of computer science", then "Kim"; "Advanced Telerobotics Research Laboratory", then "the lab" (voice-and-copy.md §3.1, brand-foundation.md §2.2) |
 | `wording` info: `Kent State style avoids "KSU" in running copy.` | "Kent State University" first, then "Kent State" or "the university". In speaker notes brand_check lowers errors to warnings, and a negated mention ("Never print @atr_kent") to info |
 | A `[placeholder]` left; social_card.py refuses the spec (exit 3); `email_signature.py --check` fails | Replace it with a verified fact or cut the line; ask the user for anything unknown |
 | `alt-text` error on a picture or chart, or alt text that is a file name ("Picture 3", "image2.png") | A sentence written per accessibility.md §4; decorative items flagged decorative |

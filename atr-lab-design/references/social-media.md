@@ -37,7 +37,7 @@ that section wins.
    the competition-team name and the roundel text, not a handle (§2).
 2. **Pair "ATR" with Kent State every time.** "ATR" alone also names a large robotics institute in Kyoto
    (atr.jp) that works on teleoperated robots. "ATR Lab" is fine in captions, handles and cards. In longer
-   copy (LinkedIn, YouTube descriptions), write "Advanced Telerobotics Research Lab at Kent State
+   copy (LinkedIn, YouTube descriptions), write "Advanced Telerobotics Research Laboratory at Kent State
    University" on first mention (references/voice-and-copy.md).
 3. **Every post points to something the lab owns**: a project page, a news post, the Join page or a
    YouTube video. Social posts last hours to a day; pages and videos keep working for years and are what
@@ -67,7 +67,7 @@ every existing link and mention; it is a PI decision).
 | Instagram | **@atr_lab** · https://www.instagram.com/atr_lab/ | Verified. About 1,800 followers but 1 visible post: dormant. The lab site does not link it. | **Relaunch** (§6.3). Fix the website icon, which points to instagram.com root. |
 | YouTube | "Advanced Telerobotics Research Laboratory" · https://www.youtube.com/@advancedteleroboticsresear8565 | Verified, 31 videos. Auto-generated handle. | Keep. A custom handle is optional and a PI decision. Do not confuse it with the unrelated @ATRLab channel. |
 | GitHub | **ATR-Lab** · https://github.com/ATR-Lab | Verified and active (53 public repos). Org display name misspelled "Advanced Telerobotic Research Laboratory". | Fix the display name to "Advanced Telerobotics Research Laboratory". Add social previews (§4). |
-| LinkedIn | Page A: /company/advanced-telerobotics-research-laboratory (current mark). Page B: /company/advanced-telerobotics-research-lab (**retired block-letter logo**). | Both verified: a duplicate. | The PI picks one canonical page. Replace the retired logo at once. Close or merge the other through LinkedIn's duplicate-page process `[VERIFY current LinkedIn Help steps]`. |
+| LinkedIn | **Canonical:** https://www.linkedin.com/company/advanced-telerobotics-research-laboratory (current mark; confirmed by the lab, Nov. 2026). Duplicate: /company/advanced-telerobotics-research-lab (**retired block-letter logo**). | Both verified: a duplicate. | Link and post only on the canonical "…Laboratory" page. Close or merge the "…Lab" page through LinkedIn's duplicate-page process `[VERIFY current LinkedIn Help steps]`. |
 | Facebook | facebook.com/ATRLabatKSU | **Unverified** as the lab's (5 followers, not linked from the lab site). | Confirm ownership before linking or tagging. If it is not the lab's, reach parents through the department's page (facebook.com/KSUCSDept) or UCM rather than opening a new page. |
 | TikTok, Bluesky, Threads | none | No lab accounts. | Open one only when the PI decides someone can sustain it, and then with UCM as an administrator (§3). Never open accounts just to reserve a name: Kent State forbids duplicate accounts. |
 | Email | atrlab.kent@gmail.com is published on the K-12 page | Works, but reads as unofficial to parents and sponsors. | Use a kent.edu address in bios and on graphics (references/pr-events-outreach.md §17). |
@@ -100,7 +100,7 @@ them.
 | **Facebook cover** (if the page is confirmed) | `assets/illustrations/banner-facebook-cover-1640x624.png` (or the `-plain` version, no mark) | 2× of 820×312, so it stays sharp on high-density screens. Facebook left-aligns the cover: computers show x 0–1109 (16:9), phones x 0–1497 (2.4:1), and the profile picture covers the lower left. Keep text and logos inside x 436–1070, y 40–545. Preview on both before posting. Zones: `assets/illustrations/README.md`. |
 | **Link-preview image** (lab website) | `assets/illustrations/banner-og-image-1200x630.png` (or the `-plain` version with the page title or the horizontal lockup) | The default `og:image` (set in Yoast), which link cards on X and other platforms fall back to. Keep text inside x 60–1140, y 75–555 for X's 2:1 crop. Zones: `assets/illustrations/README.md`; setup: references/web-and-digital.md §2.6. |
 | **Display name** | "ATR Lab, Kent State University" (30 characters) | Identifies the unit and pairs ATR with Kent State. Use the same string everywhere the field allows. |
-| **Bio** (canonical: references/brand-foundation.md §10) | "Official account of the Advanced Telerobotics Research Lab at @KentState: telepresence robotics, tele-embodiment and Physical AI." (129 characters; fits X's 160 and Instagram's 150, general platform limits to confirm in the app) | Use this one line on every platform; do not write variants. Kent State asks the bio to say "official" and link to kent.edu and social.kent.edu. The PI approves the line once in brand-foundation.md; change it there first. |
+| **Bio** (canonical: references/brand-foundation.md §10) | "Official account of the Advanced Telerobotics Research Laboratory at @KentState: telepresence robotics, tele-embodiment and Physical AI." (129 characters; fits X's 160 and Instagram's 150, general platform limits to confirm in the app) | Use this one line on every platform; do not write variants. Kent State asks the bio to say "official" and link to kent.edu and social.kent.edu. The PI approves the line once in brand-foundation.md; change it there first. |
 | **Links** | https://www.atr.cs.kent.edu/ plus https://www.kent.edu and https://social.kent.edu where the platform allows several links (YouTube, LinkedIn, Instagram) | Where only one link fits, follow references/brand-foundation.md §10: a links page on the lab site that lists www.kent.edu and social.kent.edu, or www.kent.edu itself; confirm the choice with UCM `[VERIFY]`. No link shorteners (UCM rule). Prefer the lab-site links page to a third-party link-in-bio service. Tag bio links with UTMs (§12). |
 | **Pinned post** | The current recruiting call or K-12 program post | Unpin when the deadline passes. |
 
@@ -257,7 +257,7 @@ Bluesky and Threads unchanged.
     16:9 and 1.91:1 cards) and the Kent State wordmark at the same height with the bottoms aligned, bottom
     right on every size except `youtube-thumb` and staged cards (below), where it moves to the top right of
     the header row. Gold cards carry the navy mark and, at the right, the two-line navy credit "Advanced
-    Telerobotics Research Lab / Kent State University" (36 px at 1080) instead of the wordmark; on a staged
+    Telerobotics Research Laboratory / Kent State University" (36 px at 1080) instead of the wordmark; on a staged
     gold card the credit sits top right in three lines, where the wordmark goes on navy. `"signature": "lockup"` swaps the mark for
     horizontal-short (360×137 px on a 1080 px tile, 252×96 px at 1200×675, never under 180 px wide) with the
     wordmark at its height, and prints a warning: use it only for cards viewed at full size, never for feed
@@ -422,7 +422,7 @@ B or C layout.
     | `social-gold-1080x1080.png` | top-right (x 697–1079, y 0–366) and bottom-left (x 0–391, y 619–1079) | Navy ATR mark only, in the clear bottom-right corner (x 880–1020, y 880–1020). |
 
   - **Gold cards never carry the Kent State wordmark** (until UCM supplies the All Blue file). They carry the
-    navy ATR mark, and may add a two-line navy text credit, "Advanced Telerobotics Research Lab / Kent State
+    navy ATR mark, and may add a two-line navy text credit, "Advanced Telerobotics Research Laboratory / Kent State
     University", at 36 px or more: the gold template layouts set it beside the mark, `social_card.py` at the
     right (top right, in three lines, on an illustrated card whose cut-out owns the bottom right). A cover
     that needs the wordmark itself is navy or white.
@@ -616,7 +616,7 @@ The pipeline, the Join page and the email replies are in references/pr-events-ou
 ```
 GRADUATE (LinkedIn; the PI's own post reaches furthest)
 [Hook: the research question in plain words, ≤ 210 characters.]
-The Advanced Telerobotics Research Lab at Kent State University is looking for [Ph.D. / M.S.] students
+The Advanced Telerobotics Research Laboratory at Kent State University is looking for [Ph.D. / M.S.] students
 to start in [term, year].
 What you could work on:
 • [Topic 1, ≤ 20 words]  • [Topic 2]  • [Topic 3]
@@ -694,7 +694,7 @@ Registration opens [date]: [program page URL + UTM]
 - **Alt text:** photo: "[Students' activity, e.g. two middle school students wire a small wheeled robot] at a
   past ATR Lab summer workshop at Kent State University." Card: the sidecar the renderer writes, which leads
   with the headline ("Middle school summer robotics workshop. Event announcement from the Advanced
-  Telerobotics Research Lab at Kent State University. Registration open. June 14-18, 2027. ...
+  Telerobotics Research Laboratory at Kent State University. Registration open. June 14-18, 2027. ...
   Illustration: three students build a small wheeled robot at a workbench."). Key message in the first ~100
   characters; the caption repeats the details, so a concise version is fine. Never name minors in alt text.
 - **Tags:** no participants, no schools. The department or UCM accounts if relevant.

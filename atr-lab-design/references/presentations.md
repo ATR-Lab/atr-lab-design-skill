@@ -39,7 +39,7 @@ alt text, the AI-imagery rule), references/voice-and-copy.md §3 (Kent State edi
 
 **Built in, so do not rebuild it by hand:** the ATR Office theme (`assets/tokens/office-theme/theme1.xml`; Accents 1-6
 are the chart colors in order), Source Sans 3 / Roboto Slab / Source Code Pro set per placeholder, the navy mark in
-the gold plate top left on every white content slide, the footer "Advanced Telerobotics Research Lab · Kent State
+the gold plate top left on every white content slide, the footer "Advanced Telerobotics Research Laboratory · Kent State
 University", the slide-number field and the hazard band only where references/graphic-elements.md §3 allows it: the
 bottom edge of the title and statement slides and the top edge of section dividers and the closing slide. Never
 add a band to a content slide.
@@ -229,9 +229,10 @@ shortened. Section dividers: two lines of about 18 characters at 44 pt (40 pt on
 - Left-aligned text, never centered paragraphs; no underlines under titles; no decorative stripes; no cream
   backgrounds (the AI-slide tells in references/graphic-elements.md §9).
 - Kent State style: no Oxford comma; "and", never "&", in unit names; "Sept. 23, 2026"; "9 a.m.-noon"; numerals with
-  "%" ("44%"); "Ph.D.", "M.S." (references/voice-and-copy.md §3). "Advanced Telerobotics Research Lab" on first
+  "%" ("44%"); "Ph.D.", "M.S." (references/voice-and-copy.md §3). "Advanced Telerobotics Research Laboratory" on first
   reference in running text; "ATR Lab" is fine in titles and footers because the slide also names Kent State
-  (references/brand-foundation.md §2). Never "@atr_kent", "Room 236", "330-672-9060" or "College of Arts and Sciences".
+  (references/brand-foundation.md §2). Never "@atr_kent", "College of Arts and Sciences" or
+  330-672-9060 without the label "Director's office".
 
 ### 4.4 Eyebrows and section numbers
 
@@ -400,7 +401,7 @@ follow another take defaults (`agenda_title`, `tools_label`, `registration_label
   "template": "presentation",
   "output": "atr-deck-open-lab-2026-10-15-v1.pptx",
   "title": "Open lab overview",
-  "author": "Advanced Telerobotics Research Lab",
+  "author": "Advanced Telerobotics Research Laboratory",
   "slides": [
     {"layout": "ATR - Title", "eyebrow": "OPEN LAB  ·  OCT. 15, 2026",
      "title": "Telepresence and Physical AI", "subtitle": "What the lab builds and who builds it",
@@ -471,7 +472,7 @@ Slide 4 keeps `[placeholders]` on purpose, so this spec is refused until they ar
 | `info ... the body holds N of about M lines ... Fill the frame` | A Title + Content or Two Content body under a third of its line budget: the lower half of the slide is empty. Move the content to Statement, Key Numbers, Content + Image or Three Icon Columns, or add a visual (§4.7) | 0 (also with `--strict`) |
 | `WARNING ... ppi` / `cropped by N%` | A soft picture, or a plot losing its axes to the crop: export at the frame's aspect or use `"fit": "contain"` | 0 |
 | `REFUSED ... leftover bracketed placeholder` | `[brackets]`, lorem ipsum, TODO or "Click to add" on a slide (brackets in notes too). Citations like `[1]` are fine. Use `--allow-placeholders` for drafts only | 2 |
-| `REFUSED` wording | Facts brand_check treats as errors or unverified: @atr_kent, College of Arts and Sciences, Room 236, 330-672-9060, the old building name, RoboCup placements | 2 |
+| `REFUSED` wording | Facts brand_check treats as errors or unverified: @atr_kent, College of Arts and Sciences, 330-672-9060 without a director's-office label, the old building name, RoboCup placements | 2 |
 | `REFUSED ... no alt text` | A picture, chart or video without alt text | 2 |
 | `new_deck.py: ...` | Spec error: unknown layout or field, missing file, bad chart data | 1 |
 | `PACKAGE PROBLEMS`, a failed `--check` or render | The saved file failed its own re-read, brand_check found errors or LibreOffice failed | 3 |

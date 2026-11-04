@@ -2,7 +2,7 @@
   "_comment": "Workshop flyer spec for project.py on the event flyer templates (named fields). One spec serves every size: each artifact in project.json picks the template profile (event-flyer, event-flyer-tabloid, event-flyer-17x22). {{facts.x}} comes from project.json; a fact that is a list (agenda, workflow) replaces the whole value. new_deck.py makes the QR code from registration_qr at the template's slot size and prints the clean URL in registration_url; project.py then verifies it in the exported PDF.",
   "template": "event-flyer",
   "title": "{{facts.event_title_plain}}",
-  "author": "Advanced Telerobotics Research Lab",
+  "author": "Advanced Telerobotics Research Laboratory",
   "slides": [
     {
       "layout": "Workshop flyer",

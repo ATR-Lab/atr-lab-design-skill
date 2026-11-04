@@ -2,7 +2,7 @@
 [pronouns, optional]
 [Title, e.g. Graduate Research Assistant]
 Department of Computer Science
-Advanced Telerobotics Research Lab
+Advanced Telerobotics Research Laboratory
 Kent State University
 direct: 330-672-[xxxx]
 [user]@kent.edu | www.atr.cs.kent.edu

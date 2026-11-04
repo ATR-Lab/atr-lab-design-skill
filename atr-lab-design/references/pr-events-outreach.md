@@ -37,7 +37,7 @@ copy differs); Kent State policies (minors, drones, trademarks) are in reference
 
 **Style for everything in this file** (Kent State follows AP with its own exceptions; details in
 references/voice-and-copy.md): "Kent State University" on first reference, then "Kent State" or "the
-university", never "KSU" in running copy; "Advanced Telerobotics Research Lab" on first reference, then "the
+university", never "KSU" in running copy; "Advanced Telerobotics Research Laboratory" on first reference, then "the
 lab" in body copy ("ATR Lab" is fine in headlines, handles, logos and tight space); "Department of Computer
 Science" in the **College of Sciences and Humanities**; no Oxford comma; "and", not "&", in unit names;
 dates like "Sept. 23" (Jan., Feb., Aug., Sept., Oct., Nov. and Dec. are abbreviated with a date; March
@@ -214,8 +214,9 @@ before reuse):
   Johnson Space Center". Write "selected as a top-10 team for the onsite challenge"; do not write that the team
   competed at Johnson Space Center unless the lab confirms it traveled there. Source:
   atr.cs.kent.edu/atr-accepted-for-nasa-suits-challenge/
-- **WRS Distinguished Paper Award, 2021:** listed on the director's page (cs.kent.edu/~jkim/); confirm the exact name, paper and
-  recipients with the PI before use `[VERIFY]`.
+- **WRS Distinguished Paper Award, 2021:** "the ATR_Kent team received the Distinguished Paper Award in the World
+  Robot Summit Plant Disaster Prevention Challenge (remote participation)", announced Dec. 24, 2021. Source:
+  wrs.nedo.go.jp/en/news/pdf/20211224release-en.pdf. Name the paper only once the director confirms it `[VERIFY]`.
 - **RoboCup:** no placements are published for any year. **Never claim one.**
 
 ### 3.5 UCM submission (Submit Your News)
@@ -253,7 +254,7 @@ KENT, Ohio — [Lede, 35 words or fewer: who did what, and why it matters to peo
 [Nut graf: the context and the problem, 2 to 3 sentences.]
 
 "[Quote that interprets or adds meaning, not one that repeats facts]," said Jong-Hoon Kim,
-associate professor of computer science and director of the Advanced Telerobotics Research Lab.
+associate professor of computer science and director of the Advanced Telerobotics Research Laboratory.
 
 [How it works, in plain language, 1 to 2 paragraphs. Keep the paper's hedges: sample size,
 lab setting, simulation vs hardware, preliminary.]
@@ -268,7 +269,7 @@ in §18.2, copied verbatim, never style-edited.]
 
 The study, "[Title]," [appears in / will be presented at] [venue, date]. DOI: [DOI].
 
-About the Advanced Telerobotics Research Lab
+About the Advanced Telerobotics Research Laboratory
 [100-word boilerplate from references/brand-foundation.md §10, verbatim]
 
 About Kent State University
@@ -336,7 +337,7 @@ University media relations at [UCM contact]."
 ### 5.1 Contents
 
 - [ ] **Boilerplates:** the 100-, 50- and 25-word versions from references/brand-foundation.md §10, unchanged
-- [ ] **Fact sheet**, verified facts only: name forms (Advanced Telerobotics Research Lab / Laboratory; ATR
+- [ ] **Fact sheet**, verified facts only: name forms (Advanced Telerobotics Research Laboratory; ATR
       Lab); home (Department of Computer Science, College of Sciences and Humanities, Kent State University,
       Kent, Ohio); opened spring 2017; director and title; research areas (the verified self-description);
       programs (undergraduate and graduate research, a high school summer internship, a middle school summer
@@ -373,7 +374,7 @@ applications that followed. Once a month, also check whether AI assistants descr
 
 - Prepare **three key messages** and one plain analogy; practice bridging back to them.
 - Say the important things in a form that can be quoted and transcribed: "The Advanced Telerobotics Research
-  Lab at Kent State University studies [...]", with numbers spoken aloud.
+  Laboratory at Kent State University studies [...]", with numbers spoken aloud.
 - No speculation beyond the evidence; no claims about safety, autonomy or products the paper does not support.
 - **NSF-funded work:** acknowledge NSF support aloud in every media interview, including podcasts, radio,
   television and social media video. Current NSF award terms require it (Grant General Conditions, Art. 28.a.4;
@@ -441,11 +442,11 @@ goodwill; or a showcase for leadership and press.
 
 ```
 Subject: [Hook from a demo that will really be there, e.g. "Drive a telepresence robot"], [Weekday, Mon. D]
-Preview: Open demo day at Kent State's Advanced Telerobotics Research Lab, [time].
+Preview: Open demo day at Kent State's Advanced Telerobotics Research Laboratory, [time].
 
 Hi [First name],
 
-On [Weekday, Mon. D], from [time] to [time], the Advanced Telerobotics Research Lab at Kent State
+On [Weekday, Mon. D], from [time] to [time], the Advanced Telerobotics Research Laboratory at Kent State
 University opens its doors for a demo day.
 
 You'll be able to:
@@ -459,7 +460,7 @@ Parking: [instructions]. Accessibility: [step-free route; contact for accommodat
 [Save my spot]   ← one button, to registration with a calendar add
 
 Questions? Reply to this email.
-[Name], [role], Advanced Telerobotics Research Lab
+[Name], [role], Advanced Telerobotics Research Laboratory
 ```
 
 ### 8.3 Run of show (2 hours)
@@ -692,7 +693,7 @@ Preview: What happens next, and the forms we need by [date].
 Hi [Parent/guardian first name],
 
 [Child's first name] is registered for [Program] at Kent State University's Advanced Telerobotics
-Research Lab.
+Research Laboratory.
 
 When:  [Weekday-Weekday, Mon. D-D], [start time] to [end time] each day
 Where: [Room], Mathematical Sciences Building, 1300 Lefton Esplanade, Kent, OH 44242
@@ -708,7 +709,7 @@ About photos: taking part does not require a photo release. Read how we use phot
 
 Questions? Reply to this email or call [phone]. We answer within [one business day].
 
-[Name], [role], Advanced Telerobotics Research Lab · [program kent.edu address]
+[Name], [role], Advanced Telerobotics Research Laboratory · [program kent.edu address]
 ```
 
 ### 13.2 What to bring, drop-off and pick-up (T−7 days)
@@ -814,7 +815,7 @@ Thank you for applying. We received your [letter of intent, non-paid acknowledgm
 ranking and CV]. We will email you and your parent or guardian by [notification date].
 Questions: reply to this email and keep your parent or guardian copied.
 
-[Name], [role], Advanced Telerobotics Research Lab
+[Name], [role], Advanced Telerobotics Research Laboratory
 ```
 
 Ask applicants to copy a parent or guardian when they apply. No replies by social DM.
@@ -826,7 +827,7 @@ Subject: [Free / $[cost]] robotics program for [grades] students, [dates]
 
 Hi [Name],
 
-Kent State University's Advanced Telerobotics Research Lab is running [Program] for students in
+Kent State University's Advanced Telerobotics Research Laboratory is running [Program] for students in
 [grades], [dates], at the Kent Campus. Students [build and program what, one line].
 [No coding experience needed.] (only if true)
 
@@ -842,7 +843,7 @@ We also offer [demos, classroom visits or workshops] for schools; reply if you'd
 book at least [10] weeks ahead so we can complete Kent State's registration for programs with minors.
 [VERIFY the lead time with Compliance]
 
-[Name], [role], Advanced Telerobotics Research Lab · [kent.edu address]
+[Name], [role], Advanced Telerobotics Research Laboratory · [kent.edu address]
 ```
 
 Attach the one-page flyer as an accessible PDF. **Parent FAQ** topics for the program page: coding experience
@@ -881,7 +882,7 @@ Subject: Re: [their subject]
 
 Hi [First name],
 
-Thank you for your interest in the Advanced Telerobotics Research Lab. Our current topics are listed
+Thank you for your interest in the Advanced Telerobotics Research Laboratory. Our current topics are listed
 at [Join page URL]; the ones taking students for [term, year] are [topic 1] and [topic 2].
 
 How to apply: apply to the [Ph.D. / M.S.] program in computer science through Kent State graduate
@@ -892,7 +893,7 @@ To help me read your application, please reply with the subject "Prospective [Ph
 [Topic]" and include your CV, one of our papers you read and what you thought of it, and the topic
 that fits you best.
 
-[Name], [title], Advanced Telerobotics Research Lab, Kent State University
+[Name], [title], Advanced Telerobotics Research Laboratory, Kent State University
 ```
 
 Follow-up sequence for form inquiries: (1) immediately, this reply plus an info-session date; (2) day 3, one
@@ -952,7 +953,7 @@ Thinking about graduate research in [area]? On [Weekday, Mon. D], at [time] ET (
 zones]), [PI name] and lab students will talk for 45 minutes about current projects, how the lab
 works and how to apply through Kent State. Bring your questions.
 [Save my spot]  (registration with a calendar file; a recording is available if you can't attend)
-[Name], Advanced Telerobotics Research Lab, Kent State University
+[Name], Advanced Telerobotics Research Laboratory, Kent State University
 ```
 
 ### 14.6 Visiting scholars and visiting students (reply)
@@ -960,9 +961,9 @@ works and how to apply through Kent State. Bring your questions.
 A reply template, not a recruiting ad.
 
 ```
-Subject: Visiting the Advanced Telerobotics Research Lab at Kent State University: [name], [dates]
+Subject: Visiting the Advanced Telerobotics Research Laboratory at Kent State University: [name], [dates]
 
-Thank you for your interest in visiting the Advanced Telerobotics Research Lab.
+Thank you for your interest in visiting the Advanced Telerobotics Research Laboratory.
 Visits usually work like this: [length], [a project or topic agreed in advance], [who hosts].
 What we need from you: a short research plan, your CV, the dates and your funding source
 ([home institution / scholarship]; the lab cannot fund visits unless the PI says otherwise).
@@ -1056,12 +1057,12 @@ Hi [Name],
 [A specific, true observation about the company: a product, a hiring push, a regional investment.]
 That usually means [the problem it creates for them].
 
-At Kent State's Advanced Telerobotics Research Lab, [N] students work on [relevant topic] with
+At Kent State's Advanced Telerobotics Research Laboratory, [N] students work on [relevant topic] with
 [real hardware]. [One verified proof point.]
 
 Would a 30-minute lab visit on [two date options] be useful to see if there's a fit?
 
-[Name], [title], Advanced Telerobotics Research Lab, Kent State University
+[Name], [title], Advanced Telerobotics Research Laboratory, Kent State University
 ```
 
 - 120 words or fewer, one question as the CTA. Follow up once on day 3 with new information and once on day 7
@@ -1143,7 +1144,7 @@ Coming up: [date, event] · [date, event]
 
 [Sign-off: first name, role]
 
-[Footer: Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University ·
+[Footer: Advanced Telerobotics Research Laboratory, Department of Computer Science, Kent State University ·
 postal address · Kent State academic wordmark · social handles (references/social-media.md §2) ·
 why you are receiving this · unsubscribe]
 ```

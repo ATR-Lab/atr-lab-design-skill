@@ -3,7 +3,7 @@
   "template": "event-flyer",
   "output": "atr-flyer-agentic-robotics-workshop-2026-11-07-letter.pptx",
   "title": "Build robots with AI agents: workshop flyer",
-  "author": "Advanced Telerobotics Research Lab",
+  "author": "Advanced Telerobotics Research Laboratory",
   "slides": [
     {
       "layout": "Workshop flyer",

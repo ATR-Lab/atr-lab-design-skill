@@ -203,7 +203,7 @@ https://www.kent.edu/brand/templates.
 - Suggested lab card, if approved:
   - Front, white: `atr-horizontal-short-navy` 1.5 in wide top-left (with 1 X clear space); name in Source Sans 3
     Bold 10-11 pt navy; title 8-9 pt ink; then "Department of Computer Science", "Kent State University";
-    email, `[Room ###], Mathematical Sciences Building` or the department mailing address, phone as
+    email, `Room 236, Mathematical Sciences Building` or the department mailing address, phone as
     330-672-xxxx. Nothing under 8 pt.
   - Back, navy full bleed: the official KSU all-white logo (from https://www.kent.edu/brand/logos) at its minimum
     (section 3) or larger, plus `www.atr.cs.kent.edu`. Optional: a QR code to the lab site (section 5.3).
@@ -221,13 +221,14 @@ https://www.kent.edu/brand/templates.
 - ATR-branded documents are fine as **marketing and internal pieces**: one-pagers, lab memos, meeting notes, fact
   sheets. Build those as a Letter document with `atr-horizontal-short-navy` 2.25-2.5 in wide top-left, the KSU
   color logo at its minimum (Stacked 1.05 in wide) or larger at the top-right as a separate signature, Source Sans 3
-  11 pt ink body (12 pt for public pieces) and a footer line "Advanced Telerobotics Research Lab · Department of
+  11 pt ink body (12 pt for public pieces) and a footer line "Advanced Telerobotics Research Laboratory · Department of
   Computer Science · Kent State University". Start from `assets/templates/ATR-Letterhead.docx`, which is this page
   (its usage note says what it may be used for). Despite its file name, never call such a page "letterhead" or use it
   for official off-campus correspondence.
 - Verified address for footers: Department of Computer Science, 241 Mathematical Sciences Building,
-  1300 Lefton Esplanade, Kent, OH 44242-0001; department main office 330-672-9980. The lab's own room and a direct
-  lab line stay placeholders: `[Room ###]`, `[Lab phone]`.
+  1300 Lefton Esplanade, Kent, OH 44242-0001; department main office 330-672-9980. The lab's room is Room 236,
+  Mathematical Sciences Building. No direct lab line is published; 330-672-9060 is the director's office line and is
+  printed only labeled as such ("Director's office: 330-672-9060").
 
 ### 4.3 Name badges and lanyards
 
@@ -255,7 +256,7 @@ https://www.kent.edu/brand/templates.
 **Lanyards**
 - Plain stock lanyards in a role color need no approval. A lanyard **printed with any mark or the lab name** is merch:
   UCM approval and an Affinity-licensed vendor (section 12).
-- Printed spec (typical): **3/4 in wide** polyester, repeated text "Advanced Telerobotics Research Lab · Kent State
+- Printed spec (typical): **3/4 in wide** polyester, repeated text "Advanced Telerobotics Research Laboratory · Kent State
   University" in white on navy (or navy on white), Source Sans 3 Bold about 0.25 in cap height, the mark between
   repeats if wanted. No Kent State logo in the repeat unless UCM supplies the approved artwork.
 - **Breakaway safety clasp at the neck** on every lanyard used at K-12 events or anywhere near moving robots. Around
@@ -372,7 +373,7 @@ only for a program that will not change for a year.
   - Letter or 8 × 10 in insert, non-glare. Navy background with `atr-horizontal-short-twotone-reverse` (3-4 in
     wide) and the official KSU all-white logo as a separate signature; or white with `atr-horizontal-short-navy` and the
     KSU color logo.
-  - Below the logos: `[Room ###]`, `[Hours or "By appointment"]`, a contact line and, if useful, a QR code to the
+  - Below the logos: `Room 236`, `[Hours or "By appointment"]`, a contact line and, if useful, a QR code to the
     lab's contact page.
   - Optional `hazard-band-gold-navy` strip at the top or bottom edge. No text on the band.
 - Anything mounted outside a building, or any permanent architectural sign, needs UCM plus University Architect
@@ -574,7 +575,7 @@ the lab has. Brand them lightly, legibly and safely.
 - Project and robot names are typeset words, not new logos (KSU does not allow units to create separate logos;
   references/logo-system.md).
 - An asset label on every lab-owned robot: `atr-badge-navy` 0.5-0.75 in tall + "Advanced Telerobotics Research
-  Lab, Kent State University · Asset [No.] · [lab contact]". Keep any university inventory tag visible.
+  Laboratory, Kent State University · Asset [No.] · [lab contact]". Keep any university inventory tag visible.
 - **Approval:** decals and asset labels that carry the ATR mark are marked products and follow the section 12 gate
   (UCM approval, licensed vendor). Ask UCM whether in-house cut vinyl used only to identify lab equipment is
   acceptable `[verify with UCM]`.

@@ -120,7 +120,7 @@ def main():
     # ------------------------------------------------------------ header
     hazard(c, 0, 34)
     c.rect((0, 34, W, 400), NAVY)
-    c.eyebrow(M, 92, "Advanced Telerobotics Research Lab  ·  Kent State University", GOLD)
+    c.eyebrow(M, 92, "Advanced Telerobotics Research Laboratory  ·  Kent State University", GOLD)
     c.text((M, 138), "ATR Lab color system", font("sans", "black", 96), WHITE)
     c.text((M, 262), "Swatch card: brand, support, neutrals, ramps, data and status colors.",
            font("sans", "regular", 34), RAMPS["navy"][100])

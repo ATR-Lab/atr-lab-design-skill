@@ -43,7 +43,7 @@ background pairing, plus the clear-space and minimum-size numbers.
 | Title slide | white or mist | `assets/logos/png/atr-horizontal-navy-3000.png` | 4.0-4.6 in wide |
 | Content-slide corner | white or mist | `assets/logos/png/atr-mark-navy-3000.png` | 0.40-0.50 in tall |
 | Content-slide corner | navy | `assets/logos/png/atr-mark-gold-3000.png` or `atr-mark-white-3000.png` | 0.40-0.50 in tall |
-| Tiny footer (slide, document or quad chart) with under 1.25 in / 180 px of width for a logo | white or mist (navy: use `-white`) | `assets/logos/png/atr-mark-navy-3000.png`, with "Advanced Telerobotics Research Lab" as live text beside it, outside its clear space | mark at least 0.25 in / 24 px tall; the band needs 0.25 in + 2 X = 0.41 in of height. If it has less, leave the logo off that page. (Horizontal-short at its 1.25 in minimum needs a 0.79 in band.) |
+| Tiny footer (slide, document or quad chart) with under 1.25 in / 180 px of width for a logo | white or mist (navy: use `-white`) | `assets/logos/png/atr-mark-navy-3000.png`, with "Advanced Telerobotics Research Laboratory" as live text beside it, outside its clear space | mark at least 0.25 in / 24 px tall; the band needs 0.25 in + 2 X = 0.41 in of height. If it has less, leave the logo off that page. (Horizontal-short at its 1.25 in minimum needs a 0.79 in band.) |
 | Logo over a photo | light, calm area | `atr-horizontal-short-navy` or `atr-mark-navy` | as for the format |
 | Logo over a photo | dark, calm area | the `-white` or `-twotone-reverse` file of the same lockup | as for the format |
 | Logo over a photo | busy area | move the logo to a calm area, or put it on a navy `#003976` scrim at 60-80% opacity | never directly on detail |
@@ -546,14 +546,14 @@ or ℠ (services) at the upper right, never ®. The gate, contacts and trademark
 ## 17. Alt text, provenance and approvals
 
 **Alt text**
-- Horizontal lockup: `Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University`
-- Horizontal-short, stacked, mark: `Advanced Telerobotics Research Lab` (add ", Kent State University" when nothing else on
+- Horizontal lockup: `Advanced Telerobotics Research Laboratory, Department of Computer Science, Kent State University`
+- Horizontal-short, stacked, mark: `Advanced Telerobotics Research Laboratory` (add ", Kent State University" when nothing else on
   the piece says it)
-- Stacked-ksu: `Advanced Telerobotics Research Lab, Kent State University`
-- Roundel: `Advanced Telerobotics Research Lab roundel, Kent State University`
+- Stacked-ksu: `Advanced Telerobotics Research Laboratory, Kent State University`
+- Roundel: `Advanced Telerobotics Research Laboratory roundel, Kent State University`
 - Badge: `ATR Lab badge`
 - Kent State logo: `Kent State University`
-- A linked logo describes the destination instead: `Advanced Telerobotics Research Lab home`; KSU: `Kent State University home`
+- A linked logo describes the destination instead: `Advanced Telerobotics Research Laboratory home`; KSU: `Kent State University home`
 - The supergraphic and repeated corner marks on content slides are decorative (empty alt / "Mark as decorative").
 - Each SVG carries a `<title>`, which is its accessible name when inlined. Set it to the alt text above. If an
   `atr-seal-*.svg` title still begins "ATR Lab seal", **replace it** with the roundel text above: public pages never call

@@ -348,7 +348,7 @@ The photo descriptions below are writing examples for hypothetical images, not r
 | Humanoid, research figure | "Booster K1" | "The Booster K1 humanoid mid-stride on a lab runway, left foot lifted, arms swinging opposite the legs." |
 | Group photo (web) | "ATR Lab team" | "About [number] lab members stand in the lab behind a row of robots, including Pepper and a Go2 quadruped." |
 | AI concept illustration | "Drone" | "Illustration: a stylized drone flies above a VR headset, suggesting immersive pilot training." |
-| ATR horizontal logo | "logo.png" | "Advanced Telerobotics Research Lab, Department of Computer Science, Kent State University" |
+| ATR horizontal logo | "logo.png" | "Advanced Telerobotics Research Laboratory, Department of Computer Science, Kent State University" |
 | Kent State academic wordmark | "KSU logo" | "Kent State University" (if it links: "Kent State University home page") |
 | ATR roundel beside the lab name | "ATR roundel" | Decorative (`alt=""`): the name is already in text |
 | Icon next to a label ("Workshops") | "workshop-idea icon" | Decorative |

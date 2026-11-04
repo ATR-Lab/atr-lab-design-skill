@@ -3,7 +3,7 @@
   "template": "presentation",
   "output": "minimal.pptx",
   "title": "Telepresence and Physical AI at Kent State",
-  "author": "Advanced Telerobotics Research Lab",
+  "author": "Advanced Telerobotics Research Laboratory",
   "slides": [
     {
       "layout": "ATR - Title",

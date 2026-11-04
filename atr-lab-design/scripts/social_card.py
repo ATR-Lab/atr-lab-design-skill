@@ -4,7 +4,7 @@ social_card.py: deterministic social-graphics renderer for the ATR Lab
 ======================================================================
 
 Renders on-brand social tiles (PNG) for the Advanced Telerobotics Research
-(ATR) Lab, Kent State University, from a small JSON spec. It implements the
+Laboratory (ATR Lab), Kent State University, from a small JSON spec. It implements the
 "Hazard Gold" design direction for social: a navy or gold field, the measured
 gold hazard-stripe band on one edge, a gold (or navy) label plate carrying a
 topic icon, a tracked uppercase eyebrow, a Source Sans 3 Black headline, a
@@ -159,9 +159,10 @@ Design rules the renderer enforces
 * Placeholders: any "[bracketed]" text is refused unless --allow-placeholders
   is given; then the brackets are drawn in a muted colour (navy-300 on navy,
   bronze on gold) so the placeholder state is visible at a glance.
-* Copy: "@atr_kent", "Room 236", "330-672-9060", "College of Arts and
-  Sciences" and "Mathematics and Computer Science Building" are refused
-  (retired, wrong or unverified facts, references/brand-foundation.md 11-12);
+* Copy: "@atr_kent", "College of Arts and Sciences", "Mathematics and
+  Computer Science Building" and 330-672-9060 without a director label are
+  refused (retired, wrong or mislabeled facts, references/brand-foundation.md
+  11-12);
   " & ", a probable Oxford comma and "KSU" in running copy print a note (Kent
   State editorial style), as brand_check.py does.
 * The hazard band is a bookend (bottom edge on navy, top edge on gold) and
@@ -1696,13 +1697,15 @@ def _seed(spec: dict, size: SizeSpec) -> int:
 # applies the same rules as its `wording` check).
 BANNED_COPY = [
     (re.compile(r"@atr_kent(?!\w)", re.I), "the handle @atr_kent does not exist; the lab's X handle is @atrlab_kent"),
-    (re.compile(r"\bRoom 236\b"), "Room 236 is not a verified lab address; write a [Room] placeholder or the department address"),
-    (re.compile(r"330-672-9060"), "330-672-9060 is not a verified lab number; write a placeholder or the department's 330-672-9980"),
+    # the director's office line: fine only next to a director label (DIRECTOR_LABEL)
+    (re.compile(r"330-672-9060"), "330-672-9060 is the director's office line, not a lab line; label it "
+                                  "\"Director's office\" or write the department's 330-672-9980"),
     (re.compile(r"College\s+of\s+Arts\s+(?:and|&)\s+Sciences", re.I),
      "wrong college: Computer Science is in the College of Sciences and Humanities"),
     (re.compile(r"\bMath(?:ematics)?\s+(?:and|&)\s+Computer\s+Science\s+Building\b", re.I),
      "older building name: write 'Mathematical Sciences Building'"),
 ]
+DIRECTOR_LABEL = re.compile(r"\bdirector\b|\bJong-Hoon\s+Kim\b|\bKim['’]s\b", re.I)
 SOFT_COPY = [
     (re.compile(r"\s&\s"), "write 'and' rather than '&' (Kent State editorial style)"),
     (re.compile(r",\s+(and|or)\s", re.I), "probable Oxford comma; Kent State style omits it"),
@@ -1732,7 +1735,9 @@ def check_copy(spec: dict) -> tuple:
     errors, notes = [], []
     for path, text in copy_strings(spec):
         for rx, msg in BANNED_COPY:
-            if rx.search(text):
+            m = rx.search(text)
+            if m and not (m.group(0) == "330-672-9060" and
+                          DIRECTOR_LABEL.search(text[max(0, m.start() - 80):m.end() + 80])):
                 errors.append(f"{path}: {msg}")
         for rx, msg in SOFT_COPY:
             if rx.search(text):
@@ -1863,7 +1868,7 @@ def compose_alt(spec: dict, tpl: Template) -> str:
     lead = {"announcement": "Announcement", "event": "Event announcement", "outreach": "Event announcement",
             "publication": "New publication", "recruiting": "Recruiting graphic", "stat": "Statistic graphic",
             "quote": "Quote graphic", "video-cover": "Video cover", "welcome": "Welcome graphic"}[tpl.name]
-    who = f"{lead} from the Advanced Telerobotics Research Lab at Kent State University."
+    who = f"{lead} from the Advanced Telerobotics Research Laboratory at Kent State University."
     if tpl.name == "stat":
         key = f"{as_text(spec.get('value'))} {as_text(spec.get('label') or spec.get('title'))}".strip().rstrip(".") + "."
     elif tpl.name == "quote":
@@ -2015,8 +2020,8 @@ def render(spec: dict, size: Optional[str] = None, allow_placeholders: bool = Fa
         # staged card it moves to the top right of the header row, in three shorter lines, where the
         # wordmark goes on navy, because the cut-out owns the bottom right.
         credit_st = ctx.style("sans-semibold", FLOOR_ANY, T.navy, lh=1.25, align="right")
-        credit_lines = (["Advanced Telerobotics", "Research Lab", "Kent State University"] if staged
-                        else ["Advanced Telerobotics Research Lab", "Kent State University"])
+        credit_lines = (["Advanced Telerobotics", "Research Laboratory", "Kent State University"] if staged
+                        else ["Advanced Telerobotics Research Laboratory", "Kent State University"])
         cts = Typesetter(credit_st)
         credit_w = int(math.ceil(max(cts.width(ln) for ln in credit_lines)))
         credit_h = credit_st.metrics["cap"] + (len(credit_lines) - 1) * credit_st.pitch

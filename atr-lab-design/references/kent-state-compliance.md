@@ -350,7 +350,7 @@ Kent State's editorial style "closely follows the Associated Press Stylebook", w
   running copy; it is for tabular copy or Northeast Ohio audiences only (https://www.kent.edu/ucm/n).
 - **Units:** "University style is not to use acronyms or abbreviations for names of Kent State campuses, divisions, colleges,
   schools, departments, centers or programs" (https://www.kent.edu/ucm/n). KSU applies this even to research centers ("Do not use
-  RCET"). So: "Advanced Telerobotics Research Lab" first, then **"the lab"** in running copy in every medium. "ATR Lab" is a
+  RCET"). So: "Advanced Telerobotics Research Laboratory" first, then **"the lab"** in running copy in every medium. "ATR Lab" is a
   brand name for logos, handles and display type. On a webpage only, after the full name, "ATR" may be used in headlines and
   links where space is tight (https://www.kent.edu/ucm/b).
 - **No Oxford comma** (https://www.kent.edu/ucm/c-d). **"and", not "&"**, in unit names and body copy. On the web, "&" is
@@ -381,11 +381,11 @@ university accounts, not to personal activity.
 
 | # | Element | For the lab |
 |---|---|---|
-| 1 | Handle/URL clearly tied to the unit, no duplicate accounts | The lab currently has **two LinkedIn pages**. Consolidate them. Verified handles: X @atrlab_kent, Instagram @atr_lab (dormant), GitHub ATR-Lab, a YouTube channel ("Advanced Telerobotics Research Laboratory"). |
+| 1 | Handle/URL clearly tied to the unit, no duplicate accounts | The lab currently has **two LinkedIn pages**. The canonical one is linkedin.com/company/advanced-telerobotics-research-laboratory (confirmed Nov. 2026); merge or close the "…Lab" duplicate. Verified handles: X @atrlab_kent, Instagram @atr_lab (dormant), GitHub ATR-Lab, a YouTube channel ("Advanced Telerobotics Research Laboratory"). |
 | 2 | Category: higher education, college/university or institution | Set it on each platform. |
 | 3 | **Disclaimer** in the About section | Copy it **verbatim** from the source page. It begins "Note: The views and opinions posted by visitors..." |
 | 4 | Graphics follow the visual standards. The profile image is tied to the unit, not the institution. | `assets/logos/icons/atr-avatar-mark-navy.png`, **not** the KSU logo |
-| 5 | Bio says it is the "official [unit]" account and links www.kent.edu and the social directory (social.kent.edu) | The canonical bio in `references/brand-foundation.md` §10, verbatim: "Official account of the Advanced Telerobotics Research Lab at @KentState: telepresence robotics, tele-embodiment and Physical AI." plus the links. If the wording changes, change it there first |
+| 5 | Bio says it is the "official [unit]" account and links www.kent.edu and the social directory (social.kent.edu) | The canonical bio in `references/brand-foundation.md` §10, verbatim: "Official account of the Advanced Telerobotics Research Laboratory at @KentState: telepresence robotics, tele-embodiment and Physical AI." plus the links. If the wording changes, change it there first |
 | 6 | Admins: at least one employee plus the relevant UCM account | A named employee admin and a backup |
 | 7 | Accessibility: alt text, captions and transcripts, no flashing, plain language, no long all-caps, CamelCase hashtags, emoji sparingly at sentence end, descriptive links, no link shorteners, contrast 4.5:1 / 3:1, never color alone, motion under 5 s | Every post |
 | 8 | Content plan | Posting frequency and content types |
@@ -478,7 +478,7 @@ The template has one block in three font versions (Calibri, Arial, Helvetica), a
 6. `direct: 330-672-xxxx | cell: 330-672-xxxx`
 7. The two-color KSU Horizontal logo image supplied in the template
 
-- **Lab practice:** add the lab as **one text line** ("Advanced Telerobotics Research Lab") under the department line.
+- **Lab practice:** add the lab as **one text line** ("Advanced Telerobotics Research Laboratory") under the department line.
 - **Lab practice:** don't add the ATR mark as a second image, and don't add banners or taglines. The template carries one
   logo, and an ATR image in the same small block would sit right against it, which the separate-signature rule (§9) avoids.
 - The template has no street address, fax or www.kent.edu line. The older 2020 field list is superseded (CURRENT template
