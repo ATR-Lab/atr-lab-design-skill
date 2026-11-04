@@ -23,7 +23,8 @@ Rules it enforces (references/graphic-elements.md section 8):
 - Motifs move slowly and loop seamlessly: 12 s at 30 fps; the lattice and chevrons drift 16 px/s at 1080p.
 - Nothing flashes: a frame-to-frame luminance check fails anything with more than 3 flashes in a second.
 - Under text the motif is turned down until the ground shifts by at most 1.15:1, so the copy keeps its
-  checked contrast; logos, QR codes, photos, charts and the hazard band get none of it.
+  checked contrast (on content slides the chevrons keep out from behind text entirely); logos, QR codes,
+  photos, charts and the hazard band get none of it.
 - The Teo cameo appears only when asked for (--teo-cameo / "teo_cameo": true) and only where it touches
   no text, logo or QR code; otherwise it is refused.
 
@@ -54,11 +55,14 @@ from PIL import Image, ImageFilter  # noqa: E402
 
 import atr_brand as B  # noqa: E402
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 MOTION_DIR = B.ASSETS / "motion"
 FPS = 30
 LOOP_FRAMES = 360                    # 12 s; every motif loops on this length
 TEXT_SHIFT_MAX = 1.15                # largest contrast shift the motif may cause under text
+# (motif, strength) -> highest mask under text, below what the contrast limit allows: the chevrons' thick strokes
+# read as a moving pattern behind body copy, so on content slides they keep out from behind text entirely
+TEXT_LEVEL_CAP = {("chevron-flow", "subtle"): 0.0}
 CAMEO_HEIGHTS = (0.42, 0.38, 0.34, 0.30, 0.27, 0.24)   # cameo square as a share of the frame height, largest that fits
 CAMEO_POSTER_FRAME = 150             # Teo up, eyes open, between the wave and the ear flicks
 FLASH_LIMIT = 3                      # WCAG 2.3.1: no more than three flashes in any one second
@@ -357,7 +361,8 @@ class MotionJob:
     def key(self) -> str:
         """A content hash: equal jobs make byte-equal videos, so callers can cache and share them."""
         h = hashlib.sha256()
-        h.update(json.dumps([PALETTES.get(self.motif), _file_hash(motif(self.motif).file) if self.motif else None,
+        h.update(json.dumps([PALETTES.get(self.motif), TEXT_LEVEL_CAP.get((self.motif, self.strength)),
+                             _file_hash(motif(self.motif).file) if self.motif else None,
                              _file_hash(CAMEO_FILE) if self.cameo else None]).encode())
         h.update(json.dumps([__version__, self.motif, self.ground_name, self.strength, self.cameo,
                              self.cameo_prefer, round(self.seconds, 3), list(self.size),
@@ -381,7 +386,7 @@ class Composer:
             m = motif(job.motif)
             pal = palette(m.name, job.ground_name, job.strength)
             mean = tuple(int(v) for v in np.round(self.ground.reshape(-1, 3).mean(0) * 255))
-            self.level = text_level(pal, mean)
+            self.level = min(text_level(pal, mean), TEXT_LEVEL_CAP.get((m.name, job.strength), 1.0))
             self.mask = build_mask(job.size, job.zones, self.level, feather=0.012 * h)[..., None]
             self.motif = Renderer(recolor(_load(m.file), m.roles, pal), job.size)
         self.cameo_box = None

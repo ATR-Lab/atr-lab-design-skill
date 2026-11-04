@@ -76,6 +76,17 @@ def test_subtle_white_runs_at_full_level_under_text():
     assert motion.text_level(motion.palette("lattice-drift", "white", "subtle"), (255, 255, 255)) == 1.0
 
 
+def test_subtle_chevrons_keep_out_from_behind_text():
+    from PIL import Image
+    zones = motion.Zones(text=[[20, 20, 120, 80]])
+    sub = motion.Composer(motion.MotionJob(Image.new("RGB", (192, 108), (255, 255, 255)), "chevron-flow", "white",
+                                           "subtle", zones))
+    assert sub.level == 0.0 and float(sub.mask[50, 70, 0]) == 0.0
+    full = motion.Composer(motion.MotionJob(Image.new("RGB", (192, 108), motion.B.rgb("navy")), "chevron-flow", "navy",
+                                            "full", zones))
+    assert full.level > 0
+
+
 def test_mask_zero_on_hard_zones_and_reduced_on_text():
     z = motion.Zones(hard=[[0, 0, 40, 40]], text=[[100, 100, 160, 140]])
     m = motion.build_mask((200, 200), z, 0.4, feather=3)

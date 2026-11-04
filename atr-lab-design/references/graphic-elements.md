@@ -330,7 +330,8 @@ help the audience follow, not decorate.
 **Background motion** sits behind content, so it stays calm and mechanical: linear drift (a loop must not
 accelerate), slow in and slow out only on fades, nothing bouncing. Under text the motif is turned down until the
 ground shifts by at most 1.15:1, and it never runs under logos, their clear space, QR codes, photos, charts or
-the hazard band, which stays solid and still. Each motif keeps the static pattern's rules (references above): the
+the hazard band, which stays solid and still. On content slides the chevrons keep out from behind text
+altogether: their thick strokes read as a moving pattern behind body copy, so they move only in the margins. Each motif keeps the static pattern's rules (references above): the
 chevrons tone on tone, the lattice as texture, the grid on technical pieces.
 
 **Teo is a character, so his animation follows the 12 principles of animation** (Thomas and Johnston; Richard

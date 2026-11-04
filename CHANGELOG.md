@@ -16,6 +16,7 @@ kept as Lottie files and rendered locally to looping MP4s:
 - **`scripts/motion.py`** (new) recolours, renders (rlottie) and composites a motif under a still design and writes
   an H.264 MP4 plus a poster frame:
   - the motif is turned down under text, so the ground shifts by at most 1.15:1 and the checked contrast holds;
+    on content slides the chevrons keep out from behind text entirely and move only in the margins;
   - it stays off logos and their clear space, QR codes, photos, charts and the hazard band;
   - clips with more than 3 flashes in a second are refused (WCAG 2.3.1), and the loop seam is measured;
   - `list`, `preview` and `check` commands, also as `atr_design.py motion`.
@@ -50,7 +51,7 @@ kept as Lottie files and rendered locally to looping MP4s:
 - **Setup:** new optional requirements rlottie-python and imageio-ffmpeg (or a system ffmpeg); `atr_design.py doctor`
   has a `motion` group.
 - **Asset index:** a `motion` kind, with search aliases (animated, lottie, loop, puppet).
-- **Tests:** 13 new; 143 pass.
+- **Tests:** 14 new; 144 pass.
 
 ## 2.1.1 (Nov. 3, 2026)
 

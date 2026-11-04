@@ -262,8 +262,9 @@ a time only when the talk paces them; no Fly-in, Bounce or Spin; nothing flashes
 `chevron-flow`): `"motion": "lattice-drift"` in the spec moves it behind the title, section divider, statement and
 closing slides at full strength and behind content slides in a subtle version (`"motion": {"motif": ...,
 "content": "none"}` keeps content slides still). Each slide gets a muted 12 s MP4 that starts by itself and loops, with
-the layout's band, lockups and header in front of it; under text the motif is turned down, and it stays off
-pictures, charts and tables. Use it for talks given live: a seminar, an open lab, a demo day, a lobby loop. Leave it
+the layout's band, lockups and header in front of it; under text the motif is turned down (on content slides
+`chevron-flow` keeps out from behind text entirely and moves only in the margins), and it stays off pictures, charts
+and tables. Use it for talks given live: a seminar, an open lab, a demo day, a lobby loop. Leave it
 out of thesis defenses and paper talks where the committee reads dense slides, and of decks that will be emailed
 (they grow by about 2-3 MB per distinct background). PDF exports, Google Slides and printouts show the poster frame,
 so the still version is always correct. A slide can opt out with `"motion": "none"`.
