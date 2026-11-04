@@ -1,5 +1,5 @@
 ---
-description: Make an on-brand ATR Lab banner, header, invite splash or thumbnail at any size
+description: Make an on-brand ATR Lab banner, header, invite splash, thumbnail or hallway TV slide at any size
 argument-hint: <preset or WxH, title, optional subtitle and image>
 disable-model-invocation: true
 ---
@@ -24,8 +24,10 @@ Request: $ARGUMENTS
 ## Do
 
 Pick the preset with `scripts/atr_design.py banner --list-presets` (GitHub header or social preview, Discord banner,
-invite splash or profile banner, X header, YouTube banner, OG image, square thumbnail, 16:9 slide) or use
-`--size WxH`. Render with `--safe-zones`, using only verified facts (SKILL.md §1) and, for the mascot, files from
+invite splash or profile banner, X header, YouTube banner, OG image, square thumbnail, 16:9 slide, hallway TV
+`signage-16x9` or `signage-4k`) or use `--size WxH`. For a TV slide or a TV version of a banner, follow
+references/web-and-digital.md §10: `--details` for date, time and place, `--qr` for the organizer's link,
+`--also signage-16x9` on an existing banner, and write `.jpg`. Render with `--safe-zones`, using only verified facts (SKILL.md §1) and, for the mascot, files from
 `assets/mascot/`. Open the PNG and the safe-zone copy; if the copy doesn't fit, shorten it rather than shrinking it.
 For Discord art, also preview on `#313338` and white (references/community-platforms.md). Deliver the PNG and its alt
 text.

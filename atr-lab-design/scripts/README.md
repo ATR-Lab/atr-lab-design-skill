@@ -30,7 +30,7 @@ scripts below (`banner`, `official`, `qr`, `export`, `project`, `pptx`, `deck`, 
 | `scripts/atr_design.py` | The unified CLI: `assets`, `layouts`, `doctor` built in; every other command delegated (loaded lazily, so a missing optional package only breaks its own command, exit 4 with the install command) | per command |
 | `scripts/atr_brand.py` | Brand values for code: `color`, `rgb`, `font`, `logo_path`, `logo_rules`, `icon_path`, `pattern_path`, `asset` (no hex literals or font paths in new scripts) | Pillow for `font()` |
 | `scripts/asset_index.py` | Builds `assets/index.json` (one record per asset: files, sizes, use, aliases, minimum size); `--check` fails when stale | Pillow |
-| `scripts/banner.py` | Banners, headers and thumbnails at any size or from 10 presets (GitHub header, Discord banner and invite splash, profile banner, X, YouTube, OG image, square thumbnail, 16:9 slide); lattice and hazard band drawn at the target size; keep-out zones enforced. Rules: references/community-platforms.md | Pillow, numpy |
+| `scripts/banner.py` | Banners, headers, thumbnails and hallway TV slides at any size or from 12 presets (GitHub header, Discord banner and invite splash, profile banner, X, YouTube, OG image, square thumbnail, 16:9 slide, 1080p and 4K signage); lattice and hazard band drawn at the target size; keep-out zones enforced. Rules: references/community-platforms.md | Pillow, numpy |
 | `scripts/official_assets.py` | Fetches, verifies (SHA-256) and caches the official Kent State wordmark files listed in `assets/logos/ksu/official-sources.json` | standard library |
 | `scripts/qr_code.py` | QR codes at an exact printed size; decodes them back from the final PDF | qrcode[pil], zxing-cpp, pypdf |
 | `scripts/export_office.py` | Tagged PDF export with the brand fonts; reports tags, fonts, links and page sizes; renders only changed pages; compact contact sheets | pypdf, LibreOffice, poppler |
@@ -287,6 +287,13 @@ legibility floors (11 px small text, 15 px titles at the size people see it), a 
 size (no seams) and an optional hazard band. It refuses text on the band, in a keep-out zone (the Discord invite
 card, avatars) or below the floor, retired facts and `[placeholders]` (exit 2 or 3). Look at the PNG before you
 ship it. Platform rules: references/community-platforms.md.
+
+Hallway TVs: `--preset signage-16x9` (or `signage-4k`) keeps text and logos inside the overscan-safe margin, sets
+text at 48 px and titles at 80 px or more, puts the Kent State wordmark bottom-right (`--no-ksu` to drop it) and
+notes copy over 20 words. `--details LINE` (repeatable) adds date, time and place; `--qr URL [--qr-label TEXT]`
+puts a navy-on-white QR code with its printed address in the image slot and decodes the result to check it. Write
+`-o slide.jpg` for TV slideshow modes. `--also signage-16x9` writes a 16:9 TV version of any banner next to it.
+Rules: references/web-and-digital.md §10.
 
 `icons/chroma_key.py` also takes `--outline HEX|token [--outline-px N]` (a dark outline so white art survives light
 themes) and `--die-cut [--die-cut-px N]` (stickers: white border and navy outline). Without them the output is

@@ -29,4 +29,6 @@ and lab durations separate; never invent rooms, times or results; bracket anythi
 `scripts/new_deck.py` on `event-flyer`, `event-flyer-tabloid` or `event-flyer-17x22`. Encode the registration link
 exactly; if it is a shortener, recommend the full URL but let the user decide. For several sizes or later edits, put
 it in a `project.json` (`scripts/project.py`). Export with `scripts/export_office.py pdf`, run `scripts/qr_code.py verify`
-on the PDF, lint with `scripts/brand_check.py`, look at the render, and pass the QA gate (SKILL.md §4).
+on the PDF, lint with `scripts/brand_check.py`, look at the render, and pass the QA gate (SKILL.md §4). If the
+event will also run on the hallway TVs, make the 16:9 slide from the same facts with `scripts/atr_design.py banner
+--preset signage-16x9 --details ... --qr <same link> -o <name>.jpg` (references/web-and-digital.md §10).
