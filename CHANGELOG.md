@@ -8,10 +8,10 @@ On Nov. 5, 2026 the director ruled that a minor at a lab robot demo needs the sc
 event and otherwise a parent-signed slip from the lab. The lab's slip is new:
 
 - **`assets/templates/ATR-Minor-Permission-Slip-Letter.pdf`** (print it blank) and its Word source. Page 1 is the
-  permission: the child and age, the event and date, the activity the parent ticks (watch only, or watch and drive the
-  Unitree Go2, for ages 14 and over only, one to one with a trained lab member), an emergency contact, medical and
-  allergy notes and the signature, with the note that the director, Jong-Hoon Kim, approves every robot demo with
-  K-12 visitors. Page 2 is the optional photo and video release, signed separately (minors are never named), with a
+  permission: the child and age, the event and date, the activity the parent ticks (watch only, or watch and
+  operate the Unitree Go2 or Booster K1, for ages 14 and over only, one to one with a trained lab member), an
+  emergency contact, medical and allergy notes and the signature, with the note that the director, Jong-Hoon Kim,
+  approves every robot demo with K-12 visitors. Page 2 is the optional photo and video release, signed separately (minors are never named), with a
   "For lab use" strip for the photo log.
 - **It is a draft** until someone checks it against Kent State's policy on minors with Compliance and Risk
   Management; every page's footer says so. The lab contact, the no-photo sticker and the takedown time stay

@@ -863,9 +863,10 @@ director, Jong-Hoon Kim (jkim72@kent.edu), approves every robot demo with K-12 v
 `ATR-Minor-Permission-Slip-Letter.docx`. Two Letter pages:
 
 1. **Permission:** the child's name and age; the event and date; the activity, ticked by the parent (watch only, or
-   watch and drive the Unitree Go2, which is for ages 14 and over only, after a safety briefing, with a trained lab
-   member beside the child one to one the whole time; under 14 watch only); an emergency contact; medical and
-   allergy notes; the parent or guardian's name, phone, email, signature and date.
+   watch and operate the Unitree Go2 or the Booster K1 humanoid: ages 14 and over only, after a safety briefing,
+   with a trained lab member beside the child one to one the whole time; under 14 watch only; the director set the
+   same rule for both robots on Nov. 5, 2026); an emergency contact; medical and allergy notes; the parent or
+   guardian's name, phone, email, signature and date.
 2. **Photo and video release, optional and signed separately:** how the lab uses photos (the plain-language
    terms of §13.3), "Saying no changes nothing", minors never named or tagged (references/imagery.md §5), a
    yes/no tick, a second signature and a "For lab use" strip that records the answer in the photo log.

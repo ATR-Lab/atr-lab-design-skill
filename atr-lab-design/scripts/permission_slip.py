@@ -3,8 +3,8 @@
 
 The slip is for a child under 18 who comes to a lab robot demo or activity outside a school event (at a school
 event the school's own permission slip is used; references/pr-events-outreach.md §13.9). Page 1: the child and the
-event, the activities (watching demos; driving the Unitree Go2 only at 14 and over, one to one with a trained lab
-member), the emergency contact, medical and allergy notes, and the parent or guardian signature. Page 2: the
+event, the activities (watching demos; operating the Unitree Go2 or the Booster K1 only at 14 and over, one to one
+with a trained lab member), the emergency contact, medical and allergy notes, and the parent or guardian signature. Page 2: the
 optional photo and video release, signed separately. It starts from assets/templates/ATR-Letterhead.docx, so the
 header, footer, theme and fonts match the lab's other Word pages.
 
@@ -231,8 +231,9 @@ def document_body(a) -> str:
 
     x.append(plate(2, "What your child may do (tick one)"))
     x.append(checkbox("**Watch only:** robot demos run by trained lab members, from behind the marked demo line."))
-    x.append(checkbox("**Watch and drive the Unitree Go2** (the lab's four-legged robot), only if your child is 14 or older: "
-                      "after a safety briefing, with a trained lab member beside them, one to one, the whole time.",
+    x.append(checkbox("**Watch and operate the Unitree Go2 or Booster K1** (the lab's four-legged robot and humanoid), only "
+                      "if your child is 14 or older: after a safety briefing, with a trained lab member beside them, one "
+                      "to one, the whole time.",
                       after=100))
 
     x.append(plate(3, "Emergency contact and health"))

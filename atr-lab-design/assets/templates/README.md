@@ -250,9 +250,9 @@ field's prompt, and clone a sample page with `"from_slide": N`.
   2.1 in; Kent State named in text at the top right, because the skill ships no official artwork). Navy section
   plates with gold Roboto Slab numerals, Source Sans 3 11 pt body, labeled lines to write on.
 - **Content:** page 1, the parent or guardian permission for a child under 18 at a lab robot demo or activity
-  outside a school event (child and age, event and date, watch only or watch and drive the Unitree Go2 at 14 and
-  over, emergency contact, medical and allergy notes, signature); page 2, the optional photo and video release,
-  signed separately, with a "For lab use" strip.
+  outside a school event (child and age, event and date, watch only, or watch and operate the Unitree Go2 or
+  Booster K1 at 14 and over, emergency contact, medical and allergy notes, signature); page 2, the optional photo
+  and video release, signed separately, with a "For lab use" strip.
 - **Use it for** any minor at a lab robot demo that is not part of a school event (at a school event the school's
   own slip applies). Print the PDF blank, or build a copy for one event.
 - **It is a draft:** every page's footer says it must be checked against Kent State's policy on minors with

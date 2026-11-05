@@ -37,6 +37,7 @@ def test_blank_slip_has_two_pages_the_rules_and_no_lint_errors(tmp_path):
     out, parts, text = _build(tmp_path)
     assert parts["word/document.xml"].count("<w:pageBreakBefore/>") == 1
     assert "only if your child is 14 or older" in text and "one to one" in text
+    assert "Unitree Go2 or Booster K1" in text
     assert "Jong-Hoon Kim (jkim72@kent.edu)" in text
     assert "Saying no changes nothing" in text and "publish your child's name or school" in text
     assert "[lab contact: name, kent.edu email]" in text
