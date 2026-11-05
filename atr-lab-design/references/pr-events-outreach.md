@@ -6,7 +6,7 @@ runs demo days, lab tours, K-12 programs and conference booths, and handles recr
 email and broader-impacts records.
 
 **Read this when** you draft a press release, news submission, media kit, event plan, sign, invitation,
-parent or teacher email, recruiting reply, sponsor one-pager or newsletter, or when you log outreach for a
+parent or teacher email, permission slip for a minor at a demo, recruiting reply, sponsor one-pager or newsletter, or when you log outreach for a
 grant report, or when something goes wrong at an event or in the press. Social posts are in
 references/social-media.md; voice and the style sheet are in references/voice-and-copy.md; boilerplates, the
 proof bank and the verified contact block are in references/brand-foundation.md §9 to §11 (that file wins if a
@@ -413,6 +413,8 @@ applications that followed. Once a month, also check whether AI assistants descr
   it is a covered program under the minors policy (open public events are generally excluded by the policy's
   definition) `[VERIFY with Compliance]`. Ask **at least 12 weeks out**: a covered program must be registered
   no later than 60 days before minors first take part, with every authorized adult named (§8.1, §10.1).
+  **At any lab robot demo** a minor needs a signed permission slip: the school's at a school event, otherwise the
+  lab's own (§13.9). The director approves every robot demo with K-12 visitors.
 - **When something goes wrong** (an injury, a robot incident, a complaint, a reporter at the door): §20.
 
 ---
@@ -850,6 +852,50 @@ Attach the one-page flyer as an accessible PDF. **Parent FAQ** topics for the pr
 needed; cost and scholarships (criteria set with Philanthropy, never demographic); lunch and allergies;
 disability, allergy or medical accommodations; photos; who can pick up; who supervises (13.4); what students
 take home; missed days; how to reach staff during the program. Publish only true answers.
+
+### 13.9 Permission slip for a minor at a lab robot demo (outside a school event)
+
+**The rule** (the director, Nov. 5, 2026): a minor at a lab robot demo needs the **school's permission slip** when
+the demo is part of a school event; otherwise a parent or guardian signs the **lab's own slip**. The lab's
+director, Jong-Hoon Kim (jkim72@kent.edu), approves every robot demo with K-12 visitors.
+
+**The slip:** `assets/templates/ATR-Minor-Permission-Slip-Letter.pdf` (print it blank) and its editable Word source,
+`ATR-Minor-Permission-Slip-Letter.docx`. Two Letter pages:
+
+1. **Permission:** the child's name and age; the event and date; the activity, ticked by the parent (watch only, or
+   watch and drive the Unitree Go2, which is for ages 14 and over only, after a safety briefing, with a trained lab
+   member beside the child one to one the whole time; under 14 watch only); an emergency contact; medical and
+   allergy notes; the parent or guardian's name, phone, email, signature and date.
+2. **Photo and video release, optional and signed separately:** how the lab uses photos (the plain-language
+   terms of §13.3), "Saying no changes nothing", minors never named or tagged (references/imagery.md §5), a
+   yes/no tick, a second signature and a "For lab use" strip that records the answer in the photo log.
+
+**Before you hand it out:**
+
+- [ ] **It is a draft until someone checks it against Kent State's policy on minors** (Policy 3342-5-19, §10.1)
+      with Compliance and Risk Management `[VERIFY]`: whether a lab demo with minors is a covered program, whether
+      Kent State has its own consent, medical or release forms that must be used instead of or beside this one,
+      and whether the photo release meets UCM's release rule (references/kent-state-compliance.md §16). Every page
+      says so in its footer until it is rebuilt with `--final`.
+- [ ] Fill the lab's own blanks, which stay `[bracketed]` in the shipped copy: who receives the form and photo
+      questions (a kent.edu address, not the lab Gmail), what a child without a photo release wears, and how many
+      business days a photo takedown takes.
+- [ ] The director has approved this demo.
+- [ ] Keep signed slips with the event's records, and the photo answers in the photo log; check the log before
+      anything with a child in it is posted.
+
+**Build a copy for one event** (prints the event and date in the form, fills the lab's blanks and adds the
+official Kent State wordmark at the top right; the shipped copy names Kent State in text, because the skill ships no
+official artwork):
+
+```
+python3 scripts/permission_slip.py -o out/atr-permission-slip-[event]-[yyyy-mm-dd].docx --event "[Event]" \
+    --date "[Mon. D, YYYY]" --contact "[Name], [name]@kent.edu" --sticker "[a red sticker]" --removal-days [N] \
+    --ksu-wordmark official --pdf
+```
+
+Then `python3 scripts/brand_check.py` on the `.docx` (0 errors; a warning stays for every bracket you left) and look
+at both rendered pages.
 
 ---
 

@@ -8,8 +8,8 @@ description: "Brand, marketing and graphic-design system for the Advanced Telero
 Everything needed to make, write and check marketing and design work for the **Advanced Telerobotics Research
 Laboratory** (ATR Lab), Department of Computer Science, Kent State University: the verified facts, Kent State's
 brand and editorial rules, the logo library, color and type tokens, 43 icons, patterns and backgrounds, the lab
-mascot Teo, 19 ready templates (decks, quad charts, posters, event flyers, print, social, letterhead, email
-signature) and scripts that build, revise, export and lint files.
+mascot Teo, 20 ready templates (decks, quad charts, posters, event flyers, print, social, letterhead, a
+permission slip for minors, email signature) and scripts that build, revise, export and lint files.
 All templates share one look, which the lab calls **Hazard Gold**: white or navy fields, gold label plates with the
 navy mark, Roboto Slab numerals and the gold hazard-stripe band on bookend edges only.
 
@@ -195,6 +195,7 @@ lab's facts: references/brand-foundation.md. Each row's last column is the check
 | Newsletter, outreach email, parent or teacher email | 600 px layout, web-safe fonts, PNG logos | pr-events-outreach.md §13, §17; web-and-digital.md §4 | |
 | Email signature | `scripts/email_signature.py` | web-and-digital.md §3 | `email_signature.py --check` |
 | Recruiting (graduate, undergraduate, high school), sponsor ask, K-12 program copy | Recruiting flyer layout; one-pager for sponsors | voice-and-copy.md §6.3-§6.6; pr-events-outreach.md §10, §14-§15 | `brand_check.py` |
+| **Permission slip for a minor at a robot demo** (outside a school event; at a school event the school's slip applies) | `assets/templates/ATR-Minor-Permission-Slip-Letter.pdf` to print blank; for one event, `scripts/permission_slip.py -o out.docx --event ... --date ... --ksu-wordmark official --pdf` | pr-events-outreach.md §13.9 | a draft until checked against Kent State's policy on minors with Compliance; `brand_check.py`; look at both pages |
 | Events: demo day, open lab, tours, K-12 camps, conference booths | Event flyer and door-sign templates; `assets/patterns/` bands for signage | pr-events-outreach.md §7-§13; kent-state-compliance.md §16 | |
 | Logos, co-branding, sponsor and partner logos, favicons, avatars | `atr_design.py assets find <logo words>`; **official Kent State file:** `scripts/official_assets.py fetch <id>` | logo-system.md; kent-state-compliance.md §6-§9 | `brand_check.py` says "official ... verified" |
 | Find any file in the brand kit | `scripts/atr_design.py assets find <words> [--kind K]` (aliases and "did you mean") | | |
@@ -477,8 +478,8 @@ references/                  22 guides (each starts with "Read this when"; TOCs 
   qa-checklists.md             release gate, per-deliverable lists, common fixes
 assets/
   index.json                 one record per asset (search it with `atr_design.py assets find`)
-  templates/                 19 templates (incl. 3 event-flyer sizes), their layout contracts (*-layouts.json)
-                             and README.md (the catalog)
+  templates/                 20 templates (incl. 3 event-flyer sizes and the permission slip for minors), their
+                             layout contracts (*-layouts.json) and README.md (the catalog)
   logos/                     svg/, png/ (-3000, -1000), icons/ (favicons, avatars), ksu/ (working copy and
                              official-sources.json, the official Kent State file manifest), logos.json
   mascot/                    Teo: character sheet, avatar, views, expressions, emoji, stickers, rig/ (puppet
@@ -513,6 +514,7 @@ scripts/
   quad_chart.py              NASA, status and weekly quad charts from a JSON spec; checks hand-made quads
   social_card.py             social PNGs + alt-text sidecars from a JSON spec
   email_signature.py         Outlook-safe HTML and plain-text signatures; --check validates one
+  permission_slip.py         the parent or guardian permission slip for minors at robot demos (Word + PDF)
   codex_image.sh             one AI image via the Codex CLI
   icons/                     icon pipeline (generate, key with --outline/--die-cut, recolor, badge, trace,
                              build) and icons.json

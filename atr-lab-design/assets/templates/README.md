@@ -46,6 +46,7 @@ Rules for every file here:
 | `ATR-Name-Badge.pptx` | 4 × 3 in | 4 | references/print-and-merch.md §4.3 |
 | `ATR-Door-Sign-Letter.pptx` | Letter, 8.5 × 11 in | 2 | references/print-and-merch.md §6 |
 | `ATR-Letterhead.docx` | Word, US Letter | n/a | references/print-and-merch.md §4.2 |
+| `ATR-Minor-Permission-Slip-Letter.docx`, `.pdf` | Word and PDF, US Letter, 2 pages | n/a | references/pr-events-outreach.md §13.9 |
 | `email-signature.html`, `email-signature.txt` | HTML fragment and plain text | n/a | references/web-and-digital.md §3 |
 | `social/ATR-Social-Square-1080.pptx` | 1080 × 1080 px (11.25 × 11.25 in) | 8 | references/social-media.md |
 | `social/ATR-Social-Portrait-1080x1350.pptx` | 1080 × 1350 px (11.25 × 14.0625 in) | 8 | references/social-media.md |
@@ -242,6 +243,25 @@ field's prompt, and clone a sample page with `"from_slide": N`.
   UCM's digital letterhead template.
 - **Fill it** in Word (replace every `[bracket]`, delete the usage note). No script.
 - **Reference:** references/print-and-merch.md §4.2, references/kent-state-compliance.md §15.
+
+### `ATR-Minor-Permission-Slip-Letter.docx` and `ATR-Minor-Permission-Slip-Letter.pdf`
+
+- **Format:** Word and a tagged PDF, US Letter, two pages, on the letterhead's header and footer (the ATR lockup at
+  2.1 in; Kent State named in text at the top right, because the skill ships no official artwork). Navy section
+  plates with gold Roboto Slab numerals, Source Sans 3 11 pt body, labeled lines to write on.
+- **Content:** page 1, the parent or guardian permission for a child under 18 at a lab robot demo or activity
+  outside a school event (child and age, event and date, watch only or watch and drive the Unitree Go2 at 14 and
+  over, emergency contact, medical and allergy notes, signature); page 2, the optional photo and video release,
+  signed separately, with a "For lab use" strip.
+- **Use it for** any minor at a lab robot demo that is not part of a school event (at a school event the school's
+  own slip applies). Print the PDF blank, or build a copy for one event.
+- **It is a draft:** every page's footer says it must be checked against Kent State's policy on minors with
+  Compliance and Risk Management before use, and the lab contact, the no-photo sticker and the takedown time are
+  `[bracketed]`.
+- **By script:** `python3 scripts/permission_slip.py -o out.docx --event ... --date ... --contact ...
+  --ksu-wordmark official --pdf` (the generator ships with the skill; rebuild the shipped copy with
+  `-o assets/templates/ATR-Minor-Permission-Slip-Letter.docx --pdf`). Do not hand-edit the shipped files.
+- **Reference:** references/pr-events-outreach.md §13.9, references/imagery.md §5.
 
 ### `email-signature.html` and `email-signature.txt`
 

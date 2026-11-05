@@ -183,6 +183,9 @@ which no one is identifiable.
   is checked for every face.
 - The concept illustration `assets/illustrations/illus-k12-robot-build.png` is the fallback for outreach pieces
   when no consented photos exist.
+- At a lab robot demo outside a school event, the parent's photo and video release is page 2 of the lab's
+  permission slip (`assets/templates/ATR-Minor-Permission-Slip-Letter.pdf`, references/pr-events-outreach.md
+  §13.9), signed separately from the permission itself; its "For lab use" strip feeds the photo log below.
 
 **Photo log** (a spreadsheet per shoot): file name, date, event or project, people (adults by name; minors by
 "release on file: yes/no" only), release location, photographer and credit, restrictions (internal only, sponsor

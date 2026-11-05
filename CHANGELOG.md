@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased
+
+### Permission slip for minors at robot demos
+
+On Nov. 5, 2026 the director ruled that a minor at a lab robot demo needs the school's permission slip at a school
+event and otherwise a parent-signed slip from the lab. The lab's slip is new:
+
+- **`assets/templates/ATR-Minor-Permission-Slip-Letter.pdf`** (print it blank) and its Word source. Page 1 is the
+  permission: the child and age, the event and date, the activity the parent ticks (watch only, or watch and drive the
+  Unitree Go2, for ages 14 and over only, one to one with a trained lab member), an emergency contact, medical and
+  allergy notes and the signature, with the note that the director, Jong-Hoon Kim, approves every robot demo with
+  K-12 visitors. Page 2 is the optional photo and video release, signed separately (minors are never named), with a
+  "For lab use" strip for the photo log.
+- **It is a draft** until someone checks it against Kent State's policy on minors with Compliance and Risk
+  Management; every page's footer says so. The lab contact, the no-photo sticker and the takedown time stay
+  bracketed.
+- **`scripts/permission_slip.py`** (new) builds it from the letterhead, fills one event's details (`--event`,
+  `--date`, `--contact`), adds the official Kent State wordmark (`--ksu-wordmark official`) and exports a tagged PDF
+  (`--pdf`); `--final` drops the draft line. Tests in `scripts/tests/test_permission_slip.py`.
+- Guidance: references/pr-events-outreach.md §13.9 (new) and §7, references/imagery.md §5, the SKILL.md router, the
+  template catalog and the scripts README.
+
 ## 2.2.0 (Nov. 4, 2026)
 
 ### Animated backgrounds for slides and hallway TV slides
