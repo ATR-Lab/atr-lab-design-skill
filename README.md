@@ -7,7 +7,7 @@
   <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Kent State University" src="https://img.shields.io/badge/Kent%20State-ATR%20Lab-EFAB00?style=flat-square&labelColor=003976">
   <img alt="Version 2.2.0" src="https://img.shields.io/badge/version-2.2.0-003976?style=flat-square">
-  <img alt="19 templates" src="https://img.shields.io/badge/templates-19-003976?style=flat-square">
+  <img alt="20 templates" src="https://img.shields.io/badge/templates-20-003976?style=flat-square">
   <img alt="43 icons" src="https://img.shields.io/badge/icons-43-003976?style=flat-square">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-1B2533?style=flat-square">
 </p>
@@ -27,10 +27,10 @@ It covers every part of the lab's marketing and design:
 - **Kent State compliance:** logo co-branding, athletics marks, trademark and merch licensing, and accessibility law.
 - **The visual system:** logos (traced to vector), color and design tokens, typography, 43 custom icons, patterns,
   backgrounds and concept illustrations.
-- **19 templates:** a presentation (22 layouts), quad charts (NASA format, project status, weekly summary), two
+- **20 templates:** a presentation (22 layouts), quad charts (NASA format, project status, weekly summary), two
   research posters, event and workshop flyers in Letter, Tabloid and 17 × 22 in with named fields and a registration
-  QR code, a flyer, a one-pager, a certificate, a name badge, door signs, a letterhead, an email signature and five
-  social media sizes.
+  QR code, a flyer, a one-pager, a certificate, a name badge, door signs, a letterhead, a parent or guardian
+  permission slip for minors at robot demos, an email signature and five social media sizes.
 - **Teo, the lab mascot:** a character sheet, views, expressions, Discord and Slack emoji and stickers, with usage
   rules.
 - **Scripts:** one front door (`atr_design.py`: find any asset, query a layout, check the environment), a brand and
@@ -285,6 +285,12 @@ built from a short spec; the QR code is generated at its printed size and decode
 
 <p align="center"><img src=".github/images/gallery-print.png" alt="ATR print collateral: event and recruiting flyers, project one-pager, certificate, door signs, letterhead and name badge" width="100%"></p>
 
+The **permission slip for minors** at lab robot demos outside a school event
+([PDF](atr-lab-design/assets/templates/ATR-Minor-Permission-Slip-Letter.pdf), Word source beside it) has the
+parent's permission on page 1 and an optional photo and video release, signed separately, on page 2.
+`scripts/permission_slip.py` builds a copy for one event. It was checked against Kent State's policy on minors and
+approved for use on Nov. 5, 2026 (references/pr-events-outreach.md §13.9).
+
 ### Social media
 
 <p align="center"><img src=".github/images/gallery-social.png" alt="ATR social media cards: K-12 outreach, event, publication, key result, recruiting and more" width="100%"></p>
@@ -379,6 +385,9 @@ python3 scripts/contrast.py gold white
 # Render any Office file to PDF + PNGs with the brand fonts
 scripts/render_office.sh ~/out/deck.pptx ~/out/render 150
 
+# Permission slip for a minor at a robot demo, filled for one event (Word + tagged PDF)
+python3 scripts/permission_slip.py -o out/slip.docx --event "[Event]" --date "[Mon. D, YYYY]" --ksu-wordmark official --pdf
+
 # Outlook-safe email signature
 python3 scripts/email_signature.py --name "Your Name" --title "Ph.D. student" --email "you@kent.edu" --out sig   # writes sig.html + sig.txt
 ```
@@ -397,7 +406,7 @@ atr-lab-design/                the skill (the only folder Claude needs)
 │                              pr-events-outreach, data-visualization, accessibility, qa-checklists
 ├── assets/
 │   ├── index.json             one record per asset, searched by `atr_design.py assets`
-│   ├── templates/             19 templates + layout contracts (*-layouts.json) + catalog README
+│   ├── templates/             20 templates + layout contracts (*-layouts.json) + catalog README
 │   ├── logos/                 SVG + PNG lockups, favicons, avatars, Kent State working copy and the
 │   │                          official-file manifest (official-sources.json), logos.json
 │   ├── mascot/                Teo: character sheet, views, expressions, emoji, stickers, prompts

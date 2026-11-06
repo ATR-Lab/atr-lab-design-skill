@@ -24,6 +24,7 @@ scripts below (`banner`, `official`, `qr`, `export`, `project`, `pptx`, `deck`, 
 | `scripts/render_office.sh` | Office file to PDF and per-page PNGs with the brand fonts loaded | LibreOffice, poppler (`pdftoppm`) |
 | `scripts/requirements.txt` | Python packages: a core block (linter, social cards, decks) and optional blocks | pip, in a venv |
 | `scripts/email_signature.py` | Outlook-safe HTML and plain-text email signatures | standard library (Pillow for `--make-tile`) |
+| `scripts/permission_slip.py` | The parent or guardian permission slip for minors at robot demos outside a school event (Word, US Letter, two pages), built from the letterhead; `--pdf` exports a tagged PDF. Rules: references/pr-events-outreach.md §13.9 | standard library (LibreOffice for `--pdf`) |
 | `scripts/codex_image.sh` | One AI image via the Codex CLI image tool (icons, textures, concept art) | Codex CLI |
 | `scripts/icons/` | The icon pipeline: generate, key, recolor, badge and trace the icon set; `anchor.png` is the style anchor every glyph is generated against | see `scripts/icons/README.md` |
 | `scripts/social_card.py` | Branded social tiles (PNG + alt-text sidecar) from a JSON spec | Pillow, numpy (fontTools optional, for kerning) |
@@ -245,6 +246,13 @@ stand-in for PowerPoint: line breaks can differ slightly, so leave the 10% width
   one hosted logo) as table-based HTML plus plain text, and validates existing ones:
   `python3 scripts/email_signature.py --name "[Full Name]" --title "[Title]" --email "[user]@kent.edu" --out sig`,
   `--check signature.html`. Rules: `references/web-and-digital.md`.
+- **`scripts/permission_slip.py`** builds the lab's permission slip for a minor at a robot demo outside a school
+  event, from `assets/templates/ATR-Letterhead.docx`: page 1 the permission (child, event, the activity ticked,
+  emergency contact, medical notes, signature), page 2 the optional photo and video release with its own signature.
+  `python3 scripts/permission_slip.py -o out/slip.docx --pdf` gives a blank copy; `--event`, `--date`, `--contact`,
+  `--sticker` and `--removal-days` fill it for one event, `--ksu-wordmark official` adds the official Kent State
+  wordmark (fetched by `official_assets.py`). It refuses to write inside the skill except to `assets/templates/` (the shipped copy). Rules:
+  `references/pr-events-outreach.md` §13.9.
 - **`scripts/codex_image.sh`** `<out.png> "<prompt>" [reference.png ...]` generates one image (45-90 s; ask
   for a flat #00FF00 background and key it). Integrity rules and prompts: `references/ai-image-pipeline.md`.
 - **`scripts/icons/`** regenerates or extends the icon set (`generate.py`, `slice_sheet.py`, `chroma_key.py`,

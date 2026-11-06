@@ -37,7 +37,7 @@
   "background": 24,
   "mascot": 43,
   "illustration": 3,
-  "template": 19,
+  "template": 20,
   "layouts": 7,
   "font": 28,
   "token": 13,
@@ -48,7 +48,7 @@
   "doc": 12,
   "license": 3
  },
- "count": 600,
+ "count": 601,
  "assets": [
   {"id":"logo/badge-black","kind":"logo","name":"badge","variant":"black","path":"assets/logos/png/atr-badge-black-3000.png","px":[2278,3000],"formats":["png","svg"],"use_for":"Mark + 'A T R' in a frame: section slides, equipment labels, merch, video bugs. Backgrounds: white, mist, gold; one-colour black print (fax, laser engraving, newsprint)","min_px":80,"min_dimension":"height","min_print_in":0.5,"clear_space_x_over_height":0.2087,"aspect_w_over_h":0.7592,"backgrounds":"white, mist, gold; one-colour black print (fax, laser engraving, newsprint)","files":[{"path":"assets/logos/png/atr-badge-black-1000.png","format":"png","px":[760,1000]},{"path":"assets/logos/png/atr-badge-black-3000.png","format":"png","px":[2278,3000]},{"path":"assets/logos/svg/atr-badge-black.svg","format":"svg","px":[759.2,1000]}]},
   {"id":"logo/badge-gold","kind":"logo","name":"badge","variant":"gold","path":"assets/logos/png/atr-badge-gold-3000.png","px":[2278,3000],"formats":["png","svg"],"use_for":"Mark + 'A T R' in a frame: section slides, equipment labels, merch, video bugs. Backgrounds: navy, midnight, black; dark photo areas (never white or mist)","min_px":80,"min_dimension":"height","min_print_in":0.5,"clear_space_x_over_height":0.2087,"aspect_w_over_h":0.7592,"backgrounds":"navy, midnight, black; dark photo areas (never white or mist)","files":[{"path":"assets/logos/png/atr-badge-gold-1000.png","format":"png","px":[760,1000]},{"path":"assets/logos/png/atr-badge-gold-3000.png","format":"png","px":[2278,3000]},{"path":"assets/logos/svg/atr-badge-gold.svg","format":"svg","px":[759.2,1000]}]},
@@ -517,6 +517,7 @@
   {"id":"template/ATR-Event-Flyer-Tabloid","kind":"template","name":"ATR-Event-Flyer-Tabloid","path":"assets/templates/ATR-Event-Flyer-Tabloid.pptx","size_in":[11.0,17.0],"formats":["pptx"],"use_for":"Tabloid (11 x 17 in) event or workshop flyer with named fields and a QR panel","files":[{"path":"assets/templates/ATR-Event-Flyer-Tabloid.pptx","format":"pptx","size_in":[11.0,17.0]}]},
   {"id":"template/ATR-Flyer-Letter","kind":"template","name":"ATR-Flyer-Letter","path":"assets/templates/ATR-Flyer-Letter.pptx","size_in":[8.5,11.0],"formats":["pptx"],"use_for":"US Letter event flyer; new_deck.py 'flyer'","files":[{"path":"assets/templates/ATR-Flyer-Letter.pptx","format":"pptx","size_in":[8.5,11.0]}]},
   {"id":"template/ATR-Letterhead","kind":"template","name":"ATR-Letterhead","path":"assets/templates/ATR-Letterhead.docx","formats":["docx"],"use_for":"Word letterhead (US Letter)","files":[{"path":"assets/templates/ATR-Letterhead.docx","format":"docx"}]},
+  {"id":"template/ATR-Minor-Permission-Slip-Letter","kind":"template","name":"ATR-Minor-Permission-Slip-Letter","path":"assets/templates/ATR-Minor-Permission-Slip-Letter.docx","formats":["docx","pdf"],"use_for":"ATR template","files":[{"path":"assets/templates/ATR-Minor-Permission-Slip-Letter.docx","format":"docx"},{"path":"assets/templates/ATR-Minor-Permission-Slip-Letter.pdf","format":"pdf"}]},
   {"id":"template/ATR-Name-Badge","kind":"template","name":"ATR-Name-Badge","path":"assets/templates/ATR-Name-Badge.pptx","size_in":[4.0,3.0],"formats":["pptx"],"use_for":"4 x 3 in name badge; new_deck.py 'badge'","files":[{"path":"assets/templates/ATR-Name-Badge.pptx","format":"pptx","size_in":[4.0,3.0]}]},
   {"id":"template/ATR-One-Pager-Letter","kind":"template","name":"ATR-One-Pager-Letter","path":"assets/templates/ATR-One-Pager-Letter.pptx","size_in":[8.5,11.0],"formats":["pptx"],"use_for":"US Letter one-pager / fact sheet; new_deck.py 'one-pager'","files":[{"path":"assets/templates/ATR-One-Pager-Letter.pptx","format":"pptx","size_in":[8.5,11.0]}]},
   {"id":"template/ATR-Presentation-Template","kind":"template","name":"ATR-Presentation-Template","path":"assets/templates/ATR-Presentation-Template.pptx","size_in":[10.0,5.625],"formats":["potx","pptx"],"use_for":"16:9 slide deck, 22 layouts; fill with scripts/new_deck.py (template 'presentation')","files":[{"path":"assets/templates/ATR-Presentation-Template.potx","format":"potx","size_in":[10.0,5.625]},{"path":"assets/templates/ATR-Presentation-Template.pptx","format":"pptx","size_in":[10.0,5.625]}]},
