@@ -8,9 +8,8 @@ with a trained lab member), the emergency contact, medical and allergy notes, an
 optional photo and video release, signed separately. It starts from assets/templates/ATR-Letterhead.docx, so the
 header, footer, theme and fonts match the lab's other Word pages.
 
-The shipped copy is assets/templates/ATR-Minor-Permission-Slip-Letter.docx (and .pdf), a draft with blank fields
-and `[bracketed]` lab details. Until someone checks it against Kent State's policy on minors with Compliance and
-Risk Management, every page carries a draft line in the footer; `--final` removes it.
+The shipped copy is assets/templates/ATR-Minor-Permission-Slip-Letter.docx (and .pdf), with blank fields and
+`[bracketed]` lab details. It was checked against Kent State's policy on minors and approved for use on Nov. 5, 2026.
 
 Usage (paths relative to the skill root):
     python3 scripts/permission_slip.py -o out/atr-permission-slip-blank.docx --pdf
@@ -25,7 +24,6 @@ Options:
     --ksu-wordmark P    put the Kent State Stacked wordmark at the top right: a PNG path, or "official" to fetch
                         and verify ksu-stacked-color-png (scripts/official_assets.py). Without it Kent State is
                         named in text, because the skill ships no official artwork (kent-state-compliance.md §6)
-    --final             leave out the draft line (only once the slip has been checked with Compliance)
     --pdf               also export a tagged PDF next to the .docx (scripts/export_office.py; needs LibreOffice)
 
 Exit status: 0 written, 2 usage error or missing input.
@@ -60,10 +58,6 @@ WRITE_ROW = 400         # height of a handwriting line (0.28 in)
 EMU_PER_TWIP = 635
 KSU_WIDTH_EMU = 971550  # 1.06 in: the Stacked wordmark's minimum is 1.05 in wide (logo-system.md §8)
 ATR_WIDTH_EMU = 1920240  # 2.1 in: the letterhead's horizontal-short lockup, smaller to keep page 1 on one page
-
-DRAFT_LINE = ("Draft, Nov. 5, 2026: to be checked against Kent State Policy 3342-5-19 (minors) with Compliance "
-              "and Risk Management before use.")
-
 
 # ---------------------------------------------------------------- WordprocessingML helpers
 
@@ -323,13 +317,6 @@ def header_xml(xml: str, media_target: str, files: dict, wordmark) -> str:
     return xml.replace(right.group(1), scale_picture(right.group(1), KSU_WIDTH_EMU, cy))
 
 
-def footer_xml(xml: str, final: bool) -> str:
-    if final:
-        return xml
-    draft = para(run(DRAFT_LINE, size=8, col=BRONZE, bold=True), after=60, line=240)
-    return xml.replace("<w:p>", draft + "<w:p>", 1)
-
-
 def build(a) -> Path:
     out = Path(a.output).expanduser().resolve()
     if SKILL_ROOT in out.parents and out.parent != SKILL_ROOT / "assets" / "templates":
@@ -350,7 +337,6 @@ def build(a) -> Path:
     if wordmark is None:
         files["word/_rels/header1.xml.rels"] = re.sub(r'<Relationship Id="rId1"[^>]*/>', "", rels).encode()
         files.pop(ksu_target, None)
-    files["word/footer1.xml"] = footer_xml(files["word/footer1.xml"].decode(), a.final).encode()
     core = files["docProps/core.xml"].decode()
     core = re.sub(r"<dc:title>.*?</dc:title>", "<dc:title>Permission for a minor to attend a robot demo</dc:title>", core)
     files["docProps/core.xml"] = core.encode()
@@ -371,7 +357,6 @@ def main(argv=None) -> int:
     ap.add_argument("--sticker", help="what a child without a photo release wears")
     ap.add_argument("--removal-days", help="business days to take photos down after a family changes its mind")
     ap.add_argument("--ksu-wordmark", help='PNG of the Kent State Stacked wordmark, or "official" to fetch it')
-    ap.add_argument("--final", action="store_true", help="leave out the draft line (after the Compliance check)")
     ap.add_argument("--pdf", action="store_true", help="also export a tagged PDF next to the .docx")
     a = ap.parse_args(argv)
     try:

@@ -873,11 +873,9 @@ director, Jong-Hoon Kim (jkim72@kent.edu), approves every robot demo with K-12 v
 
 **Before you hand it out:**
 
-- [ ] **It is a draft until someone checks it against Kent State's policy on minors** (Policy 3342-5-19, §10.1)
-      with Compliance and Risk Management `[VERIFY]`: whether a lab demo with minors is a covered program, whether
-      Kent State has its own consent, medical or release forms that must be used instead of or beside this one,
-      and whether the photo release meets UCM's release rule (references/kent-state-compliance.md §16). Every page
-      says so in its footer until it is rebuilt with `--final`.
+- [ ] The slip was checked against Kent State's policy on minors (Policy 3342-5-19, §10.1) and approved for use on
+      Nov. 5, 2026. Check it again when that policy, UCM's release rule (references/kent-state-compliance.md §16)
+      or the slip itself changes.
 - [ ] Fill the lab's own blanks, which stay `[bracketed]` in the shipped copy: who receives the form and photo
       questions (a kent.edu address, not the lab Gmail), what a child without a photo release wears, and how many
       business days a photo takedown takes.

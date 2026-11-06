@@ -11,14 +11,13 @@ event and otherwise a parent-signed slip from the lab. The lab's slip is new:
   permission: the child and age, the event and date, the activity the parent ticks (watch only, or watch and
   operate the Unitree Go2 or Booster K1, for ages 14 and over only, one to one with a trained lab member), an
   emergency contact, medical and allergy notes and the signature, with the note that the director, Jong-Hoon Kim,
-  approves every robot demo with K-12 visitors. Page 2 is the optional photo and video release, signed separately (minors are never named), with a
-  "For lab use" strip for the photo log.
-- **It is a draft** until someone checks it against Kent State's policy on minors with Compliance and Risk
-  Management; every page's footer says so. The lab contact, the no-photo sticker and the takedown time stay
-  bracketed.
+  approves every robot demo with K-12 visitors. Page 2 is the optional photo and video release, signed separately
+  (minors are never named), with a "For lab use" strip for the photo log.
+- **Approved for use** on Nov. 5, 2026, after a check against Kent State's policy on minors. The lab contact, the
+  no-photo sticker and the takedown time stay bracketed, to fill before printing.
 - **`scripts/permission_slip.py`** (new) builds it from the letterhead, fills one event's details (`--event`,
   `--date`, `--contact`), adds the official Kent State wordmark (`--ksu-wordmark official`) and exports a tagged PDF
-  (`--pdf`); `--final` drops the draft line. Tests in `scripts/tests/test_permission_slip.py`.
+  (`--pdf`). Tests in `scripts/tests/test_permission_slip.py`.
 - Guidance: references/pr-events-outreach.md §13.9 (new) and §7, references/imagery.md §5, the SKILL.md router, the
   template catalog and the scripts README.
 

@@ -249,10 +249,9 @@ stand-in for PowerPoint: line breaks can differ slightly, so leave the 10% width
 - **`scripts/permission_slip.py`** builds the lab's permission slip for a minor at a robot demo outside a school
   event, from `assets/templates/ATR-Letterhead.docx`: page 1 the permission (child, event, the activity ticked,
   emergency contact, medical notes, signature), page 2 the optional photo and video release with its own signature.
-  `python3 scripts/permission_slip.py -o out/slip.docx --pdf` gives a blank draft; `--event`, `--date`, `--contact`,
+  `python3 scripts/permission_slip.py -o out/slip.docx --pdf` gives a blank copy; `--event`, `--date`, `--contact`,
   `--sticker` and `--removal-days` fill it for one event, `--ksu-wordmark official` adds the official Kent State
-  wordmark (fetched by `official_assets.py`), and `--final` drops the footer's draft line once Compliance has
-  checked the slip. It refuses to write inside the skill except to `assets/templates/` (the shipped copy). Rules:
+  wordmark (fetched by `official_assets.py`). It refuses to write inside the skill except to `assets/templates/` (the shipped copy). Rules:
   `references/pr-events-outreach.md` §13.9.
 - **`scripts/codex_image.sh`** `<out.png> "<prompt>" [reference.png ...]` generates one image (45-90 s; ask
   for a flat #00FF00 background and key it). Integrity rules and prompts: `references/ai-image-pipeline.md`.

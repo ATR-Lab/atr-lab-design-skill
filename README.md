@@ -288,8 +288,8 @@ built from a short spec; the QR code is generated at its printed size and decode
 The **permission slip for minors** at lab robot demos outside a school event
 ([PDF](atr-lab-design/assets/templates/ATR-Minor-Permission-Slip-Letter.pdf), Word source beside it) has the
 parent's permission on page 1 and an optional photo and video release, signed separately, on page 2.
-`scripts/permission_slip.py` builds a copy for one event. It is a draft until it is checked against Kent State's
-policy on minors (references/pr-events-outreach.md §13.9).
+`scripts/permission_slip.py` builds a copy for one event. It was checked against Kent State's policy on minors and
+approved for use on Nov. 5, 2026 (references/pr-events-outreach.md §13.9).
 
 ### Social media
 

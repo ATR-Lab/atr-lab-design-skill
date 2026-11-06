@@ -255,9 +255,8 @@ field's prompt, and clone a sample page with `"from_slide": N`.
   and video release, signed separately, with a "For lab use" strip.
 - **Use it for** any minor at a lab robot demo that is not part of a school event (at a school event the school's
   own slip applies). Print the PDF blank, or build a copy for one event.
-- **It is a draft:** every page's footer says it must be checked against Kent State's policy on minors with
-  Compliance and Risk Management before use, and the lab contact, the no-photo sticker and the takedown time are
-  `[bracketed]`.
+- **Status:** checked against Kent State's policy on minors and approved for use on Nov. 5, 2026. The lab contact,
+  the no-photo sticker and the takedown time stay `[bracketed]`: fill them before printing.
 - **By script:** `python3 scripts/permission_slip.py -o out.docx --event ... --date ... --contact ...
   --ksu-wordmark official --pdf` (the generator ships with the skill; rebuild the shipped copy with
   `-o assets/templates/ATR-Minor-Permission-Slip-Letter.docx --pdf`). Do not hand-edit the shipped files.

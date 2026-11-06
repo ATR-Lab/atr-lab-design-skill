@@ -41,20 +41,19 @@ def test_blank_slip_has_two_pages_the_rules_and_no_lint_errors(tmp_path):
     assert "Jong-Hoon Kim (jkim72@kent.edu)" in text
     assert "Saying no changes nothing" in text and "publish your child's name or school" in text
     assert "[lab contact: name, kent.edu email]" in text
-    assert "Policy 3342-5-19" in parts["word/footer1.xml"]
+    assert "Draft" not in parts["word/footer1.xml"]
     assert "Kent State University" in parts["word/header1.xml"]
     assert "word/media/6d2a10a3363ae9fd5078839d2b8ab327439e6fc3.png" not in zipfile.ZipFile(out).namelist()
     assert _lint(out) == []
 
 
-def test_event_details_wordmark_and_final(tmp_path):
+def test_event_details_and_wordmark(tmp_path):
     out, parts, text = _build(tmp_path, "--event", "Open lab", "--date", "Nov. 20, 2026",
                               "--contact", "Pat Doe, pdoe@kent.edu", "--sticker", "a red sticker",
-                              "--removal-days", "5", "--ksu-wordmark", str(WORKING_COPY), "--final")
+                              "--removal-days", "5", "--ksu-wordmark", str(WORKING_COPY))
     assert "Open lab" in text and "Nov. 20, 2026" in text
     assert "Pat Doe, pdoe@kent.edu" in text and "a red sticker" in text and "within 5 business days" in text
     assert "[" not in text
-    assert "Draft" not in parts["word/footer1.xml"]
     assert 'cx="971550"' in parts["word/header1.xml"]
 
 
