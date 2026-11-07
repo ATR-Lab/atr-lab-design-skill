@@ -1,6 +1,28 @@
 # Changelog
 
-## Unreleased
+## 2.3.0 (Nov. 6, 2026)
+
+### Facts the lab confirmed on Nov. 4, 2026
+
+The lab's public profile (ATR-Lab/about, `docs/revamp`) now carries facts the director confirmed, and the skill
+follows them:
+
+- **Name:** "Advanced Telerobotics Research Laboratory" is the long form everywhere: references, boilerplates,
+  generators, examples, tokens and all 19 Office templates. "The lab" stays the later reference and "ATR Lab" is
+  for display only.
+- **Room and phone:** the lab is in Room 236, Mathematical Sciences Building (241 stays the department's mailing
+  address). 330-672-9060 is the director's office line and is printed only with that label; no direct lab line is
+  published.
+- **LinkedIn:** the "...Research Laboratory" page is canonical; the "...Research Lab" page is the duplicate to merge
+  or close.
+- **Proof bank:** the World Robot Summit Distinguished Paper Award went to the ATR_Kent team (WRS release, Dec. 24,
+  2021; the paper title stays bracketed), and the 2023 RoboCupRescue team description paper is citable, without
+  implying the team attended.
+- **`brand_check.py` 1.4:** no Room 236 warning; 330-672-9060 warns only when no director label is near it.
+  `new_deck.py`, `social_card.py` and `email_signature.py` follow the same rules.
+- **Layout fixes for the longer name:** the social templates' gold-tile credit runs to three lines, the quad-chart
+  footer is one non-wrapping line up to the marking placeholder, and the certificate eyebrow is updated.
+- Brand-check results on every template are unchanged.
 
 ### Permission slip for minors at robot demos
 
@@ -20,6 +42,10 @@ event and otherwise a parent-signed slip from the lab. The lab's slip is new:
   (`--pdf`). Tests in `scripts/tests/test_permission_slip.py`.
 - Guidance: references/pr-events-outreach.md §13.9 (new) and §7, references/imagery.md §5, the SKILL.md router, the
   template catalog and the scripts README.
+
+### Also
+
+- **Tests:** 3 new; 147 pass. All 21 template files lint with 0 errors and 0 warnings.
 
 ## 2.2.0 (Nov. 4, 2026)
 

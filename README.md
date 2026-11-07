@@ -6,7 +6,7 @@
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-003976?style=flat-square&logo=claude&logoColor=white">
   <img alt="Kent State University" src="https://img.shields.io/badge/Kent%20State-ATR%20Lab-EFAB00?style=flat-square&labelColor=003976">
-  <img alt="Version 2.2.0" src="https://img.shields.io/badge/version-2.2.0-003976?style=flat-square">
+  <img alt="Version 2.3.0" src="https://img.shields.io/badge/version-2.3.0-003976?style=flat-square">
   <img alt="20 templates" src="https://img.shields.io/badge/templates-20-003976?style=flat-square">
   <img alt="43 icons" src="https://img.shields.io/badge/icons-43-003976?style=flat-square">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-1B2533?style=flat-square">
@@ -39,7 +39,7 @@ It covers every part of the lab's marketing and design:
   revision workflow that rebuilds and re-exports only what an edit touches, tagged PDF export and inspection, QR codes
   verified from the final PDF, safe Office editing and an AI icon pipeline.
 
-**New in 2.2:** animated backgrounds for decks and hallway TV slides (`banner.py --motion lattice-drift`, `"motion"` in a deck spec), built in LottieFiles Creator and rendered to looping MP4s with a still version, plus an animated Teo cameo on request. **New in 2.1:** Teo's redesign (a monitor-headed robot with cat-ear fins and lens pods) and, in 2.1.1, 16:9 slides for hallway TVs (`banner.py --preset signage-16x9`, or `--also signage-16x9` on any banner). **New in 2.0** (details in [CHANGELOG.md](CHANGELOG.md)): official Kent State artwork fetched and verified by
+**New in 2.3:** the facts the lab confirmed on Nov. 4, 2026 (the long name "Advanced Telerobotics Research Laboratory", Room 236, the director's labeled office line, the canonical LinkedIn page) in every reference, template and checker, and a parent or guardian permission slip for minors at robot demos (`scripts/permission_slip.py`). **New in 2.2:** animated backgrounds for decks and hallway TV slides (`banner.py --motion lattice-drift`, `"motion"` in a deck spec), built in LottieFiles Creator and rendered to looping MP4s with a still version, plus an animated Teo cameo on request. **New in 2.1:** Teo's redesign (a monitor-headed robot with cat-ear fins and lens pods) and, in 2.1.1, 16:9 slides for hallway TVs (`banner.py --preset signage-16x9`, or `--also signage-16x9` on any banner). **New in 2.0** (details in [CHANGELOG.md](CHANGELOG.md)): official Kent State artwork fetched and verified by
 checksum, the revision workflow (`project.py`), event flyers with named fields, QR codes verified from the final PDF,
 tagged PDF export with a QA report, banners and headers at any size, Discord, Slack and GitHub guidance, the Teo
 mascot, a searchable asset index, `doctor` and a test suite.
